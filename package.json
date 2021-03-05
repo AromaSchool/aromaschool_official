@@ -1,6 +1,8 @@
 {
     "private": true,
     "scripts": {
+        "lint": "eslint resources/js/**/*.js",
+        "lint-vue": "eslint resources/views/**/*.vue",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "npm run development -- --watch",
@@ -19,6 +21,15 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "babel-eslint": "^10.1.0",
+        "bootstrap": "^4.6.0",
+        "bootstrap-vue": "^2.21.2",
+        "eslint": "^7.21.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-vue": "^7.7.0",
+        "prettier": "^2.2.1",
         "vue": "^2.6.12",
         "vue-router": "^3.5.1",
         "vue-template-compiler": "^2.6.12"
