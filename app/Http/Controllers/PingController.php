@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class PingController extends Controller
 {
-    public function ping(): string
+    public function __invoke()
     {
         return 'pong';
     }

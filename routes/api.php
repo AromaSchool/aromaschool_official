@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +13,4 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('ping', [Controllers\PingController::class, 'ping']);
+Route::get('ping', PingController::class);
