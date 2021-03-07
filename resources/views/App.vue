@@ -1,17 +1,26 @@
 <template>
     <div>
-        <h1>Aromaharvest</h1>
-
-        <p>
+        <Navbar></Navbar>
+        <!--<p>
             <router-link :to="{ name: 'home' }">Home</router-link> |
             <router-link :to="{ name: 'hello' }">Hello World</router-link>
-        </p>
+        </p>-->
 
         <div>
             <router-view></router-view>
         </div>
+        <Footer></Footer>
     </div>
 </template>
 <script>
-export default {};
+    import Navbar from "../views/component/Navbar.vue";
+    import Footer from "../views/component/Footer.vue";
+
+    export default {
+        components: {
+            Navbar,
+            Footer,
+        }
+    };
+
 </script>
