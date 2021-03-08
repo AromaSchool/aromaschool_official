@@ -2,7 +2,7 @@
     <footer>
         <div class="container">
             <figure>
-                <img src="image/logo_white.svg" alt="logo">
+                <img src="../../image/logo_white.svg" alt="logo">
             </figure>
             <div class="footer_content">
                 <ul class="footer_nav">

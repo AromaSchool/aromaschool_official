@@ -2,7 +2,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar_as">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="image/logo.svg" alt="logo">
+                <img src="../../image/logo.svg" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
