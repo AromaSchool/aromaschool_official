@@ -1,6 +1,6 @@
 # 禾場官網
 
-## 如何建置
+## 建置
 
 - 安裝`php`套件管理工具[composer](https://getcomposer.org/)
 
@@ -60,6 +60,22 @@
   composer install
   ```
 
+- 產生後端所需的設定檔`.env`
+
+  - 複製一份`.env.example`，並重新命名為`.env`
+
+  - 或是使用指令
+
+    ```bash
+    cp .env.example .env
+    ```
+
+- 產生`APP_KEY`，用來加密`cookie`，為運行`Laravel`的必須參數
+
+  ```bash
+  php artisan key:generate
+  ```
+
 - 下載前端套件
 
   ```bash
@@ -68,9 +84,28 @@
   yarn install
   ```
 
-## 套件
+## 執行
+
+- 前端開發模式
+
+  ```bash
+  npm run watch
+  # or
+  yarn watch
+  ```
+
+- 運行後端API
+
+  ```bash
+  php artisan serve
+  ```
+
+- 在瀏覽器中開啟 <http://localhost:8000>
+
+  ## 套件
 
 - [laravel/laravel](https://github.com/laravel/laravel)
+
 - [vuejs/vue](https://github.com/vuejs/vue)
+
 - [vuejs/vue-router](https://github.com/vuejs/vue-router)
-- [bootstrap-vue/bootstrap-vue](https://github.com/bootstrap-vue/bootstrap-vue)
