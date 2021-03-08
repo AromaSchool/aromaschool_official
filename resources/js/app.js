@@ -1,6 +1,6 @@
 import "./bootstrap";
 import "bootstrap";
-import "@fortawesome/fontawesome-free/js/all.js";
+import "@fortawesome/fontawesome-free/css/all.css";
 import Vue from "vue";
 import VueRouter from "vue-router";
 

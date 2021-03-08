@@ -388,8 +388,6 @@
             </p>
           </swiper-slide>
           <div class="swiper-pagination" slot="pagination"></div>
-          <div class="swiper-button-prev" slot="button-prev"></div>
-          <div class="swiper-button-next" slot="button-next"></div>
         </swiper>
       </div>
     </section>
@@ -399,11 +397,11 @@
 <script>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/swiper-bundle.css";
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 export default {
   name: "swiper-example-loop-group",
@@ -419,7 +417,7 @@ export default {
         spaceBetween: 20,
         slidesPerGroup: 3,
         loop: true,
-        loopFillGroupWithBlank: true,
+        // loopFillGroupWithBlank: true,
         autoplay: {
             delay: 1500,
             disableOnInteraction: false
@@ -427,10 +425,6 @@ export default {
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
             640: {
