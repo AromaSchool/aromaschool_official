@@ -21,6 +21,8 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
+        "@fontsource/bellota-text": "^4.2.2",
+        "@fontsource/noto-sans-tc": "^4.2.2",
         "@fortawesome/fontawesome-free": "^5.15.2",
         "@popperjs/core": "^2.9.0",
         "@vue/eslint-config-prettier": "^6.0.0",

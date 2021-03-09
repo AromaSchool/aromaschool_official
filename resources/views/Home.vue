@@ -419,26 +419,26 @@ export default {
         loop: true,
         // loopFillGroupWithBlank: true,
         autoplay: {
-            delay: 1500,
-            disableOnInteraction: false
+          delay: 1500,
+          disableOnInteraction: false,
         },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
         breakpoints: {
-            640: {
-                slidesPerView: 1,
-                slidesPerGroup: 1,
-            },
-            768: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-            },
+          640: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
         },
       },
     };
