@@ -3,7 +3,7 @@
     <div class="container">
       <div class="origin_card">
         <figure>
-          <img src="../../image/about/quote.svg" alt="quote" />
+          <img src="@/image/about/quote.svg" alt="quote" />
         </figure>
         <h5>約翰福音 4 ： 35 ～ 36 ；約珥書 2 ： 24</h5>
         <h4>

@@ -2,7 +2,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar_as">
     <div class="container">
       <a class="navbar-brand" href="/" title="index">
-        <img src="../../image/logo.svg" alt="logo" />
+        <img src="@/image/logo.svg" alt="logo" />
       </a>
       <button
         class="navbar-toggler"
@@ -163,7 +163,7 @@
 </template>
 
 <!--<style lang="scss">
-@import "../../sass/Navbar.scss";
+@import "@/sass/Navbar.scss";
 </style>-->
 <!--<style lang="scss">
 .navbar_as {

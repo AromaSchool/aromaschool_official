@@ -5,7 +5,7 @@
       <swiper class="swiper" :options="swiperOption">
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="恩琪" />
+            <img src="@/image/index/student_default.svg" alt="恩琪" />
           </figure>
           <div class="student_data">
             <div class="name">恩琪</div>
@@ -18,7 +18,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="琴" />
+            <img src="@/image/index/student_default.svg" alt="琴" />
           </figure>
           <div class="student_data">
             <div class="name">琴</div>
@@ -31,7 +31,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="祐萱" />
+            <img src="@/image/index/student_default.svg" alt="祐萱" />
           </figure>
           <div class="student_data">
             <div class="name">祐萱</div>
@@ -44,7 +44,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="恩琪" />
+            <img src="@/image/index/student_default.svg" alt="恩琪" />
           </figure>
           <div class="student_data">
             <div class="name">恩琪</div>
@@ -57,7 +57,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="琴" />
+            <img src="@/image/index/student_default.svg" alt="琴" />
           </figure>
           <div class="student_data">
             <div class="name">琴</div>
@@ -70,7 +70,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="祐萱" />
+            <img src="@/image/index/student_default.svg" alt="祐萱" />
           </figure>
           <div class="student_data">
             <div class="name">祐萱</div>
@@ -83,7 +83,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="恩琪" />
+            <img src="@/image/index/student_default.svg" alt="恩琪" />
           </figure>
           <div class="student_data">
             <div class="name">恩琪</div>
@@ -96,7 +96,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="琴" />
+            <img src="@/image/index/student_default.svg" alt="琴" />
           </figure>
           <div class="student_data">
             <div class="name">琴</div>
@@ -109,7 +109,7 @@
         </swiper-slide>
         <swiper-slide>
           <figure>
-            <img src="../../image/index/student_default.svg" alt="祐萱" />
+            <img src="@/image/index/student_default.svg" alt="祐萱" />
           </figure>
           <div class="student_data">
             <div class="name">祐萱</div>

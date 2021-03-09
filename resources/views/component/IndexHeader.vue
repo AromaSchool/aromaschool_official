@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <figure>
-        <img src="../../image/index/logo_big.svg" alt="logo" />
+        <img src="@/image/index/logo_big.svg" alt="logo" />
       </figure>
       <div class="welcome_words">
         <span>WELCOME</span>

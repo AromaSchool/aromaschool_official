@@ -5,7 +5,7 @@
       <div class="service_block">
         <div class="service_box">
           <figure>
-            <img src="../../image/about/service-1.svg" alt="Main Service" />
+            <img src="@/image/about/service-1.svg" alt="Main Service" />
           </figure>
           <h3>國際認證教育訓練</h3>
           <ul>
@@ -19,7 +19,7 @@
         </div>
         <div class="service_box">
           <figure>
-            <img src="../../image/about/service-2.svg" alt="Main Service" />
+            <img src="@/image/about/service-2.svg" alt="Main Service" />
           </figure>
           <h3>服務項目</h3>
           <ul>
@@ -41,7 +41,7 @@
         </div>
         <div class="service_box">
           <figure>
-            <img src="../../image/about/service-3.svg" alt="Main Service" />
+            <img src="@/image/about/service-3.svg" alt="Main Service" />
           </figure>
           <h3>顧問服務</h3>
           <ul>

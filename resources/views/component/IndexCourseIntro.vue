@@ -6,7 +6,7 @@
           <div class="course_content">
             <figure>
               <img
-                src="../../image/index/course_icon-1.svg"
+                src="@/image/index/course_icon-1.svg"
                 alt="芳香療法認證課程入門班"
               />
             </figure>
@@ -21,7 +21,7 @@
           <div class="course_content">
             <figure>
               <img
-                src="../../image/index/course_icon-2.svg"
+                src="@/image/index/course_icon-2.svg"
                 alt="芳香療法認證課程中階班"
               />
             </figure>
@@ -36,7 +36,7 @@
           <div class="course_content">
             <figure>
               <img
-                src="../../image/index/course_icon-3.svg"
+                src="@/image/index/course_icon-3.svg"
                 alt="芳香療法認證課程高階班"
               />
             </figure>
@@ -51,7 +51,7 @@
           <div class="course_content">
             <figure>
               <img
-                src="../../image/index/course_icon-4.svg"
+                src="@/image/index/course_icon-4.svg"
                 alt="臨床芳療師認證課程"
               />
             </figure>

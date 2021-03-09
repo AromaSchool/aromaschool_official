@@ -2,7 +2,7 @@
   <section class="brand_story">
     <div class="container">
       <figure>
-        <img src="../../image/about/aroma_square.jpg" alt="AromaHarvest" />
+        <img src="@/image/about/aroma_square.jpg" alt="AromaHarvest" />
       </figure>
       <div class="brand_content">
         <h2>品牌故事<span>STORY</span></h2>

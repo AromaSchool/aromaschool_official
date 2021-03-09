@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import IndexHeader from "../views/component/IndexHeader.vue";
-import IndexCourseIntro from "../views/component/IndexCourseIntro.vue";
-import IndexNews from "../views/component/IndexNews.vue";
-import IndexPresentation from "../views/component/IndexPresentation.vue";
-import IndexCertification from "../views/component/IndexCertification.vue";
-import IndexStudent from "../views/component/IndexStudent.vue";
+import IndexHeader from "@/views/component/IndexHeader.vue";
+import IndexCourseIntro from "@/views/component/IndexCourseIntro.vue";
+import IndexNews from "@/views/component/IndexNews.vue";
+import IndexPresentation from "@/views/component/IndexPresentation.vue";
+import IndexCertification from "@/views/component/IndexCertification.vue";
+import IndexStudent from "@/views/component/IndexStudent.vue";
 
 export default {
   components: {

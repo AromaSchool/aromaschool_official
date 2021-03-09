@@ -7,7 +7,7 @@
       <div class="certi_block">
         <div class="certi_box NAHA">
           <figure>
-            <img src="../../image/index/NAHA_logo.png" alt="NAHA" />
+            <img src="@/image/index/NAHA_logo.png" alt="NAHA" />
           </figure>
           <h4>
             美國國家整體芳香療法協會<span
@@ -22,7 +22,7 @@
         </div>
         <div class="certi_box IFPA">
           <figure>
-            <img src="../../image/index/IFPA_logo.png" alt="IFPA" />
+            <img src="@/image/index/IFPA_logo.png" alt="IFPA" />
           </figure>
           <h4>
             英國國際專業芳療師聯盟<span

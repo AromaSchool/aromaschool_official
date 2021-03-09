@@ -15,13 +15,13 @@
       </div>
       <div class="aroma_presentation_photo_block">
         <figure>
-          <img src="../../image/index/presentation-1.jpg" alt="香氣發表會" />
+          <img src="@/image/index/presentation-1.jpg" alt="香氣發表會" />
         </figure>
         <figure>
-          <img src="../../image/index/presentation-2.jpg" alt="香氣發表會" />
+          <img src="@/image/index/presentation-2.jpg" alt="香氣發表會" />
         </figure>
         <figure>
-          <img src="../../image/index/presentation-3.jpg" alt="香氣發表會" />
+          <img src="@/image/index/presentation-3.jpg" alt="香氣發表會" />
         </figure>
       </div>
     </div>
