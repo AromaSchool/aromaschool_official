@@ -1,9 +1,11 @@
 import "./bootstrap";
 import "bootstrap";
 import "@fortawesome/fontawesome-free/css/all.css";
+import animate from 'animate.css';
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+Vue.use(animate);
 Vue.use(VueRouter);
 
 import App from "../views/App.vue";
