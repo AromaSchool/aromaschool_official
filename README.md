@@ -102,7 +102,7 @@
 
 - 在瀏覽器中開啟 <http://localhost:8000>
 
-  ## 套件
+## 套件
 
 - [laravel/laravel](https://github.com/laravel/laravel)
 
