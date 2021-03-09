@@ -1,11 +1,6 @@
 <template>
   <div>
     <Navbar></Navbar>
-    <!--<p>
-            <router-link :to="{ name: 'home' }">Home</router-link> |
-            <router-link :to="{ name: 'hello' }">Hello World</router-link>
-        </p>-->
-
     <router-view></router-view>
     <Footer></Footer>
   </div>

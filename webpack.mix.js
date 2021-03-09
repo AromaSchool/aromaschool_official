@@ -1,4 +1,5 @@
 const mix = require("laravel-mix");
+const path = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -10,7 +11,13 @@ const mix = require("laravel-mix");
  | file for the application as well as bundling up all the JS files.
  |
  */
-
+ mix.webpackConfig({
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'resources/')
+        }
+    }
+});
 mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/app.scss", "public/css")
     .postCss("resources/css/main.css", "public/css", [require("autoprefixer")])

@@ -1,0 +1,121 @@
+.navbar_as {
+    padding: 25px 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.7) 30%,
+            rgba(255, 255, 255, 0.9) 100%);
+
+    .dropdown-menu {
+        border: none;
+        border-top: solid 3px #c9b5a5;
+        border-bottom: solid 3px #c9b5a5;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+    }
+
+    .dropdown-item {
+        color: #707179;
+        padding: 8px 20px;
+
+        &:focus {
+            background: #f1f1f4;
+        }
+    }
+
+    .dropdown-submenu {
+        list-style: none;
+        padding: 0;
+
+        .dropdown-item {
+            padding: 8px 30px;
+            color: #a18875;
+        }
+    }
+}
+
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            font-size: 15px;
+            color: #707179;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+}
+
+.dropdown-item {
+    &:hover {
+        background: #f1f1f4;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .navbar {
+        .nav-item {
+            .dropdown-menu {
+                display: none;
+                margin-top: 0;
+            }
+
+            &:hover {
+                .dropdown-menu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .navbar_as {
+        .nav-item+.nav-item {
+            &::before {
+                content: "/";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .dropdown-toggle {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar_as {
+        .navbar-collapse {
+            padding: 10px 0;
+            margin: 10px 0;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 0.25rem;
+            border: solid 1px rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 80px);
+            overflow: auto;
+        }
+
+        .dropdown-menu {
+            margin: 0 15px;
+        }
+
+        .dropdown-item {
+            padding: 8px 10px;
+        }
+
+        .dropdown-submenu {
+            .dropdown-item {
+                padding: 8px 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar_as {
+        padding: 15px 0;
+    }
+}
