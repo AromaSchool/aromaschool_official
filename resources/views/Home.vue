@@ -1,30 +1,30 @@
 <template>
   <div>
-    <IndexHeader></IndexHeader>
-    <IndexCourseIntro></IndexCourseIntro>
-    <IndexNews></IndexNews>
-    <IndexPresentation></IndexPresentation>
-    <IndexCertification></IndexCertification>
-    <IndexStudent></IndexStudent>
+    <Header></Header>
+    <CourseIntro></CourseIntro>
+    <News></News>
+    <Presentation></Presentation>
+    <Certification></Certification>
+    <Student></Student>
   </div>
 </template>
 
 <script>
-import IndexHeader from "@/views/component/IndexHeader.vue";
-import IndexCourseIntro from "@/views/component/IndexCourseIntro.vue";
-import IndexNews from "@/views/component/IndexNews.vue";
-import IndexPresentation from "@/views/component/IndexPresentation.vue";
-import IndexCertification from "@/views/component/IndexCertification.vue";
-import IndexStudent from "@/views/component/IndexStudent.vue";
+import Header from "@/views/index/Header.vue";
+import CourseIntro from "@/views/index/CourseIntro.vue";
+import News from "@/views/index/News.vue";
+import Presentation from "@/views/index/Presentation.vue";
+import Certification from "@/views/index/Certification.vue";
+import Student from "@/views/index/Student.vue";
 
 export default {
   components: {
-    IndexHeader,
-    IndexCourseIntro,
-    IndexNews,
-    IndexPresentation,
-    IndexCertification,
-    IndexStudent,
+    Header,
+    CourseIntro,
+    News,
+    Presentation,
+    Certification,
+    Student,
   },
 };
 </script>

@@ -13,9 +13,9 @@
 import Banner from "@/views/component/Banner.vue";
 import BreadCrumbs from "@/views/component/BreadCrumbs.vue";
 import Menu from "@/views/component/Menu.vue";
-import BrandStory from "@/views/component/BrandStory.vue";
-import BrandMainService from "@/views/component/BrandMainService.vue";
-import BrandOrigin from "@/views/component/BrandOrigin.vue";
+import BrandStory from "@/views/about/BrandStory.vue";
+import BrandMainService from "@/views/about/BrandMainService.vue";
+import BrandOrigin from "@/views/about/BrandOrigin.vue";
 
 export default {
   components: {

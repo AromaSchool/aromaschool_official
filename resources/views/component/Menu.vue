@@ -3,7 +3,7 @@
     <div class="container">
       <ul class="menu_block">
         <li class="menu_box">
-          <a href="/brand" title="品牌故事" class="active">品牌故事</a>
+          <a href="/about" title="品牌故事" class="active">品牌故事</a>
         </li>
         <li class="menu_box">
           <a href="#" title="大事紀">大事紀</a>
