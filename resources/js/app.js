@@ -22,6 +22,7 @@ const router = new VueRouter({
             path: "/",
             name: "home",
             component: Home,
+            meta: { title: "提供完整專業的芳療精油知識養成" },
         },
         {
             path: "/hello",
@@ -32,6 +33,8 @@ const router = new VueRouter({
             path: "/about",
             name: "about",
             component: About,
+            meta: { title: "關於禾場",
+                    bannerImage: "images/banner-1.jpg" },
         },
     ],
 });

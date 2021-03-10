@@ -1,18 +1,40 @@
 <template>
-  <section
-    class="header_banner"
-    v-bind:style="{ 'background-image': 'url(' + image + ')' }"
-  >
-    <div class="container">
-      <h1>關於禾場<span>ABOUT</span></h1>
-    </div>
-  </section>
+  <div>
+    <header v-if="this.$route.name == 'home'">
+      <div class="container">
+        <figure>
+          <img src="@/image/index/logo_big.svg" alt="logo" />
+        </figure>
+        <div class="welcome_words">
+          <span>WELCOME</span>
+          <h1>歡迎來到禾場國際芳療學苑</h1>
+          <h2>
+            我們把對大自然的執著與熱情，灌溉在芳香療法的禾場，來到這裡，您就是我們看顧的一粒種籽...
+          </h2>
+        </div>
+        <a href="#" class="btn_outline white" title="關於禾場"
+          >了解我們的故事</a
+        >
+      </div>
+    </header>
+    <section
+      class="header_banner"
+      v-else
+      v-bind:style="{
+        'background-image': 'url(' + this.$route.meta.bannerImage + ')',
+      }"
+    >
+      <div class="container">
+        <h1>關於禾場<span>ABOUT</span></h1>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    image: "images/banner-1.jpg",
-  }),
+  // data: () => ({
+  //   image: "images/banner-1.jpg",
+  // }),
 };
 </script>

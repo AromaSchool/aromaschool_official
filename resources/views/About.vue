@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Banner></Banner>
     <BreadCrumbs></BreadCrumbs>
     <Menu></Menu>
     <BrandStory></BrandStory>

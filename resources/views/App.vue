@@ -1,6 +1,7 @@
 <template>
   <div>
     <Navbar></Navbar>
+    <Banner></Banner>
     <router-view></router-view>
     <Footer></Footer>
   </div>
@@ -17,6 +18,14 @@ export default {
     Banner,
     BreadCrumbs,
     Footer,
+  },
+  watch: {
+    $route: {
+      immediate: true,
+      handler(to, from) {
+        document.title = "禾場國際芳療學苑 | " + to.meta.title;
+      },
+    },
   },
 };
 </script>

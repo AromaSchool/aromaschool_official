@@ -12,9 +12,9 @@
         <app></app>
     </div>
 
-    @env('local')
+    @if(env('APP_ENV')=='local')
         <script src="http://localhost:35729/livereload.js"></script>
-    @endenv
+    @endif
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
