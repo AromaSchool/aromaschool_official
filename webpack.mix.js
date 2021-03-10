@@ -12,12 +12,15 @@ const path = require("path");
  |
  */
 
+var LiveReloadPlugin = require('webpack-livereload-plugin');
+
 mix.webpackConfig({
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "resources/")
         }
-    }
+    },
+    plugins: [new LiveReloadPlugin()]
 });
 
 mix.js("resources/js/app.js", "public/js")
@@ -25,3 +28,4 @@ mix.js("resources/js/app.js", "public/js")
     .css("resources/css/main.css", "public/css")
     .copy("resources/image/banner/*",'public/images')
     .version();
+
