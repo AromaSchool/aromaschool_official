@@ -22,5 +22,6 @@ mix.webpackConfig({
 
 mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/app.scss", "public/css")
-    .postCss("resources/css/main.css", "public/css", [require("autoprefixer")])
+    .css("resources/css/main.css", "public/css")
+    .copy("resources/image/banner/*",'public/images')
     .version();

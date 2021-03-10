@@ -1,10 +1,18 @@
 <template>
   <section
     class="header_banner"
-    style="background-image: url(@/image/banner/banner-1.jpg)"
+    v-bind:style="{ 'background-image': 'url(' + image + ')' }"
   >
     <div class="container">
       <h1>關於禾場<span>ABOUT</span></h1>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    image: "images/banner-1.jpg",
+  }),
+};
+</script>
