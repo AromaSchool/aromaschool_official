@@ -36,13 +36,12 @@ const router = new VueRouter({
             component: About,
             meta: { title: "關於禾場",
                     bannerImage: "images/banner-1.jpg" },
-            // children: [
-            //     { path: '/brand',
-            //       name: "brand",
-            //       component: About,
-            //       meta: { title: "品牌故事"},
-            //     },
-            // ]
+            children: [
+                { path: 'brand',
+                  name: "brand",
+                  meta: { title: "品牌故事"},
+                },
+            ]
         },
         {
             path: "/historyTrack",

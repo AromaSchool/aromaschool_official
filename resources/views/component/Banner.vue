@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header v-if="this.$route.name == 'home'">
+    <header v-if="$route.name == 'home'">
       <div class="container">
         <figure>
           <img src="@/image/index/logo_big.svg" alt="logo" />
@@ -21,7 +21,7 @@
       class="header_banner"
       v-else
       v-bind:style="{
-        'background-image': 'url(' + this.$route.meta.bannerImage + ')',
+        'background-image': 'url(/' + bannerImage + ')',
       }"
     >
       <div class="container">
@@ -33,8 +33,12 @@
 
 <script>
 export default {
-  // data: () => ({
-  //   image: "images/banner-1.jpg",
-  // }),
+  computed: {
+    bannerImage() {
+      return this.$route.meta.bannerImage
+        ? this.$route.meta.bannerImage
+        : this.$route.matched[0].meta.bannerImage;
+    },
+  },
 };
 </script>
