@@ -1096,6 +1096,62 @@ h3.index_title span::after {
     margin: 45px auto;
 }
 
+.history_time .time_box {
+    border-top: 1px solid rgba(118, 118, 145, .2);
+    padding: 55px 0;
+}
+
+.history_time .year {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    float: left;
+}
+
+.history_time .event_block {
+    margin-left: 240px;
+    padding: 0;
+}
+
+.history_time .event_box {
+    list-style: none;
+    position: relative;
+    margin: 15px 0;
+    transition-duration: .3s;
+}
+
+.history_time .event_box:hover {
+    opacity: 0.8;
+}
+
+.history_time .event_box:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #C9B5A5;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.history_time .event_box a {
+    display: block;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.history_time .event_box .date {
+    display: inline-block;
+    color: #C9B5A5;
+    font-weight: 500;
+}
+
+.history_time .event_box .event_title {
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
 @media screen and (max-width: 1200px) {
 
     /* 導覽列 */
@@ -1277,6 +1333,15 @@ h3.index_title span::after {
     .origin_block br {
         display: none;
     }
+
+    /* 關於禾場-大事紀 */
+    .history_time .year {
+        float: none;
+    }
+
+    .history_time .event_block {
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1346,6 +1411,12 @@ h3.index_title span::after {
 
     .main_service h2 {
         margin-bottom: 40px;
+    }
+
+    /* 關於禾場-大事紀 */
+    .history_time .event_box:before {
+        top: 0;
+        transform: translateY(100%);
     }
 }
 
@@ -1450,5 +1521,14 @@ h3.index_title span::after {
 
     .origin_card {
         padding: 40px 20px;
+    }
+
+    /* 關於禾場-大事紀 */
+    .history_time .time_box {
+        padding: 30px 0;
+    }
+
+    .history_time .year {
+        text-align: center;
     }
 }

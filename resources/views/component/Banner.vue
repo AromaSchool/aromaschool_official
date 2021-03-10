@@ -25,7 +25,7 @@
       }"
     >
       <div class="container">
-        <h1>關於禾場<span>ABOUT</span></h1>
+        <h1>{{ $route.meta.title }}<span>ABOUT</span></h1>
       </div>
     </section>
   </div>

@@ -29,11 +29,9 @@
               >關於禾場</a
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/about">品牌故事</a></li>
+              <li><a class="dropdown-item" href="/about/brand">品牌故事</a></li>
               <li>
-                <a class="dropdown-item" href="/historyTrack" title=""
-                  >大事紀</a
-                >
+                <a class="dropdown-item" href="/about/event" title="">大事紀</a>
               </li>
               <li><a class="dropdown-item" href="#" title="">國際認證</a></li>
               <li><a class="dropdown-item" href="#" title="">師資陣容</a></li>
