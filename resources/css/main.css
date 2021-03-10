@@ -401,7 +401,7 @@ footer .copyright {
 }
 
 .menu_box a:hover,
-.menu_box a.active {
+.menu_box a.router-link-active {
     background: #C9B5A5;
     color: #fff;
 }
@@ -1087,6 +1087,13 @@ h3.index_title span::after {
     line-height: 1.7;
     margin-top: 30px;
     margin-bottom: 0;
+}
+
+/* 關於禾場-大事紀 */
+.history_time .slogan {
+    text-align: center;
+    color: #9C9DA8;
+    margin: 45px auto;
 }
 
 @media screen and (max-width: 1200px) {

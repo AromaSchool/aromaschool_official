@@ -3,10 +3,10 @@
     <div class="container">
       <ul class="menu_block">
         <li class="menu_box">
-          <a href="/about" title="品牌故事" class="active">品牌故事</a>
+          <router-link to="/about" title="品牌故事">品牌故事</router-link>
         </li>
         <li class="menu_box">
-          <a href="#" title="大事紀">大事紀</a>
+          <router-link to="/historyTrack" title="大事紀">大事紀</router-link>
         </li>
         <li class="menu_box">
           <a href="#" title="國際認證">國際認證</a>

@@ -2,6 +2,7 @@
   <div>
     <Navbar></Navbar>
     <Banner></Banner>
+    <BreadCrumbs></BreadCrumbs>
     <router-view></router-view>
     <Footer></Footer>
   </div>
@@ -23,7 +24,7 @@ export default {
     $route: {
       immediate: true,
       handler(to, from) {
-        document.title = "禾場國際芳療學苑 | " + to.meta.title;
+        document.title = to.meta.title + " | 禾場國際芳療學苑";
       },
     },
   },

@@ -14,6 +14,7 @@ import App from "../views/App.vue";
 import Home from "../views/Home.vue";
 import Hello from "../views/Hello.vue";
 import About from "../views/About.vue";
+import HistoryTrack from "../views/HistoryTrack.vue";
 
 const router = new VueRouter({
     mode: "history",
@@ -34,6 +35,20 @@ const router = new VueRouter({
             name: "about",
             component: About,
             meta: { title: "關於禾場",
+                    bannerImage: "images/banner-1.jpg" },
+            // children: [
+            //     { path: '/brand',
+            //       name: "brand",
+            //       component: About,
+            //       meta: { title: "品牌故事"},
+            //     },
+            // ]
+        },
+        {
+            path: "/historyTrack",
+            name: "historyTrack",
+            component: HistoryTrack,
+            meta: { title: "大事紀",
                     bannerImage: "images/banner-1.jpg" },
         },
     ],
