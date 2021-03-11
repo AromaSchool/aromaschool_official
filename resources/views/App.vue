@@ -7,6 +7,7 @@
     <Footer></Footer>
   </div>
 </template>
+
 <script>
 import Navbar from "@/views/component/Navbar.vue";
 import Banner from "@/views/component/Banner.vue";
