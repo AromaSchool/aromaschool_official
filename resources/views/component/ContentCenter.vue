@@ -4,8 +4,7 @@
       <h2>人間福報 受邀採訪：「用對才有效 破解精油迷思」</h2>
       <hr />
       <div class="arti_subtitle">
-        <div class="type">課程公告</div>
-        ．
+        <div class="type">課程公告．</div>
         <div class="date">2020/03/26</div>
       </div>
     </div>

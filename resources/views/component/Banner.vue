@@ -25,7 +25,10 @@
       }"
     >
       <div class="container">
-        <h1>{{ $route.meta.title }}<span>ABOUT</span></h1>
+        <h1>
+          {{ $route.matched[0].meta.title
+          }}<span>{{ $route.matched[0].meta.titleEn }}</span>
+        </h1>
       </div>
     </section>
   </div>

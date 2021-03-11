@@ -38,6 +38,7 @@ const router = new VueRouter({
         },
         {
             path: "/about",
+            redirect: '/about/brand',
             name: "about",
             component: About,
             meta: {
