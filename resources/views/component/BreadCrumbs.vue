@@ -35,7 +35,9 @@
 export default {
   computed: {
     breadcrumbs() {
-      return this.$route.matched;
+      return this.$route.matched.filter((matched) => {
+        return matched.meta.title;
+      });
     },
   },
 };
