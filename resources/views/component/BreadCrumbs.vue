@@ -1,28 +1,42 @@
 <template>
-  <section class="breadcrumbs" v-if="this.$route.name != 'home'">
+  <section class="breadcrumbs" v-if="$route.name != 'home'">
     <div class="container">
       <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
           <li class="breadcrumb-item"><a href="/" title="首頁">HOME</a></li>
-          <li class="breadcrumb-item">
-            <a
-              :href="this.$route.matched[0].path"
-              :title="this.$route.matched[0].meta.title"
-              >{{ this.$route.matched[0].meta.title }}</a
-            >
-          </li>
-          <li class="breadcrumb-item active" aria-current="page">
-            {{ this.$route.meta.title }}
-          </li>
-          <!-- <li class="breadcrumb-item" v-for="breadList in $route.matched">
-            <a
-              :href="this.$route.matched[0].path"
-              :title="this.$route.matched[0].meta.title"
-              >{{ this.$route.matched[0].meta.title }}</a
-            >
-          </li> -->
+          <template v-for="(breadcrumb, index) in breadcrumbs">
+            <template v-if="breadcrumb.meta.title">
+              <li
+                class="breadcrumb-item"
+                :key="breadcrumb.path"
+                v-if="index != breadcrumbs.length - 1"
+              >
+                <a :href="breadcrumb.path" :title="breadcrumb.meta.title">{{
+                  breadcrumb.meta.title
+                }}</a>
+              </li>
+              <li
+                class="breadcrumb-item active"
+                :key="breadcrumb.name"
+                aria-current="page"
+                v-else
+              >
+                {{ breadcrumb.meta.title }}
+              </li>
+            </template>
+          </template>
         </ol>
       </nav>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  computed: {
+    breadcrumbs() {
+      return this.$route.matched;
+    },
+  },
+};
+</script>

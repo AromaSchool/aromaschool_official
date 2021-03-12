@@ -58,13 +58,13 @@ const router = new VueRouter({
                     path: 'event',
                     name: "event",
                     component: Event,
+                    meta: {
+                        title: "大事紀"
+                    },
                     children: [{
                             path: '',
                             name: "eventList",
                             component: EventList,
-                            meta: {
-                                title: "大事紀"
-                            },
                         },
                         {
                             path: '/about/event/:id',

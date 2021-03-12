@@ -25,7 +25,15 @@ export default {
     $route: {
       immediate: true,
       handler(to, from) {
-        document.title = to.meta.title + " | 禾場國際芳療學苑";
+        let title = null;
+        // reverse array without mutation original array by using slice()
+        for (let matched of this.$route.matched.slice().reverse()) {
+          if (matched.meta.title) {
+            title = matched.meta.title;
+            break;
+          }
+        }
+        document.title = title + " | 禾場國際芳療學苑";
       },
     },
   },
