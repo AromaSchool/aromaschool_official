@@ -6,6 +6,7 @@
     <title>禾場國際芳療學苑</title>
     <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ mix('css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ mix('css/page.css') }}">
 </head>
 <body>
     <div id="app">

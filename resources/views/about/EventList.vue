@@ -7,28 +7,37 @@
           <h2 class="year">2020</h2>
           <ul class="event_block">
             <li class="event_box">
-              <a href="/about/event/1" title="">
+              <router-link
+                to="/about/event/1"
+                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
+              >
                 <div class="event_title">
                   <div class="date">03/04</div>
                   [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
                 </div>
-              </a>
+              </router-link>
             </li>
             <li class="event_box">
-              <a href="#" title="">
+              <router-link
+                to="/about/event/1"
+                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
+              >
                 <div class="event_title">
                   <div class="date">03/04</div>
                   [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
                 </div>
-              </a>
+              </router-link>
             </li>
             <li class="event_box">
-              <a href="#" title="">
+              <router-link
+                to="/about/event/1"
+                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
+              >
                 <div class="event_title">
                   <div class="date">03/04</div>
                   [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
                 </div>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -36,28 +45,37 @@
           <h2 class="year">2019</h2>
           <ul class="event_block">
             <li class="event_box">
-              <a href="#" title="">
+              <router-link
+                to="/about/event/1"
+                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
+              >
                 <div class="event_title">
                   <div class="date">03/04</div>
                   [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
                 </div>
-              </a>
+              </router-link>
             </li>
             <li class="event_box">
-              <a href="#" title="">
+              <router-link
+                to="/about/event/1"
+                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
+              >
                 <div class="event_title">
                   <div class="date">03/04</div>
                   [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
                 </div>
-              </a>
+              </router-link>
             </li>
             <li class="event_box">
-              <a href="#" title="">
+              <router-link
+                to="/about/event/1"
+                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
+              >
                 <div class="event_title">
                   <div class="date">03/04</div>
                   [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
                 </div>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
