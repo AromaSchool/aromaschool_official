@@ -578,6 +578,11 @@ footer .copyright {
         width: 100%;
         margin: 20px 0 30px;
     }
+
+    /* 側選單 */
+    .blog_container .sidebar {
+        margin-right: 40px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -605,6 +610,7 @@ footer .copyright {
     .navbar_as .dropdown-toggle::after {
         content: none;
     }
+
 }
 
 @media screen and (max-width: 992px) {
@@ -630,6 +636,21 @@ footer .copyright {
 
     .navbar_as .dropdown-submenu .dropdown-item {
         padding: 8px 20px;
+    }
+
+    /* 側選單 */
+    .blog_container {
+        flex-wrap: wrap;
+    }
+
+    .blog_container .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .blog_container .content_center {
+        width: 100%;
     }
 }
 

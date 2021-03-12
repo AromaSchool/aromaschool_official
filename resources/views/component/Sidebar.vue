@@ -1,6 +1,6 @@
 <template>
-  <section class="sidebar accordion" id="accordionExample">
-    <div class="accordion-item">
+  <section class="sidebar accordion">
+    <div class="accordion-item" id="accordionExample">
       <h2 class="accordion-header" id="headingOne">
         <button
           class="accordion-button"
