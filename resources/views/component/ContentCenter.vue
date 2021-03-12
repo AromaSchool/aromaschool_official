@@ -1,7 +1,7 @@
 <template>
   <section class="content_center">
     <div class="arti_title_block">
-      <h2>人間福報 受邀採訪：「用對才有效 破解精油迷思」</h2>
+      <h3>人間福報 受邀採訪：「用對才有效 破解精油迷思」</h3>
       <hr />
       <div class="arti_subtitle">
         <div class="type">課程公告．</div>

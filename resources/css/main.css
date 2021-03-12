@@ -411,10 +411,7 @@ footer .copyright {
     color: #fff;
 }
 
-
-
-
-/* 文章 */
+/* 文章內容 */
 .content_center {
     padding: 40px;
     border-top: solid 3px #9c9da8;
@@ -423,7 +420,7 @@ footer .copyright {
     margin-bottom: 40px;
 }
 
-.arti_title_block h2 {
+.arti_title_block h3 {
     font-size: 28px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -473,6 +470,91 @@ footer .copyright {
 .arti_subtitle .date {
     display: inline-block;
     font-size: 18px;
+}
+
+/* 側選單 */
+.blog_container {
+    display: flex;
+}
+
+.blog_container .sidebar {
+    width: 20%;
+    margin-right: 80px;
+}
+
+.blog_container .content_center {
+    width: 80%;
+}
+
+.sidebar * {
+    color: #707179;
+}
+
+.sidebar .accordion-header {
+    border-bottom: 3px solid #F1F1F4;
+}
+
+.sidebar .accordion-body {
+    padding: 10px 0;
+    font-weight: 400;
+}
+
+.sidebar ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.sidebar li {
+    position: relative;
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: solid 1px #F1F1F4;
+}
+
+.sidebar li::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: #9C9DA8;
+    opacity: 0.3;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.sidebar .accordion-button {
+    border: none;
+}
+
+.sidebar .accordion-button {
+    padding: 10px 0;
+}
+
+.sidebar .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #707179;
+}
+
+.sidebar .accordion-collapse {
+    border: none;
+}
+
+.sidebar .accordion-button::after {
+    content: '-';
+    background: none;
+}
+
+.sidebar .accordion-button:not(.collapsed)::after {
+    content: '+';
+    transform: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -553,8 +635,8 @@ footer .copyright {
 
 @media screen and (max-width: 768px) {
 
-    /* 文章 */
-    .arti_title_block h2 {
+    /* 文章內容 */
+    .arti_title_block h3 {
         font-size: 22px;
     }
 }
@@ -575,7 +657,7 @@ footer .copyright {
         margin-bottom: 10px;
     }
 
-    /* 文章 */
+    /* 文章內容 */
     .content_center {
         padding: 20px;
     }

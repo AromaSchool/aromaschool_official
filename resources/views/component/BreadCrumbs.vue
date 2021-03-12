@@ -5,25 +5,23 @@
         <ol class="breadcrumb justify-content-end">
           <li class="breadcrumb-item"><a href="/" title="首頁">HOME</a></li>
           <template v-for="(breadcrumb, index) in breadcrumbs">
-            <template v-if="breadcrumb.meta.title">
-              <li
-                class="breadcrumb-item"
-                :key="breadcrumb.path"
-                v-if="index != breadcrumbs.length - 1"
-              >
-                <a :href="breadcrumb.path" :title="breadcrumb.meta.title">{{
-                  breadcrumb.meta.title
-                }}</a>
-              </li>
-              <li
-                class="breadcrumb-item active"
-                :key="breadcrumb.name"
-                aria-current="page"
-                v-else
-              >
-                {{ breadcrumb.meta.title }}
-              </li>
-            </template>
+            <li
+              class="breadcrumb-item"
+              :key="breadcrumb.path"
+              v-if="index != breadcrumbs.length - 1"
+            >
+              <a :href="breadcrumb.path" :title="breadcrumb.meta.title">{{
+                breadcrumb.meta.title
+              }}</a>
+            </li>
+            <li
+              class="breadcrumb-item active"
+              :key="breadcrumb.name"
+              aria-current="page"
+              v-else
+            >
+              {{ breadcrumb.meta.title }}
+            </li>
           </template>
         </ol>
       </nav>

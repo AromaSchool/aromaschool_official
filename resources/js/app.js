@@ -18,7 +18,7 @@ import Brand from "../views/about/Brand.vue";
 import Event from "../views/about/Event.vue";
 import EventList from "../views/about/EventList.vue";
 import EventArticle from "../views/about/EventArticle.vue";
-import InterCerti from "../views/about/InterCerti.vue";
+import InterCert from "../views/about/InterCert.vue";
 import TeamMember from "../views/about/TeamMember.vue";
 
 const router = new VueRouter({
@@ -77,9 +77,9 @@ const router = new VueRouter({
                     ]
                 },
                 {
-                    path: 'interCerti',
-                    name: "interCerti",
-                    component: InterCerti,
+                    path: 'interCert',
+                    name: "interCert",
+                    component: InterCert,
                     meta: {
                         title: "國際認證"
                     },

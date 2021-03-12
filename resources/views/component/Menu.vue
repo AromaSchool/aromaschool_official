@@ -9,7 +9,7 @@
           <router-link to="/about/event" title="大事紀">大事紀</router-link>
         </li>
         <li class="menu_box">
-          <router-link to="/about/interCerti" title="國際認證"
+          <router-link to="/about/interCert" title="國際認證"
             >國際認證</router-link
           >
         </li>
