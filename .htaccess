@@ -1,3 +1,4 @@
-Options +SymLinksIfOwnerMatch
-RewriteEngine On
-RewriteRule ^ index.php [L]
+# 將請求全部重新導向public資料夾
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
