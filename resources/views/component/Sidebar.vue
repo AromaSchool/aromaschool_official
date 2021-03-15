@@ -8,7 +8,7 @@
       aria-expanded="false"
       aria-controls="sidebar_collapse"
     >
-      國際認證選單<i class="fas fa-chevron-down"></i>
+      {{ $route.meta.title }}選單<i class="fas fa-chevron-down"></i>
     </a>
     <div
       class="accordion collapse"

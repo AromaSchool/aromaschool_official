@@ -83,6 +83,13 @@ const router = new VueRouter({
                     meta: {
                         title: "國際認證"
                     },
+                    children: [{
+                        path: '/about/interCert/:id',
+                        name: "interCertArticle",
+                        meta: {
+                            title: "國際認證標題"
+                        },
+                    }, ]
                 },
                 {
                     path: 'teamMember',
