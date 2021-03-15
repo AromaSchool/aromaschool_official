@@ -566,6 +566,27 @@ footer .copyright {
     transform: none;
 }
 
+.btn_sidebar {
+    display: none;
+    /* border: solid 1px rgba(156, 157, 168, .5); */
+    padding: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background: #9c9da8;
+    color: #fff;
+    font-weight: 300;
+}
+
+.btn_sidebar:hover {
+    color: #fff;
+}
+
+.btn_sidebar i {
+    margin-left: 10px;
+    color: #fff;
+}
+
 @media screen and (max-width: 1200px) {
 
     /* 導覽列 */
@@ -661,6 +682,11 @@ footer .copyright {
 
     .blog_container .content_center {
         width: 100%;
+    }
+
+    /* 側選單 */
+    .btn_sidebar {
+        display: block;
     }
 }
 
