@@ -1,15 +1,36 @@
 <template>
   <section class="content_center">
     <div class="arti_title_block">
-      <h3>人間福報 受邀採訪：「用對才有效 破解精油迷思」</h3>
+      <h3>{{ title }}</h3>
       <hr />
       <div class="arti_subtitle">
-        <div class="type">課程公告．</div>
-        <div class="date">2020/03/26</div>
+        <div class="type">{{ type }}</div>
+        <div class="date">{{ date }}</div>
       </div>
     </div>
-    <div class="arti_editor">
-      <div>
+    <div class="arti_editor">{{ content }}</div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "article",
+  props: {
+    title: {
+      type: String,
+      default: "人間福報 受邀採訪：「用對才有效 破解精油迷思」",
+    },
+    type: {
+      type: String,
+      default: "",
+    },
+    date: {
+      type: String,
+      default: "2020/03/26",
+    },
+    content: {
+      type: String,
+      default: `<div>
         &nbsp;<span style="white-space: pre"> </span
         >【記者陳玲芳專題報導】「芳療」被現代人視為紓解壓力、放鬆身心、觸動五感的養生保健之道。面對坊間各式各樣、琳瑯滿目的精油、香氛產品，人們也出現許多自以為是、似是而非的使用方式。為免民眾「未蒙其利，先受其害」，專家列舉五大精油迷思，提醒民眾唯有了解，方能安心；「用對了，才有療效」。
       </div>
@@ -59,7 +80,8 @@
           target="_blank"
           >&nbsp;</a
         >
-      </div>
-    </div>
-  </section>
-</template>
+      </div>`,
+    },
+  },
+};
+</script>
