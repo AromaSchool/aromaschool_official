@@ -28,14 +28,14 @@ class GetEventsController extends Controller
             'search' => $request->query('search'),
             'lastIndex' => $request->query('lastIndex'),
             'limit' => $request->query('limit') ?? 30,
-            'orderBy' => $request->query('orderBy') ?? 'id',
+            'orderBy' => $request->query('orderBy') ?? 'date',
             'orderDirection' => $request->query('orderDirection') ?? 'desc',
         ];
         $validator = Validator::make(
             $params,
             [
                 'limit' => 'numeric|min:1',
-                'orderBy' => 'in:id,title,date',
+                'orderBy' => 'in:title,date',
                 'orderDirection' => 'in:desc,asc',
             ]
         );

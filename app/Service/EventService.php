@@ -18,7 +18,7 @@ class EventService
         return $event;
     }
 
-    public function getEvents($lastIndex, int $limit, string $orderBy, $orderDirection, ?string $search): array
+    public function getEvents(?string $lastIndex, int $limit, string $orderBy, $orderDirection, ?string $search): array
     {
         $query = Event::select(['id', 'title', 'date'])->limit($limit);
 
@@ -27,16 +27,27 @@ class EventService
         }
 
         if ($orderDirection == 'asc') {
-            $query->orderBy($orderBy);
+            $query->orderBy($orderBy)->orderBy('id');
 
             if ($lastIndex !== null) {
-                $query->where($orderBy, '>', $lastIndex);
+                $lastIndex = \explode(',', $lastIndex);
+                $query->where($orderBy, '>', $lastIndex[0]);
+                $query->orWhere([
+                    [$orderBy, '=', $lastIndex[0]],
+                    ['id', '>', $lastIndex[1]],
+                ]);
             }
         } else {
-            $query->orderByDesc($orderBy);
+            $query->orderByDesc($orderBy)->orderByDesc('id');
 
             if ($lastIndex !== null) {
-                $query->where($orderBy, '<', $lastIndex);
+                $lastIndex = \explode(',', $lastIndex);
+                $query->where($orderBy, '<', $lastIndex[0]);
+                $query->orWhere([
+                    [$orderBy, '=', $lastIndex[0]],
+                    ['id', '<', $lastIndex[1]],
+                ]);
+                $query;
             }
         }
 
@@ -44,7 +55,7 @@ class EventService
         $length = \count($result);
 
         return [
-            'lastIndex' => $length ? $result[$length - 1]->{$orderBy} : null,
+            'lastIndex' => $length ? "{$result[$length - 1]->{$orderBy}},{$result[$length - 1]->id}" : null,
             'list' => $result
         ];
     }
