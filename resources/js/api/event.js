@@ -22,8 +22,8 @@ class Event {
     static async getList({
         lastIndex = null,
         limit = 30,
-        orderBy = "id",
-        orderDirection = "asc",
+        orderBy = "date",
+        orderDirection = "desc",
         search = null
     } = {}) {
         return client
