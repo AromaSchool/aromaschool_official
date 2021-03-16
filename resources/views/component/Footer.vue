@@ -7,20 +7,43 @@
       <div class="footer_content">
         <ul class="footer_nav">
           <li>
-            <a href="#" title="大事紀" class="footer_nav_link">大事紀</a>
-            <a href="#" title="最新消息" class="footer_nav_link">最新消息</a>
-            <a href="#" title="國際認證" class="footer_nav_link">國際認證</a>
-            <a href="#" title="師資陣容" class="footer_nav_link">師資陣容</a>
+            <router-link
+              to="/about/event"
+              :title="routes[1].children[1].meta.title"
+              class="footer_nav_link"
+              >{{ routes[1].children[1].meta.title }}</router-link
+            >
+            <router-link to="/" title="最新消息" class="footer_nav_link"
+              >最新消息</router-link
+            >
+            <router-link to="/" title="國際認證" class="footer_nav_link"
+              >國際認證</router-link
+            >
+            <router-link to="/" title="師資陣容" class="footer_nav_link"
+              >師資陣容</router-link
+            >
           </li>
           <li>
-            <a href="#" title="芳療學苑" class="footer_nav_link">芳療學苑</a>
-            <a href="#" title="療程學苑" class="footer_nav_link">療程學苑</a>
-            <a href="#" title="學苑周刊" class="footer_nav_link">學苑周刊</a>
+            <router-link to="/" title="芳療學苑" class="footer_nav_link"
+              >芳療學苑</router-link
+            >
+            <router-link to="/" title="療程學苑" class="footer_nav_link"
+              >療程學苑</router-link
+            >
+            <router-link to="/" title="學苑周刊" class="footer_nav_link"
+              >學苑周刊</router-link
+            >
           </li>
           <li>
-            <a href="#" title="聯絡我們" class="footer_nav_link">聯絡我們</a>
-            <a href="#" title="常見問題" class="footer_nav_link">常見問題</a>
-            <a href="#" title="人才招募" class="footer_nav_link">人才招募</a>
+            <router-link to="/" title="聯絡我們" class="footer_nav_link"
+              >聯絡我們</router-link
+            >
+            <router-link to="/" title="常見問題" class="footer_nav_link"
+              >常見問題</router-link
+            >
+            <router-link to="/" title="人才招募" class="footer_nav_link"
+              >人才招募</router-link
+            >
           </li>
           <li>
             <a
@@ -120,3 +143,13 @@
     </div>
   </footer>
 </template>
+
+<script>
+import { routes } from "@/js/routes.js";
+
+export default {
+  data: () => ({
+    routes: routes,
+  }),
+};
+</script>

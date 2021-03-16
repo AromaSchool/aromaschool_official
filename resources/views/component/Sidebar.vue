@@ -8,7 +8,7 @@
       aria-expanded="false"
       aria-controls="sidebar_collapse"
     >
-      {{ $route.meta.title }}選單<i class="fas fa-chevron-down"></i>
+      {{ $route.matched[1].meta.title }}選單<i class="fas fa-chevron-down"></i>
     </a>
     <div
       class="accordion collapse"
@@ -37,37 +37,41 @@
           <div class="accordion-body">
             <ul>
               <li class="sidebar_list">
-                <router-link to="/about/interCert" title="關於NAHA"
+                <router-link to="/about/interCert/NAHA/about" title="關於NAHA"
                   >關於NAHA</router-link
                 >
               </li>
               <li class="sidebar_list">
                 <router-link
-                  to="/about/interCert"
+                  to="/about/interCert/NAHA/target"
                   title="NAHA的使命、願景、目標"
                   >NAHA的使命、願景、目標</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/about/interCert" title="NAHA的歷史"
+                <router-link
+                  to="/about/interCert/NAHA/history"
+                  title="NAHA的歷史"
                   >NAHA的歷史</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/about/interCert" title="NAHA的道德規範標準"
+                <router-link
+                  to="/about/interCert/NAHA/moral"
+                  title="NAHA的道德規範標準"
                   >NAHA的道德規範標準</router-link
                 >
               </li>
               <li class="sidebar_list">
                 <router-link
-                  to="/about/interCert"
+                  to="/about/interCert/NAHA/training"
                   title="美國國家芳療師訓練標準"
                   >美國國家芳療師訓練標準</router-link
                 >
               </li>
               <li class="sidebar_list">
                 <router-link
-                  to="/about/interCert"
+                  to="/about/interCert/NAHA/howtobecome"
                   title="如何成為NAHA美國國家芳療師協會認可的芳療學校"
                 >
                   如何成為NAHA美國國家芳療師協會認可的芳療學校

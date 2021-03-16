@@ -467,9 +467,43 @@ footer .copyright {
     display: inline-block;
 }
 
+.arti_subtitle .deco {
+    display: inline-block;
+}
+
 .arti_subtitle .date {
     display: inline-block;
     font-size: 18px;
+}
+
+.arti_editor {
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.arti_editor * {
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+}
+
+.arti_editor h4 {
+    font-size: 18px;
+    color: #767691;
+    line-height: 1.5;
+    border-left: solid 3px #767691;
+    padding-left: 10px;
+    margin: 15px 0;
+}
+
+.arti_editor b {
+    font-weight: 500;
+}
+
+.arti_editor li {
+    margin-bottom: 5px;
+}
+
+.arti_editor hr {
+    margin: 30px 0;
 }
 
 /* 側選單 */
@@ -511,7 +545,16 @@ footer .copyright {
     border-bottom: solid 1px #F1F1F4;
 }
 
-.sidebar li::before {
+.sidebar li a {
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.sidebar li:hover a {
+    color: #707179;
+}
+
+.sidebar a::before {
     content: '';
     position: absolute;
     display: block;
@@ -526,17 +569,9 @@ footer .copyright {
     transition-duration: .3s;
 }
 
-.sidebar li:hover::before {
+.sidebar a:hover::before,
+.sidebar a.router-link-active::before {
     opacity: 1;
-}
-
-.sidebar li a {
-    text-decoration: none;
-    letter-spacing: 1px;
-}
-
-.sidebar li:hover a {
-    color: #707179;
 }
 
 .sidebar .accordion-button {
@@ -568,7 +603,6 @@ footer .copyright {
 
 .btn_sidebar {
     display: none;
-    /* border: solid 1px rgba(156, 157, 168, .5); */
     padding: 10px;
     text-align: center;
     letter-spacing: 1px;
