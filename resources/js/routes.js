@@ -16,7 +16,8 @@ import CertNAHATraining from "../views/about/CertNAHATraining.vue";
 import CertNAHAHowToBecome from "../views/about/CertNAHAHowToBecome.vue";
 import TeamMember from "../views/about/TeamMember.vue";
 
-const routes = [{
+const routes = [
+    {
         path: "/",
         name: "home",
         component: Home,
@@ -126,6 +127,10 @@ const routes = [{
             },
         ]
     },
+    {
+        path: "*",
+        redirect: "/"
+    }
 ];
 const router = new VueRouter({
     mode: "history",

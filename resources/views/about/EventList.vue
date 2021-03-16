@@ -3,83 +3,73 @@
     <div class="container">
       <div class="slogan">踏著大自然的腳步，我們邁向世界…</div>
       <div class="time_block">
-        <div class="time_box">
-          <h2 class="year">2020</h2>
-          <ul class="event_block">
+        <div class="time_box" v-for="(events, year) in list" :key="year">
+          <h2 class="year">{{ year }}</h2>
+          <ul class="event_block" v-for="event in events" :key="event.id">
             <li class="event_box">
               <router-link
-                to="/about/event/1"
-                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
+                :to="`/about/event/${event.id}`"
+                :title="event.title"
               >
                 <div class="event_title">
-                  <div class="date">03/04</div>
-                  [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
-                </div>
-              </router-link>
-            </li>
-            <li class="event_box">
-              <router-link
-                to="/about/event/1"
-                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
-              >
-                <div class="event_title">
-                  <div class="date">03/04</div>
-                  [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
-                </div>
-              </router-link>
-            </li>
-            <li class="event_box">
-              <router-link
-                to="/about/event/1"
-                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
-              >
-                <div class="event_title">
-                  <div class="date">03/04</div>
-                  [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
+                  <div class="date">{{ event.date }}</div>
+                  {{ event.title }}
                 </div>
               </router-link>
             </li>
           </ul>
         </div>
-        <div class="time_box">
-          <h2 class="year">2019</h2>
-          <ul class="event_block">
-            <li class="event_box">
-              <router-link
-                to="/about/event/1"
-                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
-              >
-                <div class="event_title">
-                  <div class="date">03/04</div>
-                  [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
-                </div>
-              </router-link>
-            </li>
-            <li class="event_box">
-              <router-link
-                to="/about/event/1"
-                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
-              >
-                <div class="event_title">
-                  <div class="date">03/04</div>
-                  [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
-                </div>
-              </router-link>
-            </li>
-            <li class="event_box">
-              <router-link
-                to="/about/event/1"
-                title="[雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～"
-              >
-                <div class="event_title">
-                  <div class="date">03/04</div>
-                  [雜誌採訪]懷孕肌肉痠痛只能忍？學會5種按摩手法，孕期好輕鬆～
-                </div>
-              </router-link>
-            </li>
-          </ul>
-        </div>
+        <infinite-loading @infinite="getEventList" spinner="spiral">
+          <div slot="no-more"></div>
+          <div slot="no-results"></div>
+        </infinite-loading>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import InfiniteLoading from "vue-infinite-loading";
+import moment from "moment";
+import { Event } from "@/js/api";
+
+export default {
+  components: {
+    InfiniteLoading,
+  },
+  data: () => ({
+    list: {},
+    lastIndex: null,
+  }),
+  methods: {
+    getEventList($state) {
+      Event.getList({ lastIndex: this.lastIndex }).then((response) => {
+        this.lastIndex = response.lastIndex;
+
+        if (this.lastIndex) {
+          for (const event of response.list) {
+            const year = moment(event.date).format("YYYY");
+            const date = moment(event.date).format("MM/DD");
+            const item = {
+              id: event.id,
+              title: event.title,
+              date: date,
+            };
+
+            if (year in this.list) {
+              this.list[year].push(item);
+            } else {
+              // trigger setter to re-render,
+              // because of `year` is not in `list` at the first time.
+              this.$set(this.list, year, [item]);
+            }
+          }
+          $state.loaded();
+        } else {
+          $state.complete();
+        }
+      });
+    },
+  },
+};
+</script>

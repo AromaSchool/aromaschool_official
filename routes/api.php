@@ -14,3 +14,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('ping', PingController::class);
+
+Route::prefix('events')->group(function () {
+    Route::get('/', Event\GetEventsController::class);
+    Route::get('/{id}', Event\GetEventController::class)->where('id', '[0-9]+');
+});
