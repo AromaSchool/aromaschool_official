@@ -29,7 +29,6 @@ export default {
     },
     date: {
       type: String,
-      required: true,
     },
   },
 };
