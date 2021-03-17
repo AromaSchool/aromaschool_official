@@ -1,7 +1,7 @@
 <template>
   <section class="sidebar">
     <a
-      class="btn_sidebar"
+      class="btn_sidebar collapsed"
       data-bs-toggle="collapse"
       href="#sidebar_collapse"
       role="button"

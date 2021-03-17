@@ -739,6 +739,7 @@ h3.index_title span::after {
     display: inline-block;
     color: #C9B5A5;
     font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .history_time .event_box .event_title {

@@ -619,6 +619,11 @@ footer .copyright {
 .btn_sidebar i {
     margin-left: 10px;
     color: #fff;
+    transition-duration: .3s;
+}
+
+.btn_sidebar.collapsed i {
+    transform: rotate(180deg);
 }
 
 @media screen and (max-width: 1200px) {
