@@ -16,8 +16,7 @@ import CertNAHATraining from "../views/about/CertNAHATraining.vue";
 import CertNAHAHowToBecome from "../views/about/CertNAHAHowToBecome.vue";
 import TeamMember from "../views/about/TeamMember.vue";
 
-const routes = [
-    {
+const routes = [{
         path: "/",
         name: "home",
         component: Home,
@@ -109,7 +108,7 @@ const routes = [
                         title: "NAHA美國國家芳療師訓練標準"
                     },
                 }, {
-                    path: 'NAHA/howtobecome',
+                    path: 'NAHA/howToBecome',
                     name: "CertNAHAHowToBecome",
                     component: CertNAHAHowToBecome,
                     meta: {
@@ -124,6 +123,14 @@ const routes = [
                 meta: {
                     title: "師資陣容"
                 },
+                children: [{
+                    path: 'about/teamMember/:id',
+                    name: "CertNAHAbout",
+                    component: CertNAHAbout,
+                    meta: {
+                        title: "師資陣容標題"
+                    }
+                }, ]
             },
         ]
     },

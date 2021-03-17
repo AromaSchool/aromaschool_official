@@ -71,7 +71,7 @@
               </li>
               <li class="sidebar_list">
                 <router-link
-                  to="/about/interCert/NAHA/howtobecome"
+                  to="/about/interCert/NAHA/howToBecome"
                   title="如何成為NAHA美國國家芳療師協會認可的芳療學校"
                 >
                   如何成為NAHA美國國家芳療師協會認可的芳療學校

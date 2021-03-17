@@ -32,6 +32,7 @@ export default {
         this.title = response.title;
         this.content = response.content;
         this.date = moment(response.date).format("YYYY/MM/DD");
+        document.title = `${this.title} | 禾場國際芳療學苑`;
       });
     },
   },
