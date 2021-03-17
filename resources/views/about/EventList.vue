@@ -3,9 +3,13 @@
     <div class="container">
       <div class="slogan">踏著大自然的腳步，我們邁向世界…</div>
       <div class="time_block">
-        <div class="time_box" v-for="(events, year) in list" :key="year">
+        <div
+          class="time_box"
+          v-for="year in Object.keys(events).reverse()"
+          :key="year"
+        >
           <h2 class="year">{{ year }}</h2>
-          <ul class="event_block" v-for="event in events" :key="event.id">
+          <ul class="event_block" v-for="event in events[year]" :key="event.id">
             <li class="event_box">
               <router-link
                 :to="`/about/event/${event.id}`"
@@ -38,7 +42,7 @@ export default {
     InfiniteLoading,
   },
   data: () => ({
-    list: {},
+    events: {},
     lastIndex: null,
   }),
   methods: {
@@ -56,12 +60,12 @@ export default {
               date: date,
             };
 
-            if (year in this.list) {
-              this.list[year].push(item);
+            if (year in this.events) {
+              this.events[year].push(item);
             } else {
               // trigger setter to re-render,
-              // because of `year` is not in `list` at the first time.
-              this.$set(this.list, year, [item]);
+              // because of `year` is not in `events` at the first time.
+              this.$set(this.events, year, [item]);
             }
           }
           $state.loaded();
