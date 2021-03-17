@@ -38,6 +38,7 @@ import moment from "moment";
 import { Event } from "@/js/api";
 
 export default {
+  name: "EventList",
   components: {
     InfiniteLoading,
   },
