@@ -1,16 +1,16 @@
 <template>
   <div class="container blog_container">
-    <Sidebar></Sidebar>
+    <SidebarCert></SidebarCert>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Sidebar from "@/views/component/Sidebar.vue";
+import SidebarCert from "@/views/about/SidebarCert.vue";
 
 export default {
   components: {
-    Sidebar,
+    SidebarCert,
   },
 };
 </script>

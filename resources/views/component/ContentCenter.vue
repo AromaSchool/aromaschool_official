@@ -9,8 +9,13 @@
         <div class="date" v-if="date != null">{{ date }}</div>
       </div>
     </div>
-    <div class="arti_editor">
-      <slot></slot>
+    <div class="arti_content" :class="{ flex: $route.name == 'teamMember' }">
+      <figure v-if="firstImage != null">
+        <img :src="firstImage" :alt="title" />
+      </figure>
+      <div class="arti_editor">
+        <slot></slot>
+      </div>
     </div>
   </section>
 </template>
@@ -28,6 +33,9 @@ export default {
       default: null,
     },
     date: {
+      type: String,
+    },
+    firstImage: {
       type: String,
     },
   },

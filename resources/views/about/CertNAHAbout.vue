@@ -1,5 +1,8 @@
 <template>
   <ContentCenter :title="title" :type="type">
+    <figure>
+      <img src="@/image/index/NAHA_logo.png" alt="NAHA" />
+    </figure>
     <b>NAHA是什麼?</b>
     <p>
       美國國家整體芳香療法協會The National Association for Holistic

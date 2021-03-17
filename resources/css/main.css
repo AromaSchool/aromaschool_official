@@ -183,6 +183,7 @@
     display: block;
     width: fit-content;
     margin-bottom: 40px;
+    cursor: pointer;
 }
 
 /* 導覽列 */

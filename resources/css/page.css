@@ -740,6 +740,7 @@ h3.index_title span::after {
     color: #C9B5A5;
     font-weight: 500;
     letter-spacing: 1px;
+    width: 48px;
 }
 
 .history_time .event_box .event_title {
@@ -747,6 +748,19 @@ h3.index_title span::after {
     font-weight: 300;
     line-height: 1.7;
 }
+
+/* 關於禾場-國際認證 */
+.arti_editor figure {
+    width: 100%;
+    max-width: 150px;
+    margin: 40px auto;
+}
+
+.arti_editor figure img {
+    width: 100%;
+}
+
+/* 關於禾場-師資陣容 */
 
 @media screen and (max-width: 1200px) {
 

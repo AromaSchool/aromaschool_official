@@ -2,6 +2,7 @@ import VueRouter from "vue-router";
 
 // Admin pages
 import Home from "../views/Home.vue";
+import ContentCenter from "../views/component/ContentCenter.vue";
 import About from "../views/About.vue";
 import Brand from "../views/about/Brand.vue";
 import Event from "../views/about/Event.vue";
@@ -14,7 +15,9 @@ import CertNAHAHistory from "../views/about/CertNAHAHistory.vue";
 import CertNAHAMoral from "../views/about/CertNAHAMoral.vue";
 import CertNAHATraining from "../views/about/CertNAHATraining.vue";
 import CertNAHAHowToBecome from "../views/about/CertNAHAHowToBecome.vue";
+import CertIFPAbout from "../views/about/CertIFPAbout.vue";
 import TeamMember from "../views/about/TeamMember.vue";
+import News from "../views/News.vue";
 
 const routes = [{
         path: "/",
@@ -114,25 +117,42 @@ const routes = [{
                     meta: {
                         title: "如何成為NAHA美國國家芳療師協會認可的芳療學校"
                     },
+                }, {
+                    path: 'IFPA/about',
+                    name: "CertIFPAbout",
+                    component: CertIFPAbout,
+                    meta: {
+                        title: "關於IFPA"
+                    }
                 }, ]
             },
             {
                 path: 'teamMember',
-                name: "teamMember",
+                redirect: 'teamMember/1',
                 component: TeamMember,
                 meta: {
                     title: "師資陣容"
                 },
                 children: [{
-                    path: 'about/teamMember/:id',
-                    name: "CertNAHAbout",
-                    component: CertNAHAbout,
+                    path: ':id',
+                    name: "teamMember",
+                    component: ContentCenter,
                     meta: {
                         title: "師資陣容標題"
                     }
                 }, ]
             },
         ]
+    },
+    {
+        path: "/news",
+        name: "news",
+        component: News,
+        meta: {
+            title: "最新消息",
+            titleEn: "NEWS",
+            bannerImage: "images/banner-2.jpg"
+        },
     },
     {
         path: "*",
