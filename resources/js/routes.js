@@ -18,6 +18,7 @@ import CertNAHAHowToBecome from "../views/about/CertNAHAHowToBecome.vue";
 import CertIFPAbout from "../views/about/CertIFPAbout.vue";
 import TeamMember from "../views/about/TeamMember.vue";
 import News from "../views/News.vue";
+import NewsList from "../views/news/NewsList.vue";
 
 const routes = [{
         path: "/",
@@ -146,6 +147,7 @@ const routes = [{
     },
     {
         path: "/news",
+        redirect: '/news/all',
         name: "news",
         component: News,
         meta: {
@@ -153,6 +155,39 @@ const routes = [{
             titleEn: "NEWS",
             bannerImage: "images/banner-2.jpg"
         },
+        children: [{
+                path: 'all',
+                name: "all",
+                component: NewsList,
+                meta: {
+                    title: "所有公告"
+                },
+            },
+            {
+                path: 'class',
+                name: "class",
+                component: NewsList,
+                meta: {
+                    title: "課程公告"
+                },
+            },
+            {
+                path: 'activity',
+                name: "activity",
+                component: NewsList,
+                meta: {
+                    title: "活動公告"
+                },
+            },
+            {
+                path: 'other',
+                name: "other",
+                component: NewsList,
+                meta: {
+                    title: "其他公告"
+                },
+            },
+        ]
     },
     {
         path: "*",
