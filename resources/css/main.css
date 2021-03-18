@@ -16,6 +16,11 @@
     color: #fff;
 }
 
+hr {
+    background: #767691;
+    opacity: 0.1;
+}
+
 .btn_outline {
     display: inline-block;
     position: relative;
@@ -322,6 +327,8 @@ footer .social_media i {
 
 hr.footer {
     margin-top: 5px;
+    background: #fff;
+    opacity: 0.3;
 }
 
 footer .copyright {
@@ -412,6 +419,42 @@ footer .copyright {
     color: #fff;
 }
 
+/* 搜尋欄 */
+.search_box {
+    position: relative;
+}
+
+.search_box.side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search_input {
+    border: none;
+    border-bottom: solid 1px #9C9DA8;
+    padding: 5px;
+    width: 250px;
+}
+
+.search_input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(201 181 165 / 25%);
+}
+
+.search_btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.search_btn i {
+    color: #9C9DA8;
+}
+
 /* 文章內容 */
 .content_center {
     padding: 40px;
@@ -427,6 +470,10 @@ footer .copyright {
     letter-spacing: 1px;
     line-height: 1.5;
     text-align: center;
+}
+
+.arti_title_block hr {
+    opacity: 0.2;
 }
 
 .arti_subtitle * {
@@ -547,6 +594,7 @@ footer .copyright {
 }
 
 .sidebar li a {
+    display: block;
     text-decoration: none;
     letter-spacing: 1px;
 }

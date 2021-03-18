@@ -760,7 +760,40 @@ h3.index_title span::after {
     width: 100%;
 }
 
-/* 關於禾場-師資陣容 */
+/* 最新消息 */
+.news_list {
+    margin: 45px auto;
+    clear: both;
+}
+
+.news_list .index_news {
+    background: none;
+    min-height: auto;
+}
+
+.news_list .index_news .news_box {
+    border: solid 1px rgba(156, 157, 168, .3);
+}
+
+.news_list .index_news .news_box:hover {
+    border: solid 1px rgba(156, 157, 168, .8);
+}
+
+.news_list .index_news .time {
+    background: #767691;
+}
+
+.news_list .index_news .news_title .category {
+    color: #9C9DA8;
+}
+
+.news_list .index_news .news_title .category::before {
+    background: #9C9DA8;
+}
+
+.news_list .index_news .news_title h5 {
+    color: #707179;
+}
 
 @media screen and (max-width: 1200px) {
 
