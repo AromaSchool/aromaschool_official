@@ -452,6 +452,8 @@ h3.index_title span::after {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 100%;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
 }
 
