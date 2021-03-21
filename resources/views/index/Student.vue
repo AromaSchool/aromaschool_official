@@ -50,7 +50,7 @@
             return {
                 list: [],
                 swiperOption: {
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     spaceBetween: 20,
                     slidesPerGroup: 3,
                     loop: true,
