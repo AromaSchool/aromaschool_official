@@ -19,6 +19,7 @@ import CertIFPAbout from "../views/about/CertIFPAbout.vue";
 import TeamMember from "../views/about/TeamMember.vue";
 import News from "../views/News.vue";
 import NewsList from "../views/news/NewsList.vue";
+import NewsDetail from "../views/news/NewsDetail.vue";
 
 const routes = [{
         path: "/",
@@ -185,6 +186,14 @@ const routes = [{
                 component: NewsList,
                 meta: {
                     title: "其他公告"
+                },
+            },
+            {
+                path: ':id',
+                name: "newsDetail",
+                component: NewsDetail,
+                meta: {
+                    title: "公告標題"
                 },
             },
         ]

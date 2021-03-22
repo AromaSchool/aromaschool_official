@@ -8,7 +8,7 @@
 export default {
   methods: {
     goBack() {
-      this.$router.push({ name: "eventList" });
+      this.$router.go(-1);
     },
   },
 };

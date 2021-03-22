@@ -752,7 +752,7 @@ h3.index_title span::after {
 }
 
 /* 關於禾場-國際認證 */
-.arti_editor figure {
+.arti_editor figure.cert {
     width: 100%;
     max-width: 150px;
     margin: 40px auto;

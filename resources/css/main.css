@@ -455,6 +455,11 @@ footer .copyright {
     color: #9C9DA8;
 }
 
+/* 文章頁 */
+.flex_container {
+    display: flex;
+}
+
 /* 文章內容 */
 .content_center {
     padding: 40px;

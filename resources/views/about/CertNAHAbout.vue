@@ -1,6 +1,6 @@
 <template>
   <ContentCenter :title="title" :type="type">
-    <figure>
+    <figure class="cert">
       <img src="@/image/index/NAHA_logo.png" alt="NAHA" />
     </figure>
     <b>NAHA是什麼?</b>

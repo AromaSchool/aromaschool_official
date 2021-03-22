@@ -1,6 +1,6 @@
 <template>
   <ContentCenter :title="title" :type="type">
-    <figure>
+    <figure class="cert">
       <img src="@/image/index/IFPA_logo.png" alt="IFPA" />
     </figure>
     <p>

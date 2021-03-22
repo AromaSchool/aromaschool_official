@@ -4,7 +4,7 @@
       <ul class="news_block">
         <li>
           <router-link
-            to="/"
+            to="/news/1"
             class="news_box"
             title="禾場因應新冠肺炎教室防疫措施升級公告"
           >
@@ -21,7 +21,7 @@
         </li>
         <li>
           <router-link
-            to="/"
+            to="/news/1"
             class="news_box"
             title="禾場因應新冠肺炎教室防疫措施升級公告"
           >
@@ -38,7 +38,7 @@
         </li>
         <li>
           <router-link
-            to="/"
+            to="/news/1"
             class="news_box"
             title="禾場因應新冠肺炎教室防疫措施升級公告"
           >
