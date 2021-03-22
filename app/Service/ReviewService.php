@@ -56,7 +56,6 @@ class ReviewService
                 $review->image = env('APP_URL') . '/storage/reviews/' . $review->image;
             }
         }
-        \Log::debug(env('APP_URL'));
 
         return [
             'lastIndex' => $length ? "{$result[$length - 1]->{$orderBy}},{$result[$length - 1]->id}" : null,
