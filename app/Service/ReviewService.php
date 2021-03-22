@@ -52,7 +52,9 @@ class ReviewService
         $length = \count($result);
 
         foreach ($result as $review) {
-            $review->image = env('APP_URL') . '/storage/reviews/' . $review->image;
+            if ($review->image) {
+                $review->image = env('APP_URL') . '/storage/reviews/' . $review->image;
+            }
         }
         \Log::debug(env('APP_URL'));
 

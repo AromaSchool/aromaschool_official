@@ -27,6 +27,9 @@ class Review{
             limit: limit,
         }).then(response => {
             return response.data.list.map(item => {
+                if (!item.image) {
+                    item.image = require('@/image/index/student_default.svg')
+                }
                 return new Review({
                     id: item.id,
                     image: item.image,
