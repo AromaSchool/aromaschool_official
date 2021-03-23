@@ -351,6 +351,7 @@ footer .copyright {
 
 .header_banner h1 {
     font-size: 28px;
+    text-shadow: 0 0 20px #3e3e3e;
 }
 
 .header_banner h1 span {
