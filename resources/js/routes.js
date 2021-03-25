@@ -1,6 +1,10 @@
 import VueRouter from "vue-router";
 
 // Admin pages
+import {
+    NotFound,
+    ServerError
+} from "@/views/error";
 import Home from "../views/Home.vue";
 import ContentCenter from "../views/component/ContentCenter.vue";
 import About from "../views/About.vue";
@@ -197,6 +201,14 @@ const routes = [{
                 },
             },
         ]
+    },
+    {
+        path: "/404",
+        component: NotFound,
+    },
+    {
+        path: "/500",
+        component: ServerError,
     },
     {
         path: "*",
