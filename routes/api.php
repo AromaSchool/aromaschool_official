@@ -23,3 +23,7 @@ Route::prefix('events')->group(function () {
 Route::prefix('reviews')->group(function () {
     Route::get('/', Review\GetReviewsController::class);
 });
+
+Route::prefix('teachers')->group(function () {
+    Route::get('/', Teacher\GetTeachersController::class);
+});
