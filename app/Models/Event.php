@@ -31,5 +31,10 @@ class Event extends Model
      * @var array
      */
     protected $hidden = [
+        'visible',
+        'created_at',
+        'updated_at',
+        'created_by',
+        'updated_by',
     ];
 }

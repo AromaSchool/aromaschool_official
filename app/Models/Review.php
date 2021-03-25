@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-
     /**
     * The table associated with the model.
     *
@@ -35,5 +34,9 @@ class Review extends Model
      * @var array
      */
     protected $hidden = [
+        'created_at',
+        'updated_at',
+        'created_by',
+        'updated_by',
     ];
 }
