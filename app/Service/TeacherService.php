@@ -4,12 +4,8 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\Exceptions;
 use App\Models\Teacher;
-use App\Models\TeacherCategory;
-use Illuminate\Http\Response;
 use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Support\Facades\Storage;
 
 class TeacherService
 {

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Event;
 use App\Http\Controllers\Controller;
 use App\Service\EventService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class GetEventController extends Controller
 {
