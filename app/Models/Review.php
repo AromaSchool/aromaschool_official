@@ -3,11 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Review extends Model
 {
-    use SoftDeletes;
 
     /**
     * The table associated with the model.
@@ -37,7 +35,5 @@ class Review extends Model
      * @var array
      */
     protected $hidden = [
-        'deleted_at',
-        'deleted_by',
     ];
 }

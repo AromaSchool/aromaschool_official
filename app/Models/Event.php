@@ -3,12 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Event extends Model
 {
-    use SoftDeletes;
-
     /**
     * The table associated with the model.
     *
@@ -34,7 +31,5 @@ class Event extends Model
      * @var array
      */
     protected $hidden = [
-        'deleted_at',
-        'deleted_by',
     ];
 }
