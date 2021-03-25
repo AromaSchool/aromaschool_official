@@ -20,7 +20,7 @@ class EventService
 
     public function getEvents(?string $lastIndex, int $limit, string $orderBy, $orderDirection, ?string $search): array
     {
-        $query = Event::select(['id', 'title', 'date'])->limit($limit);
+        $query = Event::select(['id', 'title', 'date'])->where('visible', '=', true)->limit($limit);
 
         if ($search !== null) {
             $query->where(\DB::raw('CONCAT(title,date)'), 'like', '%' . $search . '%');
