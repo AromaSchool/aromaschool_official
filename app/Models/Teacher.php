@@ -34,6 +34,7 @@ class Teacher extends Model
      * @var array
      */
     protected $hidden = [
+        'priority',
         'visible',
         'category_id',
         'created_at',
