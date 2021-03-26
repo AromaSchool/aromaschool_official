@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\Event;
+namespace App\Http\Controllers\Teacher;
 
 use App\Http\Controllers\Controller;
-use App\Service\EventService;
+use App\Service\TeacherService;
 use Illuminate\Http\Request;
 
-class GetEventController extends Controller
+class GetTeachersController extends Controller
 {
     protected $service;
 
-    public function __construct(EventService $service)
+    public function __construct(TeacherService $service)
     {
         $this->service = $service;
     }
@@ -21,11 +21,11 @@ class GetEventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request, int $id)
+    public function __invoke(Request $request)
     {
-        $response = $this->service->getEvent($id);
+        $response = $this->service->getTeachers();
 
-        if ($response) {
+        if ($response->isNotEmpty()) {
             return $response;
         }
 

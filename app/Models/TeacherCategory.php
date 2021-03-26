@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class TeacherCategory extends Model
 {
     /**
     * The table associated with the model.
     *
     * @var string
     */
-    protected $table = 'events';
+    protected $table = 'teacher_categories';
 
     /**
      * The attributes that are mass assignable.
@@ -19,9 +19,7 @@ class Event extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
-        'content',
-        'date',
+        'name',
         'created_by'
     ];
 
@@ -31,7 +29,6 @@ class Event extends Model
      * @var array
      */
     protected $hidden = [
-        'visible',
         'created_at',
         'updated_at',
         'created_by',

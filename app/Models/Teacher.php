@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Event extends Model
+class Teacher extends Model
 {
     /**
     * The table associated with the model.
     *
     * @var string
     */
-    protected $table = 'events';
+    protected $table = 'teachers';
 
     /**
      * The attributes that are mass assignable.
@@ -19,9 +19,12 @@ class Event extends Model
      * @var array
      */
     protected $fillable = [
+        'name',
         'title',
-        'content',
-        'date',
+        'experience',
+        'image',
+        'priority',
+        'category_id',
         'created_by'
     ];
 
@@ -31,10 +34,26 @@ class Event extends Model
      * @var array
      */
     protected $hidden = [
+        'priority',
         'visible',
+        'category_id',
         'created_at',
         'updated_at',
         'created_by',
         'updated_by',
     ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'visible' => 'boolean'
+    ];
+
+    public function category()
+    {
+        return $this->hasOne(TeacherCategory::class, 'id', 'category_id');
+    }
 }

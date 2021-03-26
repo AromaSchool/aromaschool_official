@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\Exceptions;
 use App\Models\Review;
-use Illuminate\Http\Response;
-use Illuminate\Database\Eloquent\Collection;
 
 class ReviewService
 {

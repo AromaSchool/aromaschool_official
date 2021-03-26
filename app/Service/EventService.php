@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\Exceptions;
 use App\Models\Event;
-use Illuminate\Http\Response;
-use Illuminate\Database\Eloquent\Collection;
 
 class EventService
 {
@@ -20,7 +17,7 @@ class EventService
 
     public function getEvents(?string $lastIndex, int $limit, string $orderBy, $orderDirection, ?string $search): array
     {
-        $query = Event::select(['id', 'title', 'date'])->limit($limit);
+        $query = Event::select(['id', 'title', 'date'])->where('visible', '=', true)->limit($limit);
 
         if ($search !== null) {
             $query->where(\DB::raw('CONCAT(title,date)'), 'like', '%' . $search . '%');

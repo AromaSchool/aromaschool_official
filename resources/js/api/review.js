@@ -21,7 +21,7 @@ class Review{
     }
 
     static async getList({
-        limit = 10,
+        limit = 12,
     } = {}) {
         return client.get('/reviews', {
             limit: limit,
