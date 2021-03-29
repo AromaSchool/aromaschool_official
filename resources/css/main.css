@@ -461,6 +461,61 @@ footer .copyright {
     display: flex;
 }
 
+/* 主要區塊 */
+.main_side {
+    margin-top: 50px;
+}
+
+/* 右側區塊 */
+.sub_side {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.subside_block {
+    position: relative;
+    border: solid 1px rgb(156 157 168 /.2);
+    margin-top: 50px;
+    padding: 25px;
+}
+
+.subside_block h2 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background: #fff;
+    padding: 0 10px;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+}
+
+.subside_block.type .subside_box {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.subside_block .subside_box li {
+    border-bottom: solid 3px #F1F1F4;
+    padding: 10px;
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+.subside_block .subside_box li a {
+    display: block;
+    color: #707179;
+    text-decoration: none;
+    transition-duration: .3s;
+}
+
+.subside_block .subside_box li:hover a {
+    opacity: 0.8;
+}
+
 /* 文章內容 */
 .content_center {
     padding: 40px;

@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <section class="sub_side">
     <SearchBox></SearchBox>
     <Type></Type>
     <Rank></Rank>
-  </div>
+  </section>
 </template>
 
 <script>
