@@ -477,6 +477,11 @@ footer .copyright {
     border: solid 1px rgb(156 157 168 /.2);
     margin-top: 50px;
     padding: 25px;
+    max-width: 250px;
+}
+
+.subside_block:last-child {
+    margin-bottom: 50px;
 }
 
 .subside_block h2 {
@@ -496,6 +501,13 @@ footer .copyright {
     padding: 0;
     list-style: none;
     text-align: center;
+}
+
+.subside_block.rank .subside_box li::marker {
+    content: "0"counter(list-item);
+    color: #C9B5A5;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .subside_block .subside_box li {
