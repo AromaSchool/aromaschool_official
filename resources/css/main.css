@@ -470,6 +470,7 @@ footer .copyright {
 .sub_side {
     margin-top: 50px;
     margin-left: 30px;
+    max-width: 250px;
 }
 
 .subside_block {
@@ -477,7 +478,6 @@ footer .copyright {
     border: solid 1px rgb(156 157 168 /.2);
     margin-top: 50px;
     padding: 25px;
-    max-width: 250px;
 }
 
 .subside_block:last-child {
@@ -503,12 +503,34 @@ footer .copyright {
     text-align: center;
 }
 
-.subside_block.rank .subside_box li::marker {
+.subside_block.rank .subside_box {
+    padding: 0;
+    margin: 0;
+}
+
+.subside_block.rank .subside_box li {
+    position: relative;
+    list-style: none;
+    padding-left: 40px;
+}
+
+.subside_block.rank .subside_box li::before {
     content: "0"counter(list-item);
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
     color: #C9B5A5;
     font-size: 22px;
     font-weight: 500;
 }
+
+/* .subside_block.rank .subside_box li::marker {
+    content: "0"counter(list-item);
+    color: #C9B5A5;
+    font-size: 22px;
+    font-weight: 500;
+} */
 
 .subside_block .subside_box li {
     border-bottom: solid 3px #F1F1F4;
@@ -848,6 +870,22 @@ footer .copyright {
     /* 側選單 */
     .btn_sidebar {
         display: block;
+    }
+
+    /* 文章頁 */
+    .flex_container {
+        flex-wrap: wrap;
+    }
+
+    /* 右側區塊 */
+    .sub_side {
+        width: 100%;
+        margin: 0;
+        max-width: initial;
+    }
+
+    .search_input {
+        width: 100%;
     }
 }
 
