@@ -27,3 +27,11 @@ Route::prefix('reviews')->group(function () {
 Route::prefix('teachers')->group(function () {
     Route::get('/', Teacher\GetTeachersController::class);
 });
+
+Route::prefix('news')->group(function () {
+    Route::prefix('categories')->group(function () {
+        Route::get('/', News\GetNewsCategoriesController::class);
+    });
+    Route::get('/', News\GetNewsListController::class);
+    Route::get('/{id}', News\GetNewsController::class)->where('id', '[0-9]+');
+});
