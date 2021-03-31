@@ -31,9 +31,27 @@
 
 <script>
 export default {
-  computed: {
-    breadcrumbs() {
-      return this.$route.matched.filter((matched) => {
+  data: () => ({
+    breadcrumbs: [],
+  }),
+  watch: {
+    $route: {
+      immediate: true,
+      deep: true,
+      handler(to, from) {
+        this.updateBreadCrumbs();
+      },
+    },
+    "$route.meta.title": {
+      immediate: true,
+      handler() {
+        this.updateBreadCrumbs();
+      },
+    },
+  },
+  methods: {
+    updateBreadCrumbs() {
+      this.breadcrumbs = this.$route.matched.filter((matched) => {
         return matched.meta.title;
       });
     },

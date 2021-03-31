@@ -152,7 +152,6 @@ const routes = [{
     },
     {
         path: "/news",
-        redirect: '/news/all',
         name: "news",
         component: News,
         meta: {
@@ -161,43 +160,27 @@ const routes = [{
             bannerImage: "images/banner-2.jpg"
         },
         children: [{
-                path: 'all',
-                name: "all",
+                path: 'category/all',
+                name: "newsAll",
                 component: NewsList,
                 meta: {
                     title: "所有公告"
                 },
             },
             {
-                path: 'class',
-                name: "class",
+                path: 'category/:id(\\d+)',
+                name: "newsCategory",
                 component: NewsList,
                 meta: {
-                    title: "課程公告"
+                    title: ""
                 },
             },
             {
-                path: 'activity',
-                name: "activity",
-                component: NewsList,
-                meta: {
-                    title: "活動公告"
-                },
-            },
-            {
-                path: 'other',
-                name: "other",
-                component: NewsList,
-                meta: {
-                    title: "其他公告"
-                },
-            },
-            {
-                path: ':id',
+                path: ':id(\\d+)',
                 name: "newsDetail",
                 component: NewsDetail,
                 meta: {
-                    title: "公告標題"
+                    title: ""
                 },
             },
         ]

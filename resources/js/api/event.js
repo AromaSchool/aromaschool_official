@@ -1,7 +1,12 @@
 import client from "./api";
 
 class Event {
-    constructor({ id = null, title, content = null, date } = {}) {
+    constructor({
+        id = null,
+        title,
+        content = null,
+        date
+    } = {}) {
         this.id = id;
         this.title = title;
         this.content = content;

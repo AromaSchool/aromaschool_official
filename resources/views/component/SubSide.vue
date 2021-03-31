@@ -1,6 +1,6 @@
 <template>
   <section class="sub_side">
-    <SearchBox></SearchBox>
+    <SearchBox v-model="searchValue"></SearchBox>
     <Type></Type>
     <Rank></Rank>
   </section>
@@ -16,6 +16,25 @@ export default {
     SearchBox,
     Type,
     Rank,
+  },
+  props: {
+    value: {
+      type: String,
+      default: "",
+    },
+  },
+  data: () => ({
+    data: "",
+  }),
+  computed: {
+    searchValue: {
+      get: function () {
+        return this.value;
+      },
+      set: function (v) {
+        this.$emit("input", v);
+      },
+    },
   },
 };
 </script>

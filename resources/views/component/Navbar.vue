@@ -64,7 +64,9 @@
             </ul>
           </li>
           <li class="nav-item">
-            <router-link to="/news" class="nav-link">最新消息</router-link>
+            <router-link to="/news/category/all" class="nav-link"
+              >最新消息</router-link
+            >
           </li>
           <li class="nav-item dropdown">
             <router-link
