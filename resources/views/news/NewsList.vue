@@ -24,7 +24,7 @@
       </ul>
     </div>
     <infinite-loading
-      @infinite="getNewsList"
+      @infinite="infiniteLoadingHandler"
       :identifier="infiniteId"
       spinner="spiral"
     >
@@ -40,6 +40,7 @@ import moment from "moment";
 import { News } from "@/js/api";
 
 export default {
+  name: "NewsList",
   components: {
     InfiniteLoading,
   },
@@ -68,8 +69,18 @@ export default {
     },
   },
   created() {
-    this.$route.meta.title = "";
-    this.onSearch = window._.debounce(this.resetInfiniteLoading, 500);
+    this.onSearch = window._.debounce(() => {
+      if (this.$route.query.search != this.search) {
+        if (this.search) {
+          this.$router.push({ query: { search: this.search } });
+        } else {
+          this.$router.push({ query: {} });
+        }
+        this.resetInfiniteLoading();
+      }
+    }, 500);
+    // Fix: Event "infinite" called twice when in tabs and scroll position is not 0
+    this.infiniteLoadingHandler = window._.debounce(this.getNewsList, 100);
   },
   watch: {
     search: function () {
@@ -85,7 +96,6 @@ export default {
       immediate: true,
       handler(to, from) {
         this.updateTitleAndBreadCrumbs();
-        this.resetInfiniteLoading();
       },
     },
   },
@@ -115,6 +125,7 @@ export default {
       });
     },
     onSearch() {},
+    infiniteLoadingHandler() {},
     resetInfiniteLoading() {
       this.lastIndex = null;
       this.data = [];

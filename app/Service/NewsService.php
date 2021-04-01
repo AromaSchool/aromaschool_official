@@ -43,6 +43,7 @@ class NewsService
 
         $modifier = '';
         if ($search !== null) {
+            $search = \stripslashes($search);
             $keywords = \preg_split('/\s+/', $search);
             foreach ($keywords as $keyword) {
                 $modifier .= "+${keyword} ";
@@ -52,7 +53,9 @@ class NewsService
                 'ROUND(MATCH(`title`, `content`) AGAINST(? IN BOOLEAN MODE), 14)',
                 $modifier
             );
-            $selected[] = \DB::raw("ROUND(MATCH(`title`, `content`) AGAINST(\"$modifier\" IN BOOLEAN MODE), 14) AS `score`");
+            $selected[] = \DB::raw(
+                "ROUND(MATCH(`title`, `content`) AGAINST(\"$modifier\" IN BOOLEAN MODE), 14) AS `score`"
+            );
         }
         $query->select($selected);
 
@@ -80,9 +83,17 @@ class NewsService
                 $lastIndex = \explode(',', $lastIndex);
                 if ($search) {
                     $query->where(function ($query) use ($orderBy, $lastIndex, $modifier) {
-                        $query->where(\DB::raw("ROUND(MATCH(`title`, `content`) AGAINST(\"$modifier\" IN BOOLEAN MODE), 14)"), '<', $lastIndex[0]);
+                        $query->where(
+                            \DB::raw("ROUND(MATCH(`title`, `content`) AGAINST(\"$modifier\" IN BOOLEAN MODE), 14)"),
+                            '<',
+                            $lastIndex[0]
+                        );
                         $query->orWhere([
-                            [\DB::raw("ROUND(MATCH(`title`, `content`) AGAINST(\"$modifier\" IN BOOLEAN MODE), 14)"), '=', $lastIndex[0]],
+                            [
+                                \DB::raw("ROUND(MATCH(`title`, `content`) AGAINST(\"$modifier\" IN BOOLEAN MODE), 14)"),
+                                '=',
+                                $lastIndex[0]
+                            ],
                             ['id', '<', $lastIndex[1]],
                         ]);
                     });
@@ -98,8 +109,6 @@ class NewsService
             }
         }
 
-        \Log::debug($query->toSql());
-        \Log::debug($query->getBindings());
         $result = $query->get();
         $length = \count($result);
 

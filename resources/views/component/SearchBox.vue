@@ -5,6 +5,7 @@
       placeholder="Search..."
       class="search_input"
       v-model="data"
+      @keyup.enter="enter"
     />
     <button type="submit" class="search_btn">
       <i class="fas fa-search"></i>
@@ -28,6 +29,14 @@ export default {
       set: function (v) {
         this.$emit("input", v);
       },
+    },
+  },
+  created() {
+    this.data = this.$route.query.search;
+  },
+  methods: {
+    enter() {
+      this.$emit("enter");
     },
   },
 };

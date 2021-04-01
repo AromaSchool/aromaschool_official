@@ -8,9 +8,14 @@
       >
         <div v-html="news.content"></div>
       </ContentCenter>
-      <BackBtn></BackBtn>
+      <BackBtn to="/news/category/all"></BackBtn>
     </div>
-    <SubSide v-model="search"></SubSide>
+    <SubSide
+      v-model="search"
+      :categories="categories"
+      :rank="rank"
+      @search="onSearch"
+    ></SubSide>
   </div>
 </template>
 
@@ -35,6 +40,7 @@ export default {
   },
   data: () => ({
     news: new News({ title: "" }),
+    rank: [],
     search: "",
   }),
   computed: {
@@ -48,6 +54,7 @@ export default {
   },
   created() {
     this.getNews();
+    this.getNewsList();
   },
   methods: {
     getNews() {
@@ -56,6 +63,27 @@ export default {
         this.news.created_at = moment(this.news.created_at).format(
           "YYYY/MM/DD"
         );
+      });
+    },
+    getNewsList() {
+      News.getList({
+        limit: 5,
+      }).then((response) => {
+        for (const news of response.list) {
+          this.rank.push({
+            id: news.id,
+            title: news.title,
+            to: `/news/${news.id}`,
+          });
+        }
+      });
+    },
+    onSearch() {
+      this.$router.push({
+        name: "newsAll",
+        query: {
+          search: this.search,
+        },
       });
     },
   },
