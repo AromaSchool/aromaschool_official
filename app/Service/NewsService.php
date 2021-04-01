@@ -98,8 +98,6 @@ class NewsService
             }
         }
 
-        \Log::debug($query->toSql());
-        \Log::debug($query->getBindings());
         $result = $query->get();
         $length = \count($result);
 
