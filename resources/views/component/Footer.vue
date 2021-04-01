@@ -35,7 +35,7 @@
             >
           </li>
           <li>
-            <router-link to="/" title="聯絡我們" class="footer_nav_link"
+            <router-link to="/contact" title="聯絡我們" class="footer_nav_link"
               >聯絡我們</router-link
             >
             <router-link to="/" title="常見問題" class="footer_nav_link"

@@ -24,6 +24,7 @@ import TeamMember from "../views/about/TeamMember.vue";
 import News from "../views/News.vue";
 import NewsList from "../views/news/NewsList.vue";
 import NewsDetail from "../views/news/NewsDetail.vue";
+import Contact from "../views/Contact.vue";
 
 const routes = [{
         path: "/",
@@ -184,6 +185,16 @@ const routes = [{
                 },
             },
         ]
+    },
+    {
+        path: "/contact",
+        name: "contact",
+        component: Contact,
+        meta: {
+            title: "聯絡我們",
+            titleEn: "CONTACT",
+            bannerImage: "images/banner-3.jpg"
+        },
     },
     {
         path: "/404",
