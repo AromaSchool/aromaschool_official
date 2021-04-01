@@ -6,9 +6,19 @@
 
 <script>
 export default {
+  props: {
+    to: {
+      type: String,
+      default: null,
+    },
+  },
   methods: {
     goBack() {
-      this.$router.go(-1);
+      if (this.to) {
+        this.$router.push(this.to);
+      } else {
+        this.$router.go(-1);
+      }
     },
   },
 };

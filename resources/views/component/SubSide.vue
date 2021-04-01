@@ -1,8 +1,8 @@
 <template>
   <section class="sub_side">
-    <SearchBox v-model="searchValue"></SearchBox>
-    <Type></Type>
-    <Rank></Rank>
+    <SearchBox v-model="searchValue" @enter="onSearch"></SearchBox>
+    <Type :categories="categories"></Type>
+    <Rank :rank="rank"></Rank>
   </section>
 </template>
 
@@ -22,6 +22,14 @@ export default {
       type: String,
       default: "",
     },
+    categories: {
+      type: Array,
+      default: [],
+    },
+    rank: {
+      type: Array,
+      default: [],
+    },
   },
   data: () => ({
     data: "",
@@ -34,6 +42,11 @@ export default {
       set: function (v) {
         this.$emit("input", v);
       },
+    },
+  },
+  methods: {
+    onSearch() {
+      this.$emit("search");
     },
   },
 };

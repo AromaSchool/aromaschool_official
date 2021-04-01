@@ -7,7 +7,13 @@
         <SearchBox v-model="search"></SearchBox>
       </div>
     </template>
-    <router-view :search.sync="search" :categories="categories"></router-view>
+    <keep-alive include="NewsList">
+      <router-view
+        :search.sync="search"
+        :categories="categories"
+        :key="$route.path"
+      ></router-view>
+    </keep-alive>
   </div>
 </template>
 
