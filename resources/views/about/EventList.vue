@@ -23,7 +23,7 @@
             </li>
           </ul>
         </div>
-        <infinite-loading @infinite="getEventList" spinner="spiral">
+        <infinite-loading @infinite="infiniteLoadingHandler" spinner="spiral">
           <div slot="no-more"></div>
           <div slot="no-results"></div>
         </infinite-loading>
@@ -46,7 +46,12 @@ export default {
     events: {},
     lastIndex: null,
   }),
+  created() {
+    // Fix: Event "infinite" called twice when in tabs and scroll position is not 0
+    this.infiniteLoadingHandler = window._.debounce(this.getEventList, 100);
+  },
   methods: {
+    infiniteLoadingHandler() {},
     getEventList($state) {
       Event.getList({ lastIndex: this.lastIndex }).then((response) => {
         this.lastIndex = response.lastIndex;
