@@ -459,6 +459,8 @@ h3.index_title span::after {
 
 .index_student_claim figure img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .index_student_claim .student_data * {
