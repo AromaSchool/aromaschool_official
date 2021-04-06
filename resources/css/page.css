@@ -169,7 +169,7 @@ header img {
 
 .index_news .time {
     background: rgba(201, 181, 165, .8);
-    width: 100px;
+    width: 105px;
     padding: 5px 15px;
 }
 
@@ -1110,7 +1110,7 @@ h3.index_title span::after {
     }
 
     .index_news .time {
-        width: 85px;
+        width: 90px;
         padding: 5px 10px;
     }
 
