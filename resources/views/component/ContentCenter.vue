@@ -9,7 +9,10 @@
         <div class="date" v-if="date != null">{{ date }}</div>
       </div>
     </div>
-    <div class="arti_content" :class="{ flex: $route.name == 'teamMember' }">
+    <div
+      class="arti_content"
+      :class="{ flexbox: $route.matched[1].name == 'teamMember' }"
+    >
       <figure v-if="firstImage != null">
         <img :src="firstImage" :alt="title" />
       </figure>
@@ -22,7 +25,7 @@
 
 <script>
 export default {
-  name: "blogContent",
+  name: "ContentCenter",
   props: {
     title: {
       type: String,

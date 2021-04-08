@@ -1,16 +1,60 @@
 <template>
   <div class="container blog_container">
-    <Sidebar></Sidebar>
-    <router-view></router-view>
+    <Sidebar :categories="category" :names="item"></Sidebar>
+    <ContentCenter
+      :title="findItem.name"
+      :type="findItem.title"
+      :firstImage="findItem.image"
+    >
+      <div v-html="findItem.experience"></div>
+    </ContentCenter>
   </div>
 </template>
 
 <script>
+import { TeamMember } from "@/js/api";
 import Sidebar from "@/views/component/Sidebar.vue";
+import ContentCenter from "@/views/component/ContentCenter.vue";
 
 export default {
   components: {
     Sidebar,
+    ContentCenter,
+  },
+  data: () => ({
+    item: [],
+    category: [],
+  }),
+  created() {
+    this.getTeamMember();
+    this.getTeamMemberCategory();
+    // console.log(this.$route.params.id);
+  },
+  computed: {
+    findItem: function () {
+      for (let item of this.item) {
+        if (this.$route.params.id == item.id) {
+          return item;
+        }
+      }
+    },
+  },
+  methods: {
+    getTeamMember() {
+      TeamMember.get().then((item) => {
+        this.item = item;
+        for (let item of this.item) {
+          if (this.$route.params.id == item.id) {
+            console.log(item);
+          }
+        }
+      });
+    },
+    getTeamMemberCategory() {
+      TeamMember.getCategory().then((category) => {
+        this.category = category;
+      });
+    },
   },
 };
 </script>

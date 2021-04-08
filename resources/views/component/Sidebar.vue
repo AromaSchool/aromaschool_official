@@ -15,32 +15,45 @@
       :class="{ show: this.fullWidth > 992 }"
       id="sidebar_collapse"
     >
-      <div class="accordion-item" id="accordionExample">
-        <h2 class="accordion-header" id="headingOne">
+      <div
+        class="accordion-item"
+        id="accordionExample"
+        v-for="category in categories"
+        :key="category.id"
+      >
+        <h2 class="accordion-header" :id="`heading${category.id}`">
           <button
             class="accordion-button"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
+            :data-bs-target="`#collapse${category.id}`"
             aria-expanded="true"
-            aria-controls="collapseOne"
+            :aria-controls="`collapse${category.id}`"
           >
-            NAHA
+            {{ category.name }}
           </button>
         </h2>
         <div
-          id="collapseOne"
+          :id="`collapse${category.id}`"
           class="accordion-collapse collapse show"
-          aria-labelledby="headingOne"
+          :aria-labelledby="`heading${category.id}`"
           data-bs-parent="#accordionExample"
         >
           <div class="accordion-body">
             <ul>
-              <li class="sidebar_list">
-                <router-link to="/about/interCert/NAHA/about" title="關於NAHA"
-                  >關於NAHA</router-link
+              <template v-for="name in names">
+                <li
+                  class="sidebar_list"
+                  v-if="category.name == name.categoryName"
+                  :key="name.id"
                 >
-              </li>
+                  <router-link
+                    :to="`/about/teamMember/${name.id}`"
+                    :title="name.name"
+                    >{{ name.name }}</router-link
+                  >
+                </li>
+              </template>
             </ul>
           </div>
         </div>
@@ -51,6 +64,16 @@
 
 <script>
 export default {
+  props: {
+    categories: {
+      type: Array,
+      require: true,
+    },
+    names: {
+      type: Array,
+      require: true,
+    },
+  },
   data() {
     return {
       fullWidth: 0,

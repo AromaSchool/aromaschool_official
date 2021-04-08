@@ -6,7 +6,6 @@ import {
     ServerError
 } from "@/views/error";
 import Home from "../views/Home.vue";
-import ContentCenter from "../views/component/ContentCenter.vue";
 import About from "../views/About.vue";
 import Brand from "../views/about/Brand.vue";
 import Event from "../views/about/Event.vue";
@@ -135,6 +134,7 @@ const routes = [{
             },
             {
                 path: 'teamMember',
+                name: "teamMember",
                 redirect: 'teamMember/1',
                 component: TeamMember,
                 meta: {
@@ -142,8 +142,6 @@ const routes = [{
                 },
                 children: [{
                     path: ':id',
-                    name: "teamMember",
-                    component: ContentCenter,
                     meta: {
                         title: "師資陣容標題"
                     }
