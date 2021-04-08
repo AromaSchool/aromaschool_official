@@ -768,16 +768,16 @@ h3.index_title span::after {
 .arti_content.flex{
     display: flex;
 }
-.arti_content .first_image{
+.arti_content.flex .first_image{
     width: 20%;
     min-width: 140px;
     margin-right: 20px;
 }
-.arti_content .first_image img{
+.arti_content.flex .first_image img{
     width: 100%;
 }
-.arti_content .arti_editor{
-    width: 70%;
+.arti_content.flex .arti_editor{
+    width: 80%;
 }
 
 /* 最新消息 */
@@ -1194,13 +1194,13 @@ h3.index_title span::after {
     .arti_content.flex{
         flex-wrap: wrap;
     }
-    .arti_content .first_image{
+    .arti_content.flex .first_image{
         width: 100%;
         max-width: 140px;
         min-width: initial;
         margin:0 auto 30px;
     }
-    .arti_content .arti_editor{
+    .arti_content.flex .arti_editor{
         width: 100%;
     }
 }
