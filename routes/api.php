@@ -25,6 +25,9 @@ Route::prefix('reviews')->group(function () {
 });
 
 Route::prefix('teachers')->group(function () {
+    Route::prefix('categories')->group(function () {
+        Route::get('/', Teacher\GetTeacherCategories::class);
+    });
     Route::get('/', Teacher\GetTeachersController::class);
 });
 
