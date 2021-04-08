@@ -764,6 +764,22 @@ h3.index_title span::after {
     width: 100%;
 }
 
+/* 關於禾場-師資陣容 */
+.arti_content.flex{
+    display: flex;
+}
+.arti_content .first_image{
+    width: 20%;
+    min-width: 140px;
+    margin-right: 20px;
+}
+.arti_content .first_image img{
+    width: 100%;
+}
+.arti_content .arti_editor{
+    width: 70%;
+}
+
 /* 最新消息 */
 .news_list {
     margin: 45px auto;
@@ -1172,5 +1188,19 @@ h3.index_title span::after {
 
     .history_time .year {
         text-align: center;
+    }
+
+    /* 關於禾場-師資陣容 */
+    .arti_content.flex{
+        flex-wrap: wrap;
+    }
+    .arti_content .first_image{
+        width: 100%;
+        max-width: 140px;
+        min-width: initial;
+        margin:0 auto 30px;
+    }
+    .arti_content .arti_editor{
+        width: 100%;
     }
 }

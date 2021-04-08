@@ -11,9 +11,9 @@
     </div>
     <div
       class="arti_content"
-      :class="{ flexbox: $route.matched[1].name == 'teamMember' }"
+      :class="{ flex: $route.matched[1].name == 'teamMember' }"
     >
-      <figure v-if="firstImage != null">
+      <figure class="first_image" v-if="firstImage != null">
         <img :src="firstImage" :alt="title" />
       </figure>
       <div class="arti_editor">
