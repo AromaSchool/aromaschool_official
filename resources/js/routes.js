@@ -135,7 +135,6 @@ const routes = [{
             {
                 path: 'teamMember',
                 name: "teamMember",
-                redirect: 'teamMember/1',
                 component: TeamMember,
                 meta: {
                     title: "師資陣容"

@@ -801,6 +801,7 @@ h3.index_title span::after {
 
 .news_list .index_news .time {
     background: #767691;
+    text-align: center;
 }
 
 .news_list .index_news .news_title .category {

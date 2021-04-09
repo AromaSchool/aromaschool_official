@@ -2,6 +2,7 @@
   <div class="container blog_container">
     <Sidebar :categories="category" :names="item"></Sidebar>
     <ContentCenter
+      :key="$route.path"
       :title="findItem.name"
       :type="findItem.title"
       :firstImage="findItem.image"
@@ -35,8 +36,11 @@ export default {
       for (let item of this.item) {
         if (this.$route.params.id == item.id) {
           return item;
+        } else if (this.$route.params.id == undefined) {
+          return this.item[0];
         }
       }
+      return {};
     },
   },
   methods: {
