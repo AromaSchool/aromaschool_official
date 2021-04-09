@@ -23,6 +23,9 @@ import TeamMember from "../views/about/TeamMember.vue";
 import News from "../views/News.vue";
 import NewsList from "../views/news/NewsList.vue";
 import NewsDetail from "../views/news/NewsDetail.vue";
+import Blog from "../views/Blog.vue";
+import BlogList from "../views/blog/BlogList.vue";
+import BlogDetail from "../views/blog/BlogDetail.vue";
 import Contact from "../views/Contact.vue";
 
 const routes = [{
@@ -140,7 +143,7 @@ const routes = [{
                     title: "師資陣容"
                 },
                 children: [{
-                    path: ':id',
+                    path: ':id(\\d+)',
                     meta: {
                         title: "師資陣容標題"
                     }
@@ -177,6 +180,41 @@ const routes = [{
                 path: ':id(\\d+)',
                 name: "newsDetail",
                 component: NewsDetail,
+                meta: {
+                    title: ""
+                },
+            },
+        ]
+    },
+    {
+        path: "/blog",
+        name: "blog",
+        component: Blog,
+        meta: {
+            title: "學苑周刊",
+            titleEn: "BLOG",
+            bannerImage: "images/banner-4.jpg"
+        },
+        children: [{
+                path: 'category/all',
+                name: "blogAll",
+                component: BlogList,
+                meta: {
+                    title: "所有公告"
+                },
+            },
+            {
+                path: 'category/:id(\\d+)',
+                name: "blogCategory",
+                component: BlogList,
+                meta: {
+                    title: ""
+                },
+            },
+            {
+                path: ':id(\\d+)',
+                name: "blogDetail",
+                component: BlogDetail,
                 meta: {
                     title: ""
                 },

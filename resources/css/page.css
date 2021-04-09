@@ -815,6 +815,17 @@ h3.index_title span::after {
 .news_list .index_news .news_title h5 {
     color: #707179;
 }
+/* 學苑周刊-列表 */
+.blog_list{
+    margin-top: 20px;
+}
+.blog_list .article_box{
+    display: block;
+    background: #F1F1F4;
+}
+.article_box .article_text{
+    padding: 10px;
+}
 
 /* 聯絡我們 */
 .contact_block {
@@ -1085,6 +1096,7 @@ h3.index_title span::after {
     .history_time .event_block {
         margin-left: 0;
     }
+
     /* 聯絡我們 */
     .contact_block{
         flex-wrap: wrap;

@@ -151,7 +151,7 @@
           </li>
           <li class="nav-item dropdown">
             <router-link
-              to="/"
+              to="/blog/all"
               class="nav-link dropdown-toggle"
               id="navbarDropdownMenuLink"
               role="button"
@@ -161,22 +161,34 @@
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <router-link to="/" class="dropdown-item">禾場記趣</router-link>
+                <router-link to="/blog" class="dropdown-item"
+                  >禾場記趣</router-link
+                >
               </li>
               <li>
-                <router-link to="/" class="dropdown-item">學習感言</router-link>
+                <router-link to="/blog" class="dropdown-item"
+                  >學習感言</router-link
+                >
               </li>
               <li>
-                <router-link to="/" class="dropdown-item">芳療人物</router-link>
+                <router-link to="/blog" class="dropdown-item"
+                  >芳療人物</router-link
+                >
               </li>
               <li>
-                <router-link to="/" class="dropdown-item">教學筆記</router-link>
+                <router-link to="/blog" class="dropdown-item"
+                  >教學筆記</router-link
+                >
               </li>
               <li>
-                <router-link to="/" class="dropdown-item">芳療心語</router-link>
+                <router-link to="/blog" class="dropdown-item"
+                  >芳療心語</router-link
+                >
               </li>
               <li>
-                <router-link to="/" class="dropdown-item">精油相關</router-link>
+                <router-link to="/blog" class="dropdown-item"
+                  >精油相關</router-link
+                >
               </li>
             </ul>
           </li>
