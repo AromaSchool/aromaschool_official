@@ -18,7 +18,9 @@
             非營利組織，擁有全世界最嚴格、最完整的芳香療法教育認證著稱。 NAHA
             積極提倡並提升芳香療法教育的學院標準，同時也致力於推廣真正的芳香療法使用、芳香療法安全性，以及其在日常生活中安全及有效的應用。
           </p>
-          <a href="#" class="btn_underline purple" title="深入了解">深入了解</a>
+          <router-link to="/" class="btn_underline purple" title="深入了解"
+            >深入了解</router-link
+          >
         </div>
         <div class="certi_box IFPA">
           <figure>
@@ -35,7 +37,9 @@
             IFPA由英國RQA、
             ISPA及IFA的專業芳療師組成，擁有嚴謹的課程研習及認證考試標準，培訓學員成為合格的IFPA臨床芳療師。
           </p>
-          <a href="#" class="btn_underline brown" title="深入了解">深入了解</a>
+          <router-link to="/" class="btn_underline brown" title="深入了解"
+            >深入了解</router-link
+          >
         </div>
       </div>
     </div>

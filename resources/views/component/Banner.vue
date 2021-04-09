@@ -12,8 +12,11 @@
             我們把對大自然的執著與熱情，灌溉在芳香療法的禾場，來到這裡，您就是我們看顧的一粒種籽...
           </h2>
         </div>
-        <a href="/about/brand" class="btn_outline white" title="關於禾場"
-          >了解我們的故事</a
+        <router-link
+          to="/about/brand"
+          class="btn_outline white"
+          title="關於禾場"
+          >了解我們的故事</router-link
         >
       </div>
     </header>

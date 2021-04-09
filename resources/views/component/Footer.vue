@@ -13,14 +13,23 @@
               class="footer_nav_link"
               >{{ routes[1].children[1].meta.title }}</router-link
             >
-            <router-link to="/" title="最新消息" class="footer_nav_link"
-              >最新消息</router-link
+            <router-link
+              to="/news/category/all"
+              :title="routes[2].meta.title"
+              class="footer_nav_link"
+              >{{ routes[2].meta.title }}</router-link
             >
-            <router-link to="/" title="國際認證" class="footer_nav_link"
-              >國際認證</router-link
+            <router-link
+              to="/about/interCert/NAHA/about"
+              :title="routes[1].children[2].meta.title"
+              class="footer_nav_link"
+              >{{ routes[1].children[2].meta.title }}</router-link
             >
-            <router-link to="/" title="師資陣容" class="footer_nav_link"
-              >師資陣容</router-link
+            <router-link
+              to="/about/teamMember"
+              :title="routes[1].children[3].meta.title"
+              class="footer_nav_link"
+              >{{ routes[1].children[3].meta.title }}</router-link
             >
           </li>
           <li>
