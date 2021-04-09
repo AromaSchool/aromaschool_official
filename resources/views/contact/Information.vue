@@ -20,7 +20,15 @@
       </li>
     </ul>
     <p class="info_hint">
-      各地址僅上課教室，無行政辨公室，詢問課程歡迎電洽或留言至官方LINE。
+      各地址僅上課教室，無行政辨公室，詢問課程歡迎電洽或留言至
+      <a
+        class="link"
+        href="https://goo.gl/Khc3co"
+        title="禾場芳療官方LINE"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i class="fab fa-line"></i>官方LINE</a
+      >。
     </p>
     <hr />
     <div class="location_block">

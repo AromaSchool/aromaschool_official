@@ -818,8 +818,16 @@ h3.index_title span::after {
 
 /* 聯絡我們 */
 .contact_block {
+    display: flex;
+    align-items:flex-start;
     margin-top: 80px;
     letter-spacing: 1px;
+    margin-bottom: 80px;
+}
+
+.contact_info{
+    width: 50%;
+    margin-right: 70px;
 }
 
 .contact_info h2 {
@@ -893,6 +901,68 @@ h3.index_title span::after {
     color: #707179;
     text-decoration: none;
     font-weight: 300;
+}
+.info_hint .link{
+    color: #767691;
+}
+.info_hint .link i{
+    color: #00B900;
+}
+
+.contact_form{
+    width: 50%;
+    padding: 40px;
+    border-top: solid 3px #A18875;
+    border-bottom: solid 3px #A18875;
+    box-shadow: 0 0 20px rgb(118 118 145 / 20%);
+    font-weight: 300;
+}
+
+.contact_form .hint{
+    font-weight: 400;
+}
+
+.contact_form .hint span{
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    color: #c9b5a5;
+    margin-top: 8px;
+}
+.contact_form_block{
+    margin-top: 35px;
+}
+.contact_form_block .form_box{
+    margin-bottom: 15px;
+}
+.contact_form_block .form_label{
+    display: block;
+    margin-bottom: 5px;
+}
+.contact_form_block .form_label .hint{
+    color: #C9B5A5;
+    font-size: 15px;
+}
+.contact_form_block .form_input{
+    width: 100%;
+    padding: 8px 16px;
+    border: solid 1px #bdbec3;
+    border-radius: 5px;
+}
+.contact_form_block .form_input::placeholder{
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: rgb(112 113 121/50%);
+}
+.contact_form_block .form_input:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(201 181 165 / 25%);
+}
+.contact_form_block .btn_outline{
+    display: block;
+    background: transparent;
+    margin: 40px auto 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1014,6 +1084,18 @@ h3.index_title span::after {
 
     .history_time .event_block {
         margin-left: 0;
+    }
+    /* 聯絡我們 */
+    .contact_block{
+        flex-wrap: wrap;
+    }
+    .contact_info{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .contact_form{
+        width: 100%;
     }
 }
 
