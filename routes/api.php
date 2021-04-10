@@ -38,3 +38,11 @@ Route::prefix('news')->group(function () {
     Route::get('/', News\GetNewsListController::class);
     Route::get('/{id}', News\GetNewsController::class)->where('id', '[0-9]+');
 });
+
+Route::prefix('articles')->group(function () {
+    Route::prefix('categories')->group(function () {
+        Route::get('/', Article\GetArticleCategoriesController::class);
+    });
+    Route::get('/', Article\GetArticlesController::class);
+    Route::get('/{id}', Article\GetArticleController::class)->where('id', '[0-9]+');
+});
