@@ -33,7 +33,7 @@ class ContactMeController extends Controller
             return response()->json($validator->messages(), 400);
         }
 
-        Mail::to($request->mail)
+        Mail::to(\env('MAIL_USERNAME'))
           ->send(new ContactMe(
               $request->name,
               $request->department,
