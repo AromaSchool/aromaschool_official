@@ -8,12 +8,13 @@ import VueRouter from "vue-router";
 import {
     router
 } from './routes.js'
+import swal from "./plugins/swal";
+import App from "../views/App.vue";
 
 // new WOW({ live: false }).init();
 
 Vue.use(VueRouter);
-
-import App from "../views/App.vue";
+Vue.use(swal);
 
 new Vue({
     router,

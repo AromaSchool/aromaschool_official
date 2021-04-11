@@ -3,21 +3,18 @@
     <h2>聯絡資訊<span>INFORMATION</span></h2>
     <ul>
       <li>
-        <i class="fas fa-phone"></i
-        ><a href="tel:02-27112290" title="02-27112290">02-27112290</a>
+        <i class="fas fa-phone"></i><a href="tel:02-27112290" title="02-27112290">02-27112290</a>
       </li>
-      <li><i class="fas fa-fax"></i>02-27113370</li>
+      <li>
+        <i class="fas fa-fax"></i><a href="tel:02-27112290" title="02-27112290">02-27112290</a>
+      </li>
       <li>
         <i class="fas fa-envelope"></i
-        ><a
-          href="mailto:aroma@aromaharvest.com.tw"
-          title="aroma@aromaharvest.com.tw"
+        ><a href="mailto:aroma@aromaharvest.com.tw" title="aroma@aromaharvest.com.tw"
           >aroma@aromaharvest.com.tw</a
         >
       </li>
-      <li>
-        <i class="fas fa-clock"></i>週一至週日 09:00～18:00 ※國定假日暫停營業※
-      </li>
+      <li><i class="fas fa-clock"></i>週一至週日 09:00～18:00 ※國定假日暫停營業※</li>
     </ul>
     <p class="info_hint">
       各地址僅上課教室，無行政辨公室，詢問課程歡迎電洽或留言至
