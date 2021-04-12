@@ -13,7 +13,9 @@
     <SubSide
       v-model="search"
       :categories="categories"
+      :categoriesTitle="categoriesTitle"
       :rank="rank"
+      :rankTitle="rankTitle"
       @search="onSearch"
     ></SubSide>
   </div>
@@ -41,6 +43,8 @@ export default {
   data: () => ({
     news: new News({ title: "" }),
     rank: [],
+    categoriesTitle: "公告分類",
+    rankTitle: "最新公告",
     search: "",
   }),
   computed: {

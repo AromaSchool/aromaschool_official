@@ -161,32 +161,32 @@
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <router-link to="/blog" class="dropdown-item"
+                <router-link to="/blog/category/all" class="dropdown-item"
                   >禾場記趣</router-link
                 >
               </li>
               <li>
-                <router-link to="/blog" class="dropdown-item"
+                <router-link to="/blog/category/all" class="dropdown-item"
                   >學習感言</router-link
                 >
               </li>
               <li>
-                <router-link to="/blog" class="dropdown-item"
+                <router-link to="/blog/category/all" class="dropdown-item"
                   >芳療人物</router-link
                 >
               </li>
               <li>
-                <router-link to="/blog" class="dropdown-item"
+                <router-link to="/blog/category/all" class="dropdown-item"
                   >教學筆記</router-link
                 >
               </li>
               <li>
-                <router-link to="/blog" class="dropdown-item"
+                <router-link to="/blog/category/all" class="dropdown-item"
                   >芳療心語</router-link
                 >
               </li>
               <li>
-                <router-link to="/blog" class="dropdown-item"
+                <router-link to="/blog/category/all" class="dropdown-item"
                   >精油相關</router-link
                 >
               </li>

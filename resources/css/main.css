@@ -544,6 +544,10 @@ footer .copyright {
     color: #707179;
     text-decoration: none;
     transition-duration: .3s;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .subside_block .subside_box li:hover a {

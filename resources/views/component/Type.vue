@@ -1,6 +1,6 @@
 <template>
   <div class="subside_block type">
-    <h2>公告分類</h2>
+    <h2>{{ categoriesTitle }}</h2>
     <ul class="subside_box">
       <li v-for="category in categories" :key="category.id">
         <router-link
@@ -19,6 +19,10 @@ export default {
     categories: {
       type: Array,
       default: [],
+    },
+    categoriesTitle: {
+      type: String,
+      required: true,
     },
   },
 };

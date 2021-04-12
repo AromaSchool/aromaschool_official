@@ -1,7 +1,7 @@
 <template>
   <section class="container blog_list">
     <router-link
-      to="/"
+      to="/blog/1"
       class="article_box"
       title="植物解讀身體的訊息，善用香氣來癒療自己的情緒"
     >
@@ -21,7 +21,7 @@
       <div class="article_date">2021/04/09</div>
     </router-link>
     <router-link
-      to="/"
+      to="/blog/1"
       class="article_box"
       title="植物解讀身體的訊息，善用香氣來癒療自己的情緒"
     >
@@ -41,7 +41,7 @@
       <div class="article_date">2021/04/09</div>
     </router-link>
     <router-link
-      to="/"
+      to="/blog/1"
       class="article_box"
       title="植物解讀身體的訊息，善用香氣來癒療自己的情緒"
     >
@@ -61,7 +61,7 @@
       <div class="article_date">2021/04/09</div>
     </router-link>
     <router-link
-      to="/"
+      to="/blog/1"
       class="article_box"
       title="植物解讀身體的訊息，善用香氣來癒療自己的情緒"
     >
@@ -81,7 +81,7 @@
       <div class="article_date">2021/04/09</div>
     </router-link>
     <router-link
-      to="/"
+      to="/blog/1"
       class="article_box"
       title="植物解讀身體的訊息，善用香氣來癒療自己的情緒"
     >
@@ -101,7 +101,7 @@
       <div class="article_date">2021/04/09</div>
     </router-link>
     <router-link
-      to="/"
+      to="/blog/1"
       class="article_box"
       title="植物解讀身體的訊息，善用香氣來癒療自己的情緒"
     >
@@ -121,7 +121,7 @@
       <div class="article_date">2021/04/09</div>
     </router-link>
     <router-link
-      to="/"
+      to="/blog/1"
       class="article_box"
       title="植物解讀身體的訊息，善用香氣來癒療自己的情緒"
     >
