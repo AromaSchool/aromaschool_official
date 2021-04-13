@@ -8,6 +8,7 @@ jobs:
 
     strategy:
       matrix:
+        php-version: [7.2]
         node-version: [14.x]
 
     steps:
@@ -19,7 +20,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: npm install -g yarn
+      - name: Install Yarn
+        run: npm install -g yarn
 
       - name: Cache node modules
         uses: actions/cache@v2
@@ -30,7 +32,8 @@ jobs:
       - name: Install Node dependencies
         run: yarn install
 
-      - run: yarn prod
+      - name: Build frontend
+        run: yarn prod
 
       - name: Cache Composer dependencies
         uses: actions/cache@v2
@@ -38,10 +41,18 @@ jobs:
           path: /tmp/composer-cache
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
-      - name: Install dependencies
-        uses: php-actions/composer@v5
+      - name: Use PHP ${{ matrix.php-version }}
+        uses: shivammathur/setup-php@b7d1d9c9a92d8d8463ce36d7f60da34d461724f8
         with:
-          progress: yes
-          dev: no
-          args: --profile --ignore-platform-reqs --optimize-autoloader
-          command: composer install
+          php-version: ${{ matrix.php-version }}
+
+      - name: Install PHP Dependencies
+        run: |
+          composer install \
+            --no-dev \
+            --profile \
+            --ignore-platform-reqs \
+            --optimize-autoloader \
+            --no-scripts \
+            --no-interaction \
+            --prefer-dist
