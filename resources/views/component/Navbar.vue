@@ -147,7 +147,9 @@
             </ul>
           </li>
           <li class="nav-item">
-            <router-link to="/" class="nav-link">香氣發表會</router-link>
+            <router-link to="/presentation" class="nav-link"
+              >香氣發表會</router-link
+            >
           </li>
           <li class="nav-item dropdown">
             <router-link

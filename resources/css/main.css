@@ -774,6 +774,25 @@ footer .copyright {
     transform: rotate(180deg);
 }
 
+/* 即將上線 */
+.coming_soon{
+    margin-top: 140px;
+    margin-bottom: 190px;
+    text-align: center;
+}
+.coming_soon .title{
+    font-weight: 300;
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.coming_soon .remark{
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+
 @media screen and (max-width: 1200px) {
 
     /* 導覽列 */

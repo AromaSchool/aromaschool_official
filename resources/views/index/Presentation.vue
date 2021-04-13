@@ -11,7 +11,10 @@
         <p>
           香氣發表會是禾場國際芳療學苑為高階班學員精心規劃的畢業發表，透過向老師及同學們的案例分享，做為課程結束後的學習成果總結與展示。
         </p>
-        <router-link to="/" class="btn_outline brown" title="深入了解"
+        <router-link
+          to="/presentation"
+          class="btn_outline brown"
+          title="深入了解"
           >深入了解</router-link
         >
       </div>
