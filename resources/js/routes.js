@@ -23,10 +23,12 @@ import TeamMember from "../views/about/TeamMember.vue";
 import News from "../views/News.vue";
 import NewsList from "../views/news/NewsList.vue";
 import NewsDetail from "../views/news/NewsDetail.vue";
+import Presentation from "../views/Presentation.vue";
 import Blog from "../views/Blog.vue";
 import BlogList from "../views/blog/BlogList.vue";
 import BlogDetail from "../views/blog/BlogDetail.vue";
 import Contact from "../views/Contact.vue";
+import ComingSoon from "../views/component/ComingSoon.vue";
 
 const routes = [{
         path: "/",
@@ -185,6 +187,16 @@ const routes = [{
                 },
             },
         ]
+    },
+    {
+        path: "/presentation",
+        name: "presentation",
+        component: ComingSoon,
+        meta: {
+            title: "香氣發表會",
+            titleEn: "PRESENTATION",
+            bannerImage: "images/banner-5.jpg"
+        },
     },
     {
         path: "/blog",
