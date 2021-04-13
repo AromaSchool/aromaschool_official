@@ -12,13 +12,3 @@
     </div>
   </section>
 </template>
-
-<script>
-import BackBtn from "@/views/component/BackBtn.vue";
-
-export default {
-  components: {
-    BackBtn,
-  },
-};
-</script>
