@@ -11,6 +11,13 @@ jobs:
         php-version: [7.2]
         node-version: [14.x]
 
+    env:
+      APP_ENV: production
+      APP_DEBUG: false
+      APP_NAME: 禾場國際芳療學苑
+      APP_URL: http://official.aromaharvest.com.tw
+      DIST_TARGET_DIR: official.aromaharvest.com.tw
+
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -30,7 +37,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install Node dependencies
-        run: yarn install
+        run: yarn install --production --frozen-lockfile
 
       - name: Build frontend
         run: yarn prod
@@ -57,6 +64,24 @@ jobs:
             --no-interaction \
             --prefer-dist
 
+      - name: Step up environment
+        run: |
+          cp .env.example .env \
+          && sed -i '/^DB_USERNAME/s/=.*$/=${{ secrets.DB_USERNAME }}/' .env \
+          && sed -i '/^DB_PASSWORD/s/=.*$/=${{ secrets.DB_PASSWORD }}/' .env \
+          && sed -i '/^DB_DATABASE/s/=.*$/=${{ secrets.DB_DATABASE }}/' .env \
+          && sed -i '/^MAIL_FROM_ADDRESS/s/=.*$/=${{ secrets.MAIL_USERNAME }}/' .env \
+          && sed -i '/^MAIL_USERNAME/s/=.*$/=${{ secrets.MAIL_USERNAME }}/' .env \
+          && sed -i '/^MAIL_PASSWORD/s/=.*$/=${{ secrets.MAIL_PASSWORD }}/' .env \
+          && sed -i '/^APP_NAME/s/=.*$/=${{ env.APP_NAME }}/' .env \
+          && sed -i '/^APP_URL/s/=.*$/=${{ env.APP_URL }}/' .env \
+          && sed -i '/^APP_ENV/s/=.*$/=${{ env.APP_ENV }}/' .env \
+          && sed -i '/^APP_DEBUG/s/=.*$/=${{ env.APP_DEBUG }}/' .env \
+          && php artisan key:generate \
+          && php artisan config:cache \
+          && php artisan route:cache \
+          && php artisan view:cache
+
       - name: Deploy FTP
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         with:
@@ -64,8 +89,35 @@ jobs:
           ftp_username: ${{ secrets.FTP_USERNAME }}
           ftp_password: ${{ secrets.FTP_PASSWORD }}
           local_source_dir: "."
-          dist_target_dir: "official.aromaharvest.com.tw"
+          dist_target_dir: ${{ env.DIST_TARGET_DIR }}
           ignore_time: true
           delete: true
-          exclude: "'.git/' 'tests/' 'node_modules/' 'database/' 'resources/sass' 'resources/lang' 'resources/js' 'resources/image' 'resources/css' '.php_cs' '.editorconfig' 'package-lock.json' '.env.example' '.styleci.yml' '.eslintrc.js'"
-          other_flags: "--no-empty-dirs --ascii --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git*"
+          exclude: |
+            "
+            '.github/'
+            '.git/'
+            'tests/'
+            'node_modules/'
+            'storage/app/'
+            'resources/sass/'
+            'resources/lang/'
+            'resources/js/'
+            'resources/image/'
+            'resources/css/'
+            '.php_cs'
+            '.editorconfig'
+            'package-lock.json'
+            '.env.example'
+            '.styleci.yml'
+            '.eslintrc.js'
+            '_ide_helper.php'
+            'phpunit.xml'
+            "
+          other_flags: |
+            "--scan-all-first \
+            --parallel=$(nproc) \
+            --ascii \
+            --exclude-glob *.vue \
+            --exclude-glob *.md \
+            --exclude-glob .git* \
+            --file .env"
