@@ -11,13 +11,6 @@ jobs:
         php-version: [7.2]
         node-version: [14.x]
 
-    env:
-      APP_ENV: production
-      APP_DEBUG: false
-      APP_NAME: 禾場國際芳療學苑
-      APP_URL: http://official.aromaharvest.com.tw
-      DIST_TARGET_DIR: official.aromaharvest.com.tw
-
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
@@ -65,6 +58,12 @@ jobs:
             --prefer-dist
 
       - name: Step up environment
+        env:
+          APP_ENV: production
+          APP_DEBUG: false
+          APP_NAME: 禾場國際芳療學苑
+          APP_URL: http://official.aromaharvest.com.tw
+          DIST_TARGET_DIR: official.aromaharvest.com.tw
         run: |
           cp .env.example .env \
           && sed -i '/^DB_USERNAME/s/=.*$/=${{ secrets.DB_USERNAME }}/' .env \
@@ -74,7 +73,7 @@ jobs:
           && sed -i '/^MAIL_USERNAME/s/=.*$/=${{ secrets.MAIL_USERNAME }}/' .env \
           && sed -i '/^MAIL_PASSWORD/s/=.*$/=${{ secrets.MAIL_PASSWORD }}/' .env \
           && sed -i '/^APP_NAME/s/=.*$/=${{ env.APP_NAME }}/' .env \
-          && sed -i '/^APP_URL/s/=.*$/=${{ env.APP_URL }}/' .env \
+          && sed -i '/^APP_URL/s@=.*$@=${{ env.APP_URL }}@' .env \
           && sed -i '/^APP_ENV/s/=.*$/=${{ env.APP_ENV }}/' .env \
           && sed -i '/^APP_DEBUG/s/=.*$/=${{ env.APP_DEBUG }}/' .env \
           && php artisan key:generate \
