@@ -57,7 +57,7 @@ jobs:
             --no-interaction \
             --prefer-dist
 
-      - name: Step up environment
+      - name: Setup environment
         env:
           APP_NAME: 禾場國際芳療學苑
           APP_URL: http://official.aromaharvest.com.tw
@@ -75,10 +75,7 @@ jobs:
           && sed -i '/^APP_URL/s@=.*$@=${{ env.APP_URL }}@' .env \
           && sed -i '/^APP_ENV/s/=.*$/=${{ env.APP_ENV }}/' .env \
           && sed -i '/^APP_DEBUG/s/=.*$/=${{ env.APP_DEBUG }}/' .env \
-          && php artisan key:generate \
-          && php artisan config:cache \
-          && php artisan route:cache \
-          && php artisan view:cache
+          && php artisan key:generate
 
       - name: Deploy FTP
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
