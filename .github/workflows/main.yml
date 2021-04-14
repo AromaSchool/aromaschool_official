@@ -37,7 +37,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install Node dependencies
-        run: yarn install --production --frozen-lockfile
+        run: yarn install --frozen-lockfile
 
       - name: Build frontend
         run: yarn prod
