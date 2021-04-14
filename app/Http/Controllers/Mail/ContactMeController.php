@@ -40,7 +40,7 @@ class ContactMeController extends Controller
               $request->phone,
               $request->mail,
               $request->title,
-              $request->content,
+              $request->content
           ));
 
         if (Mail::failures()) {

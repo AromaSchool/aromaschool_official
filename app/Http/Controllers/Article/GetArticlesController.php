@@ -55,7 +55,7 @@ class GetArticlesController extends Controller
             $params['orderDirection'],
             $params['search'],
             $params['category_id'],
-            $params['keyword_id'],
+            $params['keyword_id']
         );
 
         return $response;

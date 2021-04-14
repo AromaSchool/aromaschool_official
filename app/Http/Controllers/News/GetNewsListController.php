@@ -51,7 +51,7 @@ class GetNewsListController extends Controller
             $params['orderBy'],
             $params['orderDirection'],
             $params['search'],
-            $params['category_id'],
+            $params['category_id']
         );
 
         return $response;
