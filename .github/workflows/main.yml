@@ -87,13 +87,12 @@ jobs:
           ftp_host: ${{ secrets.FTP_HOST }}
           ftp_username: ${{ secrets.FTP_USERNAME }}
           ftp_password: ${{ secrets.FTP_PASSWORD }}
-          local_source_dir: "."
+          local_source_dir: .
           dist_target_dir: ${{ env.DIST_TARGET_DIR }}
           ignore_time: true
           delete: true
           exclude: |
-            "
-            '.github/'
+            "'.github/'
             '.git/'
             'tests/'
             'node_modules/'
@@ -110,6 +109,5 @@ jobs:
             '.styleci.yml'
             '.eslintrc.js'
             '_ide_helper.php'
-            'phpunit.xml'
-            "
+            'phpunit.xml'"
           other_flags: "--scan-all-first --parallel=$(nproc) --ascii --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git* --file .env"
