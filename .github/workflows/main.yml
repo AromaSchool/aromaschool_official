@@ -112,11 +112,4 @@ jobs:
             '_ide_helper.php'
             'phpunit.xml'
             "
-          other_flags: |
-            "--scan-all-first \
-            --parallel=$(nproc) \
-            --ascii \
-            --exclude-glob *.vue \
-            --exclude-glob *.md \
-            --exclude-glob .git* \
-            --file .env"
+          other_flags: "--scan-all-first --parallel=$(nproc) --ascii --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git* --file .env"
