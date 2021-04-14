@@ -93,4 +93,4 @@ jobs:
           ignore_time: true
           delete: true
           exclude: "'.github/' '.git/' 'tests/' 'node_modules/' 'storage/app/' 'resources/sass/' 'resources/lang/' 'resources/js/' 'resources/image/' 'resources/css/' '.php_cs' '.editorconfig' 'package-lock.json' '.env.example' '.styleci.yml' '.eslintrc.js' '_ide_helper.php' 'phpunit.xml'"
-          other_flags: "--parallel=$(nproc) --ascii --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git*"
+          other_flags: "--parallel=$(nproc) --ascii --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git* --exclude-glob *.log"
