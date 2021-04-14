@@ -64,6 +64,7 @@ jobs:
           ftp_username: ${{ secrets.FTP_USERNAME }}
           ftp_password: ${{ secrets.FTP_PASSWORD }}
           local_source_dir: "."
-          dist_target_dir: "dashboard.aromaharvest.com.tw"
-          exclude: "'*.log' '*.md' '*.cache' '.git*' 'node_modules' 'resources'"
-          other_flags: "--no-empty-dirs --ascii"
+          dist_target_dir: "official.aromaharvest.com.tw"
+          only_newer: true
+          exclude: "'.git' '.env' 'public/mix-manifest.json' 'tests' 'node_modules/' 'resources/' '.php_cs'"
+          other_flags: "--no-empty-dirs --ascii --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git*"
