@@ -59,11 +59,10 @@ jobs:
 
       - name: Step up environment
         env:
-          APP_ENV: production
-          APP_DEBUG: false
           APP_NAME: 禾場國際芳療學苑
           APP_URL: http://official.aromaharvest.com.tw
-          DIST_TARGET_DIR: official.aromaharvest.com.tw
+          APP_ENV: production
+          APP_DEBUG: false
         run: |
           cp .env.example .env \
           && sed -i '/^DB_USERNAME/s/=.*$/=${{ secrets.DB_USERNAME }}/' .env \
@@ -83,6 +82,8 @@ jobs:
 
       - name: Deploy FTP
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
+        env:
+          DIST_TARGET_DIR: official.aromaharvest.com.tw
         with:
           ftp_host: ${{ secrets.FTP_HOST }}
           ftp_username: ${{ secrets.FTP_USERNAME }}
