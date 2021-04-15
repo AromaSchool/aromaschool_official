@@ -3,7 +3,7 @@
     <div class="main_side">
       <ContentCenter
         :title="news.title"
-        :type="`${categoriesMapping[news.category]}公告`"
+        :type="categoriesMapping[news.category]"
         :date="news.created_at"
       >
         <div v-html="news.content"></div>

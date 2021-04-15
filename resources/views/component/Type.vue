@@ -3,11 +3,9 @@
     <h2>{{ categoriesTitle }}</h2>
     <ul class="subside_box">
       <li v-for="category in categories" :key="category.id">
-        <router-link
-          :to="`/${categoriesPath}/category/${category.id}`"
-          :title="`${category.name}公告`"
-          >{{ `${category.name}公告` }}</router-link
-        >
+        <router-link :to="`/${categoriesPath}/category/${category.id}`" :title="category.name">{{
+          category.name
+        }}</router-link>
       </li>
     </ul>
   </div>

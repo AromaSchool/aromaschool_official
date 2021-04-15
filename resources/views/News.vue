@@ -39,7 +39,10 @@ export default {
   methods: {
     getNewsCategories() {
       News.getCategories().then((response) => {
-        this.categories = response;
+        this.categories = response.map((category) => {
+          category.name = `${category.name}公告`;
+          return category;
+        });
       });
     },
   },

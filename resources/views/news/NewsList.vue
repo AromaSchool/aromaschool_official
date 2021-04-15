@@ -3,11 +3,7 @@
     <div class="index_news">
       <ul class="news_block">
         <li v-for="news in data" :key="news.id">
-          <router-link
-            :to="`/news/${news.id}`"
-            class="news_box"
-            :title="news.title"
-          >
+          <router-link :to="`/news/${news.id}`" class="news_box" :title="news.title">
             <div class="time">
               <span class="month">{{ month(news.created_at) }}</span>
               <span class="date">{{ day(news.created_at) }}</span>
@@ -15,7 +11,7 @@
             </div>
             <div class="news_title">
               <div class="category">
-                {{ `${categoriesMapping[news.category]}公告` }}
+                {{ categoriesMapping[news.category] }}
               </div>
               <h5>{{ news.title }}</h5>
             </div>
@@ -23,11 +19,7 @@
         </li>
       </ul>
     </div>
-    <infinite-loading
-      @infinite="infiniteLoadingHandler"
-      :identifier="infiniteId"
-      spinner="spiral"
-    >
+    <infinite-loading @infinite="infiniteLoadingHandler" :identifier="infiniteId" spinner="spiral">
       <div slot="no-more"></div>
       <div slot="no-results">無資料</div>
     </infinite-loading>
@@ -137,7 +129,7 @@ export default {
           return category.id == this.$route.params.id;
         });
         if (category != undefined) {
-          const title = `${category.name}公告`;
+          const title = category.name;
           document.title = `${title} | 禾場國際芳療學苑`;
           this.$route.meta.title = title;
         }
