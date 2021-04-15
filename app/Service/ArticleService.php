@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace App\Service;
 
+use Carbon\Carbon;
 use App\Models\Article;
 use App\Models\ArticleCategory;
-use App\Models\ArticleKeyword;
-use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Collection;
 
 class ArticleService
@@ -138,5 +138,29 @@ class ArticleService
             'lastIndex' => $lastIndex,
             'list' => $result
         ];
+    }
+
+    public function updateArticleHit(int $id): void
+    {
+        $ip = \Request::ip();
+        $key = "article.$id.hit.from.$ip";
+        try {
+            \DB::beginTransaction();
+
+            if (!Cache::has($key)) {
+                $expiresAt = Carbon::now()->endOfDay();
+                Cache::put($key, Carbon::now()->toDateString(), $expiresAt);
+
+                $article = Article::find($id);
+                $article->hits += 1;
+                $article->save();
+            }
+
+            \DB::commit();
+        } catch (\Throwable $th) {
+            Cache::forget($key);
+            \DB::rollBack();
+            throw $th;
+        }
     }
 }

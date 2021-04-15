@@ -45,6 +45,7 @@ Route::prefix('articles')->group(function () {
     });
     Route::get('/', Article\GetArticlesController::class);
     Route::get('/{id}', Article\GetArticleController::class)->where('id', '[0-9]+');
+    Route::put('/{id}/hit', Article\UpdateArticleHitsController::class)->where('id', '[0-9]+');
 });
 
 Route::prefix('mail')->group(function () {

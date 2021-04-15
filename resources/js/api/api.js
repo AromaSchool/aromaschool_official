@@ -12,7 +12,7 @@ const options = {
      * treat null values like undefined values and ignore them
      * defaults to false
      */
-    nullsAsUndefineds: false,
+    nullsAsUndefineds: true,
 
     /**
      * convert true or false to 1 or 0 respectively
@@ -70,11 +70,12 @@ class Client {
     }
 
     put(path, payload) {
+        // note: https://stackoverflow.com/questions/50691938/patch-and-put-request-does-not-working-with-form-data
         return this._instance.request({
-            method: "PUT",
-            url: path,
+            method: "POST",
+            url: `${path}?_method=PUT`,
             responseType: "json",
-            data: payload
+            data: serialize(payload, options)
         });
     }
 
@@ -83,7 +84,7 @@ class Client {
             method: "POST",
             url: path,
             responseType: "json",
-            data: payload
+            data: serialize(payload, options)
         });
     }
 
@@ -92,7 +93,7 @@ class Client {
             method: "DELETE",
             url: path,
             responseType: "json",
-            data: payload
+            data: serialize(payload, options)
         });
     }
 }
