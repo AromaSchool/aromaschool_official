@@ -1,7 +1,11 @@
 <template>
   <section class="sub_side">
     <SearchBox v-model="searchValue" @enter="onSearch"></SearchBox>
-    <Type :categories="categories" :categoriesTitle="categoriesTitle"></Type>
+    <Type
+      :categories="categories"
+      :categoriesPath="categoriesPath"
+      :categoriesTitle="categoriesTitle"
+    ></Type>
     <Rank :rank="rank" :rankTitle="rankTitle"></Rank>
   </section>
 </template>
@@ -24,11 +28,15 @@ export default {
     },
     categories: {
       type: Array,
-      default: [],
+      default: () => [],
+    },
+    categoriesPath: {
+      type: String,
+      required: true,
     },
     rank: {
       type: Array,
-      default: [],
+      default: () => [],
     },
     rankTitle: {
       type: String,

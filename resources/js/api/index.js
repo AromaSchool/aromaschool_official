@@ -3,6 +3,11 @@ import Review from "./review";
 import News from "./news";
 import TeamMember from "./teamMember";
 import Email from "./email";
+import {
+    Blog,
+    BlogKeyword,
+    BlogCategory,
+} from "./blog";
 
 export {
     Event,
@@ -10,4 +15,7 @@ export {
     News,
     TeamMember,
     Email,
+    Blog,
+    BlogKeyword,
+    BlogCategory,
 };

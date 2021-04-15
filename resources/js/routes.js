@@ -212,7 +212,7 @@ const routes = [{
                 name: "blogAll",
                 component: BlogList,
                 meta: {
-                    title: "所有公告"
+                    title: "所有文章"
                 },
             },
             {

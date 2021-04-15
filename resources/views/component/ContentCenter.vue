@@ -9,30 +9,31 @@
         <div class="date" v-if="date != null">{{ date }}</div>
       </div>
     </div>
-    <div
-      class="arti_content"
-      :class="{ flex: $route.matched[1].name == 'teamMember' }"
-    >
+    <div class="arti_content" :class="{ flex: $route.matched[1].name == 'teamMember' }">
       <figure class="first_image" v-if="firstImage != null">
         <img :src="firstImage" :alt="title" />
       </figure>
       <div class="arti_editor">
         <slot></slot>
       </div>
-      <div class="arti_keyword" v-if="$route.matched[0].name == 'blog'">
-        <router-link to="/" class="keyword_box">NAHA</router-link>
-        <router-link to="/" class="keyword_box">岩蘭草</router-link>
-        <router-link to="/" class="keyword_box">神經</router-link>
-        <router-link to="/" class="keyword_box">精油</router-link>
+      <div class="arti_keyword" v-if="keywords.length">
+        <router-link
+          :to="`/blog/category/all?keyword=${keyword.id}`"
+          class="keyword_box"
+          v-for="keyword in keywords"
+          :key="keyword.id"
+        >
+          {{ keyword.name }}
+        </router-link>
       </div>
-      <div class="arti_author" v-if="$route.matched[0].name == 'blog'">
+      <div class="arti_author" v-if="author">
         <figure class="author_image">
-          <img src="@/image/index/student_default.svg" alt="Evelyn 芳療師" />
+          <img :src="author.image" :alt="author.name" />
         </figure>
         <div class="author_info">
-          <h4 class="name">Evelyn 芳療師</h4>
+          <h4 class="name">{{ author.name }}</h4>
           <p class="intro">
-            法國凡爾賽音樂院鋼琴演奏碩士，美國NAHA國際專業芳療師認證。留法返台後除了教授鋼琴並跨界多元發展，在彈琴之餘還聞香、調香，樂於分享芳香療法幫助每個人找回身心最自然的韻律。
+            {{ author.bio }}
           </p>
         </div>
       </div>
@@ -56,6 +57,14 @@ export default {
     },
     firstImage: {
       type: String,
+    },
+    keywords: {
+      type: Array,
+      default: () => [],
+    },
+    author: {
+      type: Object,
+      default: null,
     },
   },
 };

@@ -13,6 +13,7 @@
     <SubSide
       v-model="search"
       :categories="categories"
+      :categoriesPath="categoriesPath"
       :categoriesTitle="categoriesTitle"
       :rank="rank"
       :rankTitle="rankTitle"
@@ -43,6 +44,7 @@ export default {
   data: () => ({
     news: new News({ title: "" }),
     rank: [],
+    categoriesPath: "news",
     categoriesTitle: "公告分類",
     rankTitle: "最新公告",
     search: "",
@@ -64,9 +66,7 @@ export default {
     getNews() {
       News.get(this.$route.params.id).then((response) => {
         this.news = response;
-        this.news.created_at = moment(this.news.created_at).format(
-          "YYYY/MM/DD"
-        );
+        this.news.created_at = moment(this.news.created_at).format("YYYY/MM/DD");
       });
     },
     getNewsList() {

@@ -42,8 +42,8 @@ class ArticleService
         ?int $categoryId,
         ?int $keywordId
     ): array {
-        $selected = ['id', 'title', 'category_id', 'created_at', 'image'];
-        $query = Article::limit($limit)->with('category')->with('keywords')->where('visible', '=', true);
+        $selected = ['id', 'title', 'category_id', 'created_at', 'image', \DB::raw('LEFT(`content` , 20) as content')];
+        $query = Article::limit($limit)->with('category')->where('visible', '=', true);
 
         if ($categoryId !== null) {
             $query->whereHas('category', function ($q) use ($categoryId) {

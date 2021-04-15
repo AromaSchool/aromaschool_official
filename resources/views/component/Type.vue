@@ -4,7 +4,7 @@
     <ul class="subside_box">
       <li v-for="category in categories" :key="category.id">
         <router-link
-          :to="`/news/category/${category.id}`"
+          :to="`/${categoriesPath}/category/${category.id}`"
           :title="`${category.name}公告`"
           >{{ `${category.name}公告` }}</router-link
         >
@@ -21,6 +21,10 @@ export default {
       default: [],
     },
     categoriesTitle: {
+      type: String,
+      required: true,
+    },
+    categoriesPath: {
       type: String,
       required: true,
     },

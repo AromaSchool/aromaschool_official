@@ -11,7 +11,7 @@
       <router-view
         :search.sync="search"
         :categories="categories"
-        :key="$route.path"
+        :key="$route.fullPath"
       ></router-view>
     </keep-alive>
   </div>
