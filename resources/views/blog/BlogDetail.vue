@@ -62,6 +62,7 @@ export default {
     getBlog() {
       Blog.get(this.$route.params.id).then((response) => {
         this.blog = response;
+        this.blog.hit();
       });
     },
     getBlogs() {

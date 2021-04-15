@@ -29,7 +29,6 @@ export default {
   created() {
     this.getTeamMember();
     this.getTeamMemberCategory();
-    console.log(this.data);
   },
   computed: {
     findItem: function () {

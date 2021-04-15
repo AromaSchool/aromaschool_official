@@ -36,6 +36,7 @@
         "eslint-plugin-prettier": "^3.3.1",
         "eslint-plugin-vue": "^7.7.0",
         "moment": "^2.29.1",
+        "object-to-formdata": "^4.1.0",
         "prettier": "^2.2.1",
         "sweetalert2": "^10.16.0",
         "swiper": "^6.5.0",

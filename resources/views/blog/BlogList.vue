@@ -80,7 +80,6 @@ export default {
   },
   methods: {
     getBlogs($state) {
-      console.log(this.search);
       Blog.getList({
         lastIndex: this.lastIndex,
         search: this.search,

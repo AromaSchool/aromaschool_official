@@ -80,6 +80,10 @@ class Blog {
                 };
             });
     }
+
+    async hit() {
+        return client.put(`/articles/${this.id}/hit`);
+    }
 }
 
 class BlogKeyword {
