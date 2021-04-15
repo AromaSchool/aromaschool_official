@@ -29,7 +29,7 @@ export default {
   created() {
     this.getTeamMember();
     this.getTeamMemberCategory();
-    // console.log(this.$route.params.id);
+    console.log(this.data);
   },
   computed: {
     findItem: function () {
@@ -40,6 +40,9 @@ export default {
           return this.item[0];
         }
       }
+      if (this.item.length) {
+        this.$router.push({ path: "/about/teamMember/404" });
+      }
       return {};
     },
   },
@@ -47,11 +50,6 @@ export default {
     getTeamMember() {
       TeamMember.get().then((item) => {
         this.item = item;
-        for (let item of this.item) {
-          if (this.$route.params.id == item.id) {
-            console.log(item);
-          }
-        }
       });
     },
     getTeamMemberCategory() {

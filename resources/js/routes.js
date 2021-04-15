@@ -138,6 +138,14 @@ const routes = [{
                 }, ]
             },
             {
+                path: 'teamMember/404',
+                name: "teamMember404",
+                component: NotFound,
+                meta: {
+                    title: "師資陣容"
+                },
+            },
+            {
                 path: 'teamMember',
                 name: "teamMember",
                 component: TeamMember,
@@ -151,6 +159,7 @@ const routes = [{
                     }
                 }, ]
             },
+
         ]
     },
     {
@@ -259,7 +268,10 @@ const routes = [{
     },
     {
         path: "*",
-        redirect: "/"
+        component: NotFound,
+        meta: {
+            bannerImage: "images/banner-7.jpg"
+        },
     }
 ];
 const router = new VueRouter({

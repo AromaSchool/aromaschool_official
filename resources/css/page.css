@@ -828,11 +828,11 @@ h3.index_title span::after {
     width: calc(25% - 20px);
     margin: 0 10px 30px;
     text-decoration: none;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition-duration: .3s;
 }
 .blog_list .article_box:hover{
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 .blog_list .article_box:hover figure img{
     transform: scale(1.1);
