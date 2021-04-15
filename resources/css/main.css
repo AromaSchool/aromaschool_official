@@ -525,13 +525,6 @@ footer .copyright {
     font-weight: 500;
 }
 
-/* .subside_block.rank .subside_box li::marker {
-    content: "0"counter(list-item);
-    color: #C9B5A5;
-    font-size: 22px;
-    font-weight: 500;
-} */
-
 .subside_block .subside_box li {
     border-bottom: solid 3px #F1F1F4;
     padding: 10px;
@@ -791,6 +784,12 @@ footer .copyright {
     font-weight: 300;
     letter-spacing: 1px;
     margin-bottom: 35px;
+}
+
+/* 錯誤頁面 */
+.coming_soon .title span{
+    display: block;
+    font-size: 24px;
 }
 
 @media screen and (max-width: 1200px) {

@@ -246,10 +246,16 @@ const routes = [{
     {
         path: "/404",
         component: NotFound,
+        meta: {
+            bannerImage: "images/banner-7.jpg"
+        },
     },
     {
         path: "/500",
         component: ServerError,
+        meta: {
+            bannerImage: "images/banner-7.jpg"
+        },
     },
     {
         path: "*",
