@@ -42,7 +42,15 @@ class ArticleService
         ?int $categoryId,
         ?int $keywordId
     ): array {
-        $selected = ['id', 'title', 'category_id', 'created_at', 'image', \DB::raw('LEFT(`content` , 20) as content')];
+        $selected = [
+            'id',
+            'title',
+            'category_id',
+            'created_at',
+            'hits',
+            'image',
+            \DB::raw('LEFT(`content` , 20) as content'),
+        ];
         $query = Article::limit($limit)->with('category')->where('visible', '=', true);
 
         if ($categoryId !== null) {

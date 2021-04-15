@@ -35,6 +35,7 @@ class Article extends Model
      * @var array
      */
     protected $hidden = [
+        'hits',
         'visible',
         'score',
         'category_id',

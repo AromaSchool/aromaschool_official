@@ -68,6 +68,7 @@ export default {
     getBlogs() {
       Blog.getList({
         limit: 5,
+        orderBy: "hits",
       }).then((response) => {
         for (const blog of response.list) {
           this.rank.push({

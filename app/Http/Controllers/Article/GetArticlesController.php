@@ -37,7 +37,7 @@ class GetArticlesController extends Controller
             $params,
             [
                 'limit' => 'numeric|min:1',
-                'orderBy' => 'in:title,created_at,author_name',
+                'orderBy' => 'in:title,created_at,author_name,hits',
                 'orderDirection' => 'in:desc,asc',
                 'category_id' => 'exists:article_categories,id|nullable',
                 'keyword_id' => 'exists:article_keywords,id|nullable',
