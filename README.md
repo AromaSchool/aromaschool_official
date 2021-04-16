@@ -84,6 +84,22 @@
   yarn install
   ```
 
+## 郵件設置
+
+- 修改`.env`設定
+
+  - `MAIL_USERNAME`：信箱帳號
+  - `MAIL_PASSWORD`：信箱密碼
+  - `MAIL_FROM_ADDRESS`：顯示寄件者信箱
+
+  範例：
+
+  ```ini
+  MAIL_USERNAME=example@gmail.com
+  MAIL_PASSWORD=P@ssw0rd
+  MAIL_FROM_ADDRESS=example@gmail.com
+  ```
+
 ## 執行
 
 - 前端開發模式
