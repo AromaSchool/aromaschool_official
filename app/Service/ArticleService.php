@@ -49,7 +49,7 @@ class ArticleService
             'created_at',
             'hits',
             'image',
-            \DB::raw('LEFT(`content` , 20) as content'),
+            \DB::raw('LEFT(`content` , 40) as content'),
         ];
         $query = Article::limit($limit)->with('category')->where('visible', '=', true);
 
