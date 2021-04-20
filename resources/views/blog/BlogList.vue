@@ -15,7 +15,7 @@
         <div class="article_text">
           <h2 class="title">{{ blog.title }}</h2>
           <div class="preview">
-            {{ blog.content }}
+            {{ removeHTMLTag(blog.content) }}
           </div>
         </div>
         <div class="article_date">{{ datetimeFormat(blog.createdAt) }}</div>
@@ -116,6 +116,9 @@ export default {
     },
     datetimeFormat(datetime) {
       return moment(datetime).format("YYYY-MM-DD");
+    },
+    removeHTMLTag(str) {
+      return str.replace(/<\/?[^>]+(>|$)/g, "");
     },
   },
 };
