@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        php-version: [7.2]
+        php-version: [7.3]
         node-version: [14.x]
 
     steps:
@@ -28,6 +28,8 @@ jobs:
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
 
       - name: Install Node dependencies
         run: yarn install --frozen-lockfile
@@ -38,8 +40,10 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v2
         with:
-          path: /tmp/composer-cache
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+          path: '**/vendor'
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
 
       - name: Use PHP ${{ matrix.php-version }}
         uses: shivammathur/setup-php@b7d1d9c9a92d8d8463ce36d7f60da34d461724f8
@@ -87,7 +91,6 @@ jobs:
           ftp_password: ${{ secrets.FTP_PASSWORD }}
           local_source_dir: "."
           dist_target_dir: ${{ env.DIST_TARGET_DIR }}
-          ignore_time: true
           delete: true
           exclude: "'.github/' '.git/' 'tests/' 'node_modules/' 'storage/app/' 'resources/sass/' 'resources/lang/' 'resources/js/' 'resources/image/' 'resources/css/' '.php_cs' '.editorconfig' 'package-lock.json' '.env.example' '.styleci.yml' '.eslintrc.js' '_ide_helper.php' 'phpunit.xml'"
-          other_flags: "-v --parallel=$(nproc) --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git* --exclude-glob *.log"
+          other_flags: "-v --dereference --parallel=$(nproc) --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git* --exclude-glob *.log"
