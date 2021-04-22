@@ -82,7 +82,7 @@ jobs:
           && sed -i '/^APP_URL/s@=.*$@=${{ env.APP_URL }}@' .env \
           && sed -i '/^APP_ENV/s/=.*$/=${{ env.APP_ENV }}/' .env \
           && sed -i '/^APP_DEBUG/s/=.*$/=${{ env.APP_DEBUG }}/' .env \
-          && sed -i '/^STORAGE_URL/s/=.*$/=${{ env.STORAGE_URL }}/' .env \
+          && sed -i '/^STORAGE_URL/s@=.*$@=${{ env.STORAGE_URL }}@' .env \
           && php artisan key:generate
 
       - name: Deploy FTP
