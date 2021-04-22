@@ -51,3 +51,7 @@ Route::prefix('articles')->group(function () {
 Route::prefix('mail')->group(function () {
     Route::post('/contact', Mail\ContactMeController::class);
 });
+
+Route::prefix('optimize')->group(function () {
+    Route::post('/', Optimize\OptimizeController::class);
+});
