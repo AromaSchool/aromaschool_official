@@ -117,8 +117,10 @@ export default {
     datetimeFormat(datetime) {
       return moment(datetime).format("YYYY-MM-DD");
     },
-    removeHTMLTag(str) {
-      return str.replace(/<\/?[^>]+(>|$)/g, "");
+    removeHTMLTag(html) {
+      let tmp = document.createElement("div");
+      tmp.innerHTML = html;
+      return tmp.textContent || tmp.innerText || "";
     },
   },
 };
