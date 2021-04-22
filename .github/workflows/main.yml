@@ -32,7 +32,10 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install Node dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          yarn install \
+            --frozen-lockfile \
+            --no-bin-links
 
       - name: Build frontend
         run: yarn prod
@@ -67,6 +70,7 @@ jobs:
           APP_URL: http://official.aromaharvest.com.tw
           APP_ENV: production
           APP_DEBUG: false
+          STORAGE_URL: http://dashboard.aromaharvest.com.tw
         run: |
           cp .env.example .env \
           && sed -i '/^DB_USERNAME/s/=.*$/=${{ secrets.DB_USERNAME }}/' .env \
@@ -79,6 +83,7 @@ jobs:
           && sed -i '/^APP_URL/s@=.*$@=${{ env.APP_URL }}@' .env \
           && sed -i '/^APP_ENV/s/=.*$/=${{ env.APP_ENV }}/' .env \
           && sed -i '/^APP_DEBUG/s/=.*$/=${{ env.APP_DEBUG }}/' .env \
+          && sed -i '/^STORAGE_URL/s/=.*$/=${{ env.STORAGE_URL }}/' .env \
           && php artisan key:generate
 
       - name: Deploy FTP
