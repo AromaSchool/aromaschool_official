@@ -34,8 +34,7 @@ jobs:
       - name: Install Node dependencies
         run: |
           yarn install \
-            --frozen-lockfile \
-            --no-bin-links
+            --frozen-lockfile
 
       - name: Build frontend
         run: yarn prod
