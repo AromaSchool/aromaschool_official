@@ -8,8 +8,13 @@ use App\Models\Review;
 
 class ReviewService
 {
-    public function getReviews(?string $lastIndex, int $limit, string $orderBy, string $orderDirection, ?string $search): array
-    {
+    public function getReviews(
+        ?string $lastIndex,
+        int $limit,
+        string $orderBy,
+        string $orderDirection,
+        ?string $search
+    ): array {
         $query = Review::limit($limit);
 
         if ($search !== null) {
