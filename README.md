@@ -100,6 +100,12 @@
   MAIL_FROM_ADDRESS=example@gmail.com
   ```
 
+## 檔案路徑
+
+- 修改`.env`設定
+
+  - `STORAGE_URL`：後台系統網址，因為檔案上傳皆是傳送到後台的資料夾
+
 ## 執行
 
 - 前端開發模式

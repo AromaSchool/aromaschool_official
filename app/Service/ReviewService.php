@@ -50,7 +50,7 @@ class ReviewService
 
         foreach ($result as $review) {
             if ($review->image) {
-                $review->image = env('APP_URL') . '/storage/reviews/' . $review->image;
+                $review->image = env('STORAGE_URL') . '/storage/reviews/' . $review->image;
             }
         }
 

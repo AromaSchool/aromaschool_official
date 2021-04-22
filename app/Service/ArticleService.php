@@ -23,10 +23,10 @@ class ArticleService
 
         if ($article) {
             if ($article->image) {
-                $article->image = env('APP_URL') . '/storage/articles/' . $article->image;
+                $article->image = env('STORAGE_URL') . "/storage/articles/$article->image";
             }
             if ($article->author_image) {
-                $article->author_image = env('APP_URL') . '/storage/articles/author/' . $article->author_image;
+                $article->author_image = env('STORAGE_URL') . "/storage/articles/author/$article->author_image";
             }
         }
 
@@ -49,7 +49,7 @@ class ArticleService
             'created_at',
             'hits',
             'image',
-            \DB::raw('LEFT(`content` , 40) as content'),
+            \DB::raw('LEFT(`content` , 60) as content'),
         ];
         $query = Article::limit($limit)->with('category')->where('visible', '=', true);
 
@@ -135,6 +135,14 @@ class ArticleService
 
         $result = $query->get();
         $length = \count($result);
+
+        foreach ($result as $article) {
+            if ($article) {
+                if ($article->image) {
+                    $article->image = env('STORAGE_URL') . "/storage/articles/$article->image";
+                }
+            }
+        }
 
         if ($search) {
             $lastIndex = $length ? "{$result[$length - 1]->score},{$result[$length - 1]->id}" : null;
