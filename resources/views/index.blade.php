@@ -14,8 +14,11 @@
     </div>
 
     @if(env('APP_ENV')=='local')
-        <script src="http://localhost:35729/livereload.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
     @endif
+
+    <script src="{{ mix('js/manifest.js') }}"></script>
+    <script src="{{ mix('js/vendor.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

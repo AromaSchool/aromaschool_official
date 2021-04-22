@@ -97,36 +97,39 @@ export default {
           this.$swal.showLoading();
         },
       });
-      Email.send(
-        this.formData.title,
-        this.formData.content,
-        this.formData.name,
-        this.formData.phone,
-        this.formData.department,
-        this.formData.mail
-      )
-        .then(() => {
-          this.$swal.close();
-          this.$swal
-            .fire({
-              title: "成功",
-              icon: "success",
+      this.$recaptcha("login").then((token) => {
+        Email.send(
+          this.formData.title,
+          this.formData.content,
+          this.formData.name,
+          this.formData.phone,
+          this.formData.department,
+          this.formData.mail,
+          token
+        )
+          .then(() => {
+            this.$swal.close();
+            this.$swal
+              .fire({
+                title: "成功",
+                icon: "success",
+                timer: 2000,
+                showConfirmButton: false,
+              })
+              .then(() => {
+                this.formData = {};
+              });
+          })
+          .catch(() => {
+            this.$swal.close();
+            this.$swal.fire({
+              title: "發生錯誤",
+              icon: "error",
               timer: 2000,
               showConfirmButton: false,
-            })
-            .then(() => {
-              this.formData = {};
             });
-        })
-        .catch(() => {
-          this.$swal.close();
-          this.$swal.fire({
-            title: "發生錯誤",
-            icon: "error",
-            timer: 2000,
-            showConfirmButton: false,
           });
-        });
+      });
     },
   },
 };

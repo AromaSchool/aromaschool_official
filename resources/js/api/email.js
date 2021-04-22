@@ -8,14 +8,16 @@ class Email {
         phone,
         department,
         mail,
+        recaptcha
     ) {
         return client.post("/mail/contact", {
-            title,
-            content,
-            name,
-            phone,
-            department,
-            mail,
+            title: title,
+            content: content,
+            name: name,
+            phone: phone,
+            department: department,
+            mail: mail,
+            recaptcha: recaptcha,
         });
     }
 }

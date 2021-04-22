@@ -26,6 +26,7 @@ class ContactMeController extends Controller
                 'title' => 'required',
                 'content' => 'required',
                 'mail' => 'required|email',
+                'recaptcha' => 'required|recaptcha',
             ]
         );
 

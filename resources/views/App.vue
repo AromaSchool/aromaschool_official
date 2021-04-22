@@ -37,5 +37,13 @@ export default {
       },
     },
   },
+  created() {
+    this.$recaptchaLoaded().then(() => {
+      const recaptcha = this.$recaptchaInstance;
+
+      // Hide reCAPTCHA badge:
+      recaptcha.hideBadge();
+    });
+  },
 };
 </script>
