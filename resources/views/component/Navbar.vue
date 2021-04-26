@@ -64,7 +64,9 @@
             </ul>
           </li>
           <li class="nav-item">
-            <router-link to="/news/category/all" class="nav-link">最新消息</router-link>
+            <router-link to="/news/category/all" class="nav-link"
+              >最新消息</router-link
+            >
           </li>
           <li class="nav-item dropdown">
             <router-link
@@ -81,16 +83,29 @@
                 <router-link to="/" class="dropdown-item">芳療學苑</router-link>
                 <ul class="dropdown-submenu">
                   <li>
-                    <router-link to="/" class="dropdown-item">芳香療法認證課程入門班</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >芳香療法認證課程入門班</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">芳香療法認證課程中階班</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >芳香療法認證課程中階班</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">芳香療法認證課程高階班</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >芳香療法認證課程高階班</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">臨床芳療師認證課程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >臨床芳療師認證課程</router-link
+                    >
+                  </li>
+                  <li>
+                    <router-link to="/" class="dropdown-item"
+                      >芳療認證課程網路全階班</router-link
+                    >
                   </li>
                 </ul>
               </li>
@@ -98,32 +113,48 @@
                 <router-link to="/" class="dropdown-item">療程學苑</router-link>
                 <ul class="dropdown-submenu">
                   <li>
-                    <router-link to="/" class="dropdown-item">英式芳療按摩療程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >英式芳療按摩療程</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">淋巴引流按摩療程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >淋巴引流按摩療程</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">顱顏深層按摩療程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >顱顏深層按摩療程</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">孕產婦芳療療程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >孕產婦芳療療程</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">肌筋膜系列課程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >肌筋膜系列課程</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">瑞典式按摩療程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >瑞典式按摩療程</router-link
+                    >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item">經絡按摩療程</router-link>
+                    <router-link to="/" class="dropdown-item"
+                      >經絡按摩療程</router-link
+                    >
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <router-link to="/presentation" class="nav-link">香氣發表會</router-link>
+            <router-link to="/presentation" class="nav-link"
+              >香氣發表會</router-link
+            >
           </li>
           <li class="nav-item dropdown">
             <router-link
@@ -137,10 +168,15 @@
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <router-link to="/blog/category/all" class="dropdown-item">所有文章</router-link>
+                <router-link to="/blog/category/all" class="dropdown-item"
+                  >所有文章</router-link
+                >
               </li>
               <li v-for="blogCategory in bolgCategories" :key="blogCategory.id">
-                <router-link :to="`/blog/category/${blogCategory.id}`" class="dropdown-item">
+                <router-link
+                  :to="`/blog/category/${blogCategory.id}`"
+                  class="dropdown-item"
+                >
                   {{ blogCategory.name }}
                 </router-link>
               </li>

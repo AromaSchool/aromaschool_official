@@ -769,8 +769,9 @@ h3.index_title span::after {
     display: flex;
 }
 .arti_content.flex .first_image{
-    width: 20%;
+    width: 30%;
     min-width: 140px;
+    max-width: 250px;
     margin-right: 20px;
 }
 .arti_content.flex .first_image img{
