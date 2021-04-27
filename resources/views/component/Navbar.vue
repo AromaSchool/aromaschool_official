@@ -102,11 +102,6 @@
                       >臨床芳療師認證課程</router-link
                     >
                   </li>
-                  <li>
-                    <router-link to="/" class="dropdown-item"
-                      >芳療認證課程網路全階班</router-link
-                    >
-                  </li>
                 </ul>
               </li>
               <li>
@@ -145,6 +140,26 @@
                   <li>
                     <router-link to="/" class="dropdown-item"
                       >經絡按摩療程</router-link
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <router-link to="/" class="dropdown-item">網路學苑</router-link>
+                <ul class="dropdown-submenu">
+                  <li>
+                    <router-link to="/" class="dropdown-item"
+                      >直播芳療認證課程入門班</router-link
+                    >
+                  </li>
+                  <li>
+                    <router-link to="/" class="dropdown-item"
+                      >直播芳療認證課程中階班</router-link
+                    >
+                  </li>
+                  <li>
+                    <router-link to="/" class="dropdown-item"
+                      >線上芳療認證課程全階班</router-link
                     >
                   </li>
                 </ul>
