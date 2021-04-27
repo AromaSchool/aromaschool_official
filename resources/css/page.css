@@ -769,8 +769,9 @@ h3.index_title span::after {
     display: flex;
 }
 .arti_content.flex .first_image{
-    width: 20%;
+    width: 30%;
     min-width: 140px;
+    max-width: 250px;
     margin-right: 20px;
 }
 .arti_content.flex .first_image img{
@@ -815,6 +816,12 @@ h3.index_title span::after {
 .news_list .index_news .news_title h5 {
     color: #707179;
 }
+
+/* 芳療課程 */
+section.course{
+    margin-top: 50px;
+}
+
 /* 學苑周刊-列表 */
 .blog_list{
     margin-top: 20px;

@@ -654,6 +654,7 @@ footer .copyright {
 .blog_container .sidebar {
     width: 20%;
     margin-right: 80px;
+    margin-bottom: 20px;
 }
 
 .blog_container .content_center {
