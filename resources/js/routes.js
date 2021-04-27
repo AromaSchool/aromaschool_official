@@ -5,6 +5,9 @@ import {
     NotFound,
     ServerError
 } from "@/views/error";
+import {
+    AromatherapyElementary,
+} from '@/views/course';
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Brand from "../views/about/Brand.vue";
@@ -196,6 +199,24 @@ const routes = [{
                 },
             },
         ]
+    },
+    {
+        path: "/course",
+        name: "course",
+        component: AromatherapyElementary,
+        meta: {
+            title: "芳療課程",
+            titleEn: "COURSE",
+            bannerImage: "images/banner-6.jpg"
+        },
+        children: [{
+            path: "/course/aromatherapy/elementary",
+            name: "course-aromatherapy-elementary",
+            component: AromatherapyElementary,
+            meta: {
+                title: "芳香療法認證課程入門班"
+            },
+        }, ]
     },
     {
         path: "/presentation",
