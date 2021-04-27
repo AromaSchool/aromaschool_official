@@ -816,6 +816,12 @@ h3.index_title span::after {
 .news_list .index_news .news_title h5 {
     color: #707179;
 }
+
+/* 芳療課程 */
+section.course{
+    margin-top: 50px;
+}
+
 /* 學苑周刊-列表 */
 .blog_list{
     margin-top: 20px;

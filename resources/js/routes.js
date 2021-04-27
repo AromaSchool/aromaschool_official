@@ -6,7 +6,11 @@ import {
     ServerError
 } from "@/views/error";
 import {
+    Course,
     AromatherapyElementary,
+    AromatherapyIntermediate,
+    AromatherapyAdvanced,
+    AromatherapyClinical
 } from '@/views/course';
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
@@ -202,8 +206,9 @@ const routes = [{
     },
     {
         path: "/course",
+        redirect: '/course/aromatherapy/elementary',
         name: "course",
-        component: AromatherapyElementary,
+        component: Course,
         meta: {
             title: "芳療課程",
             titleEn: "COURSE",
@@ -215,6 +220,27 @@ const routes = [{
             component: AromatherapyElementary,
             meta: {
                 title: "芳香療法認證課程入門班"
+            },
+        }, {
+            path: "/course/aromatherapy/intermediate",
+            name: "course-aromatherapy-intermediate",
+            component: AromatherapyIntermediate,
+            meta: {
+                title: "芳香療法認證課程中階班"
+            },
+        }, {
+            path: "/course/aromatherapy/advanced",
+            name: "course-aromatherapy-advanced",
+            component: AromatherapyAdvanced,
+            meta: {
+                title: "芳香療法認證課程高階班"
+            },
+        }, {
+            path: "/course/aromatherapy/clinical",
+            name: "course-aromatherapy-clinical",
+            component: AromatherapyClinical,
+            meta: {
+                title: "臨床芳療師認證課程"
             },
         }, ]
     },

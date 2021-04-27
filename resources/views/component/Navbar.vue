@@ -95,18 +95,27 @@
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >芳香療法認證課程中階班</router-link
+                    <router-link
+                      to="/course/aromatherapy/intermediate"
+                      class="dropdown-item"
+                      :title="routes[3].children[1].meta.title"
+                      >{{ routes[3].children[1].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >芳香療法認證課程高階班</router-link
+                    <router-link
+                      to="/course/aromatherapy/advanced"
+                      class="dropdown-item"
+                      :title="routes[3].children[2].meta.title"
+                      >{{ routes[3].children[2].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >臨床芳療師認證課程</router-link
+                    <router-link
+                      to="/course/aromatherapy/clinical"
+                      class="dropdown-item"
+                      :title="routes[3].children[3].meta.title"
+                      >{{ routes[3].children[3].meta.title }}</router-link
                     >
                   </li>
                 </ul>
