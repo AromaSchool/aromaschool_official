@@ -32,15 +32,24 @@ export default {
   },
   computed: {
     findItem: function () {
-      for (let item of this.item) {
-        if (this.$route.params.id == item.id) {
-          return item;
-        } else if (this.$route.params.id == undefined) {
-          return this.item[0];
-        }
-      }
       if (this.item.length) {
-        this.$router.push({ path: "/about/teamMember/404" });
+        let found = null;
+        if (this.$route.params.id == undefined) {
+          found = this.item[0];
+        }
+        for (let item of this.item) {
+          if (this.$route.params.id == item.id) {
+            found = item;
+            break;
+          }
+        }
+        if (!found) {
+          this.$router.push({ path: "/about/teamMember/404" });
+        }
+
+        this.$route.meta.title = found.name;
+        document.title = `${found.name} | 禾場國際芳療學苑`;
+        return found;
       }
       return {};
     },
