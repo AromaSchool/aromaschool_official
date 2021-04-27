@@ -23,7 +23,7 @@ class TeamMember {
 
     static async get() {
         return client.get(`/teachers`).then(response => {
-            if (response.data.length) {
+            if (response.data) {
                 return response.data.map(item => {
                     if (!item.image) {
                         item.image = require('@/image/index/student_default.svg')
