@@ -6,6 +6,7 @@ namespace App\Service;
 
 use App\Models\News;
 use App\Models\NewsCategory;
+use App\Utils\Strings;
 use Illuminate\Database\Eloquent\Collection;
 
 class NewsService
@@ -30,6 +31,7 @@ class NewsService
         ?string $search,
         ?int $categoryId
     ): array {
+        $orderBy = Strings::camelToSnake($orderBy);
         $selected = ['id', 'title', 'created_at', 'category_id'];
         $query = News::with('category')
             ->where('visible', '=', true)

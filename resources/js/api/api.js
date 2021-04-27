@@ -36,6 +36,8 @@ class Client {
             baseURL: `${window.location.origin}/api`,
             withCredentials: true,
             paramsSerializer: params => {
+                // remove empty value entries
+                params = Object.fromEntries(Object.entries(params).filter(([k, v]) => v));
                 return Qs.stringify(params);
             }
         });

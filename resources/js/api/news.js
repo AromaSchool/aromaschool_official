@@ -5,14 +5,14 @@ class News {
         id = null,
         title,
         content = null,
-        created_at,
+        createdAt,
         visible = true,
         category,
     } = {}) {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.created_at = created_at;
+        this.createdAt = createdAt;
         this.visible = visible;
         this.category = category;
     }
@@ -24,7 +24,7 @@ class News {
                 id: item.id,
                 title: item.title,
                 content: item.content,
-                created_at: item.created_at,
+                createdAt: item.createdAt,
                 visible: item.visible,
                 category: item.category.id,
             });
@@ -33,7 +33,7 @@ class News {
     static async getList({
         lastIndex = null,
         limit = 30,
-        orderBy = "created_at",
+        orderBy = "createdAt",
         orderDirection = "desc",
         search = null,
         category = null,
@@ -45,7 +45,7 @@ class News {
                 orderBy: orderBy,
                 orderDirection: orderDirection,
                 search: search,
-                category_id: category,
+                categoryId: category,
             })
             .then(response => {
                 return {
@@ -54,7 +54,7 @@ class News {
                         return new News({
                             id: item.id,
                             title: item.title,
-                            created_at: item.created_at,
+                            createdAt: item.createdAt,
                             visible: item.visible,
                             category: item.category.id,
                         });
@@ -72,8 +72,7 @@ class News {
             .post("/news", {
                 title: this.title,
                 content: this.content,
-                created_at: this.created_at,
-                category_id: this.category,
+                categoryId: this.category,
             })
             .then(response => {
                 this.id = response.data.id;
@@ -84,8 +83,7 @@ class News {
         return client.put(`/news/${this.id}`, {
             title: this.title,
             content: this.content,
-            created_at: this.created_at,
-            category_id: this.category,
+            categoryId: this.category,
         });
     }
     async updateVisible() {

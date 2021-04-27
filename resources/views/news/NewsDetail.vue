@@ -4,7 +4,7 @@
       <ContentCenter
         :title="news.title"
         :type="categoriesMapping[news.category]"
-        :date="news.created_at"
+        :date="news.createdAt"
       >
         <div v-html="news.content"></div>
       </ContentCenter>
@@ -66,7 +66,7 @@ export default {
     getNews() {
       News.get(this.$route.params.id).then((response) => {
         this.news = response;
-        this.news.created_at = moment(this.news.created_at).format("YYYY/MM/DD");
+        this.news.createdAt = moment(this.news.createdAt).format("YYYY/MM/DD");
       });
     },
     getNewsList() {
