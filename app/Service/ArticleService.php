@@ -7,6 +7,7 @@ namespace App\Service;
 use Carbon\Carbon;
 use App\Models\Article;
 use App\Models\ArticleCategory;
+use App\Utils\Strings;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Collection;
 
@@ -42,6 +43,8 @@ class ArticleService
         ?int $categoryId,
         ?int $keywordId
     ): array {
+        $orderBy = Strings::camelToSnake($orderBy);
+
         $selected = [
             'id',
             'title',

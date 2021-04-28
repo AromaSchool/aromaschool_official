@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArticleKeywordRelation extends Model
 {
+    use \Eloquence\Behaviours\CamelCasing;
     /**
         * The table associated with the model.
         *

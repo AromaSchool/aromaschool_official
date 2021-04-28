@@ -325,14 +325,25 @@ const router = new VueRouter({
     mode: "history",
     routes: routes,
     scrollBehavior(to, from, savedPosition) {
+        if (to.path.startsWith('/about/teamMember')) {
+            return null;
+        }
+
+        let selector = null;
         if (savedPosition) {
-            return savedPosition
+            selector = savedPosition;
         } else {
-            return {
+            selector = {
                 x: 0,
                 y: 0
-            }
+            };
         }
+
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(selector)
+            }, 500)
+        });
     }
 })
 

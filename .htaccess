@@ -2,10 +2,3 @@
 RewriteEngine on
 RewriteCond %{REQUEST_URI} !^public
 RewriteRule ^(.*)$ public/$1 [L]
-
-<IfModule mod_expires.c>
-    <FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|woff|woff2)$">
-        ExpiresActive on
-        ExpiresDefault "access plus 1 month"
-     </FilesMatch>
-</IfModule>

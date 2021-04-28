@@ -23,23 +23,23 @@ class TeamMember {
 
     static async get() {
         return client.get(`/teachers`).then(response => {
-            // return response.data;
-            return response.data.map(item => {
-                if (!item.image) {
-                    item.image = require('@/image/index/student_default.svg')
-                }
-                return new TeamMember({
-                    id: item.id,
-                    name: item.name,
-                    title: item.title,
-                    experience: item.experience,
-                    image: item.image,
-                    visible: item.visible,
-                    categoryId: item.category.id,
-                    categoryName: item.category.name,
+            if (response.data.length) {
+                return response.data.map(item => {
+                    if (!item.image) {
+                        item.image = require('@/image/index/student_default.svg')
+                    }
+                    return new TeamMember({
+                        id: item.id,
+                        name: item.name,
+                        title: item.title,
+                        experience: item.experience,
+                        image: item.image,
+                        visible: item.visible,
+                        categoryId: item.category.id,
+                        categoryName: item.category.name,
+                    });
                 });
-            });
-
+            }
         });
     }
 

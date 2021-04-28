@@ -28,17 +28,17 @@ class GetNewsListController extends Controller
             'search' => $request->search,
             'lastIndex' => $request->lastIndex,
             'limit' => $request->limit ?? 30,
-            'orderBy' => $request->orderBy ?? 'created_at',
+            'orderBy' => $request->orderBy ?? 'createdAt',
             'orderDirection' => $request->orderDirection ?? 'desc',
-            'category_id' => $request->category_id,
+            'categoryId' => $request->categoryId,
         ];
         $validator = Validator::make(
             $params,
             [
                 'limit' => 'numeric|min:1',
-                'orderBy' => 'in:title,created_at',
+                'orderBy' => 'in:title,createdAt',
                 'orderDirection' => 'in:desc,asc',
-                'category_id' => 'exists:news_categories,id|nullable',
+                'categoryId' => 'exists:news_categories,id|nullable',
             ]
         );
 
@@ -51,7 +51,7 @@ class GetNewsListController extends Controller
             $params['orderBy'],
             $params['orderDirection'],
             $params['search'],
-            $params['category_id']
+            $params['categoryId']
         );
 
         return $response;

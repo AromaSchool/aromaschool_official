@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
+    use \Eloquence\Behaviours\CamelCasing;
+
     /**
     * The table associated with the model.
     *

@@ -56,7 +56,8 @@ export default {
     search: null,
   }),
   created() {
-    Promise.all([this.getBlog(), this.getBlogs()]);
+    this.getBlog();
+    this.getBlogs();
   },
   methods: {
     getBlog() {

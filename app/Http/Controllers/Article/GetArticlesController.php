@@ -28,19 +28,19 @@ class GetArticlesController extends Controller
             'search' => $request->search,
             'lastIndex' => $request->lastIndex,
             'limit' => $request->limit ?? 30,
-            'orderBy' => $request->orderBy ?? 'created_at',
+            'orderBy' => $request->orderBy ?? 'createdAt',
             'orderDirection' => $request->orderDirection ?? 'desc',
-            'category_id' => $request->category_id,
-            'keyword_id' => $request->keyword_id,
+            'categoryId' => $request->categoryId,
+            'keywordId' => $request->keywordId,
         ];
         $validator = Validator::make(
             $params,
             [
                 'limit' => 'numeric|min:1',
-                'orderBy' => 'in:title,created_at,author_name,hits',
+                'orderBy' => 'in:title,createdAt,authorName,hits',
                 'orderDirection' => 'in:desc,asc',
-                'category_id' => 'exists:article_categories,id|nullable',
-                'keyword_id' => 'exists:article_keywords,id|nullable',
+                'categoryId' => 'exists:article_categories,id|nullable',
+                'keywordId' => 'exists:article_keywords,id|nullable',
             ]
         );
 
@@ -54,8 +54,8 @@ class GetArticlesController extends Controller
             $params['orderBy'],
             $params['orderDirection'],
             $params['search'],
-            $params['category_id'],
-            $params['keyword_id']
+            $params['categoryId'],
+            $params['keywordId']
         );
 
         return $response;

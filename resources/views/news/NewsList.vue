@@ -5,9 +5,9 @@
         <li v-for="news in data" :key="news.id">
           <router-link :to="`/news/${news.id}`" class="news_box" :title="news.title">
             <div class="time">
-              <span class="month">{{ month(news.created_at) }}</span>
-              <span class="date">{{ day(news.created_at) }}</span>
-              <span class="year">{{ year(news.created_at) }}</span>
+              <span class="month">{{ month(news.createdAt) }}</span>
+              <span class="date">{{ day(news.createdAt) }}</span>
+              <span class="year">{{ year(news.createdAt) }}</span>
             </div>
             <div class="news_title">
               <div class="category">

@@ -3,6 +3,13 @@
         Options -MultiViews -Indexes
     </IfModule>
 
+    <IfModule mod_expires.c>
+        <FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|woff|woff2)$">
+            ExpiresActive on
+            ExpiresDefault "access plus 1 month"
+        </FilesMatch>
+    </IfModule>
+
     RewriteEngine On
 
     # Brotli

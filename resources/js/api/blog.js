@@ -33,14 +33,14 @@ class Blog {
                 title: item.title,
                 content: item.content,
                 image: item.image ? item.image : require("@/image/blog/blog_default.svg"),
-                authorName: item.author_name,
-                authorImage: item.author_image ? item.author_image : require('@/image/index/student_default.svg'),
-                authorBio: item.author_bio,
+                authorName: item.authorName,
+                authorImage: item.authorImage ? item.authorImage : require('@/image/index/student_default.svg'),
+                authorBio: item.authorBio,
                 category: new BlogCategory(item.category),
                 keywords: item.keywords.map(keyword => {
                     return new BlogKeyword(keyword)
                 }),
-                createdAt: item.created_at,
+                createdAt: item.createdAt,
             });
         });
     }
@@ -48,7 +48,7 @@ class Blog {
     static async getList({
         lastIndex = null,
         limit = 16,
-        orderBy = "created_at",
+        orderBy = "createdAt",
         orderDirection = "desc",
         search = null,
         category = null,
@@ -61,8 +61,8 @@ class Blog {
                 orderBy: orderBy,
                 orderDirection: orderDirection,
                 search: search,
-                category_id: category,
-                keyword_id: keyword,
+                categoryId: category,
+                keywordId: keyword,
             })
             .then(response => {
                 return {
@@ -72,7 +72,7 @@ class Blog {
                             id: item.id,
                             title: item.title,
                             content: item.content,
-                            createdAt: item.created_at,
+                            createdAt: item.createdAt,
                             image: item.image ? item.image : require("@/image/blog/blog_default.svg"),
                             category: new BlogCategory(item.category),
                         });
