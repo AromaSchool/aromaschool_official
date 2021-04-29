@@ -877,9 +877,24 @@ section.course{
 .course_table th.handmade{
     min-width: 95px;
 }
+.course_table th.peroid{
+    min-width: 120px;
+}
+.course_table th.time{
+    min-width: 130px;
+}
+.course_table th.week{
+    min-width: 170px;
+}
+.course_table th.date{
+    min-width: 190px;
+}
 .course_table td{
     border: solid 1px rgba(118,118,145,.2);
     font-weight: 300;
+}
+.course_table .date_list{
+    margin-bottom: 0;
 }
 .schedule .note{
     font-size: 14px;
@@ -945,6 +960,23 @@ section.course{
 .payment .link i{
     font-size: 13px;
     margin-right: 3px;
+}
+.period .course_table{
+    margin-top: 0;
+}
+.period .address{
+    margin: 20px auto;
+}
+.period .address h5{
+    font-size: 18px;
+    font-weight: 300;
+}
+.period .address h5 i{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.period .address p{
+    margin-bottom: 0;
 }
 
 /* 學苑周刊-列表 */
@@ -1574,6 +1606,11 @@ section.course{
     }
     .arti_content.flex .arti_editor{
         width: 100%;
+    }
+    /* 芳療課程 */
+    .course_content_block .btn_group .btn_underline{
+        display: block;
+        margin-bottom: 10px;
     }
     /* 學苑周刊-列表 */
     .blog_list .article_box{

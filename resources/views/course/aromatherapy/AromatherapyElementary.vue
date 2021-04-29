@@ -1,5 +1,14 @@
 <template>
-  <CourseContent :title="title" :type="type" :registry="registry">
+  <CourseContent
+    :title="title"
+    :type="type"
+    :registry="registry"
+    :isShowTaipei="isShowTaipei"
+    :isShowTaichung="isShowTaichung"
+    :isShowHsinchu="isShowHsinchu"
+    :isShowTainan="isShowTainan"
+    :isShowKaohsiung="isShowKaohsiung"
+  >
     <template #intro>
       <p>
         市面上的精油品牌、芳療師頭銜琳瑯滿目已經是一股熱潮，但為什麼常常在專櫃詢問，卻得不到自己要的答案？為什麼我感覺不到精油的神奇療效？精油是大自然生命力的精華如何才能運用在自己身上？
@@ -138,6 +147,136 @@
         </li>
       </ul>
     </template>
+    <template #periodTaipei>
+      <div class="table_container">
+        <table class="course_table" cellpadding="15">
+          <thead>
+            <tr>
+              <th class="peroid">上課時段</th>
+              <th class="time">上課時間</th>
+              <th class="week">上課週數</th>
+              <th class="date">各梯開課日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>平日早上班</td>
+              <td>09:30~12:30</td>
+              <td>含開課日，共四週</td>
+              <td>
+                <ul class="date_list">
+                  <li v-for="date in dates" :key="date">{{ date }}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
+    <template #periodTaichung>
+      <div class="table_container">
+        <table class="course_table" cellpadding="15">
+          <thead>
+            <tr>
+              <th class="peroid">上課時段</th>
+              <th class="time">上課時間</th>
+              <th class="week">上課週數</th>
+              <th class="date">各梯開課日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>平日早上班</td>
+              <td>09:30~12:30</td>
+              <td>含開課日，共四週</td>
+              <td>
+                <ul class="date_list">
+                  <li v-for="date in dates" :key="date">{{ date }}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
+    <template #periodHsinchu>
+      <div class="table_container">
+        <table class="course_table" cellpadding="15">
+          <thead>
+            <tr>
+              <th class="peroid">上課時段</th>
+              <th class="time">上課時間</th>
+              <th class="week">上課週數</th>
+              <th class="date">各梯開課日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>平日早上班</td>
+              <td>09:30~12:30</td>
+              <td>含開課日，共四週</td>
+              <td>
+                <ul class="date_list">
+                  <li v-for="date in dates" :key="date">{{ date }}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
+    <template #periodTainan>
+      <div class="table_container">
+        <table class="course_table" cellpadding="15">
+          <thead>
+            <tr>
+              <th class="peroid">上課時段</th>
+              <th class="time">上課時間</th>
+              <th class="week">上課週數</th>
+              <th class="date">各梯開課日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>平日早上班</td>
+              <td>09:30~12:30</td>
+              <td>含開課日，共四週</td>
+              <td>
+                <ul class="date_list">
+                  <li v-for="date in dates" :key="date">{{ date }}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
+    <template #periodKaohsiung>
+      <div class="table_container">
+        <table class="course_table" cellpadding="15">
+          <thead>
+            <tr>
+              <th class="peroid">上課時段</th>
+              <th class="time">上課時間</th>
+              <th class="week">上課週數</th>
+              <th class="date">各梯開課日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>平日早上班</td>
+              <td>09:30~12:30</td>
+              <td>含開課日，共四週</td>
+              <td>
+                <ul class="date_list">
+                  <li v-for="date in dates" :key="date">{{ date }}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
   </CourseContent>
 </template>
 
@@ -153,6 +292,18 @@ export default {
     type: "芳療學苑",
     registry:
       "https://docs.google.com/forms/d/e/1FAIpQLScHsPTgQB8FJpI0lEdkEFcq6YllanI5eDnOPS1m_AbDziNxsQ/viewform",
+    isShowTaipei: true,
+    isShowTaichung: true,
+    isShowHsinchu: true,
+    isShowTainan: true,
+    isShowKaohsiung: true,
+    dates: [
+      "2021-03-04 (四)",
+      "2021-04-01 (四)",
+      "2021-04-06 (二)",
+      "2021-04-09 (五)",
+      "2021-04-12 (一)",
+    ],
   }),
 };
 </script>

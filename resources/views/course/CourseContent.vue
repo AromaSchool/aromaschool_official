@@ -67,7 +67,93 @@
       </div>
       <div class="course_box period" id="period">
         <h4 class="course_title"><i class="fas fa-school"></i>開課資訊</h4>
-        <slot name="period"></slot>
+        <div class="classroom_block">
+          <div class="classroom_box" v-if="isShowTaipei == true">
+            <div class="address">
+              <h5><i class="fas fa-map-marker-alt"></i>台北教室</h5>
+              <p>台北市大安區忠孝東路四段191號10樓之1</p>
+            </div>
+            <slot name="periodTaipei"></slot>
+            <div class="btn_right">
+              <a
+                :href="registry"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn_underline purple"
+                title="線上報名"
+                >線上報名</a
+              >
+            </div>
+          </div>
+          <div class="classroom_box" v-if="isShowTaichung == true">
+            <div class="address">
+              <h5><i class="fas fa-map-marker-alt"></i>台中教室</h5>
+              <p>台中市南屯區五權西路二段666號6樓之5</p>
+            </div>
+            <slot name="periodTaichung"></slot>
+            <div class="btn_right">
+              <a
+                :href="registry"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn_underline purple"
+                title="線上報名"
+                >線上報名</a
+              >
+            </div>
+          </div>
+          <div class="classroom_box" v-if="isShowHsinchu == true">
+            <div class="address">
+              <h5><i class="fas fa-map-marker-alt"></i>新竹教室</h5>
+              <p>新竹市東區光復路二段295號17樓之1</p>
+            </div>
+            <slot name="periodHsinchu"></slot>
+            <div class="btn_right">
+              <a
+                :href="registry"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn_underline purple"
+                title="線上報名"
+                >線上報名</a
+              >
+            </div>
+          </div>
+          <div class="classroom_box" v-if="isShowTainan == true">
+            <div class="address">
+              <h5><i class="fas fa-map-marker-alt"></i>台南教室</h5>
+              <p>地點另行通知</p>
+            </div>
+            <slot name="periodTainan"></slot>
+            <div class="btn_right">
+              <a
+                :href="registry"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn_underline purple"
+                title="線上報名"
+                >線上報名</a
+              >
+            </div>
+          </div>
+          <div class="classroom_box" v-if="isShowKaohsiung == true">
+            <div class="address">
+              <h5><i class="fas fa-map-marker-alt"></i>高雄教室</h5>
+              <p>地點另行通知</p>
+            </div>
+            <slot name="periodKaohsiung"></slot>
+            <div class="btn_right">
+              <a
+                :href="registry"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn_underline purple"
+                title="線上報名"
+                >線上報名</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -86,6 +172,21 @@ export default {
     },
     registry: {
       type: String,
+    },
+    isShowTaipei: {
+      type: Boolean,
+    },
+    isShowTaichung: {
+      type: Boolean,
+    },
+    isShowHsinchu: {
+      type: Boolean,
+    },
+    isShowTainan: {
+      type: Boolean,
+    },
+    isShowKaohsiung: {
+      type: Boolean,
     },
   },
 };
