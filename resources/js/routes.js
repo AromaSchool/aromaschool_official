@@ -329,6 +329,16 @@ const router = new VueRouter({
             return null;
         }
 
+        if (to.hash) {
+            return {
+                selector: to.hash,
+                offset: {
+                    x: 0,
+                    y: 100
+                }
+            }
+        }
+
         let selector = null;
         if (savedPosition) {
             selector = savedPosition;
