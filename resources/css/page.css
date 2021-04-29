@@ -821,6 +821,131 @@ h3.index_title span::after {
 section.course{
     margin-top: 50px;
 }
+.course_content_block{
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.btn_group{
+    text-align: center;
+    margin: 30px auto;
+}
+.btn_right{
+    text-align: right;
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+.btn_group .btn_underline{
+    margin: 0 10px;
+}
+.course_content_block .course_box{
+    margin: 35px auto;
+}
+.course_title{
+    color: #767691;
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgb(118 118 145 /30%);
+}
+.course_title i{
+    margin-right: 5px;
+}
+.course_table{
+    width: 100%;
+    border: solid 1px rgba(118,118,145,.2);
+    margin: 20px auto 10px;
+}
+.course_table thead{
+    background: #F1F1F4;
+}
+.course_table th{
+    border: solid 1px rgba(118,118,145,.2);
+    font-weight: 400;
+}
+.course_table th.num{
+    min-width: 40px;
+}
+.course_table th.subject{
+    min-width: 230px;
+}
+.course_table th.system{
+    min-width: 100px;
+}
+.course_table th.activity{
+    min-width: 150px;
+}
+.course_table th.handmade{
+    min-width: 95px;
+}
+.course_table td{
+    border: solid 1px rgba(118,118,145,.2);
+    font-weight: 300;
+}
+.schedule .note{
+    font-size: 14px;
+    font-weight: 300;
+    color: #9C9DA8;
+    text-align: right;
+}
+.process ul{
+    margin: 20px auto;
+}
+.course_content_block .course_box ul {
+    padding-left: 0;
+}
+.course_content_block .course_box ul li{
+    position: relative;
+    list-style: none;
+    margin: 5px 0;
+    padding-left: 20px;
+}
+.course_content_block .course_box ul li::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #C9B5A5;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.feature ol{
+    margin: 20px auto;
+    padding-left: 20px;
+}
+.feature li{
+    margin: 5px 0;
+}
+.suitable ol{
+    margin: 20px auto;
+    padding-left: 20px;
+}
+.suitable li{
+    margin: 5px 0;
+}
+.target ol{
+    margin: 20px auto;
+    padding-left: 20px;
+}
+.target li{
+    margin: 5px 0;
+}
+.payment ul{
+    margin: 20px auto;
+    padding-left: 20px;
+}
+.payment li{
+    margin: 5px 0;
+}
+.payment .link{
+    color: #767691;
+    text-decoration: none;
+    border-bottom: dashed 1px #767691;
+}
+.payment .link i{
+    font-size: 13px;
+    margin-right: 3px;
+}
 
 /* 學苑周刊-列表 */
 .blog_list{
@@ -1313,6 +1438,17 @@ section.course{
         top: 0;
         transform: translateY(100%);
     }
+
+    /* 芳療課程 */
+    .table_container{
+        overflow: auto;
+        width: 100%;
+    }
+    .course_content_block .course_box ul li::before{
+        top: 0;
+        transform: translateY(100%);
+    }
+
     /* 學苑周刊-文章 */
     .arti_author{
         flex-wrap: wrap;

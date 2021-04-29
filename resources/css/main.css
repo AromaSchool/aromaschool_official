@@ -121,6 +121,11 @@ hr {
     border-bottom: solid 1px #767691;
 }
 
+.btn_underline.gray {
+    color: #9C9DA8;
+    border-bottom: solid 1px #9C9DA8;
+}
+
 .btn_underline.white {
     color: #fff;
 }
@@ -148,6 +153,10 @@ hr {
     background: #767691;
 }
 
+.btn_underline.gray::before {
+    background: #9C9DA8;
+}
+
 .btn_underline.white::before {
     background: #fff;
 }
@@ -170,6 +179,9 @@ hr {
 
 .btn_underline.purple::after {
     background: #767691;
+}
+.btn_underline.gray::after {
+    background: #9C9DA8;
 }
 
 .btn_underline.white::after {
