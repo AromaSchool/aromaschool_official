@@ -11,8 +11,12 @@
       <div class="intro">
         <slot name="intro"></slot>
         <div class="btn_group">
-          <a href="#period" class="btn_underline gray" title="查詢開課資訊"
-            >查詢開課資訊</a
+          <router-link
+            to="#period"
+            @click.native="anchorHashCheck"
+            class="btn_underline gray"
+            title="查詢開課資訊"
+            >查詢開課資訊</router-link
           >
           <a
             :href="registry"
@@ -188,6 +192,19 @@ export default {
     isShowKaohsiung: {
       type: Boolean,
     },
+  },
+  methods: {
+    anchorHashCheck() {
+      if (window.location.hash === this.$route.hash) {
+        const el = document.getElementById(this.$route.hash.slice(1));
+        if (el) {
+          window.scrollTo(0, el.offsetTop - 100);
+        }
+      }
+    },
+  },
+  mounted() {
+    this.anchorHashCheck();
   },
 };
 </script>
