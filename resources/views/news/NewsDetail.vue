@@ -67,6 +67,8 @@ export default {
       News.get(this.$route.params.id).then((response) => {
         this.news = response;
         this.news.createdAt = moment(this.news.createdAt).format("YYYY/MM/DD");
+        this.$route.meta.title = this.news.title;
+        document.title = `${this.news.title} | 禾場國際芳療學苑`;
       });
     },
     getNewsList() {

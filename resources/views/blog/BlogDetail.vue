@@ -64,6 +64,8 @@ export default {
       Blog.get(this.$route.params.id).then((response) => {
         this.blog = response;
         this.blog.hit();
+        this.$route.meta.title = this.blog.title;
+        document.title = `${this.blog.title} | 禾場國際芳療學苑`;
       });
     },
     getBlogs() {
