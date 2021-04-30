@@ -23,5 +23,9 @@ export default {
     Certification,
     Student,
   },
+  created() {
+    let title = this.$route.meta.title;
+    document.title = "禾場國際芳療學苑 | " + title;
+  },
 };
 </script>
