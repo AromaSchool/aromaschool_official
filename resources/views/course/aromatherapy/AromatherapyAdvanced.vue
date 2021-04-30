@@ -28,103 +28,44 @@
             <tr>
               <th class="num"></th>
               <th class="subject">課程內容</th>
-              <th class="system">生理檔案</th>
-              <th class="activity">課程活動</th>
-              <th class="handmade">DIY內容</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td>
-                芳香療法的價值與研究<br />
-                觸覺符碼<br />
-                按摩流派介紹
-              </td>
-              <td>肌肉系統</td>
-              <td>
-                手部按摩<br />
-                聞香測試
-              </td>
-              <td>水凝乳液</td>
+              <td>十大生理系統專論</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>如何界定排毒、刺激或過品反應 植物油概論</td>
-              <td>循環系統</td>
-              <td>
-                課程目標調油<br />
-                聞香測試
-              </td>
-              <td>基底油乳液</td>
+              <td>精油化學</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>調香概論</td>
-              <td>呼吸系統</td>
-              <td>聞香測試</td>
-              <td></td>
+              <td>精油各論</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>
-                純露概論<br />
-                芳香美人
-              </td>
-              <td>皮膚系統</td>
-              <td>
-                課程目標調油<br />
-                聞香測試
-              </td>
-              <td>精華液</td>
+              <td>植物油各論</td>
             </tr>
             <tr>
               <td>5</td>
-              <td>植物科屬概論</td>
-              <td>淋巴系統</td>
-              <td>
-                乾刷法<br />
-                課程目標調油<br />
-                聞香測試
-              </td>
-              <td>按摩油</td>
+              <td>純露各論</td>
             </tr>
             <tr>
               <td>6</td>
-              <td>芳療諮詢概論</td>
-              <td>消化系統</td>
-              <td>
-                芳療諮詢練習<br />
-                課程目標調油<br />
-                聞香測試
-              </td>
-              <td>按摩油</td>
+              <td>配方學</td>
             </tr>
             <tr>
               <td>7</td>
-              <td>
-                精油化學簡介<br />
-                藥用植物成分對人體功效
-              </td>
-              <td>生殖系統</td>
-              <td>
-                調香比賽投票<br />
-                聞香測試
-              </td>
-              <td></td>
+              <td>精油使用禁忌與毒性</td>
             </tr>
             <tr>
               <td>8</td>
-              <td>
-                植物的秘密生命<br />
-                香氣抓周大解密
-              </td>
-              <td></td>
-              <td>
-                聞香測試<br />
-                調香比賽頒獎
-              </td>
-              <td></td>
+              <td>香氣抓週</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>彈性課程</td>
             </tr>
           </tbody>
         </table>
