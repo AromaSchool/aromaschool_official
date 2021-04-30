@@ -195,11 +195,9 @@ export default {
   },
   methods: {
     anchorHashCheck() {
-      if (window.location.hash === this.$route.hash) {
-        const el = document.getElementById(this.$route.hash.slice(1));
-        if (el) {
-          window.scrollTo(0, el.offsetTop - 100);
-        }
+      const el = document.getElementById(this.$route.hash.slice(1));
+      if (el) {
+        window.scrollTo(0, el.offsetTop - 80);
       }
     },
   },
