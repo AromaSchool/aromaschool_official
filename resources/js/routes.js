@@ -325,7 +325,7 @@ const router = new VueRouter({
     mode: "history",
     routes: routes,
     scrollBehavior(to, from, savedPosition) {
-        if (to.path.startsWith('/about/teamMember')) {
+        if (to.path.includes('teamMember') || to.path.includes('course')) {
             return null;
         }
 
