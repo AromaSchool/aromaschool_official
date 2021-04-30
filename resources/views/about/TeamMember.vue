@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { TeamMember } from "@/js/api";
+import { TeamMember, TeamMemberCategory } from "@/js/api";
 import Sidebar from "@/views/component/Sidebar.vue";
 import ContentCenter from "@/views/component/ContentCenter.vue";
 
@@ -32,36 +32,38 @@ export default {
   },
   computed: {
     findItem: function () {
-      if (this.item.length) {
-        let found = null;
-        if (this.$route.params.id == undefined) {
-          found = this.item[0];
-        }
-        for (let item of this.item) {
-          if (this.$route.params.id == item.id) {
-            found = item;
-            break;
+      if (this.$route.path.includes("teamMember")) {
+        if (this.item.length) {
+          let found = null;
+          if (this.$route.params.id == undefined) {
+            found = this.item[0];
           }
-        }
-        if (!found) {
-          this.$router.push({ path: "/about/teamMember/404" });
-        }
+          for (let item of this.item) {
+            if (this.$route.params.id == item.id) {
+              found = item;
+              break;
+            }
+          }
+          if (!found) {
+            this.$router.push({ path: "/about/teamMember/404" });
+          }
 
-        this.$route.meta.title = found.name;
-        document.title = `${found.name} | 禾場國際芳療學苑`;
-        return found;
+          this.$route.meta.title = found.name;
+          document.title = `${found.name} | 禾場國際芳療學苑`;
+          return found;
+        }
       }
       return {};
     },
   },
   methods: {
     getTeamMember() {
-      TeamMember.get().then((item) => {
+      TeamMember.getList().then((item) => {
         this.item = item;
       });
     },
     getTeamMemberCategory() {
-      TeamMember.getCategory().then((category) => {
+      TeamMemberCategory.getList().then((category) => {
         this.category = category;
       });
     },

@@ -7,47 +7,48 @@ class TeamMember {
         title,
         experience,
         image,
-        visible = true,
-        categoryId = 1,
-        categoryName,
+        category,
     } = {}) {
         this.id = id;
         this.name = name;
         this.title = title;
         this.experience = experience;
-        this.image = image;
-        this.visible = visible;
-        this.categoryId = categoryId;
-        this.categoryName = categoryName;
+        this.image = image ? image : require('@/image/index/student_default.svg');
+        this.category = new TeamMemberCategory(category);
     }
 
-    static async get() {
+    static async getList() {
         return client.get(`/teachers`).then(response => {
             if (response.data) {
                 return response.data.map(item => {
-                    if (!item.image) {
-                        item.image = require('@/image/index/student_default.svg')
-                    }
-                    return new TeamMember({
-                        id: item.id,
-                        name: item.name,
-                        title: item.title,
-                        experience: item.experience,
-                        image: item.image,
-                        visible: item.visible,
-                        categoryId: item.category.id,
-                        categoryName: item.category.name,
-                    });
+                    return new TeamMember(item);
                 });
             }
         });
     }
+}
 
-    static async getCategory() {
-        return client.get(`/teachers/categories`).then(response => {
-            return response.data;
+class TeamMemberCategory {
+    constructor({
+        id,
+        name,
+    } = {}) {
+        this.id = id;
+        this.name = name;
+    }
+
+    static async getList() {
+        return client.get('teachers/categories').then(response => {
+            if (response.data) {
+                return response.data.map(item => {
+                    return new TeamMemberCategory(item);
+                });
+            }
         });
     }
 }
 
-export default TeamMember;
+export {
+    TeamMember,
+    TeamMemberCategory
+};

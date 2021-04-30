@@ -2,9 +2,9 @@ import client from "./api";
 
 class Event {
     constructor({
-        id = null,
+        id,
         title,
-        content = null,
+        content,
         date
     } = {}) {
         this.id = id;
@@ -15,15 +15,10 @@ class Event {
 
     static async get(id) {
         return client.get(`/events/${id}`).then(response => {
-            const item = response.data;
-            return new Event({
-                id: item.id,
-                title: item.title,
-                content: item.content,
-                date: item.date
-            });
+            return new Event(response.data);
         });
     }
+
     static async getList({
         lastIndex = null,
         limit = 30,
@@ -43,11 +38,7 @@ class Event {
                 return {
                     lastIndex: response.data.lastIndex,
                     list: response.data.list.map(item => {
-                        return new Event({
-                            id: item.id,
-                            title: item.title,
-                            date: item.date
-                        });
+                        return new Event(item);
                     })
                 };
             });

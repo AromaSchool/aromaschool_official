@@ -1,7 +1,13 @@
 import Event from "./event";
 import Review from "./review";
-import News from "./news";
-import TeamMember from "./teamMember";
+import {
+    News,
+    NewsCategory
+} from "./news";
+import {
+    TeamMember,
+    TeamMemberCategory
+} from "./teamMember";
 import Email from "./email";
 import {
     Blog,
@@ -13,7 +19,9 @@ export {
     Event,
     Review,
     News,
+    NewsCategory,
     TeamMember,
+    TeamMemberCategory,
     Email,
     Blog,
     BlogKeyword,

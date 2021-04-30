@@ -53,13 +53,30 @@ class Client {
     }
 
     handleError(error) {
-        console.error(error);
         switch (error.response.status) {
             case 404:
                 document.location = "/404";
                 break;
+            case 429:
+                Swal.fire({
+                    title: "警告",
+                    text: "頻繁操作，稍後再試",
+                    icon: "warning",
+                    timer: 2000,
+                    showConfirmButton: false,
+                });
+                break;
             case 500:
-                document.location = "/500";
+                console.error(error);
+                Swal.fire({
+                    title: "錯誤",
+                    text: "系統發生錯誤",
+                    icon: "error",
+                    timer: 2000,
+                    showConfirmButton: false,
+                }).then(() => {
+                    document.location = "/500";
+                });
                 break;
         }
         return Promise.reject(error);

@@ -11,7 +11,7 @@
             </div>
             <div class="news_title">
               <div class="category">
-                {{ categoriesMapping[news.category] }}
+                {{ `${news.category.name}公告` }}
               </div>
               <h5>{{ news.title }}</h5>
             </div>
@@ -51,15 +51,6 @@ export default {
     data: [],
     infiniteId: +new Date(),
   }),
-  computed: {
-    categoriesMapping: function () {
-      let mapping = {};
-      for (let category of this.categories) {
-        mapping[category.id] = category.name;
-      }
-      return mapping;
-    },
-  },
   created() {
     this.onSearch = window._.debounce(() => {
       if (this.$route.query.search != this.search) {
@@ -128,11 +119,14 @@ export default {
         const category = this.$props.categories.find((category) => {
           return category.id == this.$route.params.id;
         });
+        let title = null;
         if (category != undefined) {
-          const title = category.name;
-          document.title = `${title} | 禾場國際芳療學苑`;
-          this.$route.meta.title = title;
+          title = category.name;
+        } else {
+          title = "所有公告";
         }
+        document.title = `${title} | 禾場國際芳療學苑`;
+        this.$route.meta.title = title;
       }
     },
   },

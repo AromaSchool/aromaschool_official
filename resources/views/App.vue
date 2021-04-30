@@ -33,7 +33,7 @@ export default {
             break;
           }
         }
-        document.title = title + " | 禾場國際芳療學苑";
+        document.title = `${title} | 禾場國際芳療學苑`;
       },
     },
   },

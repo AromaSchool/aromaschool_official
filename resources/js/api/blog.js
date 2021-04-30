@@ -11,37 +11,25 @@ class Blog {
         authorBio,
         category,
         createdAt,
-        keywords,
+        keywords = [],
     } = {}) {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.image = image;
+        this.image = image ? image : require("@/image/blog/blog_default.svg");
         this.authorName = authorName;
-        this.authorImage = authorImage;
+        this.authorImage = authorImage ? authorImage : require('@/image/index/student_default.svg');
         this.authorBio = authorBio;
-        this.category = category;
-        this.keywords = keywords;
+        this.category = category ? new BlogCategory(category) : nul;
+        this.keywords = keywords.map(keyword => {
+            return new BlogKeyword(keyword)
+        });
         this.createdAt = createdAt;
     }
 
     static async get(id) {
         return client.get(`/articles/${id}`).then(response => {
-            const item = response.data;
-            return new Blog({
-                id: item.id,
-                title: item.title,
-                content: item.content,
-                image: item.image ? item.image : require("@/image/blog/blog_default.svg"),
-                authorName: item.authorName,
-                authorImage: item.authorImage ? item.authorImage : require('@/image/index/student_default.svg'),
-                authorBio: item.authorBio,
-                category: new BlogCategory(item.category),
-                keywords: item.keywords.map(keyword => {
-                    return new BlogKeyword(keyword)
-                }),
-                createdAt: item.createdAt,
-            });
+            return new Blog(response.data);
         });
     }
 
@@ -68,14 +56,7 @@ class Blog {
                 return {
                     lastIndex: response.data.lastIndex,
                     list: response.data.list.map(item => {
-                        return new Blog({
-                            id: item.id,
-                            title: item.title,
-                            content: item.content,
-                            createdAt: item.createdAt,
-                            image: item.image ? item.image : require("@/image/blog/blog_default.svg"),
-                            category: new BlogCategory(item.category),
-                        });
+                        return new Blog(item);
                     })
                 };
             });

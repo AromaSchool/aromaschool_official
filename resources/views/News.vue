@@ -21,7 +21,7 @@
 import Menu from "@/views/news/Menu.vue";
 import SearchBox from "@/views/component/SearchBox.vue";
 import NewsList from "@/views/news/NewsList.vue";
-import { News } from "@/js/api";
+import { NewsCategory } from "@/js/api";
 
 export default {
   components: {
@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     getNewsCategories() {
-      News.getCategories().then((response) => {
+      NewsCategory.getList().then((response) => {
         this.categories = response.map((category) => {
           category.name = `${category.name}公告`;
           return category;
