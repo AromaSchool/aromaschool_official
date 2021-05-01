@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Service\TeacherService;
 use Illuminate\Http\Request;
 
-class GetTeacherCategories extends Controller
+class GetTeacherCategoriesController extends Controller
 {
     protected $service;
 
