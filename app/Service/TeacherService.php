@@ -19,6 +19,7 @@ class TeacherService
     {
         $teachers = Teacher::with('category')
             ->where('visible', '=', true)
+            ->orderBy('category_id')
             ->orderBy('priority')
             ->orderBy('id')
             ->get();
