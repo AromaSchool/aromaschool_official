@@ -55,3 +55,9 @@ Route::prefix('mail')->group(function () {
 Route::prefix('optimize')->group(function () {
     Route::post('/', Optimize\OptimizeController::class);
 });
+
+Route::prefix('courses')->group(function () {
+    Route::prefix('batches')->group(function () {
+        Route::get('/', Course\GetCourseBatchesController::class);
+    });
+});
