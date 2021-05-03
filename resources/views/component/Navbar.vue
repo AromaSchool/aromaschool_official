@@ -124,38 +124,59 @@
                 <div class="dropdown-item">療程學苑</div>
                 <ul class="dropdown-submenu">
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >英式芳療按摩療程</router-link
+                    <router-link
+                      to="/course/treatment/british"
+                      class="dropdown-item"
+                      :title="routes[3].children[4].meta.title"
+                      >{{ routes[3].children[4].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >淋巴引流按摩療程</router-link
+                    <router-link
+                      to="/course/treatment/lymphatic"
+                      class="dropdown-item"
+                      :title="routes[3].children[5].meta.title"
+                      >{{ routes[3].children[5].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >顱顏深層按摩療程</router-link
+                    <router-link
+                      to="/course/treatment/facial"
+                      class="dropdown-item"
+                      :title="routes[3].children[6].meta.title"
+                      >{{ routes[3].children[6].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >孕產婦芳療療程</router-link
+                    <router-link
+                      to="/course/treatment/pregnancy"
+                      class="dropdown-item"
+                      :title="routes[3].children[7].meta.title"
+                      >{{ routes[3].children[7].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >肌筋膜系列課程</router-link
+                    <router-link
+                      to="/course/treatment/myofascial"
+                      class="dropdown-item"
+                      :title="routes[3].children[8].meta.title"
+                      >{{ routes[3].children[8].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >瑞典式按摩療程</router-link
+                    <router-link
+                      to="/course/treatment/swedish"
+                      class="dropdown-item"
+                      :title="routes[3].children[9].meta.title"
+                      >{{ routes[3].children[9].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >經絡按摩療程</router-link
+                    <router-link
+                      to="/course/treatment/meridian"
+                      class="dropdown-item"
+                      :title="routes[3].children[10].meta.title"
+                      >{{ routes[3].children[10].meta.title }}</router-link
                     >
                   </li>
                 </ul>

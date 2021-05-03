@@ -90,37 +90,51 @@
           <div class="accordion-body">
             <ul>
               <li class="sidebar_list">
-                <router-link to="/course" title="英式芳療按摩療程"
+                <router-link
+                  to="/course/treatment/british"
+                  title="英式芳療按摩療程"
                   >英式芳療按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="淋巴引流按摩療程"
+                <router-link
+                  to="/course/treatment/lymphatic"
+                  title="淋巴引流按摩療程"
                   >淋巴引流按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="顱顏深層按摩療程"
+                <router-link
+                  to="/course/treatment/facial"
+                  title="顱顏深層按摩療程"
                   >顱顏深層按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="孕產婦芳療療程"
+                <router-link
+                  to="/course/treatment/pregnancy"
+                  title="孕產婦芳療療程"
                   >孕產婦芳療療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="肌筋膜系列課程"
+                <router-link
+                  to="/course/treatment/myofascial"
+                  title="肌筋膜系列課程"
                   >肌筋膜系列課程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="瑞典式按摩療程"
+                <router-link
+                  to="/course/treatment/swedish"
+                  title="瑞典式按摩療程"
                   >瑞典式按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="經絡按摩療程"
+                <router-link
+                  to="/course/treatment/meridian"
+                  title="經絡按摩療程"
                   >經絡按摩療程</router-link
                 >
               </li>

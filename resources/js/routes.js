@@ -10,7 +10,14 @@ import {
     AromatherapyElementary,
     AromatherapyIntermediate,
     AromatherapyAdvanced,
-    AromatherapyClinical
+    AromatherapyClinical,
+    TreatmentBritish,
+    TreatmentLymphatic,
+    TreatmentFacial,
+    TreatmentPregnancy,
+    TreatmentMyofascial,
+    TreatmentSwedish,
+    TreatmentMeridian,
 } from '@/views/course';
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
@@ -241,6 +248,55 @@ const routes = [{
             component: AromatherapyClinical,
             meta: {
                 title: "臨床芳療師認證課程"
+            },
+        }, {
+            path: "/course/treatment/british",
+            name: "course-treatment-british",
+            component: TreatmentBritish,
+            meta: {
+                title: "英式芳療按摩療程"
+            },
+        }, {
+            path: "/course/treatment/lymphatic",
+            name: "course-treatment-lymphatic",
+            component: TreatmentLymphatic,
+            meta: {
+                title: "淋巴引流按摩療程"
+            },
+        }, {
+            path: "/course/treatment/facial",
+            name: "course-treatment-facial",
+            component: TreatmentFacial,
+            meta: {
+                title: "顱顏深層按摩療程"
+            },
+        }, {
+            path: "/course/treatment/pregnancy",
+            name: "course-treatment-pregnancy",
+            component: TreatmentPregnancy,
+            meta: {
+                title: "孕產婦芳療療程"
+            },
+        }, {
+            path: "/course/treatment/myofascial",
+            name: "course-treatment-myofascial",
+            component: TreatmentMyofascial,
+            meta: {
+                title: "肌筋膜系列課程"
+            },
+        }, {
+            path: "/course/treatment/swedish",
+            name: "course-treatment-swedish",
+            component: TreatmentSwedish,
+            meta: {
+                title: "瑞典式按摩療程"
+            },
+        }, {
+            path: "/course/treatment/meridian",
+            name: "course-treatment-meridian",
+            component: TreatmentMeridian,
+            meta: {
+                title: "經絡按摩療程"
             },
         }, ]
     },
