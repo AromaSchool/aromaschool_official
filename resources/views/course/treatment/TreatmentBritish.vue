@@ -32,83 +32,6 @@
         無論是希望為家人健康舒緩身體，或者成就心中的夢想轉職服務身心，只要您內心深處渴望透過雙手的能量，以最自然的方式聆聽來自身體的真正需求，這一套最快熟悉完整的全身療程，容易有成就感的入門按摩手法。
       </p>
     </template>
-    <template #schedule>
-      <div class="table_container">
-        <table class="course_table" cellpadding="15">
-          <thead>
-            <tr>
-              <th class="num"></th>
-              <th class="subject">課程內容</th>
-              <th class="system">生理檔案</th>
-              <th class="activity">課程活動</th>
-              <th class="handmade">DIY內容</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>
-                認識芳香療法<br />
-                芳香引領~認識精油<br />
-                精油基礎調製學
-              </td>
-              <td></td>
-              <td>
-                香氛心理測驗<br />
-                滾珠瓶體驗 <br />
-                聞香測試
-              </td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>
-                精油概論<br />
-                精油品質辨識<br />
-                精油基本使用方法
-              </td>
-              <td>免疫系統</td>
-              <td>
-                嗅覺大考驗<br />
-                課程目標調油<br />
-                聞香測試
-              </td>
-              <td>按摩油</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>
-                精油萃取方式簡介<br />
-                生命之水-純露<br />
-                純露介紹：羅馬洋甘菊、橙花
-              </td>
-              <td>邊緣系統</td>
-              <td>
-                香氣抓周<br />
-                課程目標調油<br />
-                聞香測試
-              </td>
-              <td>
-                按摩油<br />
-                髮霜
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>
-                精油毒性與禁忌<br />
-                精油藥理動力<br />
-                嗅覺密碼<br />
-                純露介紹：兩種不同產地的保加利亞玫瑰純露、薰衣草純露
-              </td>
-              <td>神經系統</td>
-              <td>聞香測試</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </template>
     <template #skill>
       <div class="table_container">
         <table class="course_table" cellpadding="10">
@@ -382,9 +305,9 @@ export default {
     isShowDiscount: true,
     isShowTaipei: true,
     isShowTaichung: true,
-    isShowHsinchu: false,
-    isShowTainan: false,
-    isShowKaohsiung: false,
+    isShowHsinchu: true,
+    isShowTainan: true,
+    isShowKaohsiung: true,
     isShowPrecaution: true,
     isShowNotes: true,
     isShowMeasure: true,
