@@ -3,11 +3,18 @@
     :title="title"
     :type="type"
     :registry="registry"
+    :isShowSchedule="isShowSchedule"
+    :isShowProcess="isShowProcess"
+    :isShowFeature="isShowFeature"
+    :isShowSuitable="isShowSuitable"
+    :isShowTarget="isShowTarget"
+    :isShowPayment="isShowPayment"
     :isShowTaipei="isShowTaipei"
     :isShowTaichung="isShowTaichung"
     :isShowHsinchu="isShowHsinchu"
     :isShowTainan="isShowTainan"
     :isShowKaohsiung="isShowKaohsiung"
+    :isShowMeasure="isShowMeasure"
   >
     <template #intro>
       <p>
@@ -267,11 +274,18 @@ export default {
     type: "芳療學苑",
     registry:
       "https://docs.google.com/forms/d/e/1FAIpQLScHsPTgQB8FJpI0lEdkEFcq6YllanI5eDnOPS1m_AbDziNxsQ/viewform",
+    isShowSchedule: true,
+    isShowProcess: true,
+    isShowFeature: true,
+    isShowSuitable: true,
+    isShowTarget: true,
+    isShowPayment: true,
     isShowTaipei: true,
     isShowTaichung: true,
     isShowHsinchu: true,
     isShowTainan: true,
     isShowKaohsiung: true,
+    isShowMeasure: true,
     dates: [
       "2021-03-04 (四)",
       "2021-04-01 (四)",
