@@ -1,5 +1,9 @@
 import VueRouter from "vue-router";
 
+import {
+    COURSES
+} from '@/js/api';
+
 // Admin pages
 import {
     NotFound,
@@ -226,77 +230,88 @@ const routes = [{
             name: "course-aromatherapy-elementary",
             component: AromatherapyElementary,
             meta: {
-                title: "芳香療法認證課程入門班"
+                title: "芳香療法認證課程入門班",
+                courseId: COURSES.AROMATHERAPY.ELEMENTARY,
             },
         }, {
             path: "/course/aromatherapy/intermediate",
             name: "course-aromatherapy-intermediate",
             component: AromatherapyIntermediate,
             meta: {
-                title: "芳香療法認證課程中階班"
+                title: "芳香療法認證課程中階班",
+                courseId: COURSES.AROMATHERAPY.INTERMEDIATE,
             },
         }, {
             path: "/course/aromatherapy/advanced",
             name: "course-aromatherapy-advanced",
             component: AromatherapyAdvanced,
             meta: {
-                title: "芳香療法認證課程高階班"
+                title: "芳香療法認證課程高階班",
+                courseId: COURSES.AROMATHERAPY.ADVANCED,
             },
         }, {
             path: "/course/aromatherapy/clinical",
             name: "course-aromatherapy-clinical",
             component: AromatherapyClinical,
             meta: {
-                title: "臨床芳療師認證課程"
+                title: "臨床芳療師認證課程",
+                courseId: COURSES.AROMATHERAPY.CLINICAL,
             },
         }, {
             path: "/course/treatment/british",
             name: "course-treatment-british",
             component: TreatmentBritish,
             meta: {
-                title: "英式芳療按摩療程"
+                title: "英式芳療按摩療程",
+                courseId: COURSES.TREATMENT.BRITISH,
             },
         }, {
             path: "/course/treatment/lymphatic",
             name: "course-treatment-lymphatic",
             component: TreatmentLymphatic,
             meta: {
-                title: "淋巴引流按摩療程"
+                title: "淋巴引流按摩療程",
+                courseId: COURSES.TREATMENT.LYMPHATIC,
             },
         }, {
             path: "/course/treatment/facial",
             name: "course-treatment-facial",
             component: TreatmentFacial,
             meta: {
-                title: "顱顏深層按摩療程"
+                title: "顱顏深層按摩療程",
+                courseId: COURSES.TREATMENT.FACIAL,
             },
         }, {
             path: "/course/treatment/pregnancy",
             name: "course-treatment-pregnancy",
             component: TreatmentPregnancy,
             meta: {
-                title: "孕產婦芳療療程"
+                title: "孕產婦芳療療程",
+                courseId: COURSES.TREATMENT.PREGNANCY,
             },
         }, {
             path: "/course/treatment/myofascial",
             name: "course-treatment-myofascial",
             component: TreatmentMyofascial,
             meta: {
-                title: "肌筋膜系列課程"
+                title: "肌筋膜系列課程",
+                courseId: COURSES.TREATMENT.MYOFASCIAL,
             },
         }, {
             path: "/course/treatment/swedish",
             name: "course-treatment-swedish",
             component: TreatmentSwedish,
             meta: {
-                title: "瑞典式按摩療程"
+                title: "瑞典式按摩療程",
+                courseId: COURSES.TREATMENT.SWEDISH,
             },
         }, {
             path: "/course/treatment/meridian",
             name: "course-treatment-meridian",
             component: TreatmentMeridian,
             meta: {
-                title: "經絡按摩療程"
+                title: "經絡按摩療程",
+                courseId: COURSES.TREATMENT.MERIDIAN,
             },
         }, ]
     },

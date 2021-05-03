@@ -14,6 +14,16 @@ import {
     BlogKeyword,
     BlogCategory,
 } from "./blog";
+import {
+    COURSES,
+    CLASSROOMS,
+    Course,
+    CourseCategory,
+    CourseClassroom,
+    CourseSchedule,
+    CourseSetting,
+    CourseBatch,
+} from "./course";
 
 export {
     Event,
@@ -26,4 +36,12 @@ export {
     Blog,
     BlogKeyword,
     BlogCategory,
+    COURSES,
+    CLASSROOMS,
+    Course,
+    CourseCategory,
+    CourseClassroom,
+    CourseSchedule,
+    CourseSetting,
+    CourseBatch,
 };

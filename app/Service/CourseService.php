@@ -15,10 +15,6 @@ class CourseService
         ?int $scheduleId
     ): Collection {
         $query = CourseSetting::where('course_id', '=', $courseId)
-            ->whereHas('batches', function ($q) use ($courseId) {
-                $q->where('visible', '=', true)
-                ->where('course_id', '=', $courseId);
-            })
             ->with(['batches' => function ($q) use ($courseId) {
                 $q->where('visible', '=', true)
                     ->where('course_id', '=', $courseId);

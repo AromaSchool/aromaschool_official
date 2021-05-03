@@ -9,12 +9,11 @@
     :isShowSuitable="isShowSuitable"
     :isShowTarget="isShowTarget"
     :isShowPayment="isShowPayment"
-    :isShowTaipei="isShowTaipei"
-    :isShowTaichung="isShowTaichung"
-    :isShowHsinchu="isShowHsinchu"
-    :isShowTainan="isShowTainan"
-    :isShowKaohsiung="isShowKaohsiung"
-    :isShowMeasure="isShowMeasure"
+    :isShowTaipei="!!data[0]"
+    :isShowTaichung="!!data[1]"
+    :isShowHsinchu="!!data[2]"
+    :isShowTainan="!!data[3]"
+    :isShowKaohsiung="!!data[4]"
   >
     <template #intro>
       <p>
@@ -107,9 +106,7 @@
     </template>
     <template #process>
       <ul>
-        <li>
-          美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階
-        </li>
+        <li>美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階</li>
         <li>英國IFPA國際芳療師認證班需完成：入門 + 中階 + 高階 + 英式按摩</li>
       </ul>
     </template>
@@ -146,8 +143,7 @@
         <li>本課程費用優惠價 新台幣4,200元</li>
         <li>課程共12小時，含課程費、講義、耗材</li>
         <li>
-          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩)
-          合報優惠及其他優惠活動，請來電洽詢
+          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩) 合報優惠及其他優惠活動，請來電洽詢
           <a href="tel:0227112290" title="02-27112290" class="link"
             ><i class="fas fa-phone-alt"></i>02-27112290</a
           >
@@ -166,15 +162,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>平日早上班</td>
-              <td>09:30~12:30</td>
-              <td>含開課日，共四週</td>
-              <td>
-                <ul class="date_list">
-                  <li v-for="date in dates" :key="date">{{ date }}</li>
-                </ul>
-              </td>
+            <tr v-for="datum in data[0]" :key="`setting-${datum.id}`">
+              <template v-if="datum.batches.length">
+                <td>{{ `${datum.schedule.name}班` }}</td>
+                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                <td>
+                  <ul class="date_list">
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      {{ batch.startDate }}
+                    </li>
+                  </ul>
+                </td>
+              </template>
+              <template v-else>
+                <td colspan="4" class="center">敬請期待</td>
+              </template>
             </tr>
           </tbody>
         </table>
@@ -192,15 +195,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>平日早上班</td>
-              <td>09:30~12:30</td>
-              <td>含開課日，共四週</td>
-              <td>
-                <ul class="date_list">
-                  <li v-for="date in dates" :key="date">{{ date }}</li>
-                </ul>
-              </td>
+            <tr v-for="datum in data[1]" :key="`setting-${datum.id}`">
+              <template v-if="datum.batches.length">
+                <td>{{ `${datum.schedule.name}班` }}</td>
+                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                <td>
+                  <ul class="date_list">
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      {{ batch.startDate }}
+                    </li>
+                  </ul>
+                </td>
+              </template>
+              <template v-else>
+                <td colspan="4" class="center">敬請期待</td>
+              </template>
             </tr>
           </tbody>
         </table>
@@ -218,15 +228,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>平日早上班</td>
-              <td>09:30~12:30</td>
-              <td>含開課日，共四週</td>
-              <td>
-                <ul class="date_list">
-                  <li v-for="date in dates" :key="date">{{ date }}</li>
-                </ul>
-              </td>
+            <tr v-for="datum in data[2]" :key="`setting-${datum.id}`">
+              <template v-if="datum.batches.length">
+                <td>{{ `${datum.schedule.name}班` }}</td>
+                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                <td>
+                  <ul class="date_list">
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      {{ batch.startDate }}
+                    </li>
+                  </ul>
+                </td>
+              </template>
+              <template v-else>
+                <td colspan="4" class="center">敬請期待</td>
+              </template>
             </tr>
           </tbody>
         </table>
@@ -244,15 +261,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>平日早上班</td>
-              <td>09:30~12:30</td>
-              <td>含開課日，共四週</td>
-              <td>
-                <ul class="date_list">
-                  <li v-for="date in dates" :key="date">{{ date }}</li>
-                </ul>
-              </td>
+            <tr v-for="datum in data[3]" :key="`setting-${datum.id}`">
+              <template v-if="datum.batches.length">
+                <td>{{ `${datum.schedule.name}班` }}</td>
+                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                <td>
+                  <ul class="date_list">
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      {{ batch.startDate }}
+                    </li>
+                  </ul>
+                </td>
+              </template>
+              <template v-else>
+                <td colspan="4" class="center">敬請期待</td>
+              </template>
             </tr>
           </tbody>
         </table>
@@ -270,15 +294,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>平日早上班</td>
-              <td>09:30~12:30</td>
-              <td>含開課日，共四週</td>
-              <td>
-                <ul class="date_list">
-                  <li v-for="date in dates" :key="date">{{ date }}</li>
-                </ul>
-              </td>
+            <tr v-for="datum in data[4]" :key="`setting-${datum.id}`">
+              <template v-if="datum.batches.length">
+                <td>{{ `${datum.schedule.name}班` }}</td>
+                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                <td>
+                  <ul class="date_list">
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      {{ batch.startDate }}
+                    </li>
+                  </ul>
+                </td>
+              </template>
+              <template v-else>
+                <td colspan="4" class="center">敬請期待</td>
+              </template>
             </tr>
           </tbody>
         </table>
@@ -289,6 +320,7 @@
 
 <script>
 import CourseContent from "@/views/course/CourseContent.vue";
+import { CourseBatch, CLASSROOMS } from "@/js/api";
 
 export default {
   components: {
@@ -305,19 +337,23 @@ export default {
     isShowSuitable: true,
     isShowTarget: true,
     isShowPayment: true,
-    isShowTaipei: true,
-    isShowTaichung: true,
-    isShowHsinchu: true,
-    isShowTainan: true,
-    isShowKaohsiung: true,
     isShowMeasure: true,
-    dates: [
-      "2021-03-04 (四)",
-      "2021-04-01 (四)",
-      "2021-04-06 (二)",
-      "2021-04-09 (五)",
-      "2021-04-12 (一)",
-    ],
+    data: [],
   }),
+  created() {
+    this.getCourseBatches();
+  },
+  methods: {
+    getCourseBatches() {
+      for (const [_, classroomId] of Object.entries(CLASSROOMS)) {
+        CourseBatch.getList({
+          courseId: this.$route.meta.courseId,
+          classroomId: classroomId,
+        }).then((response) => {
+          this.data.push(response);
+        });
+      }
+    },
+  },
 };
 </script>
