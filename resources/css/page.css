@@ -940,6 +940,15 @@ section.course{
     top: 0%;
     transform: translateY(100%);
 }
+.feature .trial_box{
+    margin: 20px auto;
+}
+.feature h6{
+    font-size: 14px;
+    font-weight: 300;
+    color: #9C9DA8;
+    margin-top: 5px;
+}
 .feature ol{
     margin: 20px auto;
     padding-left: 20px;
@@ -1651,6 +1660,9 @@ section.course{
     .course_content_block .btn_group .btn_underline{
         display: block;
         margin-bottom: 10px;
+    }
+    .feature .trial_box audio{
+        width: 100%;
     }
     /* 學苑周刊-列表 */
     .blog_list .article_box{
