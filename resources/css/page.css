@@ -903,6 +903,9 @@ section.course{
     border: solid 1px rgba(118,118,145,.2);
     font-weight: 300;
 }
+.course_table td.center{
+    text-align: center;
+}
 .course_table .date_list{
     margin-bottom: 0;
 }
