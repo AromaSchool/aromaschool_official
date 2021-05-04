@@ -25,6 +25,7 @@ class CourseBatch extends Model
         'setting_id',
         'start_date',
         'end_date',
+        'off_shelf_date',
         'deadline',
         'comment',
         'created_by',

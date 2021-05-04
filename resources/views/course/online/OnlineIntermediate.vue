@@ -11,12 +11,7 @@
     :isShowPayment="isShowPayment"
     :isShowPrecaution="isShowPrecaution"
     :isShowMeasure="isShowMeasure"
-    :isShowTaipei="!!data[0]"
-    :isShowTaichung="!!data[1]"
-    :isShowHsinchu="!!data[2]"
-    :isShowTainan="!!data[3]"
-    :isShowKaohsiung="!!data[4]"
-    :isShowOnline="isShowOnline"
+    :isShowOnline="!!data"
   >
     <template #intro>
       <p>
@@ -143,9 +138,7 @@
     </template>
     <template #process>
       <ul>
-        <li>
-          美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階
-        </li>
+        <li>美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階</li>
         <li>英國IFPA國際芳療師認證班需完成：入門 + 中階 + 高階 + 英式按摩</li>
       </ul>
     </template>
@@ -157,13 +150,9 @@
       <ol>
         <li>在學期間不限次數重複上課，不怕缺課，不用擔心補課</li>
         <li>不需配合別人的進度，自己安排進度！</li>
-        <li>
-          只要有網路與手機、平版或電腦就能隨時上課，不需受限於開課地點，節省交通時間
-        </li>
+        <li>只要有網路與手機、平版或電腦就能隨時上課，不需受限於開課地點，節省交通時間</li>
         <li>可以有效利用空餘時間，提升專業能力，取得專業認證</li>
-        <li>
-          芳療認證資歷最豐富，2003年成立至今，歷經欲20年的萃鍊，課程最專業
-        </li>
+        <li>芳療認證資歷最豐富，2003年成立至今，歷經欲20年的萃鍊，課程最專業</li>
         <li>專屬導師諮詢，有問題於短時間內回覆協助指導</li>
         <li>費用最優惠，為面授課程的6折</li>
         <li>避免群聚感染壓力</li>
@@ -199,16 +188,13 @@
     <template #payment>
       <ul>
         <li>
-          本課程費用優惠價 8,000 元，含課程費、講義、耗材（郵寄附贈全套價值
-          3,500 個人專屬教材）
+          本課程費用優惠價 8,000 元，含課程費、講義、耗材（郵寄附贈全套價值 3,500 個人專屬教材）
         </li>
-        <li>
-          本課程為面授課程之「錄影影片」，需於規定時間內自行安排時間於線上上課
-        </li>
+        <li>本課程為面授課程之「錄影影片」，需於規定時間內自行安排時間於線上上課</li>
         <li>課程共 24 小時</li>
         <li>
-          教材含：上課講義、10ml 無香油膠*1、10ml 無香精華液*1、10ml
-          無香乳液*1、20ml 葵花油*2、20ml 純露、20ml
+          教材含：上課講義、10ml 無香油膠*1、10ml 無香精華液*1、10ml 無香乳液*1、20ml 葵花油*2、20ml
+          純露、20ml
           基底油7支(甜杏仁油、金盞花油、荷荷巴油、澳洲胡桃油、橄欖油、聖約翰草油、葵花油)、專業聞香紙
           60張
         </li>
@@ -225,15 +211,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="datum in data[4]" :key="`setting-${datum.id}`">
-              <template v-if="datum.batches.length">
-                <td>{{ `${datum.schedule.name}班` }}</td>
-                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
-                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
-              </template>
-              <template v-else>
-                <td colspan="3" class="center">敬請期待</td>
-              </template>
+            <template v-if="data.length">
+              <tr v-for="datum in data" :key="`batch-${datum.id}`">
+                <td>{{ datum.startDate }}</td>
+                <td>{{ datum.endDate }}</td>
+                <td>{{ datum.deadline }}</td>
+              </tr>
+            </template>
+            <tr v-else>
+              <td colspan="3" class="center">敬請期待</td>
             </tr>
           </tbody>
         </table>
@@ -241,21 +227,15 @@
     </template>
     <template #precaution>
       <ol>
-        <li>
-          網路課程以「Facebook」平台為主，行政人員於學員完成繳費後引導學員進入網路直播教室。
-        </li>
+        <li>網路課程以「Facebook」平台為主，行政人員於學員完成繳費後引導學員進入網路直播教室。</li>
         <li>
           直播錄影課程效果受限於學員所處環境的網路品質，無法保證影片流暢，直播感受跟現場會有一定落差，此部分請自行斟酌。
         </li>
         <li>
           建議連接家中wifi訊號可確保課程收視品質，僅使用3G、4G等訊號將導致訊號不穩、網路擁擠而影響上課品質。
         </li>
-        <li>
-          若您曾經順利收看FB臉書上相關直播節目，則表示您所處環境的頻寬沒有問題，可放心上課。
-        </li>
-        <li>
-          網路課程為面授課程之「錄影影片」，需自行安排於規定時間內完成課程。
-        </li>
+        <li>若您曾經順利收看FB臉書上相關直播節目，則表示您所處環境的頻寬沒有問題，可放心上課。</li>
+        <li>網路課程為面授課程之「錄影影片」，需自行安排於規定時間內完成課程。</li>
         <li>
           開課後請於四周內安排時間將課程觀看完畢，課程結束後即關閉觀看權限。若需延長觀看期限，需另付學分費及設定費。
         </li>
@@ -266,10 +246,7 @@
         <li>收到上課教材後無法退貨退費、無補課機制。</li>
         <li>
           若想廣大學習芳香療法、個案分享、經驗交流，歡迎報名
-          <router-link
-            to="/course/aromatherapy/intermediate"
-            title="面授課程"
-            class="link"
+          <router-link to="/course/aromatherapy/intermediate" title="面授課程" class="link"
             >➤面授課程</router-link
           >。
         </li>
@@ -280,7 +257,7 @@
 
 <script>
 import CourseContent from "@/views/course/CourseContent.vue";
-import { CourseBatch, CLASSROOMS } from "@/js/api";
+import { CourseBatch } from "@/js/api";
 
 export default {
   components: {
@@ -307,14 +284,11 @@ export default {
   },
   methods: {
     getCourseBatches() {
-      for (const [_, classroomId] of Object.entries(CLASSROOMS)) {
-        CourseBatch.getList({
-          courseId: this.$route.meta.courseId,
-          classroomId: classroomId,
-        }).then((response) => {
-          this.data.push(response);
-        });
-      }
+      CourseBatch.getList({
+        courseId: this.$route.meta.courseId,
+      }).then((response) => {
+        this.data.push(...response);
+      });
     },
   },
 };

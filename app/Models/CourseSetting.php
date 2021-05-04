@@ -27,8 +27,6 @@ class CourseSetting extends Model
         'start_time',
         'end_time',
         'weeks',
-        'teaching_hours',
-        'examination_hours',
         'created_by',
     ];
 

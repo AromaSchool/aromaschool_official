@@ -113,8 +113,8 @@ class CourseBatch {
     } = {}) {
         this.id = id;
         this.startDate = `${startDate} (${moment(startDate).locale('zh-tw').format('dddd').substring(2,3)})`;
-        this.endDate = endDate;
-        this.deadline = deadline;
+        this.endDate = `${endDate} (${moment(endDate).locale('zh-tw').format('dddd').substring(2,3)})`;
+        this.deadline = `${deadline} (${moment(deadline).locale('zh-tw').format('dddd').substring(2,3)})`;
         this.comment = comment;
     }
 
@@ -131,10 +131,16 @@ class CourseBatch {
             })
             .then(response => {
                 if (response.data) {
+                    if ([COURSES.ONLINE.ELEMENTARY, COURSES.ONLINE.INTERMEDIATE, COURSES.ONLINE.ALL].indexOf(courseId) != -1) {
+                        return response.data.map(item => {
+                            return new CourseBatch(item)
+                        });
+                    }
                     return response.data.map(item => {
                         return new CourseSetting(item)
-                    })
+                    });
                 }
+                return [];
             });
     }
 }
