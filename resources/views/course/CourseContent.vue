@@ -173,8 +173,8 @@
             <div class="address">
               <h5><i class="fas fa-map-marker-alt"></i>線上上課</h5>
               <p>
-                於 Facebook 平台觀看課程。不用配合固定上課時間，課程開放後需於
-                14 天內自行安排時間觀看。
+                於 Facebook
+                平台觀看課程。不用配合固定上課時間，課程開放後需於期限內自行安排時間觀看。
               </p>
             </div>
             <slot name="periodOnline"></slot>
