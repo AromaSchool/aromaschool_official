@@ -9,6 +9,7 @@
     :isShowSuitable="isShowSuitable"
     :isShowTarget="isShowTarget"
     :isShowPayment="isShowPayment"
+    :isShowMeasure="isShowMeasure"
     :isShowTaipei="!!data[0]"
     :isShowTaichung="!!data[1]"
     :isShowHsinchu="!!data[2]"
@@ -355,6 +356,7 @@ export default {
     isShowSuitable: true,
     isShowTarget: true,
     isShowPayment: true,
+    isShowMeasure: true,
     isShowMeasure: true,
     data: [],
   }),
