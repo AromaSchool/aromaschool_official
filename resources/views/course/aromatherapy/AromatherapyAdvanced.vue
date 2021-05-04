@@ -80,7 +80,9 @@
     </template>
     <template #process>
       <ul>
-        <li>美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階</li>
+        <li>
+          美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階
+        </li>
         <li>英國IFPA國際芳療師認證班需完成：入門 + 中階 + 高階 + 英式按摩</li>
       </ul>
     </template>
@@ -116,10 +118,11 @@
     </template>
     <template #payment>
       <ul>
-        <li>本課程費用新台幣70,000元 (舊生、現金9折)</li>
-        <li>課程共120小時，含課程費、講義、耗材</li>
+        <li>本課程費用 70,000 元 (舊生、現金9折)，含課程費、講義、耗材</li>
+        <li>課程共 120 小時</li>
         <li>
-          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩) 合報優惠及其他優惠活動，請來電洽詢
+          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩)
+          合報優惠及其他優惠活動，請來電洽詢
           <a href="tel:0227112290" title="02-27112290" class="link"
             ><i class="fas fa-phone-alt"></i>02-27112290</a
           >
@@ -145,7 +148,10 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                    <li
+                      v-for="batch in datum.batches"
+                      :key="`batch-${batch.id}`"
+                    >
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -178,7 +184,10 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                    <li
+                      v-for="batch in datum.batches"
+                      :key="`batch-${batch.id}`"
+                    >
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -211,7 +220,10 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                    <li
+                      v-for="batch in datum.batches"
+                      :key="`batch-${batch.id}`"
+                    >
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -244,7 +256,10 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                    <li
+                      v-for="batch in datum.batches"
+                      :key="`batch-${batch.id}`"
+                    >
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -277,7 +292,10 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                    <li
+                      v-for="batch in datum.batches"
+                      :key="`batch-${batch.id}`"
+                    >
                       {{ batch.startDate }}
                     </li>
                   </ul>
