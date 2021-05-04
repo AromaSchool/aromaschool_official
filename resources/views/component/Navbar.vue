@@ -185,18 +185,27 @@
                 <div class="dropdown-item">網路學苑</div>
                 <ul class="dropdown-submenu">
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >直播芳療認證課程入門班</router-link
+                    <router-link
+                      to="/course/online/elementary"
+                      class="dropdown-item"
+                      :title="routes[3].children[11].meta.title"
+                      >{{ routes[3].children[11].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >直播芳療認證課程中階班</router-link
+                    <router-link
+                      to="/course/online/intermediate"
+                      class="dropdown-item"
+                      :title="routes[3].children[12].meta.title"
+                      >{{ routes[3].children[12].meta.title }}</router-link
                     >
                   </li>
                   <li>
-                    <router-link to="/" class="dropdown-item" title=""
-                      >線上芳療認證課程全階班</router-link
+                    <router-link
+                      to="/course/online/all"
+                      class="dropdown-item"
+                      :title="routes[3].children[13].meta.title"
+                      >{{ routes[3].children[13].meta.title }}</router-link
                     >
                   </li>
                 </ul>

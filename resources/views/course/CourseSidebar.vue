@@ -164,17 +164,23 @@
           <div class="accordion-body">
             <ul>
               <li class="sidebar_list">
-                <router-link to="/course" title="直播芳療認證課程入門班"
+                <router-link
+                  to="/course/online/elementary"
+                  title="直播芳療認證課程入門班"
                   >直播芳療認證課程入門班</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="直播芳療認證課程中階班"
+                <router-link
+                  to="/course/online/intermediate"
+                  title="直播芳療認證課程中階班"
                   >直播芳療認證課程中階班</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course" title="線上芳療認證課程全階班"
+                <router-link
+                  to="/course/online/all"
+                  title="線上芳療認證課程全階班"
                   >線上芳療認證課程全階班</router-link
                 >
               </li>

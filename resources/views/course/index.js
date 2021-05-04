@@ -10,6 +10,9 @@ import TreatmentPregnancy from './treatment/TreatmentPregnancy.vue';
 import TreatmentMyofascial from './treatment/TreatmentMyofascial.vue';
 import TreatmentSwedish from './treatment/TreatmentSwedish.vue';
 import TreatmentMeridian from './treatment/TreatmentMeridian.vue';
+import OnlineElementary from './online/OnlineElementary.vue';
+import OnlineIntermediate from './online/OnlineIntermediate.vue';
+import OnlineAll from './online/OnlineAll.vue';
 
 export {
     Course,
@@ -24,4 +27,7 @@ export {
     TreatmentMyofascial,
     TreatmentSwedish,
     TreatmentMeridian,
+    OnlineElementary,
+    OnlineIntermediate,
+    OnlineAll
 };

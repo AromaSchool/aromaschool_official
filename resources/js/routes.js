@@ -22,6 +22,9 @@ import {
     TreatmentMyofascial,
     TreatmentSwedish,
     TreatmentMeridian,
+    OnlineElementary,
+    OnlineIntermediate,
+    OnlineAll
 } from '@/views/course';
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
@@ -226,94 +229,120 @@ const routes = [{
             bannerImage: "images/banner-6.jpg"
         },
         children: [{
-            path: "/course/aromatherapy/elementary",
-            name: "course-aromatherapy-elementary",
-            component: AromatherapyElementary,
-            meta: {
-                title: "芳香療法認證課程入門班",
-                courseId: COURSES.AROMATHERAPY.ELEMENTARY,
+                path: "/course/aromatherapy/elementary",
+                name: "course-aromatherapy-elementary",
+                component: AromatherapyElementary,
+                meta: {
+                    title: "芳香療法認證課程入門班",
+                    courseId: COURSES.AROMATHERAPY.ELEMENTARY,
+                },
+            }, {
+                path: "/course/aromatherapy/intermediate",
+                name: "course-aromatherapy-intermediate",
+                component: AromatherapyIntermediate,
+                meta: {
+                    title: "芳香療法認證課程中階班",
+                    courseId: COURSES.AROMATHERAPY.INTERMEDIATE,
+                },
+            }, {
+                path: "/course/aromatherapy/advanced",
+                name: "course-aromatherapy-advanced",
+                component: AromatherapyAdvanced,
+                meta: {
+                    title: "芳香療法認證課程高階班",
+                    courseId: COURSES.AROMATHERAPY.ADVANCED,
+                },
+            }, {
+                path: "/course/aromatherapy/clinical",
+                name: "course-aromatherapy-clinical",
+                component: AromatherapyClinical,
+                meta: {
+                    title: "臨床芳療師認證課程",
+                    courseId: COURSES.AROMATHERAPY.CLINICAL,
+                },
+            }, {
+                path: "/course/treatment/british",
+                name: "course-treatment-british",
+                component: TreatmentBritish,
+                meta: {
+                    title: "英式芳療按摩療程",
+                    courseId: COURSES.TREATMENT.BRITISH,
+                },
+            }, {
+                path: "/course/treatment/lymphatic",
+                name: "course-treatment-lymphatic",
+                component: TreatmentLymphatic,
+                meta: {
+                    title: "淋巴引流按摩療程",
+                    courseId: COURSES.TREATMENT.LYMPHATIC,
+                },
+            }, {
+                path: "/course/treatment/facial",
+                name: "course-treatment-facial",
+                component: TreatmentFacial,
+                meta: {
+                    title: "顱顏深層按摩療程",
+                    courseId: COURSES.TREATMENT.FACIAL,
+                },
+            }, {
+                path: "/course/treatment/pregnancy",
+                name: "course-treatment-pregnancy",
+                component: TreatmentPregnancy,
+                meta: {
+                    title: "孕產婦芳療療程",
+                    courseId: COURSES.TREATMENT.PREGNANCY,
+                },
+            }, {
+                path: "/course/treatment/myofascial",
+                name: "course-treatment-myofascial",
+                component: TreatmentMyofascial,
+                meta: {
+                    title: "肌筋膜系列課程",
+                    courseId: COURSES.TREATMENT.MYOFASCIAL,
+                },
+            }, {
+                path: "/course/treatment/swedish",
+                name: "course-treatment-swedish",
+                component: TreatmentSwedish,
+                meta: {
+                    title: "瑞典式按摩療程",
+                    courseId: COURSES.TREATMENT.SWEDISH,
+                },
+            }, {
+                path: "/course/treatment/meridian",
+                name: "course-treatment-meridian",
+                component: TreatmentMeridian,
+                meta: {
+                    title: "經絡按摩療程",
+                    courseId: COURSES.TREATMENT.MERIDIAN,
+                },
+            }, {
+                path: "/course/online/elementary",
+                name: "course-online-elementary",
+                component: OnlineElementary,
+                meta: {
+                    title: "直播芳療認證課程入門班",
+                    courseId: COURSES.ONLINE.ELEMENTARY,
+                },
             },
-        }, {
-            path: "/course/aromatherapy/intermediate",
-            name: "course-aromatherapy-intermediate",
-            component: AromatherapyIntermediate,
-            meta: {
-                title: "芳香療法認證課程中階班",
-                courseId: COURSES.AROMATHERAPY.INTERMEDIATE,
+            {
+                path: "/course/online/intermediate",
+                name: "course-online-intermediate",
+                component: OnlineIntermediate,
+                meta: {
+                    title: "直播芳療認證課程中階班",
+                    courseId: COURSES.ONLINE.INTERMEDIATE,
+                },
+            }, {
+                path: "/course/online/all",
+                name: "course-online-all",
+                component: OnlineAll,
+                meta: {
+                    title: "線上芳療認證課程全階班",
+                    courseId: COURSES.ONLINE.ALL,
+                },
             },
-        }, {
-            path: "/course/aromatherapy/advanced",
-            name: "course-aromatherapy-advanced",
-            component: AromatherapyAdvanced,
-            meta: {
-                title: "芳香療法認證課程高階班",
-                courseId: COURSES.AROMATHERAPY.ADVANCED,
-            },
-        }, {
-            path: "/course/aromatherapy/clinical",
-            name: "course-aromatherapy-clinical",
-            component: AromatherapyClinical,
-            meta: {
-                title: "臨床芳療師認證課程",
-                courseId: COURSES.AROMATHERAPY.CLINICAL,
-            },
-        }, {
-            path: "/course/treatment/british",
-            name: "course-treatment-british",
-            component: TreatmentBritish,
-            meta: {
-                title: "英式芳療按摩療程",
-                courseId: COURSES.TREATMENT.BRITISH,
-            },
-        }, {
-            path: "/course/treatment/lymphatic",
-            name: "course-treatment-lymphatic",
-            component: TreatmentLymphatic,
-            meta: {
-                title: "淋巴引流按摩療程",
-                courseId: COURSES.TREATMENT.LYMPHATIC,
-            },
-        }, {
-            path: "/course/treatment/facial",
-            name: "course-treatment-facial",
-            component: TreatmentFacial,
-            meta: {
-                title: "顱顏深層按摩療程",
-                courseId: COURSES.TREATMENT.FACIAL,
-            },
-        }, {
-            path: "/course/treatment/pregnancy",
-            name: "course-treatment-pregnancy",
-            component: TreatmentPregnancy,
-            meta: {
-                title: "孕產婦芳療療程",
-                courseId: COURSES.TREATMENT.PREGNANCY,
-            },
-        }, {
-            path: "/course/treatment/myofascial",
-            name: "course-treatment-myofascial",
-            component: TreatmentMyofascial,
-            meta: {
-                title: "肌筋膜系列課程",
-                courseId: COURSES.TREATMENT.MYOFASCIAL,
-            },
-        }, {
-            path: "/course/treatment/swedish",
-            name: "course-treatment-swedish",
-            component: TreatmentSwedish,
-            meta: {
-                title: "瑞典式按摩療程",
-                courseId: COURSES.TREATMENT.SWEDISH,
-            },
-        }, {
-            path: "/course/treatment/meridian",
-            name: "course-treatment-meridian",
-            component: TreatmentMeridian,
-            meta: {
-                title: "經絡按摩療程",
-                courseId: COURSES.TREATMENT.MERIDIAN,
-            },
-        }, ]
+        ]
     },
     {
         path: "/presentation",

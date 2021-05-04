@@ -21,7 +21,7 @@ const COURSES = {
     ONLINE: {
         ELEMENTARY: 12,
         INTERMEDIATE: 13,
-        ADVANCED: 14,
+        ALL: 14,
     },
 };
 
