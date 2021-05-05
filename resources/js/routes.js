@@ -49,6 +49,7 @@ import Blog from "../views/Blog.vue";
 import BlogList from "../views/blog/BlogList.vue";
 import BlogDetail from "../views/blog/BlogDetail.vue";
 import Contact from "../views/Contact.vue";
+import Faq from "../views/Faq.vue";
 import ComingSoon from "../views/component/ComingSoon.vue";
 
 const routes = [{
@@ -396,6 +397,26 @@ const routes = [{
         meta: {
             title: "聯絡我們",
             titleEn: "CONTACT",
+            bannerImage: "images/banner-3.jpg"
+        },
+    },
+    {
+        path: "/faq",
+        name: "faq",
+        component: ComingSoon,
+        meta: {
+            title: "常見問題",
+            titleEn: "Q&A",
+            bannerImage: "images/banner-3.jpg"
+        },
+    },
+    {
+        path: "/recruit",
+        name: "recruit",
+        component: ComingSoon,
+        meta: {
+            title: "人才招募",
+            titleEn: "RECRUIT",
             bannerImage: "images/banner-3.jpg"
         },
     },

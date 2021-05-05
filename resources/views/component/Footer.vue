@@ -62,10 +62,10 @@
             <router-link to="/contact" title="聯絡我們" class="footer_nav_link"
               >聯絡我們</router-link
             >
-            <router-link to="/" title="常見問題" class="footer_nav_link"
+            <router-link to="/faq" title="常見問題" class="footer_nav_link"
               >常見問題</router-link
             >
-            <router-link to="/" title="人才招募" class="footer_nav_link"
+            <router-link to="/recruit" title="人才招募" class="footer_nav_link"
               >人才招募</router-link
             >
           </li>
