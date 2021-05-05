@@ -33,13 +33,28 @@
             >
           </li>
           <li>
-            <router-link to="/" title="芳療學苑" class="footer_nav_link"
+            <router-link
+              to="/course/aromatherapy/elementary"
+              title="芳療學苑"
+              class="footer_nav_link"
               >芳療學苑</router-link
             >
-            <router-link to="/" title="療程學苑" class="footer_nav_link"
+            <router-link
+              to="/course/treatment/british"
+              title="療程學苑"
+              class="footer_nav_link"
               >療程學苑</router-link
             >
-            <router-link to="/" title="學苑周刊" class="footer_nav_link"
+            <router-link
+              to="/course/online/elementary"
+              title="網路學苑"
+              class="footer_nav_link"
+              >網路學苑</router-link
+            >
+            <router-link
+              to="/blog/category/all"
+              title="學苑周刊"
+              class="footer_nav_link"
               >學苑周刊</router-link
             >
           </li>
