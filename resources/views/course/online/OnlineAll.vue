@@ -112,13 +112,9 @@
     </template>
     <template #suitable>
       <ol>
-        <li>美容、SPA相關產業從業人員、相關產業主管、業者</li>
-        <li>希望取得國際芳療師認證的芳療師</li>
-        <li>醫護人員</li>
-        <li>諮商心理師、臨床心理師</li>
-        <li>想要參加正式芳療訓練精油玩家</li>
-        <li>想要更進一步擁有正確芳療知識的一般民眾</li>
-        <li>無法配合面授課上課時間者</li>
+        <li>有志提升芳療專業</li>
+        <li>想取得以 NAHA 美國國家芳療協會芳療師認證</li>
+        <li>欲將自身專業結合芳香療法專業，跨界綜合運用</li>
       </ol>
     </template>
     <template #target>
@@ -221,8 +217,7 @@ export default {
   data: () => ({
     title: "線上芳療認證課程全階班",
     type: "網路學苑",
-    registry:
-      "https://docs.google.com/forms/d/e/1FAIpQLSdUsNUiMIZ1IW2T_49Uy64Q-cOS2yXK3SjZGHRYnXLgQ3WXUg/viewform",
+    registry: "https://forms.gle/cySRyJgBoL1APehW9",
     isShowSchedule: true,
     isShowProcess: true,
     isShowFeature: true,

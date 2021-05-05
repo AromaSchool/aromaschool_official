@@ -425,8 +425,13 @@ const router = new VueRouter({
     mode: "history",
     routes: routes,
     scrollBehavior(to, from, savedPosition) {
-        if (to.path.includes('teamMember') || to.path.includes('course')) {
+        if (to.path.includes('teamMember')) {
             return null;
+        } else {
+            selector = {
+                x: 0,
+                y: 0
+            };
         }
 
         if (to.hash) {
