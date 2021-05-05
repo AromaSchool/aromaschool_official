@@ -348,6 +348,66 @@ footer .copyright {
     text-align: center;
 }
 
+/* Go Top */
+.fixed_block{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+}
+.fixed_block .fixed_box{
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,.8);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    text-align: center;
+}
+#goTop{
+    position: relative;
+    font-size: 14px;
+    padding-right: 10px;
+    color: #707179;
+    letter-spacing: 1px;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    cursor: pointer;
+    border: solid 1px #fff;
+    transition-duration: .3s;
+}
+#goTop::before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    width: 1px;
+    height: 50px;
+    background: #a18875;
+    transition-duration: .3s;
+}
+#goTop::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 27px;
+    bottom: 53px;
+    width: 1px;
+    height: 8px;
+    background: #a18875;
+    transform: rotate(-45deg);
+    transition-duration: .3s;
+}
+#goTop:hover{
+    border: solid 1px rgba(241, 241, 244,1);
+}
+#goTop:hover::before{
+    height: 60px;
+}
+#goTop:hover::after{
+    bottom: 63px;
+}
+
 /* banner */
 .header_banner {
     padding-top: 150px;
