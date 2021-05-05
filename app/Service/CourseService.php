@@ -24,10 +24,10 @@ class CourseService
                 ->orderBy('start_date');
         } else {
             $query = CourseSetting::where('course_id', '=', $courseId)
-                ->where('off_shelf_date', '>=', Carbon::now())
                 ->with(['batches' => function ($q) use ($courseId) {
                     $q->where('visible', '=', true)
-                        ->where('course_id', '=', $courseId);
+                        ->where('course_id', '=', $courseId)
+                        ->where('off_shelf_date', '>=', Carbon::now());
                 }])
                 ->with('classroom')
                 ->with('schedule')
