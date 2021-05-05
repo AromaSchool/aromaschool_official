@@ -446,36 +446,10 @@ const router = new VueRouter({
     mode: "history",
     routes: routes,
     scrollBehavior(to, from, savedPosition) {
-        if (to.path.includes('teamMember')) {
-            return null;
-        } else {
-            selector = {
-                x: 0,
-                y: 0
-            };
+        return savedPosition || {
+            x: 0,
+            y: 0
         }
-
-        if (to.hash) {
-            return {
-                selector: to.hash,
-            }
-        }
-
-        let selector = null;
-        if (savedPosition) {
-            selector = savedPosition;
-        } else {
-            selector = {
-                x: 0,
-                y: 0
-            };
-        }
-
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(selector)
-            }, 500)
-        });
     }
 })
 

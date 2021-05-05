@@ -34,17 +34,13 @@
         <p class="note">※課表內容以學苑核發之實際課表為主</p>
       </div>
       <div class="course_box skill" v-if="isShowSkill == true">
-        <h4 class="course_title">
-          <i class="fas fa-hand-sparkles"></i>手法屬性
-        </h4>
+        <h4 class="course_title"><i class="fas fa-hand-sparkles"></i>手法屬性</h4>
         <div class="skill_block">
           <slot name="skill"></slot>
         </div>
       </div>
       <div class="course_box process" v-if="isShowProcess == true">
-        <h4 class="course_title">
-          <i class="fas fa-swatchbook"></i>國際認證進修流程
-        </h4>
+        <h4 class="course_title"><i class="fas fa-swatchbook"></i>國際認證進修流程</h4>
         <slot name="process"></slot>
         <div class="btn_right">
           <a
@@ -62,9 +58,7 @@
         <slot name="feature"></slot>
       </div>
       <div class="course_box suitable" v-if="isShowSuitable == true">
-        <h4 class="course_title">
-          <i class="fas fa-user-friends"></i>適合對象
-        </h4>
+        <h4 class="course_title"><i class="fas fa-user-friends"></i>適合對象</h4>
         <slot name="suitable"></slot>
       </div>
       <div class="course_box target" v-if="isShowTarget == true">
@@ -72,9 +66,7 @@
         <slot name="target"></slot>
       </div>
       <div class="course_box payment" v-if="isShowPayment == true">
-        <h4 class="course_title">
-          <i class="fas fa-comments-dollar"></i>課程費用說明
-        </h4>
+        <h4 class="course_title"><i class="fas fa-comments-dollar"></i>課程費用說明</h4>
         <slot name="payment"></slot>
       </div>
       <div class="course_box discount" v-if="isShowDiscount == true">
@@ -195,9 +187,7 @@
         </div>
       </div>
       <div class="course_box precaution" v-if="isShowPrecaution == true">
-        <h4 class="course_title">
-          <i class="fas fa-exclamation-circle"></i>報名注意事項
-        </h4>
+        <h4 class="course_title"><i class="fas fa-exclamation-circle"></i>報名注意事項</h4>
         <slot name="precaution"></slot>
       </div>
       <div class="course_box notes" v-if="isShowNotes == true">
@@ -307,7 +297,11 @@ export default {
     anchorHashCheck() {
       const el = document.getElementById(this.$route.hash.slice(1));
       if (el) {
-        window.scrollTo(0, el.offsetTop - 80);
+        window.scrollTo({
+          top: el.offsetTop - 80,
+          left: 0,
+          behavior: "smooth",
+        });
       }
     },
   },

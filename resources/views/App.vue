@@ -47,3 +47,9 @@ export default {
   },
 };
 </script>
+
+<style>
+html {
+  scroll-behavior: auto !important;
+}
+</style>
