@@ -287,7 +287,9 @@ export default {
       CourseBatch.getList({
         courseId: this.$route.meta.courseId,
       }).then((response) => {
-        this.data.push(...response);
+        if (response) {
+          this.data.push(...response);
+        }
       });
     },
   },

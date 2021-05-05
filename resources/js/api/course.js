@@ -140,7 +140,6 @@ class CourseBatch {
                         return new CourseSetting(item)
                     });
                 }
-                return [];
             });
     }
 }
