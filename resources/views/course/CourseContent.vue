@@ -172,9 +172,12 @@
           <div class="classroom_box" v-if="isShowOnline == true">
             <div class="address">
               <h5><i class="fas fa-map-marker-alt"></i>線上上課</h5>
-              <p>
+              <p v-if="onlineMode == 'vedio'">
                 於 Facebook
                 平台觀看課程。不用配合固定上課時間，課程開放後需於期限內自行安排時間觀看。
+              </p>
+              <p v-if="onlineMode == 'audio'">
+                利用手機、平版、電腦收聽課程，並按課程指導進行遠距函授課程。
               </p>
             </div>
             <slot name="periodOnline"></slot>
@@ -295,6 +298,9 @@ export default {
     },
     isShowMeasure: {
       type: Boolean,
+    },
+    onlineMode: {
+      type: String,
     },
   },
   methods: {

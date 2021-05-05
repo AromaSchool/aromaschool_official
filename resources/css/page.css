@@ -875,6 +875,9 @@ section.course{
 .course_table tr td:first-child{
     width: 45px;
 }
+.course_table.online_all tr td:first-child{
+    width: auto;
+}
 .course_table th.subject{
     min-width: 230px;
 }
