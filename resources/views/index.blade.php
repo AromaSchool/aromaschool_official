@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成</title>
+    <link rel="icon" href="favicon.ico" /> 
     <!-- Search Engine -->
     <meta name="description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
     <meta name="image" content="http://aromaschool.com.tw/images/og_image.jpg">
