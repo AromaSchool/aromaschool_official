@@ -332,7 +332,7 @@ export default {
     title: "臨床芳療師認證課程",
     type: "芳療學苑",
     registry:
-      "https://docs.google.com/forms/d/e/1FAIpQLScHsPTgQB8FJpI0lEdkEFcq6YllanI5eDnOPS1m_AbDziNxsQ/viewform",
+      "https://docs.google.com/forms/d/1kLVWhTg5uD-QYLwgOjsq8MNnEbDLFXLH-Y1QFVbY_pI/viewform?ts=5ed6106d&edit_requested=true",
     isShowSchedule: true,
     isShowProcess: true,
     isShowFeature: true,
