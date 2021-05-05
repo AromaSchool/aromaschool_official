@@ -11,12 +11,7 @@
     :isShowPayment="isShowPayment"
     :isShowPrecaution="isShowPrecaution"
     :isShowMeasure="isShowMeasure"
-    :isShowTaipei="!!data[0]"
-    :isShowTaichung="!!data[1]"
-    :isShowHsinchu="!!data[2]"
-    :isShowTainan="!!data[3]"
-    :isShowKaohsiung="!!data[4]"
-    :isShowOnline="isShowOnline"
+    :isShowOnline="!!data"
     :onlineMode="onlineMode"
   >
     <template #intro> </template>
@@ -32,23 +27,20 @@
           <tbody>
             <tr>
               <td>芳香療法概論</td>
-              <td>
-                認識芳香療法<br />芳香療法的歷史<br />芳香療法的價值與研究
-              </td>
+              <td>認識芳香療法<br />芳香療法的歷史<br />芳香療法的價值與研究</td>
             </tr>
             <tr>
               <td>精油概論</td>
               <td>
-                精油基礎調製學 <br />精油品質辨識 <br />精油基本使用方式
-                <br />精油萃取方式簡介 <br />精油藥理動力學 <br />精油毒性與禁忌
+                精油基礎調製學 <br />精油品質辨識 <br />精油基本使用方式 <br />精油萃取方式簡介
+                <br />精油藥理動力學 <br />精油毒性與禁忌
               </td>
             </tr>
             <tr>
               <td>芳療相關理論</td>
               <td>
-                如何界定排毒、刺激或過敏反應 <br />植物科屬概論
-                <br />精油基礎化學芳療 <br />調油處方與技巧注意事項
-                <br />芳療諮詢概論
+                如何界定排毒、刺激或過敏反應 <br />植物科屬概論 <br />精油基礎化學芳療
+                <br />調油處方與技巧注意事項 <br />芳療諮詢概論
               </td>
             </tr>
             <tr>
@@ -80,9 +72,7 @@
     </template>
     <template #process>
       <ul>
-        <li>
-          美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階
-        </li>
+        <li>美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階</li>
         <li>英國IFPA國際芳療師認證班需完成：入門 + 中階 + 高階 + 英式按摩</li>
       </ul>
     </template>
@@ -94,13 +84,9 @@
       <ol>
         <li>在學期間不限次數重複上課，不怕缺課，不用擔心補課</li>
         <li>不需配合別人的進度，自己安排進度！</li>
-        <li>
-          只要有網路與手機、平版或電腦就能隨時上課，不需受限於開課地點，節省交通時間
-        </li>
+        <li>只要有網路與手機、平版或電腦就能隨時上課，不需受限於開課地點，節省交通時間</li>
         <li>可以有效利用空餘時間，提升專業能力，取得專業認證</li>
-        <li>
-          芳療認證資歷最豐富，2003年成立至今，歷經欲20年的萃鍊，課程最專業
-        </li>
+        <li>芳療認證資歷最豐富，2003年成立至今，歷經欲20年的萃鍊，課程最專業</li>
         <li>專屬導師諮詢，有問題於短時間內回覆協助指導</li>
         <li>費用最優惠，為面授課程的6折</li>
         <li>避免群聚感染壓力</li>
@@ -147,15 +133,15 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="datum in data[4]" :key="`setting-${datum.id}`">
-              <template v-if="datum.batches.length">
-                <td>{{ `${datum.schedule.name}班` }}</td>
-                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
-                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
-              </template>
-              <template v-else>
-                <td colspan="3" class="center">敬請期待</td>
-              </template>
+            <template v-if="data.length">
+              <tr v-for="datum in data" :key="`batch-${datum.id}`">
+                <td>{{ datum.startDate }}</td>
+                <td>{{ datum.endDate }}</td>
+                <td>{{ datum.deadline }}</td>
+              </tr>
+            </template>
+            <tr v-else>
+              <td colspan="3" class="center">敬請期待</td>
             </tr>
           </tbody>
         </table>
@@ -163,12 +149,9 @@
     </template>
     <template #precaution>
       <ol>
+        <li>本課程為網路線上課程，學員報名繳費完成後不得退費，亦不得轉換成其他課程或產品。</li>
         <li>
-          本課程為網路線上課程，學員報名繳費完成後不得退費，亦不得轉換成其他課程或產品。
-        </li>
-        <li>
-          本課程費用「不含」台灣地區台、澎、金、馬
-          以外之運費，海外民眾若有興趣，歡迎與禾場洽詢。
+          本課程費用「不含」台灣地區台、澎、金、馬 以外之運費，海外民眾若有興趣，歡迎與禾場洽詢。
         </li>
         <li>
           通過高階芳療師認證考試後可申請：
@@ -179,9 +162,7 @@
         <li>
           學費不含以下費用，學員可按需要申請：
           <ul>
-            <li>
-              高階芳療師認證考試費 NTD.3600（含高階考試費 + 禾場高階芳療師證書）
-            </li>
+            <li>高階芳療師認證考試費 NTD.3600（含高階考試費 + 禾場高階芳療師證書）</li>
             <li>NAHA認證申請費 NTD.1500</li>
             <li>NAHA認證費 USD.125（由美國NAHA收取）</li>
           </ul>
@@ -240,14 +221,13 @@ export default {
   },
   methods: {
     getCourseBatches() {
-      for (const [_, classroomId] of Object.entries(CLASSROOMS)) {
-        CourseBatch.getList({
-          courseId: this.$route.meta.courseId,
-          classroomId: classroomId,
-        }).then((response) => {
-          this.data.push(response);
-        });
-      }
+      CourseBatch.getList({
+        courseId: this.$route.meta.courseId,
+      }).then((response) => {
+        if (response) {
+          this.data.push(...response);
+        }
+      });
     },
   },
 };
