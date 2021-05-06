@@ -15,30 +15,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install Yarn
-        run: npm install -g yarn
-
-      - name: Cache node modules
-        uses: actions/cache@v2
-        with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
-      - name: Install Node dependencies
-        run: |
-          yarn install \
-            --frozen-lockfile
-
-      - name: Build frontend
-        run: yarn prod
-
       - name: Cache Composer dependencies
         uses: actions/cache@v2
         with:
@@ -66,10 +42,10 @@ jobs:
       - name: Setup environment
         env:
           APP_NAME: 禾場國際芳療學苑
-          APP_URL: http://official.aromaharvest.com.tw
+          APP_URL: https://aromaschool.com.tw
           APP_ENV: production
           APP_DEBUG: false
-          STORAGE_URL: http://dashboard.aromaharvest.com.tw
+          STORAGE_URL: https://admin.aromaschool.com.tw
         run: |
           cp .env.example .env \
           && sed -i '/^DB_USERNAME/s/=.*$/=${{ secrets.DB_USERNAME }}/' .env \
@@ -78,12 +54,38 @@ jobs:
           && sed -i '/^MAIL_FROM_ADDRESS/s/=.*$/=${{ secrets.MAIL_USERNAME }}/' .env \
           && sed -i '/^MAIL_USERNAME/s/=.*$/=${{ secrets.MAIL_USERNAME }}/' .env \
           && sed -i '/^MAIL_PASSWORD/s/=.*$/=${{ secrets.MAIL_PASSWORD }}/' .env \
+          && sed -i '/^MIX_RECAPTCHA_SITE_KEY/s/=.*$/=${{ secrets.MIX_RECAPTCHA_SITE_KEY }}/' .env \
+          && sed -i '/^RECAPTCHA_SECRET_KEY/s/=.*$/=${{ secrets.RECAPTCHA_SECRET_KEY }}/' .env \
           && sed -i '/^APP_NAME/s/=.*$/=${{ env.APP_NAME }}/' .env \
           && sed -i '/^APP_URL/s@=.*$@=${{ env.APP_URL }}@' .env \
           && sed -i '/^APP_ENV/s/=.*$/=${{ env.APP_ENV }}/' .env \
           && sed -i '/^APP_DEBUG/s/=.*$/=${{ env.APP_DEBUG }}/' .env \
           && sed -i '/^STORAGE_URL/s@=.*$@=${{ env.STORAGE_URL }}@' .env \
           && php artisan key:generate
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install Yarn
+        run: npm install -g yarn
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install Node dependencies
+        run: |
+          yarn install \
+            --frozen-lockfile
+
+      - name: Build frontend
+        run: yarn prod
 
       - name: Deploy FTP
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
@@ -98,3 +100,8 @@ jobs:
           delete: true
           exclude: "'.github/' '.git/' 'tests/' 'node_modules/' 'storage/app/' 'resources/sass/' 'resources/lang/' 'resources/js/' 'resources/image/' 'resources/css/' '.php_cs' '.editorconfig' 'package-lock.json' '.env.example' '.styleci.yml' '.eslintrc.js' '_ide_helper.php' 'phpunit.xml'"
           other_flags: "-v --dereference --parallel=$(nproc) --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git* --exclude-glob *.log"
+
+      - name: Optimize
+        env:
+          BASE_URL: https://aromaschool.com.tw
+        run: curl --location --request POST '${{ env.BASE_URL }}/api/optimize'
