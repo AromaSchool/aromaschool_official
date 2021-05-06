@@ -54,7 +54,7 @@ jobs:
           && sed -i '/^MAIL_FROM_ADDRESS/s/=.*$/=${{ secrets.MAIL_USERNAME }}/' .env \
           && sed -i '/^MAIL_USERNAME/s/=.*$/=${{ secrets.MAIL_USERNAME }}/' .env \
           && sed -i '/^MAIL_PASSWORD/s/=.*$/=${{ secrets.MAIL_PASSWORD }}/' .env \
-          && sed -i '/^MIX_RECAPTCHA_SITE_KEY/s/=.*$/=${{ secrets.MIX_RECAPTCHA_SITE_KEY }}/' .env \
+          && sed -i '/^MIX_RECAPTCHA_SITE_KEY/s/=.*$/=${{ secrets.RECAPTCHA_SITE_KEY }}/' .env \
           && sed -i '/^RECAPTCHA_SECRET_KEY/s/=.*$/=${{ secrets.RECAPTCHA_SECRET_KEY }}/' .env \
           && sed -i '/^APP_NAME/s/=.*$/=${{ env.APP_NAME }}/' .env \
           && sed -i '/^APP_URL/s@=.*$@=${{ env.APP_URL }}@' .env \
