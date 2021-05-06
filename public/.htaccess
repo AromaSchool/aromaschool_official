@@ -4,9 +4,9 @@
     </IfModule>
 
     <IfModule mod_expires.c>
-        <FilesMatch "\.(jpe?g|png|gif|js|css|svg|ttf|woff|woff2)$">
+        <FilesMatch "\.(jpg|jpeg|png|gif|svg|ttf|woff|woff2)$">
             ExpiresActive on
-            ExpiresDefault "access plus 1 month"
+            ExpiresDefault "access plus 1 year"
         </FilesMatch>
     </IfModule>
 
@@ -47,12 +47,18 @@
         Header set Content-Encoding br
         # Force proxies to cache brotli & non-brotli files separately
         Header append Vary Accept-Encoding
+        # Cache for one year
+        ExpiresActive on
+        ExpiresDefault "access plus 1 year"
     </FilesMatch>
     <FilesMatch "\.(css|html|js)\.gz$">
         # Serve correct encoding type
         Header set Content-Encoding gzip
         # Force proxies to cache gzip & non-gzip files separately
         Header append Vary Accept-Encoding
+        # Cache for one year
+        ExpiresActive on
+        ExpiresDefault "access plus 1 year"
     </FilesMatch>
 
     # Handle Authorization Header
