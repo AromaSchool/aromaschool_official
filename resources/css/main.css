@@ -374,6 +374,10 @@ footer .copyright {
     cursor: pointer;
     border: solid 1px #fff;
     transition-duration: .3s;
+    opacity: 0;
+}
+#goTop.show{
+    opacity: 1;
 }
 #goTop::before{
     content: '';
