@@ -1,4 +1,9 @@
-# 將請求全部重新導向public資料夾
 RewriteEngine on
+
+# 強制使用HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+
+# 將請求全部重新導向public資料夾
 RewriteCond %{REQUEST_URI} !^public
 RewriteRule ^(.*)$ public/$1 [L]
