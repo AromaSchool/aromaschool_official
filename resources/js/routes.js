@@ -186,6 +186,7 @@ const routes = [{
     },
     {
         path: "/news",
+        redirect: '/news/category/all',
         name: "news",
         component: News,
         meta: {
@@ -357,6 +358,7 @@ const routes = [{
     },
     {
         path: "/blog",
+        redirect: '/blog/category/all',
         name: "blog",
         component: Blog,
         meta: {
