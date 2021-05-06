@@ -351,22 +351,22 @@ footer .copyright {
 /* Go Top */
 .fixed_block{
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 90px;
+    right: 24px;
     z-index: 10;
 }
 .fixed_block .fixed_box{
-    width: 45px;
-    height: 45px;
-    background: rgba(255,255,255,.8);
+    width: 60px;
+    height: 60px;
+    background: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
     text-align: center;
 }
 #goTop{
     position: relative;
     font-size: 14px;
-    padding-right: 10px;
+    padding-right: 15px;
     color: #707179;
     letter-spacing: 1px;
     -webkit-writing-mode: vertical-rl;
@@ -379,10 +379,10 @@ footer .copyright {
     content: '';
     display: block;
     position: absolute;
-    right: 30px;
+    right: 35px;
     bottom: 10px;
     width: 1px;
-    height: 50px;
+    height: 60px;
     background: #a18875;
     transition-duration: .3s;
 }
@@ -390,8 +390,8 @@ footer .copyright {
     content: '';
     display: block;
     position: absolute;
-    right: 27px;
-    bottom: 53px;
+    right: 32px;
+    bottom: 63px;
     width: 1px;
     height: 8px;
     background: #a18875;
@@ -402,10 +402,10 @@ footer .copyright {
     border: solid 1px rgba(241, 241, 244,1);
 }
 #goTop:hover::before{
-    height: 60px;
+    height: 70px;
 }
 #goTop:hover::after{
-    bottom: 63px;
+    bottom: 73px;
 }
 
 /* banner */

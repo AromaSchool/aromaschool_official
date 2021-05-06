@@ -20,6 +20,7 @@
     <meta name="og:url" content="http://aromaschool.com.tw">
     <meta name="og:site_name" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
     <meta name="og:type" content="website">
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ mix('css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ mix('css/page.css') }}">
