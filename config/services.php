@@ -31,5 +31,9 @@ return [
 
     'recaptcha' => [
         'key' => env('RECAPTCHA_SECRET_KEY'),
+    ],
+
+    'storage' => [
+        'url' => env('STORAGE_URL'),
     ]
 ];

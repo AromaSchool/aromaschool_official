@@ -24,10 +24,10 @@ class ArticleService
 
         if ($article) {
             if ($article->image) {
-                $article->image = env('STORAGE_URL') . "/storage/articles/$article->image";
+                $article->image = \config('services.storage.url') . "/storage/articles/$article->image";
             }
             if ($article->author_image) {
-                $article->author_image = env('STORAGE_URL') . "/storage/articles/author/$article->author_image";
+                $article->author_image = \config('services.storage.url') . "/storage/articles/author/$article->author_image";
             }
         }
 
@@ -142,7 +142,7 @@ class ArticleService
         foreach ($result as $article) {
             if ($article) {
                 if ($article->image) {
-                    $article->image = env('STORAGE_URL') . "/storage/articles/$article->image";
+                    $article->image = \config('services.storage.url') . "/storage/articles/$article->image";
                 }
             }
         }

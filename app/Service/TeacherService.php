@@ -26,7 +26,7 @@ class TeacherService
 
         foreach ($teachers as $teacher) {
             if ($teacher->image) {
-                $teacher->image = env('STORAGE_URL') . '/storage/teachers/' . $teacher->image;
+                $teacher->image = \config('services.storage.url') . '/storage/teachers/' . $teacher->image;
             }
         }
 
