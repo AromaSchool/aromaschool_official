@@ -3,7 +3,9 @@
     <div class="container">
       <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
         <ol class="breadcrumb justify-content-end">
-          <li class="breadcrumb-item"><a href="/" title="首頁">HOME</a></li>
+          <li class="breadcrumb-item">
+            <router-link to="/" title="首頁">HOME</router-link>
+          </li>
           <template v-for="(breadcrumb, index) in breadcrumbs">
             <li
               class="breadcrumb-item"
