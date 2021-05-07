@@ -540,6 +540,7 @@ footer .copyright {
 /* 主要區塊 */
 .main_side {
     margin-top: 50px;
+    width: 100%;
 }
 
 /* 右側區塊 */

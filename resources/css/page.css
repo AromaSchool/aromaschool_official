@@ -1096,6 +1096,7 @@ section.course{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    height: 44px;
 }
 .article_date{
     color: #767691;
