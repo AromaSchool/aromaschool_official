@@ -10,9 +10,11 @@
               :key="breadcrumb.path"
               v-if="index != breadcrumbs.length - 1"
             >
-              <a :href="breadcrumb.path" :title="breadcrumb.meta.title">{{
-                breadcrumb.meta.title
-              }}</a>
+              <router-link
+                :to="breadcrumb.path"
+                :title="breadcrumb.meta.title"
+                >{{ breadcrumb.meta.title }}</router-link
+              >
             </li>
             <li
               class="breadcrumb-item active"
