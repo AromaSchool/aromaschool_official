@@ -9,7 +9,10 @@
         <div class="date" v-if="date != null">{{ date }}</div>
       </div>
     </div>
-    <div class="arti_content" :class="{ flex: $route.matched[1].name == 'teamMember' }">
+    <div
+      class="arti_content"
+      :class="{ flex: $route.matched[1].name == 'teamMember' }"
+    >
       <figure class="first_image" v-if="firstImage != null">
         <img :src="firstImage" :alt="title" />
       </figure>
@@ -26,7 +29,7 @@
           {{ keyword.name }}
         </router-link>
       </div>
-      <div class="arti_author" v-if="author">
+      <div class="arti_author" v-if="author.name">
         <figure class="author_image">
           <img :src="author.image" :alt="author.name" />
         </figure>
