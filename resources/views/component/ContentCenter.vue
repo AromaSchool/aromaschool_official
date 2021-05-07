@@ -9,10 +9,7 @@
         <div class="date" v-if="date != null">{{ date }}</div>
       </div>
     </div>
-    <div
-      class="arti_content"
-      :class="{ flex: $route.matched[1].name == 'teamMember' }"
-    >
+    <div class="arti_content" :class="{ flex: $route.matched[1].name == 'teamMember' }">
       <figure class="first_image" v-if="firstImage != null">
         <img :src="firstImage" :alt="title" />
       </figure>
@@ -67,7 +64,7 @@ export default {
     },
     author: {
       type: Object,
-      default: null,
+      default: () => ({}),
     },
   },
 };
