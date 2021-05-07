@@ -134,23 +134,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="datum in data[0]" :key="`setting-${datum.id}`">
-              <template v-if="datum.batches.length">
-                <td>{{ `${datum.schedule.name}班` }}</td>
-                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
-                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
-                <td>
-                  <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
-                      {{ batch.startDate }}
-                    </li>
-                  </ul>
-                </td>
-              </template>
-              <template v-else>
+            <template v-if="isComingSoon(data[0])">
+              <tr>
                 <td colspan="4" class="center">敬請期待</td>
-              </template>
-            </tr>
+              </tr>
+            </template>
+            <template v-else>
+              <tr v-for="datum in data[0]" :key="`setting-${datum.id}`">
+                <template v-if="datum.batches.length">
+                  <td>{{ `${datum.schedule.name}班` }}</td>
+                  <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                  <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                  <td>
+                    <ul class="date_list">
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                        {{ batch.startDate }}
+                      </li>
+                    </ul>
+                  </td>
+                </template>
+              </tr>
+            </template>
           </tbody>
         </table>
       </div>
@@ -167,23 +171,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="datum in data[1]" :key="`setting-${datum.id}`">
-              <template v-if="datum.batches.length">
-                <td>{{ `${datum.schedule.name}班` }}</td>
-                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
-                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
-                <td>
-                  <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
-                      {{ batch.startDate }}
-                    </li>
-                  </ul>
-                </td>
-              </template>
-              <template v-else>
+            <template v-if="isComingSoon(data[1])">
+              <tr>
                 <td colspan="4" class="center">敬請期待</td>
-              </template>
-            </tr>
+              </tr>
+            </template>
+            <template v-else>
+              <tr v-for="datum in data[1]" :key="`setting-${datum.id}`">
+                <template v-if="datum.batches.length">
+                  <td>{{ `${datum.schedule.name}班` }}</td>
+                  <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                  <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                  <td>
+                    <ul class="date_list">
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                        {{ batch.startDate }}
+                      </li>
+                    </ul>
+                  </td>
+                </template>
+              </tr>
+            </template>
           </tbody>
         </table>
       </div>
@@ -200,23 +208,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="datum in data[2]" :key="`setting-${datum.id}`">
-              <template v-if="datum.batches.length">
-                <td>{{ `${datum.schedule.name}班` }}</td>
-                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
-                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
-                <td>
-                  <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
-                      {{ batch.startDate }}
-                    </li>
-                  </ul>
-                </td>
-              </template>
-              <template v-else>
+            <template v-if="isComingSoon(data[2])">
+              <tr>
                 <td colspan="4" class="center">敬請期待</td>
-              </template>
-            </tr>
+              </tr>
+            </template>
+            <template v-else>
+              <tr v-for="datum in data[2]" :key="`setting-${datum.id}`">
+                <template v-if="datum.batches.length">
+                  <td>{{ `${datum.schedule.name}班` }}</td>
+                  <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                  <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                  <td>
+                    <ul class="date_list">
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                        {{ batch.startDate }}
+                      </li>
+                    </ul>
+                  </td>
+                </template>
+              </tr>
+            </template>
           </tbody>
         </table>
       </div>
@@ -233,23 +245,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="datum in data[3]" :key="`setting-${datum.id}`">
-              <template v-if="datum.batches.length">
-                <td>{{ `${datum.schedule.name}班` }}</td>
-                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
-                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
-                <td>
-                  <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
-                      {{ batch.startDate }}
-                    </li>
-                  </ul>
-                </td>
-              </template>
-              <template v-else>
+            <template v-if="isComingSoon(data[3])">
+              <tr>
                 <td colspan="4" class="center">敬請期待</td>
-              </template>
-            </tr>
+              </tr>
+            </template>
+            <template v-else>
+              <tr v-for="datum in data[3]" :key="`setting-${datum.id}`">
+                <template v-if="datum.batches.length">
+                  <td>{{ `${datum.schedule.name}班` }}</td>
+                  <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                  <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                  <td>
+                    <ul class="date_list">
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                        {{ batch.startDate }}
+                      </li>
+                    </ul>
+                  </td>
+                </template>
+              </tr>
+            </template>
           </tbody>
         </table>
       </div>
@@ -266,23 +282,27 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="datum in data[4]" :key="`setting-${datum.id}`">
-              <template v-if="datum.batches.length">
-                <td>{{ `${datum.schedule.name}班` }}</td>
-                <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
-                <td>{{ `含開課日，共${datum.weeks}週` }}</td>
-                <td>
-                  <ul class="date_list">
-                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
-                      {{ batch.startDate }}
-                    </li>
-                  </ul>
-                </td>
-              </template>
-              <template v-else>
+            <template v-if="isComingSoon(data[4])">
+              <tr>
                 <td colspan="4" class="center">敬請期待</td>
-              </template>
-            </tr>
+              </tr>
+            </template>
+            <template v-else>
+              <tr v-for="datum in data[4]" :key="`setting-${datum.id}`">
+                <template v-if="datum.batches.length">
+                  <td>{{ `${datum.schedule.name}班` }}</td>
+                  <td>{{ `${datum.startTime}~${datum.endTime}` }}</td>
+                  <td>{{ `含開課日，共${datum.weeks}週` }}</td>
+                  <td>
+                    <ul class="date_list">
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                        {{ batch.startDate }}
+                      </li>
+                    </ul>
+                  </td>
+                </template>
+              </tr>
+            </template>
           </tbody>
         </table>
       </div>
@@ -325,6 +345,14 @@ export default {
           this.$set(this.data, classroomId - 1, response);
         });
       }
+    },
+    isComingSoon(data) {
+      for (const datum of data) {
+        if (datum.batches.length) {
+          return false;
+        }
+      }
+      return true;
     },
   },
 };
