@@ -28,8 +28,7 @@
         2 大幅的往前推進到了300個小時的新專業標準規範。
       </p>
       <p>
-        禾場國際芳療學苑也將率先於今年9月正式推出 NAHA標準的Level
-        3臨床芳療師認證課程。<br />
+        禾場國際芳療學苑也將率先於今年9月正式推出 NAHA標準的Level 3臨床芳療師認證課程。<br />
         禾場講師群具備護理，藥理，心理，諮商及大量的實務、臨床經驗。歡迎想要取得NAHA
         Level3的芳療師報名進修。
       </p>
@@ -97,9 +96,7 @@
     </template>
     <template #process>
       <ul>
-        <li>
-          美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階
-        </li>
+        <li>美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階</li>
         <li>英國IFPA國際芳療師認證班需完成：入門 + 中階 + 高階 + 英式按摩</li>
       </ul>
     </template>
@@ -156,10 +153,7 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li
-                      v-for="batch in datum.batches"
-                      :key="`batch-${batch.id}`"
-                    >
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -192,10 +186,7 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li
-                      v-for="batch in datum.batches"
-                      :key="`batch-${batch.id}`"
-                    >
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -228,10 +219,7 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li
-                      v-for="batch in datum.batches"
-                      :key="`batch-${batch.id}`"
-                    >
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -264,10 +252,7 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li
-                      v-for="batch in datum.batches"
-                      :key="`batch-${batch.id}`"
-                    >
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -300,10 +285,7 @@
                 <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                 <td>
                   <ul class="date_list">
-                    <li
-                      v-for="batch in datum.batches"
-                      :key="`batch-${batch.id}`"
-                    >
+                    <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                       {{ batch.startDate }}
                     </li>
                   </ul>
@@ -352,7 +334,7 @@ export default {
           courseId: this.$route.meta.courseId,
           classroomId: classroomId,
         }).then((response) => {
-          this.data.push(response);
+          this.$set(this.data, classroomId - 1, response);
         });
       }
     },

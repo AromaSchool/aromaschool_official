@@ -346,7 +346,7 @@ export default {
           courseId: this.$route.meta.courseId,
           classroomId: classroomId,
         }).then((response) => {
-          this.data.push(response);
+          this.$set(this.data, classroomId - 1, response);
         });
       }
     },
