@@ -702,6 +702,15 @@ footer .copyright {
     font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
 }
 
+.arti_editor figure.image{
+    max-width: 100% !important;
+    height: auto !important;
+}
+.arti_editor img{
+    max-width: 100% !important;
+    height: auto !important;
+}
+
 .arti_editor h4 {
     font-size: 18px;
     color: #767691;
