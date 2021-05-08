@@ -41,6 +41,7 @@
         "number-to-chinese-words": "^1.0.20",
         "object-to-formdata": "^4.1.0",
         "prettier": "^2.2.1",
+        "smoothscroll-polyfill": "^0.4.4",
         "sweetalert2": "^10.16.0",
         "swiper": "^6.5.0",
         "vue": "^2.6.12",

@@ -8,14 +8,16 @@ import VueRouter from "vue-router";
 import {
     router
 } from './routes.js'
-import swal from "./plugins/swal";
-import reCaptcha from "./plugins/recaptcha";
+import {
+    Swal,
+    reCaptcha
+} from "./plugins";
 import App from "../views/App.vue";
 
 // new WOW({ live: false }).init();
 
 Vue.use(VueRouter);
-Vue.use(swal);
+Vue.use(Swal);
 Vue.use(reCaptcha)
 
 new Vue({
