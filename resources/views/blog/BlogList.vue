@@ -9,7 +9,7 @@
         :title="blog.title"
       >
         <figure>
-          <img :src="blog.image" :alt="blog.title" />
+          <img v-lazy="blog.image" :alt="blog.title" />
           <span class="category">{{ blog.category.name }}</span>
         </figure>
         <div class="article_text">

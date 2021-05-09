@@ -10,7 +10,8 @@ import {
 } from './routes.js'
 import {
     Swal,
-    reCaptcha
+    reCaptcha,
+    LazyLoad,
 } from "./plugins";
 import App from "../views/App.vue";
 
@@ -18,7 +19,8 @@ import App from "../views/App.vue";
 
 Vue.use(VueRouter);
 Vue.use(Swal);
-Vue.use(reCaptcha)
+Vue.use(reCaptcha);
+Vue.use(LazyLoad);
 
 new Vue({
     router,
