@@ -34,10 +34,10 @@ export default {
     findItem: function () {
       if (this.$route.path.includes("teamMember")) {
         if (this.item.length) {
-          let found = null;
           if (this.$route.params.id == undefined) {
-            found = this.item[0];
+            return this.item[0];
           }
+          let found = null;
           for (let item of this.item) {
             if (this.$route.params.id == item.id) {
               found = item;
