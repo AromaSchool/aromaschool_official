@@ -21,23 +21,18 @@
         <div class="article_date">{{ datetimeFormat(blog.createdAt) }}</div>
       </router-link>
     </section>
-    <infinite-loading @infinite="infiniteLoadingHandler" :identifier="infiniteId" spinner="spiral">
-      <div slot="no-more"></div>
-      <div slot="no-results">無資料</div>
-    </infinite-loading>
+    <section class="container container_infinite">
+      <infinite-loading @infinite="infiniteLoadingHandler" :identifier="infiniteId" />
+    </section>
   </div>
 </template>
 
 <script>
-import InfiniteLoading from "vue-infinite-loading";
 import moment from "moment";
 import { Blog } from "@/js/api";
 
 export default {
   name: "BlogList",
-  components: {
-    InfiniteLoading,
-  },
   props: {
     search: {
       Type: String,

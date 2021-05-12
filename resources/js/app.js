@@ -12,6 +12,7 @@ import {
     Swal,
     reCaptcha,
     LazyLoad,
+    InfiniteLoading,
 } from "./plugins";
 import App from "../views/App.vue";
 
@@ -21,6 +22,7 @@ Vue.use(VueRouter);
 Vue.use(Swal);
 Vue.use(reCaptcha);
 Vue.use(LazyLoad);
+Vue.use(InfiniteLoading);
 
 new Vue({
     router,
