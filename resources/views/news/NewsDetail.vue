@@ -8,7 +8,7 @@
       >
         <div v-html="news.content"></div>
       </ContentCenter>
-      <BackBtn to="/news/category/all"></BackBtn>
+      <BackBtn :to="to"></BackBtn>
     </div>
     <SubSide
       v-model="search"
@@ -48,6 +48,7 @@ export default {
     categoriesTitle: "公告分類",
     rankTitle: "最新公告",
     search: "",
+    from: null,
   }),
   computed: {
     categoriesMapping: function () {
@@ -57,6 +58,16 @@ export default {
       }
       return mapping;
     },
+    to: function () {
+      return this.from && (this.from.name == "newsAll" || this.from.name == "newsCategory")
+        ? null
+        : "/news/category/all";
+    },
+  },
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      vm.from = from;
+    });
   },
   created() {
     this.getNews();

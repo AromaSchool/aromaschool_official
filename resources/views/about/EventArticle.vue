@@ -3,7 +3,7 @@
     <ContentCenter :title="title" :date="date">
       <div v-html="content"></div>
     </ContentCenter>
-    <BackBtn></BackBtn>
+    <BackBtn :to="to"></BackBtn>
   </div>
 </template>
 
@@ -22,7 +22,18 @@ export default {
     title: "",
     content: "",
     date: "",
+    from: null,
   }),
+  computed: {
+    to: function () {
+      return this.from && this.from.name == "eventList" ? null : "/about/event";
+    },
+  },
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      vm.from = from;
+    });
+  },
   created() {
     // clean meta first
     this.$route.meta.title = "";

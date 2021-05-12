@@ -14,7 +14,7 @@
       >
         <div v-html="blog.content"></div>
       </ContentCenter>
-      <BackBtn to="/blog/category/all"></BackBtn>
+      <BackBtn :to="to"></BackBtn>
     </div>
     <SubSide
       v-model="search"
@@ -47,6 +47,13 @@ export default {
       default: () => [],
     },
   },
+  computed: {
+    to: function () {
+      return this.from && (this.from.name == "blogAll" || this.from.name == "blogCategory")
+        ? null
+        : "/blog/category/all";
+    },
+  },
   data: () => ({
     blog: new Blog({ title: "", category: {}, createdAt: "", content: "" }),
     categoriesTitle: "文章分類",
@@ -54,7 +61,13 @@ export default {
     rank: [],
     rankTitle: "熱門文章",
     search: null,
+    from: null,
   }),
+  beforeRouteEnter(to, from, next) {
+    next((vm) => {
+      vm.from = from;
+    });
+  },
   created() {
     this.getBlog();
     this.getBlogs();
