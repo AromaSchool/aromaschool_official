@@ -7,7 +7,7 @@
       v-model="data"
       @keyup.enter="enter"
     />
-    <button type="submit" class="search_btn" @click="enter">
+    <button type="submit" class="search_btn" aria-label="Search" @click="enter">
       <i class="fas fa-search"></i>
     </button>
   </div>
