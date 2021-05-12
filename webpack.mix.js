@@ -28,5 +28,6 @@ mix.js("resources/js/app.js", "public/js")
     .postCss("resources/css/main.css", "public/css", [require("autoprefixer")])
     .postCss("resources/css/page.css", "public/css", [require("autoprefixer")])
     .copy("resources/image/banner/*", 'public/images')
+    .copy("resources/image/og_image.jpg", 'public/images')
     .version()
     .extract(['vue']);
