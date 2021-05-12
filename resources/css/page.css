@@ -760,7 +760,7 @@ h3.index_title span::after {
     margin: 40px auto;
 }
 
-.arti_editor figure img {
+.arti_editor figure.cert img {
     width: 100%;
 }
 
