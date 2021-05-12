@@ -696,10 +696,12 @@ footer .copyright {
 .arti_editor {
     font-weight: 300;
     line-height: 1.7;
+    color: #707179;
 }
 
 .arti_editor * {
     font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    color: unset;
 }
 
 .arti_editor figure.image{
