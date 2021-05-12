@@ -19,23 +19,16 @@
         </li>
       </ul>
     </div>
-    <infinite-loading @infinite="infiniteLoadingHandler" :identifier="infiniteId" spinner="spiral">
-      <div slot="no-more"></div>
-      <div slot="no-results">無資料</div>
-    </infinite-loading>
+    <infinite-loading @infinite="infiniteLoadingHandler" :identifier="infiniteId" />
   </section>
 </template>
 
 <script>
-import InfiniteLoading from "vue-infinite-loading";
 import moment from "moment";
 import { News } from "@/js/api";
 
 export default {
   name: "NewsList",
-  components: {
-    InfiniteLoading,
-  },
   props: {
     search: {
       Type: String,
