@@ -277,15 +277,36 @@ export default {
   data: () => ({
     routes: routes,
     bolgCategories: [],
+    buttonNavbars: null,
   }),
   created() {
     this.getBlogCategories();
+  },
+  mounted() {
+    this.buttonNavbars = document.querySelectorAll("#navbarNavDropdown a");
+    this.closeNavbar();
+  },
+  destroyed() {
+    buttonNavbar.removeEventListener("click", function () {
+      document.getElementById("navbarNavDropdown").classList.remove("show");
+    });
   },
   methods: {
     getBlogCategories() {
       BlogCategory.getList().then((response) => {
         this.bolgCategories = response;
       });
+    },
+    closeNavbar() {
+      if (window.innerWidth < 992) {
+        Array.from(this.buttonNavbars).forEach(function (buttonNavbar) {
+          buttonNavbar.addEventListener("click", function () {
+            document
+              .getElementById("navbarNavDropdown")
+              .classList.remove("show");
+          });
+        });
+      }
     },
   },
 };
