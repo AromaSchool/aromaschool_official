@@ -98,7 +98,7 @@ jobs:
           local_source_dir: "."
           dist_target_dir: ${{ env.DIST_TARGET_DIR }}
           delete: true
-          exclude: "'.github/' '.git/' 'tests/' 'node_modules/' 'storage/app/' 'resources/sass/' 'resources/lang/' 'resources/js/' 'resources/image/' 'resources/css/' '.php_cs' '.editorconfig' 'package-lock.json' '.env.example' '.styleci.yml' '.eslintrc.js' '_ide_helper.php' 'phpunit.xml'"
+          exclude: "'.github/' '.git/' '.well-known/' 'tests/' 'node_modules/' 'storage/app/' 'resources/sass/' 'resources/lang/' 'resources/js/' 'resources/image/' 'resources/css/' '.php_cs' '.editorconfig' 'package-lock.json' '.env.example' '.styleci.yml' '.eslintrc.js' '_ide_helper.php' 'phpunit.xml'"
           other_flags: "-v --dereference --parallel=$(nproc) --exclude-glob *.vue --exclude-glob *.md --exclude-glob .git* --exclude-glob *.log"
 
       - name: Optimize
