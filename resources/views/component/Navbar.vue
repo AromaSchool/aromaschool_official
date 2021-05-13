@@ -284,11 +284,14 @@ export default {
   },
   mounted() {
     this.buttonNavbars = document.querySelectorAll("#navbarNavDropdown a");
-    this.closeNavbar();
+    let this_ = this;
+    this.buttonNavbars.forEach(function (buttonNavbar) {
+      buttonNavbar.addEventListener("click", this_.toggleNavDropdown);
+    });
   },
   destroyed() {
-    buttonNavbar.removeEventListener("click", function () {
-      document.getElementById("navbarNavDropdown").classList.remove("show");
+    this.buttonNavbars.forEach(function (buttonNavbar) {
+      buttonNavbar.removeEventListener("click", this_.toggleNavDropdown);
     });
   },
   methods: {
@@ -297,16 +300,8 @@ export default {
         this.bolgCategories = response;
       });
     },
-    closeNavbar() {
-      if (window.innerWidth < 992) {
-        Array.from(this.buttonNavbars).forEach(function (buttonNavbar) {
-          buttonNavbar.addEventListener("click", function () {
-            document
-              .getElementById("navbarNavDropdown")
-              .classList.remove("show");
-          });
-        });
-      }
+    toggleNavDropdown() {
+      document.getElementById("navbarNavDropdown").classList.remove("show");
     },
   },
 };
