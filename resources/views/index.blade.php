@@ -17,19 +17,24 @@
     <title>禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成</title>
     <link rel="icon" href="favicon.ico" />
     <!-- Search Engine -->
+    <meta name="keywords" content="芳療, 精油,芳療, 精油,,">
     <meta name="description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
     <meta name="image" content="http://aromaschool.com.tw/images/og_image.jpg">
+    <meta name="author" content="禾場國際芳療學苑">
+    <meta name="copyright" content="禾場國際芳療學苑">
     <!-- Schema.org for Google -->
     <meta itemprop="name" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
     <meta itemprop="description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
     <meta itemprop="image" content="http://aromaschool.com.tw/images/og_image.jpg">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
-    <meta name="og:description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
-    <meta name="og:image" content="http://aromaschool.com.tw/images/og_image.jpg">
-    <meta name="og:url" content="http://aromaschool.com.tw">
-    <meta name="og:site_name" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
-    <meta name="og:type" content="website">
+    <meta property="og:title" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
+    <meta property="og:description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
+    <meta property="og:image" content="http://aromaschool.com.tw/images/og_image.jpg">
+    <meta property="og:url" content="http://aromaschool.com.tw">
+    <meta property="og:site_name" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="363121530631" />
+    <meta property="fb:admins" content="363121530631"/>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ mix('css/main.css') }}">
