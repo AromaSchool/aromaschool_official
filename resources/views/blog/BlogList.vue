@@ -80,15 +80,19 @@ export default {
         search: this.search,
         category: this.$route.params.id,
         keyword: this.$route.query.keyword,
-      }).then((response) => {
-        this.lastIndex = response.lastIndex;
-        if (this.lastIndex) {
-          this.blogs.push(...response.list);
-          $state.loaded();
-        } else {
-          $state.complete();
-        }
-      });
+      })
+        .then((response) => {
+          this.lastIndex = response.lastIndex;
+          if (this.lastIndex) {
+            this.blogs.push(...response.list);
+            $state.loaded();
+          } else {
+            $state.complete();
+          }
+        })
+        .catch(() => {
+          this.$router.push({ name: "blogCategory404" });
+        });
     },
     onSearch() {},
     infiniteLoadingHandler() {},

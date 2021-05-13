@@ -2,7 +2,7 @@
   <section class="menu">
     <div class="container">
       <ul class="menu_block">
-        <li class="menu_box">
+        <li class="menu_box" v-if="categories.length">
           <router-link to="/blog/category/all" title="所有文章">所有文章</router-link>
         </li>
         <li class="menu_box" v-for="category in categories" :key="category.id">

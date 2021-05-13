@@ -75,6 +75,9 @@ export default {
   methods: {
     getNews() {
       News.get(this.$route.params.id).then((response) => {
+        if (!response) {
+          this.$router.push({ name: "newsCategory404" });
+        }
         this.news = response;
         this.$route.meta.title = this.news.title;
         document.title = `${this.news.title} | 禾場國際芳療學苑`;

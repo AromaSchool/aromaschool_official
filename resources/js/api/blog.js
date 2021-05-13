@@ -30,7 +30,7 @@ class Blog {
 
     static async get(id) {
         return client.get(`/articles/${id}`).then(response => {
-            return new Blog(response.data);
+            return response.data ? new Blog(response.data) : null;
         });
     }
 

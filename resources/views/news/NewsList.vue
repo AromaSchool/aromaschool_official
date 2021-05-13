@@ -90,15 +90,19 @@ export default {
         lastIndex: this.lastIndex,
         search: this.search,
         category: this.$route.params.id,
-      }).then((response) => {
-        this.lastIndex = response.lastIndex;
-        if (this.lastIndex) {
-          this.data = this.data.concat(response.list);
-          $state.loaded();
-        } else {
-          $state.complete();
-        }
-      });
+      })
+        .then((response) => {
+          this.lastIndex = response.lastIndex;
+          if (this.lastIndex) {
+            this.data = this.data.concat(response.list);
+            $state.loaded();
+          } else {
+            $state.complete();
+          }
+        })
+        .catch(() => {
+          this.$router.push({ name: "newsCategory404" });
+        });
     },
     onSearch() {},
     infiniteLoadingHandler() {},

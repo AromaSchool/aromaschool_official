@@ -39,6 +39,9 @@ export default {
   methods: {
     getEvent() {
       Event.get(this.$route.params.id).then((response) => {
+        if (!response) {
+          this.$router.push({ name: "event404" });
+        }
         this.event = response;
 
         // update document title and breadcrumbs
