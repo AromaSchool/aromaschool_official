@@ -95,7 +95,7 @@
                 精油毒性與禁忌<br />
                 精油藥理動力<br />
                 嗅覺密碼<br />
-                純露介紹：兩種不同產地的保加利亞玫瑰純露、薰衣草純露
+                純露介紹：保加利亞玫瑰純露、薰衣草純露
               </td>
               <td>神經系統</td>
               <td>聞香測試</td>
@@ -107,7 +107,9 @@
     </template>
     <template #process>
       <ul>
-        <li>美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階</li>
+        <li>
+          美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階
+        </li>
         <li>英國IFPA國際芳療師認證班需完成：入門 + 中階 + 高階 + 英式按摩</li>
       </ul>
     </template>
@@ -144,7 +146,8 @@
         <li>本課程費用優惠價 4,200 元，含課程費、講義、耗材</li>
         <li>課程共 12 小時</li>
         <li>
-          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩) 合報優惠及其他優惠活動，請來電洽詢
+          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩)
+          合報優惠及其他優惠活動，請來電洽詢
           <a href="tel:0227112290" title="02-27112290" class="link"
             ><i class="fas fa-phone-alt"></i>02-27112290</a
           >
@@ -176,7 +179,10 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      <li
+                        v-for="batch in datum.batches"
+                        :key="`batch-${batch.id}`"
+                      >
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -213,7 +219,10 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      <li
+                        v-for="batch in datum.batches"
+                        :key="`batch-${batch.id}`"
+                      >
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -250,7 +259,10 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      <li
+                        v-for="batch in datum.batches"
+                        :key="`batch-${batch.id}`"
+                      >
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -287,7 +299,10 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      <li
+                        v-for="batch in datum.batches"
+                        :key="`batch-${batch.id}`"
+                      >
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -324,7 +339,10 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
+                      <li
+                        v-for="batch in datum.batches"
+                        :key="`batch-${batch.id}`"
+                      >
                         {{ batch.startDate }}
                       </li>
                     </ul>
