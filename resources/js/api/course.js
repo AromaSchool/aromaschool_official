@@ -41,7 +41,7 @@ class Course {
     } = {}) {
         this.id = id;
         this.name = name;
-        this.category = category ? new CourseCategory(category) : null;
+        this.category = category ? new CourseCategory(category) : {};
     }
 }
 

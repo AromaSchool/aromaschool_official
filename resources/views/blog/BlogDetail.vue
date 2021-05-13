@@ -4,7 +4,7 @@
       <ContentCenter
         :title="blog.title"
         :type="blog.category.name"
-        :date="datetimeFormat(blog.createdAt)"
+        :date="blog.createdAt"
         :keywords="blog.keywords"
         :author="{
           name: blog.authorName,
@@ -32,7 +32,6 @@
 import ContentCenter from "@/views/component/ContentCenter.vue";
 import BackBtn from "@/views/component/BackBtn.vue";
 import SubSide from "@/views/component/SubSide.vue";
-import moment from "moment";
 import { Blog } from "@/js/api";
 
 export default {
@@ -55,7 +54,7 @@ export default {
     },
   },
   data: () => ({
-    blog: new Blog({ title: "", category: {}, createdAt: "", content: "" }),
+    blog: new Blog(),
     categoriesTitle: "文章分類",
     categoriesPath: "blog",
     rank: [],
@@ -94,9 +93,6 @@ export default {
           });
         }
       });
-    },
-    datetimeFormat(datetime) {
-      return moment(datetime).format("YYYY-MM-DD");
     },
     onSearch() {
       this.$router.push({

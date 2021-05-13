@@ -14,7 +14,7 @@ class TeamMember {
         this.title = title;
         this.experience = experience;
         this.image = image ? image : require('@/image/index/student_default.svg');
-        this.category = new TeamMemberCategory(category);
+        this.category = category ? new TeamMemberCategory(category) : {};
     }
 
     static async getList() {

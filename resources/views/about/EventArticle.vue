@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <ContentCenter :title="title" :date="date">
-      <div v-html="content"></div>
+    <ContentCenter :title="event.title" :date="event.date">
+      <div v-html="event.content"></div>
     </ContentCenter>
     <BackBtn :to="to"></BackBtn>
   </div>
@@ -9,7 +9,6 @@
 
 <script>
 import { Event } from "@/js/api";
-import moment from "moment";
 import ContentCenter from "@/views/component/ContentCenter.vue";
 import BackBtn from "@/views/component/BackBtn.vue";
 
@@ -19,9 +18,7 @@ export default {
     BackBtn,
   },
   data: () => ({
-    title: "",
-    content: "",
-    date: "",
+    event: {},
     from: null,
   }),
   computed: {
@@ -42,9 +39,7 @@ export default {
   methods: {
     getEvent() {
       Event.get(this.$route.params.id).then((response) => {
-        this.title = response.title;
-        this.content = response.content;
-        this.date = moment(response.date).format("YYYY/MM/DD");
+        this.event = response;
 
         // update document title and breadcrumbs
         this.$route.meta.title = this.title;

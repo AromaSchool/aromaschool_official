@@ -1,4 +1,5 @@
 import client from "./api";
+import moment from "moment";
 
 class Blog {
     constructor({
@@ -20,11 +21,11 @@ class Blog {
         this.authorName = authorName;
         this.authorImage = authorImage ? authorImage : require('@/image/index/student_default.svg');
         this.authorBio = authorBio;
-        this.category = category ? new BlogCategory(category) : nul;
+        this.category = category ? new BlogCategory(category) : {};
         this.keywords = keywords.map(keyword => {
             return new BlogKeyword(keyword)
         });
-        this.createdAt = createdAt;
+        this.createdAt = createdAt ? moment(createdAt).format("YYYY-MM-DD") : null;
     }
 
     static async get(id) {

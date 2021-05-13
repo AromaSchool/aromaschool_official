@@ -26,7 +26,6 @@
 import ContentCenter from "@/views/component/ContentCenter.vue";
 import BackBtn from "@/views/component/BackBtn.vue";
 import SubSide from "@/views/component/SubSide.vue";
-import moment from "moment";
 import { News } from "@/js/api";
 
 export default {
@@ -42,7 +41,7 @@ export default {
     },
   },
   data: () => ({
-    news: new News({ title: "" }),
+    news: new News(),
     rank: [],
     categoriesPath: "news",
     categoriesTitle: "公告分類",
@@ -77,7 +76,6 @@ export default {
     getNews() {
       News.get(this.$route.params.id).then((response) => {
         this.news = response;
-        this.news.createdAt = moment(this.news.createdAt).format("YYYY/MM/DD");
         this.$route.meta.title = this.news.title;
         document.title = `${this.news.title} | 禾場國際芳療學苑`;
       });
