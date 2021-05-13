@@ -74,6 +74,9 @@ export default {
   methods: {
     getBlog() {
       Blog.get(this.$route.params.id).then((response) => {
+        if (!response) {
+          this.$router.push({ name: "blogCategory404" });
+        }
         this.blog = response;
         this.blog.hit();
         this.$route.meta.title = this.blog.title;

@@ -16,7 +16,7 @@ class Event {
 
     static async get(id) {
         return client.get(`/events/${id}`).then(response => {
-            return new Event(response.data);
+            return response.data ? new Event(response.data) : null;
         });
     }
 

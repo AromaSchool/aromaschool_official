@@ -19,7 +19,7 @@ class News {
     static async get(id) {
         return client.get(`/news/${id}`).then(response => {
             const item = response.data;
-            return new News(response.data);
+            return response.data ? new News(response.data) : null;
         });
     }
 

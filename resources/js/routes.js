@@ -86,6 +86,13 @@ const routes = [{
                     title: "大事紀"
                 },
                 children: [{
+                        path: '404',
+                        name: "event404",
+                        component: NotFound,
+                        meta: {
+                            title: "大事紀"
+                        },
+                    }, {
                         path: '',
                         name: "eventList",
                         component: EventList,
@@ -195,6 +202,14 @@ const routes = [{
             bannerImage: "images/banner-2.jpg"
         },
         children: [{
+                path: 'category/404',
+                name: "newsCategory404",
+                component: NotFound,
+                meta: {
+                    title: "最新消息"
+                },
+            },
+            {
                 path: 'category/all',
                 name: "newsAll",
                 component: NewsList,
@@ -367,6 +382,14 @@ const routes = [{
             bannerImage: "images/banner-4.jpg"
         },
         children: [{
+                path: 'category/404',
+                name: "blogCategory404",
+                component: NotFound,
+                meta: {
+                    title: "學苑周刊"
+                },
+            },
+            {
                 path: 'category/all',
                 name: "blogAll",
                 component: BlogList,
