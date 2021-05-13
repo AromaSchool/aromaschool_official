@@ -1,7 +1,9 @@
 <template>
   <section class="content_center">
     <div class="arti_title_block">
-      <h3>{{ title }}</h3>
+      <h3>
+        <PuSkeleton>{{ title }}</PuSkeleton>
+      </h3>
       <hr />
       <div class="arti_subtitle">
         <div class="type" v-if="type != null">{{ type }}</div>

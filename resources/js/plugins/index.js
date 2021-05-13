@@ -1,4 +1,5 @@
 import './smoothScroll';
+import './skeletonLoader';
 import Swal from './swal';
 import reCaptcha from './recaptcha';
 import LazyLoad from './lazyLoad';
