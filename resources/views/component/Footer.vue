@@ -86,7 +86,7 @@
                 >沐禾 AromaHarvest</a
               >
               <a
-                href="https://www.aromaharvest.com.tw/aacd.php"
+                href="https://aacd.aromaschool.com.tw/"
                 title="產品檢測報告查詢系統"
                 target="_blank"
                 rel="noopener noreferrer"
