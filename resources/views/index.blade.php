@@ -14,24 +14,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成</title>
+    <title>{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}</title>
     <link rel="icon" href="favicon.ico" />
     <!-- Search Engine -->
     <meta name="keywords" content="禾場,芳療,精油,認證課程,國際認證,NAHA,IFPA">
-    <meta name="description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
-    <meta name="image" content="http://aromaschool.com.tw/images/og_image.jpg">
-    <meta name="author" content="禾場國際芳療學苑">
-    <meta name="copyright" content="禾場國際芳療學苑">
+    <meta name="description" content="{{ env('META_TAG_DESCRIPTION')}}">
+    <meta name="image" content="{{ env('APP_URL') }}/images/og_image.jpg">
+    <meta name="author" content="{{ env('META_TAG_AUTHOR') }}">
+    <meta name="copyright" content="{{ env('META_TAG_AUTHOR') }}">
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
-    <meta itemprop="description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
-    <meta itemprop="image" content="http://aromaschool.com.tw/images/og_image.jpg">
+    <meta itemprop="name" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}">
+    <meta itemprop="description" content="{{ env('META_TAG_DESCRIPTION')}}">
+    <meta itemprop="image" content="{{ env('APP_URL') }}/images/og_image.jpg">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
-    <meta property="og:description" content="禾場國際芳療學苑提供台灣最完整專業的IFPA﹑NAHA國際芳療認證教育及履歷認證精油，倡導以專業的芳療知識為根基，每個人都可以成為好朋友的療癒顧問！">
-    <meta property="og:image" content="http://aromaschool.com.tw/images/og_image.jpg">
-    <meta property="og:url" content="http://aromaschool.com.tw">
-    <meta property="og:site_name" content="禾場國際芳療學苑 | 提供完整專業的芳療精油知識養成">
+    <meta property="og:title" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}">
+    <meta property="og:description" content="{{ env('META_TAG_DESCRIPTION')}}">
+    <meta property="og:image" content="{{ env('APP_URL') }}/images/og_image.jpg">
+    <meta property="og:url" content="{{ env('APP_URL') }}">
+    <meta property="og:site_name" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="363121530631" />
     <meta property="fb:admins" content="363121530631"/>
