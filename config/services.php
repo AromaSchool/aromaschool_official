@@ -35,5 +35,9 @@ return [
 
     'storage' => [
         'url' => env('STORAGE_URL'),
+    ],
+
+    'mail' => [
+        'username' => env('MAIL_USERNAME'),
     ]
 ];
