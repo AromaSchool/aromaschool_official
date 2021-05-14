@@ -180,10 +180,17 @@
         <li>課程共 24 小時</li>
         <li>
           關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩)
-          合報優惠及其他優惠活動，請來電洽詢
+          合報優惠及其他優惠活動，請加入<a
+            href="https://goo.gl/Khc3co"
+            title="官方LINE"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link"
+            ><i class="fab fa-line"></i>官方LINE</a
+          >洽詢，或於上班時間來電
           <a href="tel:0227112290" title="02-27112290" class="link"
             ><i class="fas fa-phone-alt"></i>02-27112290</a
-          >
+          >（星期一至五 9:00~18:00；公休日：國定例假日含連休）
         </li>
       </ul>
     </template>
