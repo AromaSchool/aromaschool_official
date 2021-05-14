@@ -17,6 +17,7 @@ pnpm-debug.log*
 .env
 .env.backup
 # Editor directories and files
+.phpstorm.meta.php
 .idea
 .vscode
 *.suo
