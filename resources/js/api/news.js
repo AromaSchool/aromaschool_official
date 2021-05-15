@@ -12,7 +12,7 @@ class News {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.createdAt = createdAt ? moment(createdAt).format("YYYY/MM/DD") : null;
+        this.createdAt = createdAt ? moment(createdAt).format("YYYY-MM-DD") : null;
         this.category = category ? new NewsCategory(category) : {};
     }
 
