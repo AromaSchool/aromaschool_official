@@ -23,9 +23,10 @@ export default {
     Certification,
     Student,
   },
+  inject: ["setTitle", "setAuthor"],
   created() {
-    let title = this.$route.meta.title;
-    document.title = "禾場國際芳療學苑 | " + title;
+    this.setTitle(process.env.MIX_META_TAG_AUTHOR);
+    this.setAuthor(this.$route.meta.title);
   },
 };
 </script>

@@ -33,6 +33,7 @@ import { Blog } from "@/js/api";
 
 export default {
   name: "BlogList",
+  inject: ["setTitle"],
   props: {
     search: {
       Type: String,
@@ -108,8 +109,8 @@ export default {
         });
         if (category != undefined) {
           const title = `${category.name}`;
-          document.title = `${title} | 禾場國際芳療學苑`;
           this.$route.meta.title = title;
+          this.setTitle(title);
         }
       }
     },

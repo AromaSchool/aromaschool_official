@@ -15,14 +15,11 @@
       </div>
     </div>
     <template v-if="title">
-      <div
-        class="arti_content"
-        :class="{ flex: $route.matched[1].name == 'teamMember' }"
-      >
+      <div class="arti_content" :class="{ flex: $route.matched[1].name == 'teamMember' }">
         <figure class="first_image" v-if="firstImage != null">
           <img :src="firstImage" :alt="title" />
         </figure>
-        <div class="arti_editor">
+        <div class="arti_editor" ref="content">
           <slot></slot>
         </div>
         <div class="arti_keyword" v-if="keywords.length">
@@ -55,6 +52,7 @@
 <script>
 export default {
   name: "ContentCenter",
+  inject: ["setDescription"],
   props: {
     title: {
       required: true,
@@ -77,6 +75,14 @@ export default {
       type: Object,
       default: () => ({}),
     },
+  },
+  mounted() {
+    const interval = setInterval(() => {
+      if (this.$refs.content) {
+        this.setDescription(this.$refs.content.innerText);
+        clearInterval(interval);
+      }
+    }, 50);
   },
 };
 </script>

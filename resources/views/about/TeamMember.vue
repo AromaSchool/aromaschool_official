@@ -22,6 +22,7 @@ export default {
     Sidebar,
     ContentCenter,
   },
+  inject: ["setTitle"],
   data: () => ({
     item: [],
     category: [],
@@ -49,7 +50,7 @@ export default {
           }
 
           this.$route.meta.title = found.name;
-          document.title = `${found.name} | 禾場國際芳療學苑`;
+          this.setTitle(found.name);
           return found;
         }
       }

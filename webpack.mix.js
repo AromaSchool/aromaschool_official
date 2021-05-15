@@ -57,6 +57,7 @@ if (!mix.inProduction()) {
     mix.extract([
             'vue',
             'vue-router',
+            'vue-meta',
             'vue-infinite-loading',
             'vue-lazyload',
             'vue-loading-skeleton',
@@ -73,10 +74,7 @@ if (!mix.inProduction()) {
             'smoothscroll-polyfill',
         ], '/js/vendor-utils.js');
 
-    if (process.env.APP_ENV !== 'local') {
-        mix.bundleAnalyzer({
-            analyzerMode: 'disabled',
-            openAnalyzer: false,
-        });
+    if (process.env.APP_ENV === 'local') {
+        mix.bundleAnalyzer();
     }
 }

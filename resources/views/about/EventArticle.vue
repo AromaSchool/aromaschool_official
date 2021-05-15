@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <ContentCenter :title="event.title" :date="event.date">
+    <ContentCenter id="content" :title="event.title" :date="event.date">
       <div v-html="event.content"></div>
     </ContentCenter>
     <BackBtn :to="to"></BackBtn>
@@ -17,6 +17,7 @@ export default {
     ContentCenter,
     BackBtn,
   },
+  inject: ["setTitle"],
   data: () => ({
     event: {},
     from: null,
@@ -45,8 +46,8 @@ export default {
         this.event = response;
 
         // update document title and breadcrumbs
-        this.$route.meta.title = this.title;
-        document.title = `${this.title} | 禾場國際芳療學苑`;
+        this.$route.meta.title = this.event.title;
+        this.setTitle(this.event.title);
       });
     },
   },

@@ -11,7 +11,7 @@ class Event {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.date = date ? moment(date).format("YYYY/MM/DD") : null;
+        this.date = date ? moment(date).format("YYYY-MM-DD") : null;
     }
 
     static async get(id) {

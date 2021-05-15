@@ -29,6 +29,7 @@ import { News } from "@/js/api";
 
 export default {
   name: "NewsList",
+  inject: ["setTitle"],
   props: {
     search: {
       Type: String,
@@ -122,8 +123,8 @@ export default {
         } else {
           title = "所有公告";
         }
-        document.title = `${title} | 禾場國際芳療學苑`;
         this.$route.meta.title = title;
+        this.setTitle(title);
       }
     },
   },

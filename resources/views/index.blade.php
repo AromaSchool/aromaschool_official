@@ -18,20 +18,20 @@
     <link rel="icon" href="favicon.ico" />
     <!-- Search Engine -->
     <meta name="keywords" content="禾場,芳療,精油,認證課程,國際認證,NAHA,IFPA">
-    <meta name="description" content="{{ env('META_TAG_DESCRIPTION')}}">
+    <meta name="description" content="{{ env('META_TAG_DESCRIPTION')}}" data-vmid="name:description">
     <meta name="image" content="{{ env('APP_URL') }}/images/og_image.jpg">
     <meta name="author" content="{{ env('META_TAG_AUTHOR') }}">
     <meta name="copyright" content="{{ env('META_TAG_AUTHOR') }}">
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}">
-    <meta itemprop="description" content="{{ env('META_TAG_DESCRIPTION')}}">
+    <meta itemprop="name" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}" data-vmid="itemprop:name">
+    <meta itemprop="description" content="{{ env('META_TAG_DESCRIPTION')}}" data-vmid="itemprop:description">
     <meta itemprop="image" content="{{ env('APP_URL') }}/images/og_image.jpg">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}">
-    <meta property="og:description" content="{{ env('META_TAG_DESCRIPTION')}}">
+    <meta property="og:title" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}" data-vmid="og:title">
+    <meta property="og:description" content="{{ env('META_TAG_DESCRIPTION')}}" data-vmid="og:description">
     <meta property="og:image" content="{{ env('APP_URL') }}/images/og_image.jpg">
     <meta property="og:url" content="{{ env('APP_URL') }}">
-    <meta property="og:site_name" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}">
+    <meta property="og:site_name" content="{{ env('META_TAG_AUTHOR')}} | {{ env('META_TAG_TITLE') }}" data-vmid="og:site_name">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="363121530631" />
     <meta property="fb:admins" content="363121530631"/>

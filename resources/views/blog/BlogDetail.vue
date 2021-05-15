@@ -40,6 +40,7 @@ export default {
     BackBtn,
     SubSide,
   },
+  inject: ["setTitle"],
   props: {
     categories: {
       type: Array,
@@ -80,7 +81,7 @@ export default {
         this.blog = response;
         this.blog.hit();
         this.$route.meta.title = this.blog.title;
-        document.title = `${this.blog.title} | 禾場國際芳療學苑`;
+        this.setTitle(this.blog.title);
       });
     },
     getBlogs() {

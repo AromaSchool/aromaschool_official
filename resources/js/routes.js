@@ -450,6 +450,7 @@ const routes = [{
         path: "/500",
         component: ServerError,
         meta: {
+            title: "伺服器錯誤回應",
             bannerImage: "images/banner-7.jpg"
         },
     },
@@ -457,6 +458,7 @@ const routes = [{
         path: "*",
         component: NotFound,
         meta: {
+            title: "不存在的頁面",
             bannerImage: "images/banner-7.jpg"
         },
     }

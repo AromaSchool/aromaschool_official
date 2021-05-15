@@ -1,11 +1,7 @@
 <template>
   <div class="container flex_container">
     <div class="main_side">
-      <ContentCenter
-        :title="news.title"
-        :type="categoriesMapping[news.category]"
-        :date="news.createdAt"
-      >
+      <ContentCenter :title="news.title" :date="news.createdAt">
         <div v-html="news.content"></div>
       </ContentCenter>
       <BackBtn :to="to"></BackBtn>
@@ -34,6 +30,7 @@ export default {
     BackBtn,
     SubSide,
   },
+  inject: ["setTitle"],
   props: {
     categories: {
       type: Array,
@@ -50,13 +47,6 @@ export default {
     from: null,
   }),
   computed: {
-    categoriesMapping: function () {
-      let mapping = {};
-      for (let category of this.categories) {
-        mapping[category.id] = category.name;
-      }
-      return mapping;
-    },
     to: function () {
       return this.from && (this.from.name == "newsAll" || this.from.name == "newsCategory")
         ? null
@@ -80,7 +70,7 @@ export default {
         }
         this.news = response;
         this.$route.meta.title = this.news.title;
-        document.title = `${this.news.title} | 禾場國際芳療學苑`;
+        this.setTitle(this.news.title);
       });
     },
     getNewsList() {
