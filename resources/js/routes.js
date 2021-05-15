@@ -1,56 +1,50 @@
 import VueRouter from "vue-router";
-
 import {
     COURSES
 } from '@/js/api';
 
-// Admin pages
-import {
-    NotFound,
-    ServerError
-} from "@/views/error";
-import {
-    Course,
-    AromatherapyElementary,
-    AromatherapyIntermediate,
-    AromatherapyAdvanced,
-    AromatherapyClinical,
-    TreatmentBritish,
-    TreatmentLymphatic,
-    TreatmentFacial,
-    TreatmentPregnancy,
-    TreatmentMyofascial,
-    TreatmentSwedish,
-    TreatmentMeridian,
-    OnlineElementary,
-    OnlineIntermediate,
-    OnlineAll
-} from '@/views/course';
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
-import Brand from "../views/about/Brand.vue";
-import Event from "../views/about/Event.vue";
-import EventList from "../views/about/EventList.vue";
-import EventArticle from "../views/about/EventArticle.vue";
-import InterCert from "../views/about/InterCert.vue";
-import CertNAHAbout from "../views/about/CertNAHAbout.vue";
-import CertNAHATarget from "../views/about/CertNAHATarget.vue";
-import CertNAHAHistory from "../views/about/CertNAHAHistory.vue";
-import CertNAHAMoral from "../views/about/CertNAHAMoral.vue";
-import CertNAHATraining from "../views/about/CertNAHATraining.vue";
-import CertNAHAHowToBecome from "../views/about/CertNAHAHowToBecome.vue";
-import CertIFPAbout from "../views/about/CertIFPAbout.vue";
-import TeamMember from "../views/about/TeamMember.vue";
-import News from "../views/News.vue";
-import NewsList from "../views/news/NewsList.vue";
-import NewsDetail from "../views/news/NewsDetail.vue";
-import Presentation from "../views/Presentation.vue";
-import Blog from "../views/Blog.vue";
-import BlogList from "../views/blog/BlogList.vue";
-import BlogDetail from "../views/blog/BlogDetail.vue";
-import Contact from "../views/Contact.vue";
-import Faq from "../views/Faq.vue";
-import ComingSoon from "../views/component/ComingSoon.vue";
+const NotFound = () => import( /* webpackChunkName: "/js/error" */ "../views/error/404.vue");
+const ServerError = () => import( /* webpackChunkName: "/js/error" */ "../views/error/500.vue");
+const Home = () => import( /* webpackPreload: true */ /* webpackChunkName: "/js/home" */ "../views/Home.vue");
+const About = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/About.vue");
+const Brand = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/Brand.vue");
+const Event = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/Event.vue");
+const EventList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/EventList.vue");
+const EventArticle = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/EventArticle.vue");
+const InterCert = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/InterCert.vue");
+const CertNAHAbout = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/CertNAHAbout.vue");
+const CertNAHATarget = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/CertNAHATarget.vue");
+const CertNAHAHistory = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/CertNAHAHistory.vue");
+const CertNAHAMoral = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/CertNAHAMoral.vue");
+const CertNAHATraining = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/CertNAHATraining.vue");
+const CertNAHAHowToBecome = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/CertNAHAHowToBecome.vue");
+const CertIFPAbout = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/CertIFPAbout.vue");
+const TeamMember = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/about" */ "../views/about/TeamMember.vue");
+const News = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/news" */ "../views/News.vue");
+const NewsList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/news" */ "../views/news/NewsList.vue");
+const NewsDetail = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/news" */ "../views/news/NewsDetail.vue");
+const Blog = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/blog" */ "../views/Blog.vue");
+const BlogList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/blog" */ "../views/blog/BlogList.vue");
+const BlogDetail = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/blog" */ "../views/blog/BlogDetail.vue");
+const Course = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/Course.vue")
+const AromatherapyElementary = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyElementary.vue")
+const AromatherapyIntermediate = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyIntermediate.vue")
+const AromatherapyAdvanced = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyAdvanced.vue")
+const AromatherapyClinical = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyClinical.vue")
+const TreatmentBritish = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentBritish.vue")
+const TreatmentLymphatic = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentLymphatic.vue")
+const TreatmentFacial = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentFacial.vue")
+const TreatmentPregnancy = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentPregnancy.vue")
+const TreatmentMyofascial = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentMyofascial.vue")
+const TreatmentSwedish = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentSwedish.vue")
+const TreatmentMeridian = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentMeridian.vue")
+const OnlineElementary = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/online/OnlineElementary.vue")
+const OnlineIntermediate = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/online/OnlineIntermediate.vue")
+const OnlineAll = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/online/OnlineAll.vue")
+const Contact = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Contact.vue");
+const ComingSoon = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/component/ComingSoon.vue");
+const Presentation = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Presentation.vue");
+const Faq = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Faq.vue");
 
 const routes = [{
         path: "/",

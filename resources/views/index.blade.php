@@ -43,22 +43,22 @@
 <body>
     <!-- Messenger 洽談外掛程式 Code -->
     <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v10.0'
-          });
-        };
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v10.0'
+        });
+      };
 
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <!-- Your 洽談外掛程式 code -->
     <div class="fb-customerchat"
@@ -66,16 +66,16 @@
         page_id="363121530631">
     </div>
 
-    <div id="app">
-        <app></app>
-    </div>
+    <div id="app"></div>
 
     @if(env('APP_ENV')=='local')
     <script src="http://localhost:35729/livereload.js"></script>
+    @else
+    <script rel="preload" src="{{ mix('/js/manifest.js') }}"></script>
+    <script rel="preload" src="{{ mix('/js/vendor-vue.js') }}"></script>
+    <script rel="preload" src="{{ mix('/js/vendor-net.js') }}"></script>
+    <script rel="preload" src="{{ mix('/js/vendor-utils.js') }}"></script>
     @endif
-
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script rel="preload" src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>

@@ -12,10 +12,7 @@
             我們把對大自然的執著與熱情，灌溉在芳香療法的禾場，來到這裡，您就是我們看顧的一粒種籽...
           </h2>
         </div>
-        <router-link
-          to="/about/brand"
-          class="btn_outline white"
-          title="關於禾場"
+        <router-link to="/about/brand" class="btn_outline white" title="關於禾場"
           >了解我們的故事</router-link
         >
       </div>
@@ -27,10 +24,9 @@
         'background-image': 'url(/' + bannerImage + ')',
       }"
     >
-      <div class="container">
+      <div class="container" v-if="$route.matched[0]">
         <h1>
-          {{ $route.matched[0].meta.title
-          }}<span>{{ $route.matched[0].meta.titleEn }}</span>
+          {{ $route.matched[0].meta.title }}<span>{{ $route.matched[0].meta.titleEn }}</span>
         </h1>
       </div>
     </section>
@@ -41,6 +37,9 @@
 export default {
   computed: {
     bannerImage() {
+      if (!this.$route.matched[0]) {
+        return null;
+      }
       return this.$route.meta.bannerImage
         ? this.$route.meta.bannerImage
         : this.$route.matched[0].meta.bannerImage;
