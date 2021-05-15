@@ -180,6 +180,7 @@ hr {
 .btn_underline.purple::after {
     background: #767691;
 }
+
 .btn_underline.gray::after {
     background: #9C9DA8;
 }
@@ -349,13 +350,14 @@ footer .copyright {
 }
 
 /* Go Top */
-.fixed_block{
+.fixed_block {
     position: fixed;
     bottom: 90px;
     right: 24px;
     z-index: 10;
 }
-.fixed_block .fixed_box{
+
+.fixed_block .fixed_box {
     width: 60px;
     height: 60px;
     background: #fff;
@@ -363,7 +365,8 @@ footer .copyright {
     box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
     text-align: center;
 }
-#goTop{
+
+#goTop {
     position: relative;
     font-size: 14px;
     padding-right: 15px;
@@ -376,10 +379,12 @@ footer .copyright {
     transition-duration: .3s;
     opacity: 0;
 }
-#goTop.show{
+
+#goTop.show {
     opacity: 1;
 }
-#goTop::before{
+
+#goTop::before {
     content: '';
     display: block;
     position: absolute;
@@ -390,7 +395,8 @@ footer .copyright {
     background: #a18875;
     transition-duration: .3s;
 }
-#goTop::after{
+
+#goTop::after {
     content: '';
     display: block;
     position: absolute;
@@ -402,13 +408,16 @@ footer .copyright {
     transform: rotate(-45deg);
     transition-duration: .3s;
 }
-#goTop:hover{
-    border: solid 1px rgba(241, 241, 244,1);
+
+#goTop:hover {
+    border: solid 1px rgba(241, 241, 244, 1);
 }
-#goTop:hover::before{
+
+#goTop:hover::before {
     height: 70px;
 }
-#goTop:hover::after{
+
+#goTop:hover::after {
     bottom: 73px;
 }
 
@@ -704,13 +713,18 @@ footer .copyright {
     color: unset;
 }
 
-.arti_editor figure.image{
+.arti_editor figure.image {
     max-width: 100% !important;
     height: auto !important;
+    margin: 0 auto;
+    text-align: center;
 }
-.arti_editor img{
+
+.arti_editor img {
     max-width: 100% !important;
     height: auto !important;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .arti_editor h4 {
@@ -857,26 +871,28 @@ footer .copyright {
 }
 
 /* 即將上線 */
-.coming_soon{
+.coming_soon {
     margin-top: 140px;
     margin-bottom: 190px;
     text-align: center;
 }
-.coming_soon .title{
+
+.coming_soon .title {
     font-weight: 300;
     font-size: 40px;
     letter-spacing: 3px;
     margin-top: 30px;
     margin-bottom: 15px;
 }
-.coming_soon .remark{
+
+.coming_soon .remark {
     font-weight: 300;
     letter-spacing: 1px;
     margin-bottom: 35px;
 }
 
 /* 錯誤頁面 */
-.coming_soon .title span{
+.coming_soon .title span {
     display: block;
     font-size: 24px;
 }
@@ -1001,14 +1017,17 @@ footer .copyright {
 }
 
 @media screen and (max-width: 768px) {
+
     /* 單元選單 */
-    .menu_box{
+    .menu_box {
         margin: 5px;
     }
-    .menu_box a{
+
+    .menu_box a {
         padding: 5px;
         font-size: 14px;
     }
+
     /* 文章內容 */
     .arti_title_block h3 {
         font-size: 22px;
