@@ -1031,6 +1031,40 @@ section.course{
     margin: 20px auto;
 }
 
+/* 線上報名 */
+.course_banner{
+    display: block;
+    margin-bottom: 60px;
+}
+.course_banner img{
+    width: 100%;
+}
+.contact_form.signup_form{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.signup_form .hint{
+    font-size: 18px;
+}
+.form_course_box{
+    padding: 15px 0;
+}
+.form_course_box + .form_course_box{
+    border-top: solid 1px rgba(156,157,168,.2);
+}
+.form_course_box .category{
+    display: block;
+    color: #C9B5A5;
+    margin-bottom: 10px;
+}
+.check_box_group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.check_box_group .form-check{
+    margin:0 10px;
+}
+
 /* 學苑周刊-列表 */
 .blog_list{
     margin-top: 20px;
@@ -1672,6 +1706,10 @@ section.course{
     .feature .trial_box audio{
         width: 100%;
     }
+    /* 線上報名 */
+    .check_box_group .form-check{
+        width: 100%;
+    }
     /* 學苑周刊-列表 */
     .blog_list .article_box{
         width: 100%;
@@ -1684,5 +1722,9 @@ section.course{
     .arti_author .author_image{
         width: 100px;
         height: 100px;
+    }
+    /* 聯絡我們 */
+    .contact_form{
+        padding: 20px;
     }
 }

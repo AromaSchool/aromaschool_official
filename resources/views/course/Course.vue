@@ -1,7 +1,7 @@
 <template>
   <section class="course">
     <div class="container blog_container">
-      <CourseSidebar></CourseSidebar>
+      <CourseSidebar v-if="$route.name != 'course-sign-up'"></CourseSidebar>
       <router-view></router-view>
     </div>
   </section>

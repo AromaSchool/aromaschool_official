@@ -27,6 +27,7 @@ const Blog = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js
 const BlogList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/blog" */ "../views/blog/BlogList.vue");
 const BlogDetail = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/blog" */ "../views/blog/BlogDetail.vue");
 const Course = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/Course.vue")
+const CourseSignUp = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/CourseSignUp.vue")
 const AromatherapyElementary = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyElementary.vue")
 const AromatherapyIntermediate = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyIntermediate.vue")
 const AromatherapyAdvanced = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyAdvanced.vue")
@@ -351,6 +352,13 @@ const routes = [{
                 meta: {
                     title: "線上芳療認證課程全階班",
                     courseId: COURSES.ONLINE.ALL,
+                },
+            }, {
+                path: "/course/signup",
+                name: "course-sign-up",
+                component: CourseSignUp,
+                meta: {
+                    title: "線上報名",
                 },
             },
         ]
