@@ -23,6 +23,7 @@ import {
     CourseSchedule,
     CourseSetting,
     CourseBatch,
+    CourseSignUp,
 } from "./course";
 
 export {
@@ -44,4 +45,5 @@ export {
     CourseSchedule,
     CourseSetting,
     CourseBatch,
+    CourseSignUp,
 };

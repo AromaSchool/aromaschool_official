@@ -7,6 +7,8 @@ namespace App\Service;
 use Carbon\Carbon;
 use App\Models\CourseSetting;
 use App\Models\CourseBatch;
+use App\Models\CourseCustomer;
+use App\Models\CourseSignUp;
 use Illuminate\Database\Eloquent\Collection;
 
 class CourseService
@@ -43,5 +45,36 @@ class CourseService
         }
 
         return $query->get();
+    }
+
+    public function signUpCourse(
+        string $name,
+        string $phone,
+        string $mail,
+        string $comment,
+        array $courses
+    ): void {
+        try {
+            \DB::beginTransaction();
+            $courseCustomer = CourseCustomer::create([
+                'name' => $name,
+                'phone' => $phone,
+                'mail' => $mail,
+                'comment' => $comment,
+            ]);
+            $courseCustomer->save();
+
+            foreach ($courses as $course) {
+                $courseSignUp = CourseSignUp::create([
+                    'course_customer_id' => $courseCustomer->id,
+                    'course_id' => $course,
+                ]);
+                $courseSignUp->save();
+            }
+            \DB::commit();
+        } catch (\Throwable $th) {
+            \DB::rollBack();
+            throw $th;
+        }
     }
 }

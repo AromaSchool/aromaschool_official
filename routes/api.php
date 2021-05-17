@@ -60,4 +60,7 @@ Route::prefix('courses')->group(function () {
     Route::prefix('batches')->group(function () {
         Route::get('/', Course\GetCourseBatchesController::class);
     });
+    Route::prefix('signup')->group(function () {
+        Route::post('/', Course\SignUpCourseController::class);
+    });
 });

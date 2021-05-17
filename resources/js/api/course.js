@@ -144,6 +144,32 @@ class CourseBatch {
     }
 }
 
+class CourseSignUp {
+    constructor({
+        name,
+        phone,
+        mail,
+        comment,
+        courses,
+    } = {}) {
+        this.name = name;
+        this.phone = phone;
+        this.mail = mail;
+        this.comment = comment;
+        this.courses = courses ? courses : [];
+    }
+
+    async signUp() {
+        return client.post('/courses/signup', {
+            name: this.name,
+            phone: this.phone,
+            mail: this.mail,
+            comment: this.comment,
+            courses: this.courses,
+        })
+    }
+}
+
 export {
     COURSES,
     CLASSROOMS,
@@ -153,4 +179,5 @@ export {
     CourseSchedule,
     CourseSetting,
     CourseBatch,
+    CourseSignUp,
 };
