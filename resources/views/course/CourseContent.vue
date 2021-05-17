@@ -34,13 +34,17 @@
         <p class="note">※課表內容以學苑核發之實際課表為主</p>
       </div>
       <div class="course_box skill" v-if="isShowSkill == true">
-        <h4 class="course_title"><i class="fas fa-hand-sparkles"></i>手法屬性</h4>
+        <h4 class="course_title">
+          <i class="fas fa-hand-sparkles"></i>手法屬性
+        </h4>
         <div class="skill_block">
           <slot name="skill"></slot>
         </div>
       </div>
       <div class="course_box process" v-if="isShowProcess == true">
-        <h4 class="course_title"><i class="fas fa-swatchbook"></i>國際認證進修流程</h4>
+        <h4 class="course_title">
+          <i class="fas fa-swatchbook"></i>國際認證進修流程
+        </h4>
         <slot name="process"></slot>
         <div class="btn_right">
           <a
@@ -58,7 +62,9 @@
         <slot name="feature"></slot>
       </div>
       <div class="course_box suitable" v-if="isShowSuitable == true">
-        <h4 class="course_title"><i class="fas fa-user-friends"></i>適合對象</h4>
+        <h4 class="course_title">
+          <i class="fas fa-user-friends"></i>適合對象
+        </h4>
         <slot name="suitable"></slot>
       </div>
       <div class="course_box target" v-if="isShowTarget == true">
@@ -66,7 +72,9 @@
         <slot name="target"></slot>
       </div>
       <div class="course_box payment" v-if="isShowPayment == true">
-        <h4 class="course_title"><i class="fas fa-comments-dollar"></i>課程費用說明</h4>
+        <h4 class="course_title">
+          <i class="fas fa-comments-dollar"></i>課程費用說明
+        </h4>
         <slot name="payment"></slot>
       </div>
       <div class="course_box discount" v-if="isShowDiscount == true">
@@ -187,7 +195,9 @@
         </div>
       </div>
       <div class="course_box precaution" v-if="isShowPrecaution == true">
-        <h4 class="course_title"><i class="fas fa-exclamation-circle"></i>報名注意事項</h4>
+        <h4 class="course_title">
+          <i class="fas fa-exclamation-circle"></i>報名注意事項
+        </h4>
         <slot name="precaution"></slot>
       </div>
       <div class="course_box notes" v-if="isShowNotes == true">
@@ -201,17 +211,42 @@
         <div class="measure_box">
           <p>現在全球最關心的就是 COVID-19，本學苑與政府的資訊也是同步的。</p>
           <p>
-            政府目前「尚未發佈」停班停課的資訊，請各位一定要多注意，但切勿恐慌。（保持心情正向愉快，也是增強免疫力的一種方式哦）
-            學苑目前並未因疫情而影響到開課，各位都非常期待來學芳療保健的專業。（因這次的疫情，各位更重視自我保健方式了呢）
+            中央流行疫情指揮中心於5/15發佈，從5/15~5/28提升雙北地區疫情警戒至第三級
+            <a
+              href="https://www.cdc.gov.tw/Bulletin/Detail/E7bi2j8UYj1Rmz73OPE7Yg?typeid=9"
+              title="相關資訊"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              >( 相關資訊 )</a
+            ><br />
+            5/17中央流行疫情指揮中心，正式公佈補習班停課。為考量到各位學員及講師的安全，本學苑也配合政府於5/28前暫停面授課程。
+          </p>
+          <p>
+            學苑的課程安排方式為每個月都會開設新梯次，所以學苑會於近期通知關於後續課程安排的事宜。學員也可主動留言至
+            <a
+              href="https://goo.gl/Khc3co"
+              title="官方LINE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link"
+              ><i class="fab fa-line"></i>官方LINE</a
+            >
+            告知想參加6月份之後的哪一個梯次。<br />
+            相信大家都知道芳香療法對於自身保健及保護都有相當的回饋，學苑會盡力讓學員在安全的情況下盡快參加到期待的芳療課程。
           </p>
           <p>
             本學苑教室採取定時消毒清潔，課程每班都為小班制，上課學員採「間隔坐」，學苑全天侯用純天然精油進行擴香。
-            且於上課前都會提醒學員、講師於上課時"全程"戴口罩、自備水杯、進教室前先進行雙手酒精消毒、量額溫。
+            上課前都會提醒學員、講師於上課時「全程」戴口罩、自備水杯、進教室前先進行雙手酒精消毒、量額溫。
           </p>
           <p>
-            另外也提醒大家平時要勤洗手、多喝水、出門戴口罩、維持良好的生活作息。
-            回到家時先將衣物、物品消毒過一遍，先保護好自已。 身體確認有不適請先向相關醫療單位諮詢。
-            相信台灣、相信全世界，相信我們大家都能夠平安度過這次的疫情的唷。
+            另外也提醒大家，對於疫情方面，每天關注新聞動態資訊，但切勿恐慌。（保持心情正向愉快，也是提升免疫力的一種方式哦）
+            <br />
+            平時要勤洗手、多喝水、出門戴口罩、維持良好的生活作息。
+            回到家時先將衣物、物品消毒過一遍，先保護好自已。
+            身體確認有不適請先向相關醫療單位諮詢。
+            <br />
+            相信台灣、相信全世界，相信我們大家都能夠平安度過這次的疫情。
           </p>
           <p>祝 順心健康。</p>
           <div class="btn_right">
