@@ -233,9 +233,7 @@
           </div>
         </div>
         <div class="form_box">
-          <label for="inputContent" class="form_label"
-            >備註<span class="hint">*</span></label
-          >
+          <label for="inputContent" class="form_label">備註</label>
           <textarea
             id="inputContent"
             class="form_input"

@@ -1712,6 +1712,7 @@ section.course{
     }
     .check_box_group .form-check{
         width: 100%;
+        margin-bottom: 5px;
     }
     /* 學苑周刊-列表 */
     .blog_list .article_box{
