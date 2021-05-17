@@ -9,7 +9,9 @@
           </figure>
           <div class="student_data">
             <div class="name">{{ student.name }}</div>
-            <div class="class_number">{{ `${student.class}${student.semester}期學員` }}</div>
+            <div class="class_number">
+              {{ `${student.class}${student.semester}期學員` }}
+            </div>
             <div class="graduate_time">{{ `${student.graduation}畢業` }}</div>
           </div>
           <p>{{ student.review }}</p>
@@ -41,7 +43,7 @@ export default {
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 20,
-        slidesPerGroup: 3,
+        slidesPerGroup: 1,
         loop: true,
         // loopFillGroupWithBlank: true,
         autoplay: {
@@ -59,11 +61,11 @@ export default {
           },
           768: {
             slidesPerView: 2,
-            slidesPerGroup: 2,
+            slidesPerGroup: 1,
           },
           1024: {
             slidesPerView: 3,
-            slidesPerGroup: 3,
+            slidesPerGroup: 1,
           },
         },
       },
