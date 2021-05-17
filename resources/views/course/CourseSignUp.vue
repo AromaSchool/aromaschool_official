@@ -1,8 +1,12 @@
 <template>
   <div>
     <picture class="course_banner">
+      <source
+        srcset="@/image/course/course_sign_up.jpg"
+        media="(min-width: 769px)"
+      />
       <img
-        src="@/image/course/course_sign_up.jpg"
+        src="@/image/course/course_sign_up_mobile.jpg"
         alt="芳療課程線上報名：從這裡開始建立芳療的基礎觀念及基本運用方法，感受精油的自然療癒力量，引領您進入芳療的世界。"
       />
     </picture>

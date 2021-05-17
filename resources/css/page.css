@@ -1707,6 +1707,9 @@ section.course{
         width: 100%;
     }
     /* 線上報名 */
+    .course_banner{
+        margin-bottom: 30px;
+    }
     .check_box_group .form-check{
         width: 100%;
     }
@@ -1725,6 +1728,6 @@ section.course{
     }
     /* 聯絡我們 */
     .contact_form{
-        padding: 20px;
+        padding: 40px 20px;
     }
 }
