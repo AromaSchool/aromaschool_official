@@ -270,7 +270,7 @@ export default {
         this.$swal.close();
         this.$swal
           .fire({
-            title: "成功",
+            title: "報名完成",
             icon: "success",
             timer: 2000,
             showConfirmButton: false,
