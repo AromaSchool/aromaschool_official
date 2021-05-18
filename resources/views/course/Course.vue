@@ -1,7 +1,9 @@
 <template>
   <section class="course">
     <div class="container blog_container">
-      <CourseSidebar v-if="$route.name != 'course-sign-up'"></CourseSidebar>
+      <CourseSidebar
+        v-if="$route.name != 'course-sign-up' && $route.name != 'course-finish'"
+      ></CourseSidebar>
       <router-view></router-view>
     </div>
   </section>

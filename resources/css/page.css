@@ -1065,6 +1065,50 @@ section.course{
     margin:0 10px;
 }
 
+/* 報名完成 */
+.content_center.course_finish_block{
+    width: 100%;
+}
+.acc_block{
+    display: flex;
+    margin: 20px auto;
+}
+.acc_box{
+    display: block;
+    flex: 1;
+    margin: 5px;
+}
+.acc_box picture{
+    display: block;
+    position: relative;
+}
+.acc_box .acc_cover{
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    bottom: 0;
+    color: #fff;
+    text-align: right;
+    font-size: 14px;
+    padding: 5px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
+    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
+}
+.acc_box img{
+    width: 100%;
+}
+.course_finish_block li .link{
+    color: #767691;
+    text-decoration: none;
+    border-bottom: 1px dashed #767691;
+}
+.course_finish_block li .link i{
+    font-size: 13px;
+    margin-right: 3px;
+}
+
 /* 學苑周刊-列表 */
 .blog_list{
     margin-top: 20px;
@@ -1348,7 +1392,6 @@ section.course{
 }
 
 @media screen and (max-width: 1200px) {
-
     /* 關於禾場-品牌故事 */
     .brand_story .container::before {
         height: 55%;
@@ -1358,6 +1401,14 @@ section.course{
         width: 100%;
         /* height: 100%; */
         object-fit: cover;
+    }
+    /* 報名完成 */
+    .acc_block{
+        flex-wrap: wrap;
+    }
+    .acc_box{
+        flex: initial;
+        width: calc(20% - 10px);
     }
 }
 
@@ -1570,6 +1621,12 @@ section.course{
     .course_content_block .course_box ul li::before{
         top: 0;
         transform: translateY(100%);
+    }
+
+    /* 報名完成 */
+    .acc_box{
+        flex: initial;
+        width: calc(100% / 3 - 10px);
     }
 
     /* 學苑周刊-文章 */

@@ -28,6 +28,7 @@ const BlogList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: 
 const BlogDetail = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/blog" */ "../views/blog/BlogDetail.vue");
 const Course = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/Course.vue")
 const CourseSignUp = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/CourseSignUp.vue")
+const CourseFinish = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/CourseFinish.vue")
 const AromatherapyElementary = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyElementary.vue")
 const AromatherapyIntermediate = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyIntermediate.vue")
 const AromatherapyAdvanced = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/aromatherapy/AromatherapyAdvanced.vue")
@@ -359,6 +360,13 @@ const routes = [{
                 component: CourseSignUp,
                 meta: {
                     title: "線上報名",
+                },
+            }, {
+                path: "/course/finish",
+                name: "course-finish",
+                component: CourseFinish,
+                meta: {
+                    title: "報名完成",
                 },
             },
         ]
