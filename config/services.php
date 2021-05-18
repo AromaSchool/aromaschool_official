@@ -39,5 +39,11 @@ return [
 
     'mail' => [
         'username' => env('MAIL_USERNAME'),
+    ],
+
+    'meta' => [
+        'title' => env('META_TAG_TITLE'),
+        'author' => env('META_TAG_AUTHOR'),
+        'description' => env('META_TAG_DESCRIPTION'),
     ]
 ];
