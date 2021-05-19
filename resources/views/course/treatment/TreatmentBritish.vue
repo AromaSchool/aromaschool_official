@@ -371,8 +371,7 @@ export default {
   data: () => ({
     title: "英式芳療按摩療程",
     type: "療程學苑",
-    registry:
-      "https://docs.google.com/forms/d/1VfaJWGZpoj2snOIwwGHamnlC_HPbwG-QLSsgtvHDIAE/viewform?edit_requested=true",
+    registry: "/course/signup",
     isShowSchedule: false,
     isShowSkill: true,
     isShowProcess: true,

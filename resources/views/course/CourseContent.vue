@@ -18,13 +18,11 @@
             title="查詢開課資訊"
             >查詢開課資訊</router-link
           >
-          <a
-            :href="registry"
-            target="_blank"
-            rel="noopener noreferrer"
+          <router-link
+            :to="registry"
             class="btn_underline purple"
             title="線上報名"
-            >線上報名</a
+            >線上報名</router-link
           >
         </div>
       </div>

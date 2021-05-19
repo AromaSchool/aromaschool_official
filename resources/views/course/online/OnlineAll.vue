@@ -211,7 +211,7 @@ export default {
   data: () => ({
     title: "線上芳療認證課程全階班",
     type: "網路學苑",
-    registry: "https://forms.gle/cySRyJgBoL1APehW9",
+    registry: "/course/signup",
     isShowSchedule: true,
     isShowProcess: true,
     isShowFeature: true,

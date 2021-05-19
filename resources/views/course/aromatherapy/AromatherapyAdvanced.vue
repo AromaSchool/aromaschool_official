@@ -349,8 +349,7 @@ export default {
   data: () => ({
     title: "芳香療法認證課程高階班",
     type: "芳療學苑",
-    registry:
-      "https://docs.google.com/forms/d/e/1FAIpQLScHsPTgQB8FJpI0lEdkEFcq6YllanI5eDnOPS1m_AbDziNxsQ/viewform",
+    registry: "/course/signup",
     isShowSchedule: true,
     isShowProcess: true,
     isShowFeature: true,

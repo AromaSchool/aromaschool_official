@@ -7,7 +7,7 @@
       />
       <img
         src="@/image/course/course_finish_mobile.jpg"
-        alt="芳療課程線上報名：從這裡開始建立芳療的基礎觀念及基本運用方法，感受精油的自然療癒力量，引領您進入芳療的世界。"
+        alt="報名完成：我們已收到您的報名資訊，請等候專人與您電話連絡。另外，我們將致贈您「獨家優惠好禮」：個人專屬精油抓周性格分析及課程報名優惠禮。"
       />
     </picture>
     <ContentCenter :title="title" :type="type" :class="className">

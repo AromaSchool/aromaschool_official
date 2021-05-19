@@ -234,8 +234,7 @@ export default {
   data: () => ({
     title: "直播芳療認證課程入門班",
     type: "網路學苑",
-    registry:
-      "https://docs.google.com/forms/d/e/1FAIpQLSdUsNUiMIZ1IW2T_49Uy64Q-cOS2yXK3SjZGHRYnXLgQ3WXUg/viewform",
+    registry: "/course/signup",
     isShowSchedule: true,
     isShowProcess: true,
     isShowFeature: true,
