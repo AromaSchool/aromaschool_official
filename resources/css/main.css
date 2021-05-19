@@ -38,7 +38,8 @@ hr {
 }
 
 .btn_outline.brown {
-    color: #C9B5A5;
+    color: #fff;
+    background: #A18875;
     border: solid 1px #C9B5A5;
 }
 
@@ -88,7 +89,7 @@ hr {
 
 .btn_outline.brown:hover {
     color: #C9B5A5;
-    background: rgba(201, 181, 165, .1);
+    background: #fff;
 }
 
 .btn_outline:hover::before {
