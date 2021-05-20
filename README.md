@@ -101,7 +101,7 @@
     - 檢查安裝是否正確
 
       ```bash
-      composer -v
+      composer -V
       ```
 
     - 將`composer`插件路徑加到系統`PATH`環境變數中
