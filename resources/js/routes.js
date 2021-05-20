@@ -46,6 +46,8 @@ const OnlineAll = () => import( /* webpackPrefetch: true */ /* webpackChunkName:
 const Contact = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Contact.vue");
 const ComingSoon = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/component/ComingSoon.vue");
 const Presentation = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Presentation.vue");
+const PresentationList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/presentation/PresentationList.vue");
+const PresentationDetail = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/presentation/PresentationDetail.vue");
 const Faq = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Faq.vue");
 
 const routes = [{
@@ -373,13 +375,29 @@ const routes = [{
     },
     {
         path: "/presentation",
+        redirect: '/presentation/category/all',
         name: "presentation",
-        component: ComingSoon,
+        component: Presentation,
         meta: {
             title: "香氣發表會",
             titleEn: "PRESENTATION",
             bannerImage: "images/banner-5.jpg"
         },
+        children: [{
+            path: "category/all",
+            name: "presentationAll",
+            component: PresentationList,
+            meta: {
+                title: "所有分類"
+            },
+        }, {
+            path: ":id(\\d+)",
+            name: "presentationDetail",
+            component: PresentationDetail,
+            meta: {
+                title: "學員名稱"
+            },
+        }]
     },
     {
         path: "/blog",

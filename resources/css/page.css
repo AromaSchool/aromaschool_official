@@ -1109,6 +1109,11 @@ section.course{
     margin-right: 3px;
 }
 
+/* 香氣發表會 */
+section.presentation{
+    margin-top: 50px;
+}
+
 /* 學苑周刊-列表 */
 .blog_list{
     margin-top: 20px;

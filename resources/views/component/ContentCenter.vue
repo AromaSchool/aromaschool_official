@@ -78,9 +78,6 @@ export default {
       type: Object,
       default: () => ({}),
     },
-    class: {
-      type: String,
-    },
   },
   mounted() {
     const interval = setInterval(() => {
