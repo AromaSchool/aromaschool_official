@@ -1109,9 +1109,21 @@ section.course{
     margin-right: 3px;
 }
 
-/* 香氣發表會 */
+/* 香氣發表會-列表 */
 section.presentation{
     margin-top: 50px;
+}
+
+/* 香氣發表會-內文 */
+.presentation_content_block .student_info_block {
+    display: flex;
+}
+.presentation_content_block .student_info_block picture{
+    width: 195px;
+    height: 195px;
+}
+.presentation_content_block .student_info_block img{
+    width: 100%;
 }
 
 /* 學苑周刊-列表 */
