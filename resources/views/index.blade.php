@@ -14,24 +14,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('services.meta.author') }} | {{ config('services.meta.title') }}</title>
+    <title>{{ $title }} | {{ $author }}</title>
     <link rel="icon" href="favicon.ico" />
     <!-- Search Engine -->
     <meta name="keywords" content="禾場,芳療,精油,認證課程,國際認證,NAHA,IFPA">
-    <meta name="description" content="{{ config('services.meta.description')}}" data-vmid="name:description">
+    @if ($description)
+      <meta name="description" content="{{ $description }}" data-vmid="name:description">
+    @endif
     <meta name="image" content="{{ config('app.url') }}/images/og_image.jpg">
-    <meta name="author" content="{{ config('services.meta.author') }}">
-    <meta name="copyright" content="{{ config('services.meta.author') }}">
+    <meta name="author" content="{{ $author }}">
+    <meta name="copyright" content="{{ $author }}">
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="{{ config('services.meta.author') }} | {{ config('services.meta.title') }}" data-vmid="itemprop:name">
-    <meta itemprop="description" content="{{ config('services.meta.description')}}" data-vmid="itemprop:description">
+    <meta itemprop="name" content="{{ $title }} | {{ $author }}" data-vmid="itemprop:name">
+    @if ($description)
+      <meta itemprop="description" content="{{ $description }}" data-vmid="itemprop:description">
+    @endif
     <meta itemprop="image" content="{{ config('app.url') }}/images/og_image.jpg">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="{{ config('services.meta.author') }} | {{ config('services.meta.title') }}" data-vmid="og:title">
-    <meta property="og:description" content="{{ config('services.meta.description')}}" data-vmid="og:description">
+    <meta property="og:title" content="{{ $title }} | {{ $author }}" data-vmid="og:title">
+    @if ($description)
+      <meta property="og:description" content="{{ $description }}" data-vmid="og:description">
+    @endif
     <meta property="og:image" content="{{ config('app.url') }}/images/og_image.jpg">
     <meta property="og:url" content="{{ config('app.url') }}">
-    <meta property="og:site_name" content="{{ config('services.meta.author') }} | {{ config('services.meta.title') }}" data-vmid="og:site_name">
+    <meta property="og:site_name" content="{{ $title }} | {{ $author }}" data-vmid="og:site_name">
     <meta property="og:type" content="website">
     <meta property="fb:app_id" content="363121530631" />
     <meta property="fb:admins" content="363121530631"/>

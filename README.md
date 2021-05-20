@@ -1,6 +1,64 @@
 # 禾場官網
 
+![node](https://img.shields.io/badge/node-^v14.16.0-brightgreen) ![php](https://img.shields.io/badge/php-7.4-blueviolet)
+
 ## 建置
+
+- 安裝`nodejs`，選擇版本`v14`
+
+  至官網下載：<https://nodejs.org/en/>
+
+- 安裝`php`
+
+  - Windows
+
+    至官網下載：<https://windows.php.net/download#php-7.4>
+
+  - Mac
+
+    - 安裝`brew`
+
+      ```bash
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+      eval "$(/opt/homebrew/bin/brew shellenv)"
+      ```
+
+    - 使用`brew`指令安裝裝`php7.4`
+
+      ```bash
+      brew install php@7.4
+      ```
+
+    - 啟動`php`服務
+
+      ```bash
+      brew services start php
+      ```
+
+    - 切換目前版本至`php7.4`
+
+      ```bash
+      brew link php@7.4
+      ```
+
+    - 重新讀取環境變數
+
+      ```bash
+      exec $SHELL
+      ```
+
+      或是關掉終端機後重啟
+
+    - 查看`php`版本
+
+      ```php
+      php -v
+      ```
+
+  - Linux
+
+    使用[phpbrew](https://github.com/phpbrew/phpbrew)安裝`php7.4`
 
 - 安裝`php`套件管理工具[composer](https://getcomposer.org/)
 
@@ -10,7 +68,7 @@
 
     - 驗證安裝
 
-      ```cmd
+      ```bash
       composer -V
       ```
 
@@ -19,7 +77,7 @@
     - 下載`composer`安裝檔
 
       ```bash
-      php -r "copy('<https://getcomposer.org/installer>', 'composer-setup.php');"
+      php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
       ```
 
     - 使用`SHA-384`來驗證安裝檔是否正確
