@@ -21,7 +21,7 @@
     @if ($description)
       <meta name="description" content="{{ $description }}" data-vmid="name:description">
     @endif
-    <meta name="image" content="{{ config('app.url') }}/images/og_image.jpg">
+    <meta name="image" content="{{ $image }}">
     <meta name="author" content="{{ $author }}">
     <meta name="copyright" content="{{ $author }}">
     <!-- Schema.org for Google -->
@@ -29,13 +29,13 @@
     @if ($description)
       <meta itemprop="description" content="{{ $description }}" data-vmid="itemprop:description">
     @endif
-    <meta itemprop="image" content="{{ config('app.url') }}/images/og_image.jpg">
+    <meta itemprop="image" content="{{ $image }}">
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta property="og:title" content="{{ $title }} | {{ $author }}" data-vmid="og:title">
     @if ($description)
       <meta property="og:description" content="{{ $description }}" data-vmid="og:description">
     @endif
-    <meta property="og:image" content="{{ config('app.url') }}/images/og_image.jpg">
+    <meta property="og:image" content="{{ $image }}">
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:site_name" content="{{ $title }} | {{ $author }}" data-vmid="og:site_name">
     <meta property="og:type" content="website">
@@ -74,7 +74,7 @@
 
     <div id="app"></div>
 
-    @if(env('APP_ENV')=='local')
+    @if( config('app.env') == 'local')
     <script src="http://localhost:35729/livereload.js"></script>
     @else
     <script rel="preload" src="{{ mix('/js/manifest.js') }}"></script>

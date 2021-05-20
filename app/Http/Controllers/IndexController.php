@@ -32,6 +32,7 @@ class IndexController extends Controller
 
     public function __invoke(?string $path = null)
     {
+        $image = \config('app.url') . '/images/og_image.jpg';
         $author = \config('services.meta.author');
         $title = \config('services.meta.title');
         $description = null;
@@ -257,10 +258,12 @@ class IndexController extends Controller
                 \preg_match('/[0-9]+$/', $path, $matches);
                 $article = $this->articleService->getArticle(\intval($matches[0]));
                 $title = $article->title;
+                $image = $article->image ?? \config('app.url') . '/images/blog_default.svg';
                 break;
         }
 
         return view('index', [
+            'image' => $image,
             'author' => $author,
             'title' => $title,
             'description' => $description,

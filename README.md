@@ -89,7 +89,7 @@
     - 執行安裝
 
       ```bash
-      php composer-setup.php --install-dir=/bin --filename=composer
+      sudo php composer-setup.php --install-dir=/usr/local/bin/ --filename=composer
       ```
 
     - 移除安裝檔
