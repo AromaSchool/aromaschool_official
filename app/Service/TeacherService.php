@@ -15,6 +15,11 @@ class TeacherService
         return TeacherCategory::all();
     }
 
+    public function getTeacher(int $id): Teacher
+    {
+        return Teacher::find($id);
+    }
+
     public function getTeachers(): Collection
     {
         $teachers = Teacher::with('category')

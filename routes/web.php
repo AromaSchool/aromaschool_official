@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/{any}', IndexController::class)->where('any', '(?!api).*');
+Route::get('/{path}', IndexController::class)->where('path', '(?!api).*');

@@ -13,6 +13,11 @@ use Illuminate\Database\Eloquent\Collection;
 
 class ArticleService
 {
+    public function getArticleCategory(int $id): ArticleCategory
+    {
+        return ArticleCategory::find($id);
+    }
+
     public function getArticleCategories(): Collection
     {
         return ArticleCategory::all();
