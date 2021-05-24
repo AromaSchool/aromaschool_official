@@ -765,19 +765,22 @@ h3.index_title span::after {
 }
 
 /* 關於禾場-師資陣容 */
-.arti_content.flex{
+.arti_content.flex {
     display: flex;
 }
-.arti_content.flex .first_image{
+
+.arti_content.flex .first_image {
     width: 30%;
     min-width: 140px;
     max-width: 250px;
     margin-right: 20px;
 }
-.arti_content.flex .first_image img{
+
+.arti_content.flex .first_image img {
     width: 100%;
 }
-.arti_content.flex .arti_editor{
+
+.arti_content.flex .arti_editor {
     width: 80%;
 }
 
@@ -818,122 +821,152 @@ h3.index_title span::after {
 }
 
 /* 芳療課程 */
-section.course{
+section.course {
     margin-top: 50px;
 }
-.course_content_block{
+
+.course_content_block {
     font-weight: 300;
     letter-spacing: 1px;
 }
-.course_content_block .intro q{
+
+.course_content_block .intro q {
     display: block;
     text-align: center;
     color: #767691;
     font-size: 16px;
     font-weight: 400;
-    background: rgba(241, 241, 244,.5);
+    background: rgba(241, 241, 244, .5);
     padding: 20px;
     margin-bottom: 15px;
 }
-.btn_group{
+
+.btn_group {
     text-align: center;
     margin: 30px auto;
 }
-.btn_right{
+
+.btn_right {
     text-align: right;
     margin-top: 25px;
     margin-bottom: 35px;
 }
-.btn_group .btn_underline{
+
+.btn_group .btn_underline {
     margin: 0 10px;
 }
-.course_content_block .course_box{
+
+.course_content_block .course_box {
     margin: 35px auto;
 }
-.course_title{
+
+.course_title {
     color: #767691;
     font-size: 18px;
     font-weight: 400;
     padding-bottom: 10px;
     border-bottom: solid 1px rgb(118 118 145 /30%);
 }
-.course_title i{
+
+.course_title i {
     margin-right: 5px;
 }
-.course_table{
+
+.course_table {
     width: 100%;
-    border: solid 1px rgba(118,118,145,.2);
+    border: solid 1px rgba(118, 118, 145, .2);
     margin: 20px auto 10px;
 }
-.course_table thead{
+
+.course_table thead {
     background: #F1F1F4;
 }
-.course_table th{
-    border: solid 1px rgba(118,118,145,.2);
+
+.course_table th {
+    border: solid 1px rgba(118, 118, 145, .2);
     font-weight: 400;
 }
-.course_table tr td:first-child{
+
+.course_table tr td:first-child {
     width: 45px;
 }
-.course_table.online_all tr td:first-child{
+
+.course_table.online_all tr td:first-child {
     width: auto;
 }
-.course_table th.subject{
+
+.course_table th.subject {
     min-width: 230px;
 }
-.course_table th.system{
+
+.course_table th.system {
     min-width: 100px;
 }
-.course_table th.activity{
+
+.course_table th.activity {
     min-width: 150px;
 }
-.course_table th.handmade{
+
+.course_table th.handmade {
     min-width: 95px;
 }
-.course_table th.peroid{
+
+.course_table th.peroid {
     min-width: 120px;
 }
-.course_table th.time{
+
+.course_table th.time {
     min-width: 130px;
 }
-.course_table th.week{
+
+.course_table th.week {
     min-width: 170px;
 }
-.course_table th.date{
+
+.course_table th.date {
     min-width: 190px;
 }
-.course_table td{
-    border: solid 1px rgba(118,118,145,.2);
+
+.course_table td {
+    border: solid 1px rgba(118, 118, 145, .2);
     font-weight: 300;
 }
-.course_table td.center{
+
+.course_table td.center {
     text-align: center;
 }
-.course_table .date_list{
+
+.course_table .date_list {
     margin-bottom: 0;
 }
-.schedule .note{
+
+.schedule .note {
     font-size: 14px;
     font-weight: 300;
     color: #9C9DA8;
     text-align: right;
 }
-.skill .course_table tr td:first-child{
+
+.skill .course_table tr td:first-child {
     width: 150px;
 }
-.process ul{
+
+.process ul {
     margin: 20px auto;
 }
+
 .course_content_block .course_box ul {
     padding-left: 0;
 }
-.course_content_block .course_box ul li{
+
+.course_content_block .course_box ul li {
     position: relative;
     list-style: none;
     margin: 5px 0;
     padding-left: 20px;
 }
-.course_content_block .course_box ul li::before{
+
+.course_content_block .course_box ul li::before {
     content: '';
     position: absolute;
     width: 8px;
@@ -943,146 +976,182 @@ section.course{
     top: 0%;
     transform: translateY(100%);
 }
-.feature .trial_box{
+
+.feature .trial_box {
     margin: 20px auto;
 }
-.feature h6{
+
+.feature h6 {
     font-size: 14px;
     font-weight: 300;
     color: #9C9DA8;
     margin-top: 5px;
 }
-.feature ol{
+
+.feature ol {
     margin: 20px auto;
     padding-left: 20px;
 }
-.feature li{
+
+.feature li {
     margin: 5px 0;
 }
-.suitable ol{
+
+.suitable ol {
     margin: 20px auto;
     padding-left: 20px;
 }
-.suitable li{
+
+.suitable li {
     margin: 5px 0;
 }
-.target ol{
+
+.target ol {
     margin: 20px auto;
     padding-left: 20px;
 }
-.target li{
+
+.target li {
     margin: 5px 0;
 }
-.payment ul{
+
+.payment ul {
     margin: 20px auto;
     padding-left: 20px;
 }
-.payment li{
+
+.payment li {
     margin: 5px 0;
 }
-.discount ul{
+
+.discount ul {
     margin: 20px auto;
     padding-left: 20px;
 }
-.discount li{
+
+.discount li {
     margin: 5px 0;
 }
-.course_content_block .link{
+
+.course_content_block .link {
     color: #767691;
     text-decoration: none;
     border-bottom: dashed 1px #767691;
 }
-.course_content_block .link i{
+
+.course_content_block .link i {
     font-size: 13px;
     margin-right: 3px;
 }
-.period .course_table{
+
+.period .course_table {
     margin-top: 0;
 }
-.period .address{
+
+.period .address {
     margin: 20px auto;
 }
-.period .address h5{
+
+.period .address h5 {
     font-size: 18px;
     font-weight: 300;
 }
-.period .address h5 i{
+
+.period .address h5 i {
     font-size: 16px;
     margin-right: 5px;
 }
-.period .address p{
+
+.period .address p {
     margin-bottom: 0;
 }
-.precaution ol{
+
+.precaution ol {
     margin: 20px auto;
     padding-left: 20px;
 }
-.precaution li{
+
+.precaution li {
     margin: 5px 0;
 }
-.notes ol{
+
+.notes ol {
     margin: 20px auto;
     padding-left: 20px;
 }
-.notes li{
+
+.notes li {
     margin: 5px 0;
 }
-.measure .measure_box{
+
+.measure .measure_box {
     margin: 20px auto;
 }
 
 /* 線上報名 */
-.course_banner{
+.course_banner {
     display: block;
     margin-bottom: 60px;
 }
-.course_banner img{
+
+.course_banner img {
     width: 100%;
 }
-.contact_form.signup_form{
+
+.contact_form.signup_form {
     width: 100%;
     margin-bottom: 100px;
 }
-.signup_form .hint{
+
+.signup_form .hint {
     font-size: 18px;
 }
-.form_course_box{
+
+.form_course_box {
     padding: 15px 0;
 }
-.form_course_box + .form_course_box{
-    border-top: solid 1px rgba(156,157,168,.2);
+
+.form_course_box+.form_course_box {
+    border-top: solid 1px rgba(156, 157, 168, .2);
 }
-.form_course_box .category{
+
+.form_course_box .category {
     display: block;
     color: #C9B5A5;
     margin-bottom: 10px;
 }
-.check_box_group{
+
+.check_box_group {
     display: flex;
     flex-wrap: wrap;
 }
-.check_box_group .form-check{
-    margin:0 10px;
+
+.check_box_group .form-check {
+    margin: 0 10px;
 }
 
 /* 報名完成 */
-.content_center.course_finish_block{
+.content_center.course_finish_block {
     width: 100%;
 }
-.acc_block{
+
+.acc_block {
     display: flex;
     margin: 20px auto;
 }
-.acc_box{
+
+.acc_box {
     display: block;
     flex: 1;
     margin: 5px;
 }
-.acc_box picture{
+
+.acc_box picture {
     display: block;
     position: relative;
 }
-.acc_box .acc_cover{
+
+.acc_box .acc_cover {
     position: absolute;
     width: 100%;
     height: 30px;
@@ -1096,44 +1165,234 @@ section.course{
     background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
     background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
 }
-.acc_box img{
+
+.acc_box img {
     width: 100%;
 }
-.course_finish_block li .link{
+
+.course_finish_block li .link {
     color: #767691;
     text-decoration: none;
     border-bottom: 1px dashed #767691;
 }
-.course_finish_block li .link i{
+
+.course_finish_block li .link i {
     font-size: 13px;
     margin-right: 3px;
 }
 
 /* 香氣發表會-列表 */
-section.presentation{
+section.presentation {
     margin-top: 50px;
 }
+
+.time_block_pst {
+    width: 80%;
+}
+
+/*-回到所有分類-*/
+.time_block_pst .btn_left {
+    margin: 8px 0px;
+}
+
+.btn_purple {
+    color: #767691;
+}
+
+.btn_purple {
+    position: relative;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 5px 40px 5px 0px;
+    margin: 0 auto;
+    transition-duration: .3s;
+}
+
+.btn_purple:hover {
+    width: 35px;
+    color: #767691;
+}
+
+.btn_purple:hover::before {
+    width: 35px;
+    color: #767691;
+    right: -15px;
+}
+
+.btn_purple::before {
+    background: #767691;
+}
+
+.btn_purple::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 1px;
+    top: 50%;
+    right: 0;
+    transition-duration: .3s;
+}
+
+.btn_purple:hover::after {
+    right: -15px;
+}
+
+.btn_purple::after {
+    background: #767691;
+}
+
+.btn_purple::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    top: 44%;
+    right: 0;
+    transform: rotate(45deg);
+    transition-duration: .3s;
+}
+
+
+.time_block_pst .time_box {
+    border-top: 1px solid rgba(118, 118, 145, .2);
+    padding: 55px 0;
+}
+
+/*-期數&日期-*/
+.time_block_pst .time_box .time_title {
+    float: left;
+}
+
+.year_pst {
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+.arti_subtitle {
+    position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 10px auto 40px auto;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.arti_subtitle::after,
+.arti_subtitle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 16px;
+    background: #9c9da8;
+}
+
+.arti_subtitle::before {
+    left: -10px;
+}
+
+.arti_subtitle::after {
+    right: -10px;
+}
+
+.type {
+    display: inline-block;
+}
+
+/*--學員列表--*/
+.student_list_box {
+    margin-left: 220px;
+    padding: 0px;
+}
+
+.student_list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.list_li {
+    width: calc(20% - 10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    margin: 0px 5px 20px 5px;
+}
+
+.list_li:hover {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.list_a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.list_a .title {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #DEDEDE;
+    color: #707179;
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.student_icon {
+    padding-top: 10px;
+    display: flex;
+    margin: 0px -15px 0px 0px;
+}
+
+.student_icon i {
+    color: #C9B5A5;
+    border-radius: 50%;
+    border: 1px solid #C9B5A5;
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 23px;
+    margin: 0px 10px 0px 0px;
+}
+
+.fas.fa-play {
+    font-size: 0.7rem;
+    line-height: 23px;
+}
+
+
 
 /* 香氣發表會-內文 */
 .presentation_content_block .student_info_block {
     display: flex;
 }
-.presentation_content_block .student_info_block picture{
+
+.presentation_content_block .student_info_block picture {
     width: 195px;
     height: 195px;
 }
-.presentation_content_block .student_info_block img{
+
+.presentation_content_block .student_info_block img {
     width: 100%;
 }
 
 /* 學苑周刊-列表 */
-.blog_list{
+.blog_list {
     margin-top: 20px;
     margin-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
 }
-.blog_list .article_box{
+
+.blog_list .article_box {
     display: block;
     background: #fff;
     width: calc(25% - 20px);
@@ -1142,13 +1401,16 @@ section.presentation{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition-duration: .3s;
 }
-.blog_list .article_box:hover{
+
+.blog_list .article_box:hover {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
-.blog_list .article_box:hover figure img{
+
+.blog_list .article_box:hover figure img {
     transform: scale(1.1);
 }
-.article_box figure{
+
+.article_box figure {
     width: 100%;
     height: 0;
     padding-bottom: calc(100% / (3 / 2));
@@ -1156,11 +1418,13 @@ section.presentation{
     overflow: hidden;
     position: relative;
 }
-.article_box figure img{
+
+.article_box figure img {
     width: 100%;
     transition-duration: .3s;
 }
-.article_box figure .category{
+
+.article_box figure .category {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -1170,10 +1434,12 @@ section.presentation{
     padding: 3px 10px;
     border-radius: 999px;
 }
-.article_box .article_text{
+
+.article_box .article_text {
     padding: 20px;
 }
-.article_text .title{
+
+.article_text .title {
     font-size: 17px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -1184,7 +1450,8 @@ section.presentation{
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.article_text .preview{
+
+.article_text .preview {
     font-size: 15px;
     font-weight: 300;
     display: -webkit-box;
@@ -1193,7 +1460,8 @@ section.presentation{
     overflow: hidden;
     height: 44px;
 }
-.article_date{
+
+.article_date {
     color: #767691;
     font-size: 14px;
     letter-spacing: 1px;
@@ -1202,11 +1470,12 @@ section.presentation{
 }
 
 /* 學苑周刊-文章 */
-.arti_keyword{
+.arti_keyword {
     margin-top: 60px;
     margin-bottom: 30px;
 }
-.arti_keyword .keyword_box{
+
+.arti_keyword .keyword_box {
     display: inline-block;
     color: #9C9DA8;
     font-size: 14px;
@@ -1218,18 +1487,21 @@ section.presentation{
     margin-bottom: 10px;
     transition-duration: .3s;
 }
-.arti_keyword .keyword_box:hover{
+
+.arti_keyword .keyword_box:hover {
     background: #9C9DA8;
     color: #fff;
 }
-.arti_author{
+
+.arti_author {
     display: flex;
     align-items: center;
     padding: 30px;
     border-top: solid 1px #F1F1F4;
     border-bottom: solid 1px #F1F1F4;
 }
-.arti_author .author_image{
+
+.arti_author .author_image {
     width: 130px;
     height: 130px;
     border-radius: 50%;
@@ -1237,21 +1509,25 @@ section.presentation{
     margin-right: 60px;
     margin-bottom: 0;
 }
-.arti_author .author_image img{
+
+.arti_author .author_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.arti_author .author_info{
+
+.arti_author .author_info {
     width: calc(100% - 190px);
     letter-spacing: 1px;
 }
-.author_info .name{
+
+.author_info .name {
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 15px;
 }
-.author_info .intro{
+
+.author_info .intro {
     font-size: 14px;
     color: #9C9DA8;
     font-weight: 300;
@@ -1262,13 +1538,13 @@ section.presentation{
 /* 聯絡我們 */
 .contact_block {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     margin-top: 80px;
     letter-spacing: 1px;
     margin-bottom: 80px;
 }
 
-.contact_info{
+.contact_info {
     width: 50%;
     margin-right: 70px;
 }
@@ -1345,14 +1621,16 @@ section.presentation{
     text-decoration: none;
     font-weight: 300;
 }
-.info_hint .link{
+
+.info_hint .link {
     color: #767691;
 }
-.info_hint .link i{
+
+.info_hint .link i {
     color: #00B900;
 }
 
-.contact_form{
+.contact_form {
     width: 50%;
     padding: 40px;
     border-top: solid 3px #A18875;
@@ -1361,53 +1639,72 @@ section.presentation{
     font-weight: 300;
 }
 
-.contact_form .hint{
+.contact_form .hint {
     font-weight: 400;
 }
 
-.contact_form .hint span{
+.contact_form .hint span {
     display: block;
     font-weight: 300;
     font-size: 14px;
     color: #c9b5a5;
     margin-top: 8px;
 }
-.contact_form_block{
+
+.contact_form_block {
     margin-top: 35px;
 }
-.contact_form_block .form_box{
+
+.contact_form_block .form_box {
     margin-bottom: 15px;
 }
-.contact_form_block .form_label{
+
+.contact_form_block .form_label {
     display: block;
     margin-bottom: 5px;
 }
-.contact_form_block .form_label .hint{
+
+.contact_form_block .form_label .hint {
     color: #C9B5A5;
     font-size: 15px;
 }
-.contact_form_block .form_input{
+
+.contact_form_block .form_input {
     width: 100%;
     padding: 8px 16px;
     border: solid 1px #bdbec3;
     border-radius: 5px;
 }
-.contact_form_block .form_input::placeholder{
+
+.contact_form_block .form_input::placeholder {
     font-size: 15px;
     font-weight: 300;
     letter-spacing: 1px;
     color: rgb(112 113 121/50%);
 }
-.contact_form_block .form_input:focus{
+
+.contact_form_block .form_input:focus {
     outline: 0;
     box-shadow: 0 0 0 0.25rem rgb(201 181 165 / 25%);
 }
-.contact_form_block .btn_outline{
+
+.contact_form_block .btn_outline {
     display: block;
     margin: 40px auto 0;
 }
 
+@media screen and (max-width: 1400px) {
+
+    /* 香氣發表會 */
+    .list_li {
+        width: calc(25% - 10px);
+    }
+}
+
+
+
 @media screen and (max-width: 1200px) {
+
     /* 關於禾場-品牌故事 */
     .brand_story .container::before {
         height: 55%;
@@ -1418,14 +1715,22 @@ section.presentation{
         /* height: 100%; */
         object-fit: cover;
     }
+
     /* 報名完成 */
-    .acc_block{
+    .acc_block {
         flex-wrap: wrap;
     }
-    .acc_box{
+
+    .acc_box {
         flex: initial;
         width: calc(20% - 10px);
     }
+
+    /* 香氣發表會 */
+    .list_li {
+        width: calc(33% - 10px);
+    }
+
 }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
@@ -1536,21 +1841,49 @@ section.presentation{
     }
 
     /* 學苑周刊-列表 */
-    .blog_list .article_box{
+    .blog_list .article_box {
         width: calc(50% - 20px);
     }
 
     /* 聯絡我們 */
-    .contact_block{
+    .contact_block {
         flex-wrap: wrap;
     }
-    .contact_info{
+
+    .contact_info {
         width: 100%;
         margin-right: 0;
         margin-bottom: 50px;
     }
-    .contact_form{
+
+    .contact_form {
         width: 100%;
+    }
+
+    /* 香氣發表會 */
+    .time_block_pst {
+        width: 100%;
+    }
+
+    .time_block_pst .time_box .time_title {
+        float: none;
+    }
+
+    .arti_subtitle {
+        text-align: left;
+        margin: 10px 0px 40px 10px;
+    }
+
+    .student_list_box {
+        margin-left: 0px;
+    }
+
+    .student_list {
+        padding-left: 0px;
+    }
+
+    .list_li {
+        width: calc(20% - 10px);
     }
 }
 
@@ -1630,33 +1963,85 @@ section.presentation{
     }
 
     /* 芳療課程 */
-    .table_container{
+    .table_container {
         overflow: auto;
         width: 100%;
     }
-    .course_content_block .course_box ul li::before{
+
+    .course_content_block .course_box ul li::before {
         top: 0;
         transform: translateY(100%);
     }
 
     /* 報名完成 */
-    .acc_box{
+    .acc_box {
         flex: initial;
         width: calc(100% / 3 - 10px);
     }
 
     /* 學苑周刊-文章 */
-    .arti_author{
+    .arti_author {
         flex-wrap: wrap;
     }
-    .arti_author .author_info{
+
+    .arti_author .author_info {
         width: 100%;
     }
-    .arti_author .author_image{
+
+    .arti_author .author_image {
         margin: 0 auto 30px;
     }
-    .author_info .name{
+
+    .author_info .name {
         text-align: center;
+    }
+
+    /* 香氣發表會 */
+    .time_block_pst .time_box .time_title {}
+
+    .arti_subtitle {
+        text-align: center;
+        margin: 10px 0px 40px 10px;
+    }
+
+    .student_list_box {
+        margin-left: 0px;
+    }
+
+    .student_list {
+        padding-left: 0px;
+    }
+
+    .list_li {
+        width: calc(20% - 10px);
+    }
+
+    .list_a {
+        padding: 10px 10px;
+    }
+
+    .list_a .title {
+        font-size: 1.1rem;
+    }
+
+    .student_icon {}
+
+    .student_icon i {
+        width: 23px;
+        height: 23px;
+        line-height: 21px;
+        margin: 0px 7px 0px 0px;
+    }
+
+    .fas.fa-play {
+        font-size: 0.7rem;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .list_li {
+        width: calc(33% - 10px);
     }
 }
 
@@ -1759,49 +2144,109 @@ section.presentation{
     }
 
     /* 關於禾場-師資陣容 */
-    .arti_content.flex{
+    .arti_content.flex {
         flex-wrap: wrap;
     }
-    .arti_content.flex .first_image{
+
+    .arti_content.flex .first_image {
         width: 100%;
         max-width: 140px;
         min-width: initial;
-        margin:0 auto 30px;
+        margin: 0 auto 30px;
     }
-    .arti_content.flex .arti_editor{
+
+    .arti_content.flex .arti_editor {
         width: 100%;
     }
+
     /* 芳療課程 */
-    .course_content_block .btn_group .btn_underline{
+    .course_content_block .btn_group .btn_underline {
         display: block;
         margin-bottom: 10px;
     }
-    .feature .trial_box audio{
+
+    .feature .trial_box audio {
         width: 100%;
     }
+
     /* 線上報名 */
-    .course_banner{
+    .course_banner {
         margin-bottom: 30px;
     }
-    .check_box_group .form-check{
+
+    .check_box_group .form-check {
         width: 100%;
         margin-bottom: 5px;
     }
+
     /* 學苑周刊-列表 */
-    .blog_list .article_box{
+    .blog_list .article_box {
         width: 100%;
         margin: 0 0 20px;
     }
+
     /* 學苑周刊-文章 */
-    .arti_author{
+    .arti_author {
         padding: 20px 0;
     }
-    .arti_author .author_image{
+
+    .arti_author .author_image {
         width: 100px;
         height: 100px;
     }
+
     /* 聯絡我們 */
-    .contact_form{
+    .contact_form {
         padding: 40px 20px;
+    }
+
+    /* 香氣發表會 */
+    .time_block_pst .time_box .time_title {
+        text-align: center;
+    }
+
+    .arti_subtitle {
+        text-align: center;
+        margin: 10px auto 40px auto;
+    }
+
+    .student_list_box {
+        margin-left: 0px;
+    }
+
+    .student_list {
+        padding-left: 0px;
+    }
+
+    .list_li {
+        width: calc(33% - 10px);
+    }
+
+    .list_a {
+        padding: 10px 10px;
+    }
+
+    .list_a .title {
+        font-size: 1.1rem;
+    }
+
+    .student_icon {}
+
+    .student_icon i {
+        width: 23px;
+        height: 23px;
+        line-height: 21px;
+        margin: 0px 7px 0px 0px;
+    }
+
+    .fas.fa-play {
+        font-size: 0.7rem;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .list_li {
+        width: calc(50% - 10px);
     }
 }
