@@ -20,7 +20,7 @@
                 <i class="fas fa-ribbon"></i>
               </div>
               <div class="label_box" title="影音花絮">
-                <i class="fas fa-play-circle"></i>
+                <i class="fas fa-play-circle-circle"></i>
               </div>
               <div class="label_box" title="簡報下載">
                 <i class="fas fa-file-download"></i>
@@ -45,7 +45,7 @@
       </div>
       <q>{{ summary }}</q>
       <div class="course_box">
-        <h4 class="course_title"><i class="fas fa-play-circle"></i>影音花絮</h4>
+        <h4 class="course_title"><i class="fas fa-play-circle-circle"></i>影音花絮</h4>
         <div class="video_block">
           <div class="video_box" v-for="video in videos" :key="video.title">
             <iframe

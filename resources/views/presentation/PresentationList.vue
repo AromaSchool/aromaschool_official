@@ -20,77 +20,77 @@
       <div class="student_list_box">
         <ul class="student_list">
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <!--<i class="fas fa-play" title="影音花絮"></i>-->
+                <!--<i class="fas fa-play-circle" title="影音花絮"></i>-->
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <!--<i class="fas fa-play" title="影音花絮"></i>-->
+                <!--<i class="fas fa-play-circle" title="影音花絮"></i>-->
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <!--<i class="fas fa-file-powerpoint" title="簡報下載"></i>-->
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <!--<i class="fas fa-ribbon" title="研習認證"></i>-->
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
@@ -115,44 +115,44 @@
       <div class="student_list_box">
         <ul class="student_list">
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <!--<i class="fas fa-play" title="影音花絮"></i>-->
+                <!--<i class="fas fa-play-circle" title="影音花絮"></i>-->
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <!--<i class="fas fa-ribbon" title="研習認證"></i>-->
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <!--<i class="fas fa-play" title="影音花絮"></i>-->
+                <!--<i class="fas fa-play-circle" title="影音花絮"></i>-->
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
@@ -177,121 +177,121 @@
       <div class="student_list_box">
         <ul class="student_list">
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
           </li>
 
           <li class="list_li">
-            <router-link to="/presentation/1" title="黃小明" class="list_a">
+            <router-link to="/presentation/1" title="歐沐慈" class="list_a">
               <div class="title">歐沐慈</div>
               <div class="student_icon">
                 <i class="fas fa-ribbon" title="研習認證"></i>
-                <i class="fas fa-play" title="影音花絮"></i>
+                <i class="fas fa-play-circle" title="影音花絮"></i>
                 <i class="fas fa-file-powerpoint" title="簡報下載"></i>
               </div>
             </router-link>
