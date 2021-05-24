@@ -377,7 +377,7 @@ const routes = [{
         path: "/presentation",
         redirect: '/presentation/category/all',
         name: "presentation",
-        component: Presentation,
+        component: ComingSoon,
         meta: {
             title: "香氣發表會",
             titleEn: "PRESENTATION",
@@ -386,7 +386,7 @@ const routes = [{
         children: [{
             path: "category/all",
             name: "presentationAll",
-            component: PresentationList,
+            component: ComingSoon,
             meta: {
                 title: "所有分類"
             },
