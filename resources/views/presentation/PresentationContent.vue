@@ -63,7 +63,7 @@
       </div>
       <div class="course_box">
         <h4 class="course_title"><i class="fas fa-comment-dots"></i>發表內容</h4>
-        <div class="presentation_content">
+        <div class="arti_editor presentation_content">
           <p>
             個案的配合度超高，對於芳療師開的功課都能按時做到。也時常跟芳療師回報自己遇到的問題，例如第二次個案覺得滋潤度有，但皮膚偏乾等，當下即可因個案需求調整配方，讓個案覺得使用油及芳療是一個開心的歷程。
           </p>
