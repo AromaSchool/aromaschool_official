@@ -1273,7 +1273,7 @@ section.presentation {
     margin-bottom: 0px;
 }
 
-.arti_subtitle {
+.time_block_pst .arti_subtitle {
     position: relative;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1284,8 +1284,8 @@ section.presentation {
     letter-spacing: 1px;
 }
 
-.arti_subtitle::after,
-.arti_subtitle::before {
+.time_block_pst .arti_subtitle::after,
+.time_block_pst .arti_subtitle::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1295,15 +1295,15 @@ section.presentation {
     background: #9c9da8;
 }
 
-.arti_subtitle::before {
+.time_block_pst .arti_subtitle::before {
     left: -10px;
 }
 
-.arti_subtitle::after {
+.time_block_pst .arti_subtitle::after {
     right: -10px;
 }
 
-.type {
+.time_block_pst .type {
     display: inline-block;
 }
 
@@ -1324,6 +1324,7 @@ section.presentation {
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     border-radius: 10px;
     margin: 0px 5px 20px 5px;
+    transition-duration: .3s;
 }
 
 .list_li:hover {
@@ -1363,10 +1364,7 @@ section.presentation {
     margin: 0px 10px 0px 0px;
 }
 
-.fas.fa-play {
-    font-size: 0.7rem;
-    line-height: 23px;
-}
+
 
 
 
@@ -1992,7 +1990,7 @@ section.presentation .blog_container .content_center {
         float: none;
     }
 
-    .arti_subtitle {
+    .time_block_pst .arti_subtitle {
         text-align: left;
         margin: 10px 0px 40px 10px;
     }
@@ -2120,7 +2118,7 @@ section.presentation .blog_container .content_center {
     }
 
     /* 香氣發表會-列表 */
-    .arti_subtitle {
+    .time_block_pst .arti_subtitle {
         text-align: center;
         margin: 10px 0px 40px 10px;
     }
@@ -2152,10 +2150,6 @@ section.presentation .blog_container .content_center {
         margin: 0px 7px 0px 0px;
     }
 
-    .fas.fa-play {
-        font-size: 0.7rem;
-        line-height: 21px;
-    }
 
     /* 香氣發表會-底層 */
     .presentation_content_block .student_info_block {
@@ -2350,7 +2344,7 @@ section.presentation .blog_container .content_center {
         text-align: center;
     }
 
-    .arti_subtitle {
+    .time_block_pst .arti_subtitle {
         text-align: center;
         margin: 10px auto 40px auto;
     }
@@ -2382,10 +2376,6 @@ section.presentation .blog_container .content_center {
         margin: 0px 7px 0px 0px;
     }
 
-    .fas.fa-play {
-        font-size: 0.7rem;
-        line-height: 21px;
-    }
 }
 
 @media screen and (max-width: 320px) {
