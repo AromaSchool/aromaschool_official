@@ -9,6 +9,17 @@
     </div>
     <div class="course_content_block">
       <div class="intro">
+        <div class="video_block">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/WdU2gMNeesk"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
         <slot name="intro"></slot>
         <div class="btn_group">
           <router-link
@@ -18,10 +29,7 @@
             title="查詢開課資訊"
             >查詢開課資訊</router-link
           >
-          <router-link
-            :to="registry"
-            class="btn_underline purple"
-            title="線上報名"
+          <router-link :to="registry" class="btn_underline purple" title="線上報名"
             >線上報名</router-link
           >
         </div>
@@ -32,17 +40,13 @@
         <p class="note">※課表內容以學苑核發之實際課表為主</p>
       </div>
       <div class="course_box skill" v-if="isShowSkill == true">
-        <h4 class="course_title">
-          <i class="fas fa-hand-sparkles"></i>手法屬性
-        </h4>
+        <h4 class="course_title"><i class="fas fa-hand-sparkles"></i>手法屬性</h4>
         <div class="skill_block">
           <slot name="skill"></slot>
         </div>
       </div>
       <div class="course_box process" v-if="isShowProcess == true">
-        <h4 class="course_title">
-          <i class="fas fa-swatchbook"></i>國際認證進修流程
-        </h4>
+        <h4 class="course_title"><i class="fas fa-swatchbook"></i>國際認證進修流程</h4>
         <slot name="process"></slot>
         <div class="btn_right">
           <a
@@ -60,9 +64,7 @@
         <slot name="feature"></slot>
       </div>
       <div class="course_box suitable" v-if="isShowSuitable == true">
-        <h4 class="course_title">
-          <i class="fas fa-user-friends"></i>適合對象
-        </h4>
+        <h4 class="course_title"><i class="fas fa-user-friends"></i>適合對象</h4>
         <slot name="suitable"></slot>
       </div>
       <div class="course_box target" v-if="isShowTarget == true">
@@ -70,9 +72,7 @@
         <slot name="target"></slot>
       </div>
       <div class="course_box payment" v-if="isShowPayment == true">
-        <h4 class="course_title">
-          <i class="fas fa-comments-dollar"></i>課程費用說明
-        </h4>
+        <h4 class="course_title"><i class="fas fa-comments-dollar"></i>課程費用說明</h4>
         <slot name="payment"></slot>
       </div>
       <div class="course_box discount" v-if="isShowDiscount == true">
@@ -193,9 +193,7 @@
         </div>
       </div>
       <div class="course_box precaution" v-if="isShowPrecaution == true">
-        <h4 class="course_title">
-          <i class="fas fa-exclamation-circle"></i>報名注意事項
-        </h4>
+        <h4 class="course_title"><i class="fas fa-exclamation-circle"></i>報名注意事項</h4>
         <slot name="precaution"></slot>
       </div>
       <div class="course_box notes" v-if="isShowNotes == true">
@@ -241,8 +239,7 @@
             另外也提醒大家，對於疫情方面，每天關注新聞動態資訊，但切勿恐慌。（保持心情正向愉快，也是提升免疫力的一種方式哦）
             <br />
             平時要勤洗手、多喝水、出門戴口罩、維持良好的生活作息。
-            回到家時先將衣物、物品消毒過一遍，先保護好自已。
-            身體確認有不適請先向相關醫療單位諮詢。
+            回到家時先將衣物、物品消毒過一遍，先保護好自已。 身體確認有不適請先向相關醫療單位諮詢。
             <br />
             相信台灣、相信全世界，相信我們大家都能夠平安度過這次的疫情。
           </p>

@@ -8,13 +8,9 @@
       aria-expanded="false"
       aria-controls="sidebar_collapse"
     >
-      {{ $route.matched[1].meta.title }}選單<i class="fas fa-chevron-down"></i>
+      芳療課程選單<i class="fas fa-chevron-down"></i>
     </a>
-    <div
-      class="accordion collapse"
-      :class="{ show: this.fullWidth > 992 }"
-      id="sidebar_collapse"
-    >
+    <div class="accordion collapse" :class="{ show: this.fullWidth > 992 }" id="sidebar_collapse">
       <div class="accordion-item" id="accordionOne">
         <h2 class="accordion-header" id="headingOne">
           <button
@@ -37,30 +33,22 @@
           <div class="accordion-body">
             <ul>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/aromatherapy/elementary"
-                  title="芳香療法認證課程入門班"
+                <router-link to="/course/aromatherapy/elementary" title="芳香療法認證課程入門班"
                   >芳香療法認證課程入門班</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/aromatherapy/intermediate"
-                  title="芳香療法認證課程中階班"
+                <router-link to="/course/aromatherapy/intermediate" title="芳香療法認證課程中階班"
                   >芳香療法認證課程中階班</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/aromatherapy/advanced"
-                  title="芳香療法認證課程高階班"
+                <router-link to="/course/aromatherapy/advanced" title="芳香療法認證課程高階班"
                   >芳香療法認證課程高階班</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/aromatherapy/clinical"
-                  title="臨床芳療師認證課程"
+                <router-link to="/course/aromatherapy/clinical" title="臨床芳療師認證課程"
                   >臨床芳療師認證課程</router-link
                 >
               </li>
@@ -90,51 +78,37 @@
           <div class="accordion-body">
             <ul>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/treatment/british"
-                  title="英式芳療按摩療程"
+                <router-link to="/course/treatment/british" title="英式芳療按摩療程"
                   >英式芳療按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/treatment/lymphatic"
-                  title="淋巴引流按摩療程"
+                <router-link to="/course/treatment/lymphatic" title="淋巴引流按摩療程"
                   >淋巴引流按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/treatment/facial"
-                  title="顱顏深層按摩療程"
+                <router-link to="/course/treatment/facial" title="顱顏深層按摩療程"
                   >顱顏深層按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/treatment/pregnancy"
-                  title="孕產婦芳療療程"
+                <router-link to="/course/treatment/pregnancy" title="孕產婦芳療療程"
                   >孕產婦芳療療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/treatment/myofascial"
-                  title="肌筋膜系列課程"
+                <router-link to="/course/treatment/myofascial" title="肌筋膜系列課程"
                   >肌筋膜系列課程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/treatment/swedish"
-                  title="瑞典式按摩療程"
+                <router-link to="/course/treatment/swedish" title="瑞典式按摩療程"
                   >瑞典式按摩療程</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/treatment/meridian"
-                  title="經絡按摩療程"
+                <router-link to="/course/treatment/meridian" title="經絡按摩療程"
                   >經絡按摩療程</router-link
                 >
               </li>
@@ -164,23 +138,17 @@
           <div class="accordion-body">
             <ul>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/online/elementary"
-                  title="直播芳療認證課程入門班"
+                <router-link to="/course/online/elementary" title="直播芳療認證課程入門班"
                   >直播芳療認證課程入門班</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/online/intermediate"
-                  title="直播芳療認證課程中階班"
+                <router-link to="/course/online/intermediate" title="直播芳療認證課程中階班"
                   >直播芳療認證課程中階班</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/course/online/all"
-                  title="線上芳療認證課程全階班"
+                <router-link to="/course/online/all" title="線上芳療認證課程全階班"
                   >線上芳療認證課程全階班</router-link
                 >
               </li>

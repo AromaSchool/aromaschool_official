@@ -830,6 +830,23 @@ section.course {
     letter-spacing: 1px;
 }
 
+.course_content_block .intro .video_block {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    margin-bottom: 25px;
+    height: 0;
+    overflow: hidden;
+}
+
+.course_content_block .intro .video_block iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .course_content_block .intro q {
     display: block;
     text-align: center;
