@@ -8,13 +8,9 @@
       aria-expanded="false"
       aria-controls="sidebar_collapse"
     >
-      {{ $route.matched[1].meta.title }}選單<i class="fas fa-chevron-down"></i>
+      {{ `${title}選單` }}<i class="fas fa-chevron-down"></i>
     </a>
-    <div
-      class="accordion collapse"
-      :class="{ show: this.fullWidth > 992 }"
-      id="sidebar_collapse"
-    >
+    <div class="accordion collapse" :class="{ show: this.fullWidth > 992 }" id="sidebar_collapse">
       <div
         class="accordion-item"
         id="accordionExample"
@@ -42,16 +38,10 @@
           <div class="accordion-body">
             <ul>
               <template v-for="name in names">
-                <li
-                  class="sidebar_list"
-                  v-if="category.name == name.category.name"
-                  :key="name.id"
-                >
-                  <router-link
-                    :to="`/about/teamMember/${name.id}`"
-                    :title="name.name"
-                    >{{ name.name }}</router-link
-                  >
+                <li class="sidebar_list" v-if="category.name == name.category.name" :key="name.id">
+                  <router-link :to="`${to}/${name.id}`" :title="name.name">{{
+                    name.name
+                  }}</router-link>
                 </li>
               </template>
             </ul>
@@ -71,6 +61,13 @@ export default {
     },
     names: {
       type: Array,
+      require: true,
+    },
+    title: {
+      type: String,
+    },
+    to: {
+      type: String,
       require: true,
     },
   },

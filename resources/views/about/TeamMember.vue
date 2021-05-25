@@ -1,6 +1,6 @@
 <template>
   <div class="container blog_container">
-    <Sidebar :categories="category" :names="item"></Sidebar>
+    <Sidebar :categories="category" :names="item" :title="title" to="/about/teamMember"></Sidebar>
     <ContentCenter
       :key="$route.path"
       :title="findItem.name"
@@ -24,6 +24,7 @@ export default {
   },
   inject: ["setTitle"],
   data: () => ({
+    title: "師資陣容",
     item: [],
     category: [],
   }),

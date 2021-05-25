@@ -95,7 +95,7 @@ export default {
         .then((response) => {
           this.lastIndex = response.lastIndex;
           if (this.lastIndex) {
-            this.data = this.data.concat(response.list);
+            this.data.push(...response.list);
             $state.loaded();
           } else {
             $state.complete();

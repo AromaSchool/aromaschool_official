@@ -384,20 +384,30 @@ const routes = [{
             bannerImage: "images/banner-5.jpg"
         },
         children: [{
-            path: "category/all",
-            name: "presentationAll",
-            component: ComingSoon,
-            meta: {
-                title: "所有分類"
+                path: "category/all",
+                name: "presentationAll",
+                component: ComingSoon,
+                meta: {
+                    title: "所有分類"
+                }
             },
-        }, {
-            path: ":id(\\d+)",
-            name: "presentationDetail",
-            component: PresentationDetail,
-            meta: {
-                title: "學員名稱"
+            {
+                path: "category/:id(\\d+)",
+                name: "presentationCategory",
+                component: PresentationList,
+                meta: {
+                    title: ""
+                },
             },
-        }]
+            {
+                path: ":id(\\d+)",
+                name: "presentationDetail",
+                component: PresentationDetail,
+                meta: {
+                    title: "學員名稱"
+                },
+            }
+        ]
     },
     {
         path: "/blog",

@@ -64,3 +64,14 @@ Route::prefix('courses')->group(function () {
         Route::post('/', Course\SignUpCourseController::class);
     });
 });
+
+Route::prefix('presentations')->group(function () {
+    Route::prefix('physiological-systems')->group(function () {
+        Route::get('/', Presentation\GetPhysiologicalSystemsController::class);
+    });
+    Route::prefix('symptoms')->group(function () {
+        Route::get('/', Presentation\GetSymptomsController::class);
+    });
+    Route::get('/', Presentation\GetPresentationsController::class);
+    Route::get('/{id}', Presentation\GetPresentationController::class);
+});

@@ -8,13 +8,9 @@
       aria-expanded="false"
       aria-controls="sidebar_collapse"
     >
-      {{ $route.matched[1].meta.title }}選單<i class="fas fa-chevron-down"></i>
+      {{ `${route.matched[1].meta.title}選單` }}<i class="fas fa-chevron-down"></i>
     </a>
-    <div
-      class="accordion collapse"
-      :class="{ show: this.fullWidth > 992 }"
-      id="sidebar_collapse"
-    >
+    <div class="accordion collapse" :class="{ show: this.fullWidth > 992 }" id="sidebar_collapse">
       <div class="accordion-item" id="accordionExample">
         <h2 class="accordion-header" id="headingOne">
           <button
@@ -42,30 +38,22 @@
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/about/interCert/NAHA/target"
-                  title="NAHA的使命、願景、目標"
+                <router-link to="/about/interCert/NAHA/target" title="NAHA的使命、願景、目標"
                   >NAHA的使命、願景、目標</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/about/interCert/NAHA/history"
-                  title="NAHA的歷史"
+                <router-link to="/about/interCert/NAHA/history" title="NAHA的歷史"
                   >NAHA的歷史</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/about/interCert/NAHA/moral"
-                  title="NAHA的道德規範標準"
+                <router-link to="/about/interCert/NAHA/moral" title="NAHA的道德規範標準"
                   >NAHA的道德規範標準</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link
-                  to="/about/interCert/NAHA/training"
-                  title="美國國家芳療師訓練標準"
+                <router-link to="/about/interCert/NAHA/training" title="美國國家芳療師訓練標準"
                   >美國國家芳療師訓練標準</router-link
                 >
               </li>

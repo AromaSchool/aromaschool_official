@@ -25,6 +25,12 @@ import {
     CourseBatch,
     CourseSignUp,
 } from "./course";
+import {
+    Symptom,
+    PhysiologicalSystems,
+    PresentationSemester,
+    Presentation,
+} from './presentation';
 
 export {
     Event,
@@ -46,4 +52,8 @@ export {
     CourseSetting,
     CourseBatch,
     CourseSignUp,
+    Symptom,
+    PhysiologicalSystems,
+    PresentationSemester,
+    Presentation,
 };
