@@ -1,6 +1,6 @@
 <template>
   <div class="time_block_pst">
-    <div class="btn_left">
+    <div class="btn_left" v-if="this.$route.params.id">
       <router-link to="/presentation/category/all" title="所有分類" class="btn_purple">
         所有分類
       </router-link>
