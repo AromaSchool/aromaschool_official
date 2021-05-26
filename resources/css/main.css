@@ -205,6 +205,82 @@ hr {
     cursor: pointer;
 }
 
+.btn_group.solid {
+    margin: 40px 0;
+}
+
+.btn_group .btn_solid {
+    margin: 0 5px;
+}
+
+.btn_solid {
+    position: relative;
+    padding: 10px 15px;
+    padding-right: 50px;
+    border: solid 1px;
+    color: #fff;
+    text-decoration: none;
+    transition-duration: .3s;
+}
+
+.btn_solid:hover {
+    color: #fff;
+    padding-right: 60px;
+}
+
+.btn_solid::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 1px;
+    top: 50%;
+    right: 10px;
+    transition-duration: .3s;
+}
+
+.btn_solid:hover::before {
+    width: 35px;
+}
+
+.btn_solid::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 1px;
+    top: 44%;
+    right: 10px;
+    transform: rotate(45deg);
+    transition-duration: .3s;
+}
+
+.btn_solid.purple {
+    background: #767691;
+    border-color: #767691;
+}
+
+.btn_solid.gray {
+    color: #9c9da8;
+    border-color: #9c9da8;
+}
+
+.btn_solid.purple::before {
+    background: #fff;
+}
+
+.btn_solid.purple::after {
+    background: #fff;
+}
+
+.btn_solid.gray::before {
+    background: #9c9da8;
+}
+
+.btn_solid.gray::after {
+    background: #9c9da8;
+}
+
 /* 導覽列 */
 .navbar_as {
     padding: 25px 0;
@@ -1036,6 +1112,12 @@ footer .copyright {
 }
 
 @media screen and (max-width: 576px) {
+
+    /* 通用樣式 */
+    .btn_group.solid .btn_solid {
+        display: block;
+        margin-bottom: 10px;
+    }
 
     /* 導覽列 */
     .navbar_as {
