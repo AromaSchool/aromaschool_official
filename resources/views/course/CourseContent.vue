@@ -21,16 +21,16 @@
           ></iframe>
         </div>
         <slot name="intro"></slot>
-        <div class="btn_group">
+        <div class="btn_group solid">
+          <router-link :to="registry" class="btn_solid purple" title="線上報名"
+            >線上報名</router-link
+          >
           <router-link
             to="#period"
             @click.native="anchorHashCheck"
-            class="btn_underline gray"
+            class="btn_solid gray"
             title="查詢開課資訊"
             >查詢開課資訊</router-link
-          >
-          <router-link :to="registry" class="btn_underline purple" title="線上報名"
-            >線上報名</router-link
           >
         </div>
       </div>
@@ -49,13 +49,8 @@
         <h4 class="course_title"><i class="fas fa-swatchbook"></i>國際認證進修流程</h4>
         <slot name="process"></slot>
         <div class="btn_right">
-          <a
-            :href="registry"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn_underline purple"
-            title="線上報名"
-            >線上報名</a
+          <router-link :to="registry" class="btn_solid purple" title="線上報名"
+            >線上報名</router-link
           >
         </div>
       </div>
@@ -89,13 +84,8 @@
             </div>
             <slot name="periodTaipei"></slot>
             <div class="btn_right">
-              <a
-                :href="registry"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn_underline purple"
-                title="線上報名"
-                >線上報名</a
+              <router-link :to="registry" class="btn_solid purple" title="線上報名"
+                >線上報名</router-link
               >
             </div>
           </div>
@@ -106,13 +96,8 @@
             </div>
             <slot name="periodTaichung"></slot>
             <div class="btn_right">
-              <a
-                :href="registry"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn_underline purple"
-                title="線上報名"
-                >線上報名</a
+              <router-link :to="registry" class="btn_solid purple" title="線上報名"
+                >線上報名</router-link
               >
             </div>
           </div>
@@ -123,13 +108,8 @@
             </div>
             <slot name="periodHsinchu"></slot>
             <div class="btn_right">
-              <a
-                :href="registry"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn_underline purple"
-                title="線上報名"
-                >線上報名</a
+              <router-link :to="registry" class="btn_solid purple" title="線上報名"
+                >線上報名</router-link
               >
             </div>
           </div>
@@ -140,13 +120,8 @@
             </div>
             <slot name="periodTainan"></slot>
             <div class="btn_right">
-              <a
-                :href="registry"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn_underline purple"
-                title="線上報名"
-                >線上報名</a
+              <router-link :to="registry" class="btn_solid purple" title="線上報名"
+                >線上報名</router-link
               >
             </div>
           </div>
@@ -157,13 +132,8 @@
             </div>
             <slot name="periodKaohsiung"></slot>
             <div class="btn_right">
-              <a
-                :href="registry"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn_underline purple"
-                title="線上報名"
-                >線上報名</a
+              <router-link :to="registry" class="btn_solid purple" title="線上報名"
+                >線上報名</router-link
               >
             </div>
           </div>
@@ -180,13 +150,8 @@
             </div>
             <slot name="periodOnline"></slot>
             <div class="btn_right">
-              <a
-                :href="registry"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn_underline purple"
-                title="線上報名"
-                >線上報名</a
+              <router-link :to="registry" class="btn_solid purple" title="線上報名"
+                >線上報名</router-link
               >
             </div>
           </div>
@@ -245,13 +210,8 @@
           </p>
           <p>祝 順心健康。</p>
           <div class="btn_right">
-            <a
-              :href="registry"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn_underline purple"
-              title="線上報名"
-              >線上報名</a
+            <router-link :to="registry" class="btn_solid purple" title="線上報名"
+              >線上報名</router-link
             >
           </div>
         </div>
