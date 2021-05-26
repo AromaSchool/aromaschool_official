@@ -35,12 +35,14 @@ export default {
     },
   },
   created() {
+    this.$route.meta.title = "";
     this.getPresentation();
   },
   methods: {
     getPresentation() {
       Presentation.get(this.$route.params.id).then((response) => {
         this.data = response;
+        this.$route.meta.title = this.data.name;
       });
     },
   },
