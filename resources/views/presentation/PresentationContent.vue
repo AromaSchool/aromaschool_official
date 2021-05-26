@@ -52,22 +52,20 @@
       <div class="course_box" v-if="presentation.videos.length">
         <h4 class="course_title"><i class="fas fa-play-circle"></i>影音花絮</h4>
         <div class="video_block">
-          <div
-            class="video_box"
-            v-for="(video, index) in presentation.videos.slice(0, 2)"
-            :key="`video${video.id}`"
-          >
-            <iframe
-              width="560"
-              height="315"
-              :src="video.url"
-              :title="titles[index]"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-            <h5>{{ titles[index] }}</h5>
-          </div>
+          <template v-for="(video, index) in presentation.videos.slice(0, 2)">
+            <div class="video_box" v-if="video.url != ''" :key="`video${video.id}`">
+              <iframe
+                width="560"
+                height="315"
+                :src="video.url"
+                :title="titles[index]"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <h5>{{ titles[index] }}</h5>
+            </div>
+          </template>
         </div>
       </div>
       <div class="course_box">
