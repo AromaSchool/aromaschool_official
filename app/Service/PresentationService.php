@@ -24,7 +24,12 @@ class PresentationService
 
     public function getPresentation(int $id): Presentation
     {
-        return Presentation::with(['symptoms', 'videos', 'semester'])->find($id);
+        $presentation = Presentation::with(['symptoms', 'videos', 'semester'])->find($id);
+        if ($presentation->image) {
+            $presentation->image = \config('services.storage.url') . "/storage/presentation/$presentation->image";
+        }
+
+        return $presentation;
     }
 
     public function getPresentations(
