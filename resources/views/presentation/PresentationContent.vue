@@ -10,7 +10,7 @@
     <div class="presentation_content_block">
       <div class="student_info_block">
         <picture>
-          <img :src="presentation.image" :alt="`高階${presentation.semester.semester}期學員`" />
+          <img :src="presentation.image" :alt="presentation.name" />
         </picture>
         <div class="student_info_box">
           <div class="name_box">
