@@ -44,7 +44,8 @@ class PresentationService
                             $q->where('id', '=', $symptomId);
                         }
                     });
-            }]);
+            }])
+            ->has('presentations');
 
         if ($orderDirection == 'asc') {
             $query->orderBy($orderBy)->orderBy('id');
