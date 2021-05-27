@@ -71,7 +71,7 @@
     RewriteRule ^ %1 [L,R=301]
 
     # Redirect to old site
-    RewriteRule ^images/epost/(.*)$ https://aromaharvest.com.tw/images/epost/$1 [L]
+    RewriteRule ^images/epost/(.*)$ https://admin.aromaschool.com.tw/epost/$1 [L]
 
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
