@@ -148,8 +148,8 @@
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course/online/all" title="線上芳療認證課程全階班"
-                  >線上芳療認證課程全階班</router-link
+                <router-link to="/course/online/all" title="Podcast 線上全階認證課程"
+                  >Podcast 線上全階認證課程</router-link
                 >
               </li>
             </ul>

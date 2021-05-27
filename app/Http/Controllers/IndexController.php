@@ -230,10 +230,10 @@ class IndexController extends Controller
                 break;
 
             case 'course/online/all':
-                $title = '線上芳療認證課程全階班';
+                $title = 'Podcast 線上全階認證課程';
                 $description = '芳療線上學習時代來臨！用最效率的方式學習，釋放內心的潛能。人生在不同階段都有不同發展與成長需求，'
                 . '學習不需要理由更不分年齡。喜愛精油的你是否曾經思考過，除了本業你還擁有什麼?現在就是你晉升專業芳療技能的最好時機，'
-                . '《禾場國際芳療學苑》線上芳療認證課程全階班，內容以美國NAHA芳療師協會研究多年的系統為架構，融會成立20年以';
+                . '《禾場國際芳療學苑》Podcast 線上全階認證課程，內容以美國NAHA芳療師協會研究多年的系統為架構，融會成立20年以';
                 break;
 
             case 'course/signup':

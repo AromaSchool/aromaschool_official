@@ -353,7 +353,7 @@ const routes = [{
                 name: "course-online-all",
                 component: OnlineAll,
                 meta: {
-                    title: "線上芳療認證課程全階班",
+                    title: "Podcast 線上全階認證課程",
                     courseId: COURSES.ONLINE.ALL,
                 },
             }, {
@@ -377,7 +377,7 @@ const routes = [{
         path: "/presentation",
         redirect: '/presentation/category/all',
         name: "presentation",
-        component: ComingSoon,
+        component: Presentation,
         meta: {
             title: "香氣發表會",
             titleEn: "PRESENTATION",
@@ -386,7 +386,7 @@ const routes = [{
         children: [{
                 path: "category/all",
                 name: "presentationAll",
-                component: ComingSoon,
+                component: PresentationList,
                 meta: {
                     title: "所有分類"
                 }

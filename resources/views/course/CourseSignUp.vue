@@ -1,10 +1,7 @@
 <template>
   <div>
     <picture class="course_banner">
-      <source
-        srcset="@/image/course/course_sign_up.jpg"
-        media="(min-width: 769px)"
-      />
+      <source srcset="@/image/course/course_sign_up.jpg" media="(min-width: 769px)" />
       <img
         src="@/image/course/course_sign_up_mobile.jpg"
         alt="芳療課程線上報名：從這裡開始建立芳療的基礎觀念及基本運用方法，感受精油的自然療癒力量，引領您進入芳療的世界。"
@@ -17,9 +14,7 @@
       </p>
       <form class="contact_form_block" @submit="signUp">
         <div class="form_box">
-          <label for="inputName" class="form_label"
-            >姓名<span class="hint">*</span></label
-          >
+          <label for="inputName" class="form_label">姓名<span class="hint">*</span></label>
           <input
             id="inputName"
             class="form_input"
@@ -30,9 +25,7 @@
           />
         </div>
         <div class="form_box">
-          <label for="inputPhone" class="form_label"
-            >聯絡電話<span class="hint">*</span></label
-          >
+          <label for="inputPhone" class="form_label">聯絡電話<span class="hint">*</span></label>
           <input
             id="inputPhone"
             class="form_input"
@@ -44,9 +37,7 @@
           />
         </div>
         <div class="form_box">
-          <label for="inputMail" class="form_label"
-            >電子郵件<span class="hint">*</span></label
-          >
+          <label for="inputMail" class="form_label">電子郵件<span class="hint">*</span></label>
           <input
             id="inputMail"
             class="form_input"
@@ -87,9 +78,7 @@
                     :value="courses.AROMATHERAPY.INTERMEDIATE"
                     @click="selectCourse"
                   />
-                  <label
-                    class="form-check-label"
-                    for="aromatherapy_intermediate"
+                  <label class="form-check-label" for="aromatherapy_intermediate"
                     >芳香療法認證課程中階班</label
                   >
                 </div>
@@ -130,9 +119,7 @@
                     :value="courses.TREATMENT.BRITISH"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="treatment_british"
-                    >英式芳療按摩療程</label
-                  >
+                  <label class="form-check-label" for="treatment_british">英式芳療按摩療程</label>
                 </div>
                 <div class="form-check">
                   <input
@@ -142,9 +129,7 @@
                     :value="courses.TREATMENT.LYMPHATIC"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="treatment_lymphatic"
-                    >淋巴引流按摩療程</label
-                  >
+                  <label class="form-check-label" for="treatment_lymphatic">淋巴引流按摩療程</label>
                 </div>
                 <div class="form-check">
                   <input
@@ -154,9 +139,7 @@
                     :value="courses.TREATMENT.FACIAL"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="treatment_facial"
-                    >顱顏深層按摩療程</label
-                  >
+                  <label class="form-check-label" for="treatment_facial">顱顏深層按摩療程</label>
                 </div>
                 <div class="form-check">
                   <input
@@ -166,9 +149,7 @@
                     :value="courses.TREATMENT.PREGNANCY"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="treatment_pregnancy"
-                    >孕產婦芳療療程</label
-                  >
+                  <label class="form-check-label" for="treatment_pregnancy">孕產婦芳療療程</label>
                 </div>
                 <div class="form-check">
                   <input
@@ -178,9 +159,7 @@
                     :value="courses.TREATMENT.MYOFASCIAL"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="treatment_myofascial"
-                    >肌筋膜系列課程</label
-                  >
+                  <label class="form-check-label" for="treatment_myofascial">肌筋膜系列課程</label>
                 </div>
                 <div class="form-check">
                   <input
@@ -190,9 +169,7 @@
                     :value="courses.TREATMENT.SWEDISH"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="treatment_swedish"
-                    >瑞典式按摩療程</label
-                  >
+                  <label class="form-check-label" for="treatment_swedish">瑞典式按摩療程</label>
                 </div>
                 <div class="form-check">
                   <input
@@ -202,9 +179,7 @@
                     :value="courses.TREATMENT.MERIDIAN"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="treatment_meridian"
-                    >經絡按摩療程</label
-                  >
+                  <label class="form-check-label" for="treatment_meridian">經絡按摩療程</label>
                 </div>
               </div>
             </div>
@@ -243,9 +218,7 @@
                     :value="courses.ONLINE.ALL"
                     @click="selectCourse"
                   />
-                  <label class="form-check-label" for="online_all"
-                    >線上芳療認證課程全階班</label
-                  >
+                  <label class="form-check-label" for="online_all">Podcast 線上全階認證課程</label>
                 </div>
               </div>
             </div>
