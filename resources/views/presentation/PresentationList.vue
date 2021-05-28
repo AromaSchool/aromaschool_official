@@ -33,7 +33,7 @@
               <div class="student_icon">
                 <i v-if="presentation.participate" class="fas fa-ribbon" title="研習認證"></i>
                 <i
-                  v-if="presentation.videos.length"
+                  v-if="hasVideo(presentation.videos)"
                   class="fas fa-play-circle"
                   title="影音花絮"
                 ></i>
@@ -79,6 +79,14 @@ export default {
           $state.complete();
         }
       });
+    },
+    hasVideo(videos) {
+      for (const vidoe of videos) {
+        if (vidoe.url !== "") {
+          return true;
+        }
+      }
+      return false;
     },
   },
 };
