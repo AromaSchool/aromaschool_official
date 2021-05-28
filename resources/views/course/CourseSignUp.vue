@@ -67,7 +67,7 @@
                     ref="course"
                   />
                   <label class="form-check-label" for="aromatherapy_elementary"
-                    >芳香療法認證課程入門班</label
+                    >芳療認證入門班 | 防疫優惠版</label
                   >
                 </div>
                 <div class="form-check">
@@ -79,7 +79,7 @@
                     @click="selectCourse"
                   />
                   <label class="form-check-label" for="aromatherapy_intermediate"
-                    >芳香療法認證課程中階班</label
+                    >芳療認證中階班 | 防疫優惠版</label
                   >
                 </div>
                 <div class="form-check">
@@ -91,7 +91,7 @@
                     @click="selectCourse"
                   />
                   <label class="form-check-label" for="aromatherapy_advanced"
-                    >芳香療法認證課程高階班</label
+                    >芳療認證高階班 | 防疫優惠版</label
                   >
                 </div>
                 <div class="form-check">

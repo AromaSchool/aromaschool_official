@@ -33,18 +33,22 @@
           <div class="accordion-body">
             <ul>
               <li class="sidebar_list">
-                <router-link to="/course/aromatherapy/elementary" title="芳香療法認證課程入門班"
-                  >芳香療法認證課程入門班</router-link
+                <router-link
+                  to="/course/aromatherapy/elementary"
+                  title="芳療認證入門班 | 防疫優惠版"
+                  >芳療認證入門班 | 防疫優惠版</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course/aromatherapy/intermediate" title="芳香療法認證課程中階班"
-                  >芳香療法認證課程中階班</router-link
+                <router-link
+                  to="/course/aromatherapy/intermediate"
+                  title="芳療認證中階班 | 防疫優惠版"
+                  >芳療認證中階班 | 防疫優惠版</router-link
                 >
               </li>
               <li class="sidebar_list">
-                <router-link to="/course/aromatherapy/advanced" title="芳香療法認證課程高階班"
-                  >芳香療法認證課程高階班</router-link
+                <router-link to="/course/aromatherapy/advanced" title="芳療認證高階班 | 防疫優惠版"
+                  >芳療認證高階班 | 防疫優惠版</router-link
                 >
               </li>
               <li class="sidebar_list">

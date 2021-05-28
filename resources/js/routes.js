@@ -248,7 +248,7 @@ const routes = [{
                 name: "course-aromatherapy-elementary",
                 component: AromatherapyElementary,
                 meta: {
-                    title: "芳香療法認證課程入門班",
+                    title: "芳療認證入門班 | 防疫優惠版",
                     courseId: COURSES.AROMATHERAPY.ELEMENTARY,
                 },
             }, {
@@ -256,7 +256,7 @@ const routes = [{
                 name: "course-aromatherapy-intermediate",
                 component: AromatherapyIntermediate,
                 meta: {
-                    title: "芳香療法認證課程中階班",
+                    title: "芳療認證中階班 | 防疫優惠版",
                     courseId: COURSES.AROMATHERAPY.INTERMEDIATE,
                 },
             }, {
@@ -264,7 +264,7 @@ const routes = [{
                 name: "course-aromatherapy-advanced",
                 component: AromatherapyAdvanced,
                 meta: {
-                    title: "芳香療法認證課程高階班",
+                    title: "芳療認證高階班 | 防疫優惠版",
                     courseId: COURSES.AROMATHERAPY.ADVANCED,
                 },
             }, {
