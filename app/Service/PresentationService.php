@@ -50,7 +50,9 @@ class PresentationService
                         }
                     });
             }])
-            ->has('presentations');
+            ->whereHas('presentations', function ($q) {
+                $q->where('visible', true);
+            });
 
         if ($orderDirection == 'asc') {
             $query->orderBy($orderBy)->orderBy('id');
