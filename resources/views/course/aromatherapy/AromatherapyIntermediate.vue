@@ -17,6 +17,25 @@
     :isShowKaohsiung="!!data[4]"
   >
     <template #intro>
+      <q>
+        <br />
+        <p>
+          <b
+            >芳療人生不能停，在家也可安心上課！<br />
+            禾場20年來最大優惠課程放送！</b
+          >
+        </p>
+        <p>
+          三級防疫期間只要報名禾場課程，<br />
+          就能即刻加入禾場Meet芳療視訊教室，免費無限重複上課。
+        </p>
+        <p>入門班每月36小時 / 中階班每月36小時 / 高階班每月24小時</p>
+        <p>
+          時數加碼送，有史以來北中南10位師資群首次同步開課，學員可以上到最多不同專長老師的課程！<br />
+          學習時間不受空間影響，隨時想聽就聽，只有在禾場Meet芳療視訊教室！<br />
+          心動不如馬上行動，越早報名賺越多！
+        </p>
+      </q>
       <p>
         完成了芳香療法入門班之後的下一步，就是芳香療法認證系列課程的芳香療法中階班！在入門班一步一腳印地學習精油、純露、植物油等知識後，想要成為一位能夠幫助個案的芳療師，還需要更進一步的準備！
       </p>
@@ -138,9 +157,7 @@
     </template>
     <template #process>
       <ul>
-        <li>
-          美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階
-        </li>
+        <li>美國NAHA Level2 國際芳療師專業認證課程需完成：入門 + 中階 + 高階</li>
         <li>英國IFPA國際芳療師認證班需完成：入門 + 中階 + 高階 + 英式按摩</li>
       </ul>
     </template>
@@ -179,8 +196,7 @@
         <li>本課程費用 9,500 元，含課程費、講義、耗材</li>
         <li>課程共 24 小時</li>
         <li>
-          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩)
-          合報優惠及其他優惠活動，請加入<a
+          關於 二階(入+中)/三階(入+中+高)/四階(入+中+高+英式按摩) 合報優惠及其他優惠活動，請加入<a
             href="https://goo.gl/Khc3co"
             title="官方LINE"
             target="_blank"
@@ -219,10 +235,7 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li
-                        v-for="batch in datum.batches"
-                        :key="`batch-${batch.id}`"
-                      >
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -259,10 +272,7 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li
-                        v-for="batch in datum.batches"
-                        :key="`batch-${batch.id}`"
-                      >
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -299,10 +309,7 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li
-                        v-for="batch in datum.batches"
-                        :key="`batch-${batch.id}`"
-                      >
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -339,10 +346,7 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li
-                        v-for="batch in datum.batches"
-                        :key="`batch-${batch.id}`"
-                      >
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -379,10 +383,7 @@
                   <td>{{ `含開課日，共${datum.weeks}週` }}</td>
                   <td>
                     <ul class="date_list">
-                      <li
-                        v-for="batch in datum.batches"
-                        :key="`batch-${batch.id}`"
-                      >
+                      <li v-for="batch in datum.batches" :key="`batch-${batch.id}`">
                         {{ batch.startDate }}
                       </li>
                     </ul>
@@ -406,7 +407,7 @@ export default {
     CourseContent,
   },
   data: () => ({
-    title: "芳香療法認證課程中階班",
+    title: "芳療認證中階班 | 防疫優惠版",
     type: "芳療學苑",
     registry: "/course/signup",
     isShowSchedule: true,
