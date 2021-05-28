@@ -8,7 +8,7 @@
       aria-expanded="false"
       aria-controls="sidebar_collapse"
     >
-      {{ `${route.matched[1].meta.title}選單` }}<i class="fas fa-chevron-down"></i>
+      {{ `${$route.matched[1].meta.title}選單` }}<i class="fas fa-chevron-down"></i>
     </a>
     <div class="accordion collapse" :class="{ show: this.fullWidth > 992 }" id="sidebar_collapse">
       <div class="accordion-item" id="accordionExample">
