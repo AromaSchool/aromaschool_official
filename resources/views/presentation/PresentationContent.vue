@@ -49,7 +49,7 @@
         </div>
       </div>
       <q>{{ presentation.summary }}</q>
-      <div class="course_box" v-if="presentation.videos.length">
+      <div class="course_box" v-if="hasVideo(presentation.videos)">
         <h4 class="course_title"><i class="fas fa-play-circle"></i>影音花絮</h4>
         <div class="video_block">
           <template v-for="(video, index) in presentation.videos.slice(0, 2)">
@@ -86,6 +86,16 @@ export default {
   props: {
     presentation: {
       required: true,
+    },
+  },
+  methods: {
+    hasVideo(videos) {
+      for (const vidoe of videos) {
+        if (vidoe.url !== "") {
+          return true;
+        }
+      }
+      return false;
     },
   },
 };
