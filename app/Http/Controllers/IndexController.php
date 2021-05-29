@@ -7,6 +7,7 @@ use App\Service\ArticleService;
 use App\Service\EventService;
 use App\Service\TeacherService;
 use App\Service\NewsService;
+use App\Service\PresentationService;
 
 class IndexController extends Controller
 {
@@ -18,16 +19,20 @@ class IndexController extends Controller
 
     protected $teacherService;
 
+    protected $presentationService;
+
     public function __construct(
         ArticleService $articleService,
         EventService $eventService,
         NewsService $newsService,
+        PresentationService $presentationService,
         TeacherService $teacherService
     ) {
         $this->articleService = $articleService;
         $this->eventService = $eventService;
         $this->newsService = $newsService;
         $this->teacherService = $teacherService;
+        $this->presentationService = $presentationService;
     }
 
     public function __invoke(?string $path = null)
@@ -259,6 +264,17 @@ class IndexController extends Controller
                 $article = $this->articleService->getArticle(\intval($matches[0]));
                 $title = $article->title;
                 $image = $article->image ?? \config('app.url') . '/images/blog_default.svg';
+                break;
+
+            case 'presentation/category/all':
+                $title = '所有分類';
+                break;
+
+            case (\preg_match('/^presentation\/category\/[0-9]+$/', $path) ? true : false):
+                \preg_match('/[0-9]+$/', $path, $matches);
+                $presentation = $this->presentationService->getSymptom(\intval($matches[0]));
+                $title = $presentation->name;
+                $image = $presentation->image ?? \config('app.url') . '/images/student_default.svg';
                 break;
         }
 
