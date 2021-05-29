@@ -37,6 +37,7 @@ class Presentation extends Model
      * @var array
      */
     protected $hidden = [
+        'pivot',
         'visible',
         'semester_id',
         'created_at',

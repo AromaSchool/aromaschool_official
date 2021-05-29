@@ -19,7 +19,11 @@ class PresentationService
 
     public function getSymptoms(): Collection
     {
-        return Symptom::with('system')->get();
+        return Symptom::with('system')
+            ->whereHas('presentations', function ($q) {
+                $q->where('visible', true);
+            })
+            ->get();
     }
 
     public function getPresentation(int $id): Presentation
@@ -50,8 +54,13 @@ class PresentationService
                         }
                     });
             }])
-            ->whereHas('presentations', function ($q) {
-                $q->where('visible', true);
+            ->whereHas('presentations', function ($q) use ($symptomId) {
+                $q->where('visible', true)
+                    ->whereHas('symptoms', function ($q) use ($symptomId) {
+                        if ($symptomId) {
+                            $q->where('id', '=', $symptomId);
+                        }
+                    });
             });
 
         if ($orderDirection == 'asc') {

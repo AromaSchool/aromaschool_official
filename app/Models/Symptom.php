@@ -46,4 +46,9 @@ class Symptom extends Model
     {
         return $this->belongsTo(PhysiologicalSystem::class, 'system_id', 'id');
     }
+
+    public function presentations()
+    {
+        return $this->belongsToMany(Presentation::class, PresentationSymptom::class, 'symptom_id', 'presentation_id');
+    }
 }
