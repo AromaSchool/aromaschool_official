@@ -7,7 +7,7 @@ use App\Service\PresentationService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
-class GetPresentationController extends Controller
+class GetSymptomController extends Controller
 {
     protected $service;
 
@@ -29,7 +29,7 @@ class GetPresentationController extends Controller
                 'id' => $id,
             ],
             [
-                'id' => 'exists:presentations',
+                'id' => 'exists:symptoms',
             ]
         );
 
@@ -37,6 +37,6 @@ class GetPresentationController extends Controller
             return response()->json($validator->messages(), 400);
         }
 
-        return $this->service->getPresentation($id);
+        return $this->service->getSymptom($id);
     }
 }

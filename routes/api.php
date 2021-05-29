@@ -71,6 +71,7 @@ Route::prefix('presentations')->group(function () {
     });
     Route::prefix('symptoms')->group(function () {
         Route::get('/', Presentation\GetSymptomsController::class);
+        Route::get('/{id}', Presentation\GetSymptomController::class);
     });
     Route::get('/', Presentation\GetPresentationsController::class);
     Route::get('/{id}', Presentation\GetPresentationController::class);

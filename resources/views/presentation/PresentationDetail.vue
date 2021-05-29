@@ -11,6 +11,7 @@ import BackBtn from "@/views/component/BackBtn.vue";
 import { Presentation } from "@/js/api";
 
 export default {
+  inject: ["setTitle"],
   components: {
     PresentationContent,
     BackBtn,
@@ -43,6 +44,7 @@ export default {
       Presentation.get(this.$route.params.id).then((response) => {
         this.data = response;
         this.$route.meta.title = this.data.name;
+        this.setTitle(this.data.name);
       });
     },
   },

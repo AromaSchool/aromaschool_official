@@ -51,9 +51,10 @@
 </template>
 
 <script>
-import { PresentationSemester } from "@/js/api";
+import { PresentationSemester, Symptom } from "@/js/api";
 
 export default {
+  inject: ["setTitle"],
   name: "PresentationList",
   data: () => ({
     semesters: [],
@@ -63,9 +64,18 @@ export default {
   created() {
     // Fix: Event "infinite" called twice when in tabs and scroll position is not 0
     this.infiniteLoadingHandler = window._.debounce(this.getPresentationSemesters, 100);
+    if (this.$route.params.id) {
+      this.getSymptom(this.$route.params.id);
+    }
   },
   methods: {
     infiniteLoadingHandler() {},
+    getSymptom(id) {
+      return Symptom.get(id).then((response) => {
+        this.$route.meta.title = response.name;
+        this.setTitle(response.name);
+      });
+    },
     getPresentationSemesters($state) {
       PresentationSemester.getList({
         lastIndex: this.lastIndex,

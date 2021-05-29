@@ -12,6 +12,12 @@ class Symptom {
         this.category = system ? new PhysiologicalSystems(system) : {};
     }
 
+    static async get(id) {
+        return client.get(`/presentations/symptoms/${id}`).then(response => {
+            return new Symptom(response.data);
+        })
+    }
+
     static async getList() {
         return client.get('/presentations/symptoms').then(response => {
             return response.data.map(item => {
