@@ -32,6 +32,7 @@ class SignUpCourseController extends Controller
                 'mail' => 'required|email',
                 'courses' => 'required|array',
                 'courses.*' => 'exists:courses,id',
+                'recaptcha' => 'required|recaptcha',
             ]
         );
 
