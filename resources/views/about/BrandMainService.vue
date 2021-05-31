@@ -30,11 +30,11 @@
             <li>ACO 有機認證精油、基底油、純露</li>
             <li>
               <a
-                href="https://www.aromaharvest.com.tw/aacd.php"
+                href="https://admin.aromaschool.com.tw/storage/file/price_list.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="AACD 產品檢測報告查詢系統"
-                >AACD 產品檢測報告查詢系統</a
+                title="產品價目表"
+                >產品價目表</a
               >
             </li>
           </ul>

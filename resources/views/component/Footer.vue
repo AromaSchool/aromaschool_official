@@ -40,22 +40,39 @@
                 class="footer_nav_link"
                 >芳療學苑</router-link
               >
-              <router-link to="/course/treatment/british" title="療程學苑" class="footer_nav_link"
+              <router-link
+                to="/course/treatment/british"
+                title="療程學苑"
+                class="footer_nav_link"
                 >療程學苑</router-link
               >
-              <router-link to="/course/online/elementary" title="網路學苑" class="footer_nav_link"
+              <router-link
+                to="/course/online/elementary"
+                title="網路學苑"
+                class="footer_nav_link"
                 >網路學苑</router-link
               >
-              <router-link to="/blog/category/all" title="學苑周刊" class="footer_nav_link"
+              <router-link
+                to="/blog/category/all"
+                title="學苑周刊"
+                class="footer_nav_link"
                 >學苑周刊</router-link
               >
             </li>
             <li>
-              <router-link to="/contact" title="聯絡我們" class="footer_nav_link"
+              <router-link
+                to="/contact"
+                title="聯絡我們"
+                class="footer_nav_link"
                 >聯絡我們</router-link
               >
-              <router-link to="/faq" title="常見問題" class="footer_nav_link">常見問題</router-link>
-              <router-link to="/recruit" title="人才招募" class="footer_nav_link"
+              <router-link to="/faq" title="常見問題" class="footer_nav_link"
+                >常見問題</router-link
+              >
+              <router-link
+                to="/recruit"
+                title="人才招募"
+                class="footer_nav_link"
                 >人才招募</router-link
               >
             </li>
@@ -67,6 +84,14 @@
                 rel="noopener noreferrer"
                 class="footer_nav_link"
                 >沐禾 AromaHarvest</a
+              >
+              <a
+                href="https://admin.aromaschool.com.tw/storage/file/price_list.pdf"
+                title="產品價目表"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer_nav_link"
+                >產品價目表</a
               >
               <a
                 href="https://aacd.aromaschool.com.tw/"
@@ -86,7 +111,9 @@
             <li><i class="fas fa-fax"></i>02-27113370</li>
             <li>
               <i class="fas fa-envelope"></i
-              ><a href="mailto:aroma@aromaharvest.com.tw" title="aroma@aromaharvest.com.tw"
+              ><a
+                href="mailto:aroma@aromaharvest.com.tw"
+                title="aroma@aromaharvest.com.tw"
                 >aroma@aromaharvest.com.tw</a
               >
             </li>
@@ -126,7 +153,11 @@
             title="Facebook"
             ><i class="fab fa-facebook-f"></i
           ></a>
-          <a href="https://goo.gl/Khc3co" target="_blank" rel="noopener noreferrer" title="LINE"
+          <a
+            href="https://goo.gl/Khc3co"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LINE"
             ><i class="fab fa-line"></i
           ></a>
           <a
@@ -145,7 +176,9 @@
           ></a>
         </div>
         <hr class="footer" />
-        <div class="copyright">禾場國際芳療學苑版權所有 2021 ©All rights reserved.</div>
+        <div class="copyright">
+          禾場國際芳療學苑版權所有 2021 ©All rights reserved.
+        </div>
       </div>
     </footer>
     <section class="fixed_block">
@@ -167,7 +200,10 @@ export default {
   methods: {
     showBtn() {
       let goTopBtn = document.getElementById("goTop");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
         goTopBtn.classList.add("show");
       } else {
         goTopBtn.classList.remove("show");
