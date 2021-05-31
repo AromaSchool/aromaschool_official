@@ -248,6 +248,7 @@ export default {
   data: () => ({
     courses: COURSES,
     courseSignUp: new CourseSignUp(),
+    courseSelected: false,
     error: "至少勾選一個課程",
   }),
   mounted() {
@@ -256,6 +257,10 @@ export default {
   methods: {
     signUp(e) {
       e.preventDefault();
+
+      if (this.courseSelected) {
+        this.$refs.course.focus();
+      }
 
       this.$swal.fire({
         title: "送出中",
@@ -284,6 +289,7 @@ export default {
       const checkbox = e.target;
       if (checkbox.checked) {
         this.$refs.course.setCustomValidity("");
+        this.courseSelected = true;
         this.courseSignUp.courses.push(checkbox.value);
       } else {
         const index = this.courseSignUp.courses.indexOf(checkbox.value);
@@ -293,6 +299,7 @@ export default {
 
         if (!this.courseSignUp.courses.length) {
           this.$refs.course.setCustomValidity(this.error);
+          this.courseSelected = false;
         }
       }
     },
