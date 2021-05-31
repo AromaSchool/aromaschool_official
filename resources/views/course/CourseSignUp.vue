@@ -322,18 +322,20 @@ export default {
         },
       });
 
-      this.courseSignUp.signUp().then(() => {
-        this.$swal.close();
-        this.$swal
-          .fire({
-            title: "報名完成",
-            icon: "success",
-            timer: 2000,
-            showConfirmButton: false,
-          })
-          .then(() => {
-            this.$router.push({ path: "/course/finish" });
-          });
+      this.$recaptcha("login").then((token) => {
+        this.courseSignUp.signUp(token).then(() => {
+          this.$swal.close();
+          this.$swal
+            .fire({
+              title: "報名完成",
+              icon: "success",
+              timer: 2000,
+              showConfirmButton: false,
+            })
+            .then(() => {
+              this.$router.push({ path: "/course/finish" });
+            });
+        });
       });
     },
     selectCourse(e) {

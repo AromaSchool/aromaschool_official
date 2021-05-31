@@ -159,13 +159,14 @@ class CourseSignUp {
         this.courses = courses ? courses : [];
     }
 
-    async signUp() {
+    async signUp(token) {
         return client.post('/courses/signup', {
             name: this.name,
             phone: this.phone,
             mail: this.mail,
             comment: this.comment,
             courses: this.courses,
+            recaptcha: token,
         })
     }
 }
