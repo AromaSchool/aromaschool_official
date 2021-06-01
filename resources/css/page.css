@@ -1834,6 +1834,51 @@ section.presentation .blog_container .content_center {
     margin: 40px auto 0;
 }
 
+/* 常見問題 */
+.faq {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+section.faq_list {
+    width: 80%;
+    line-height: 1.7;
+}
+
+.faq_list .accordion-button {
+    color: #707179;
+    font-weight: 400;
+    line-height: 1.7;
+    border-left: none;
+    border-right: none;
+}
+
+.faq_list .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.faq_list .accordion-button:focus {
+    border-color: rgb(201 181 165 / 25%);
+    box-shadow: 0 0 0 0.25rem rgb(201 181 165 / 25%);
+}
+
+.faq_list .accordion-button:not(.collapsed) {
+    color: #707179;
+    background: transparent;
+
+}
+
+.faq_list .accordion-collapse {
+    border-left: none;
+    border-right: none;
+}
+
+.faq_list .accordion-body {
+    background: #FFF9F3;
+    font-weight: 300;
+
+}
+
 @media screen and (max-width: 1400px) {
 
     /* 香氣發表會 */
@@ -2025,6 +2070,11 @@ section.presentation .blog_container .content_center {
 
     .list_li {
         width: calc(20% - 10px);
+    }
+
+    /* 常見問題 */
+    section.faq_list {
+        width: 100%;
     }
 }
 

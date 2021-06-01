@@ -49,6 +49,7 @@ const Presentation = () => import( /* webpackPrefetch: true */ /* webpackChunkNa
 const PresentationList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/presentation/PresentationList.vue");
 const PresentationDetail = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/presentation/PresentationDetail.vue");
 const Faq = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Faq.vue");
+const FaqList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/faq/FaqList.vue");
 
 const routes = [{
         path: "/",
@@ -465,13 +466,22 @@ const routes = [{
     },
     {
         path: "/faq",
+        redirect: '/faq/category/1',
         name: "faq",
-        component: ComingSoon,
+        component: Faq,
         meta: {
             title: "常見問題",
             titleEn: "Q&A",
             bannerImage: "images/banner-3.jpg"
         },
+        children: [{
+            path: 'category/:id(\\d+)',
+            name: "faqCategory",
+            component: FaqList,
+            meta: {
+                title: ""
+            },
+        }, ]
     },
     {
         path: "/recruit",
