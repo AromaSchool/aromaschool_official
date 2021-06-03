@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 class NewsService
 {
-    public function getNewsCategory(int $id): NewsCategory
+    public function getNewsCategory(int $id): ?NewsCategory
     {
         return NewsCategory::find($id);
     }

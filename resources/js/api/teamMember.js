@@ -24,6 +24,7 @@ class TeamMember {
                     return new TeamMember(item);
                 });
             }
+            return [];
         });
     }
 }
@@ -44,6 +45,7 @@ class TeamMemberCategory {
                     return new TeamMemberCategory(item);
                 });
             }
+            return [];
         });
     }
 }

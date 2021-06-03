@@ -76,3 +76,10 @@ Route::prefix('presentations')->group(function () {
     Route::get('/', Presentation\GetPresentationsController::class);
     Route::get('/{id}', Presentation\GetPresentationController::class);
 });
+
+Route::prefix('questions')->group(function () {
+    Route::prefix('categories')->group(function () {
+        Route::get('/', Question\GetQuestionCategoriesController::class);
+    });
+    Route::get('/', Question\GetQuestionsController::class);
+});

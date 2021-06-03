@@ -117,13 +117,17 @@ class IndexController extends Controller
 
             case 'about/teamMember':
                 $teacher = $this->teacherService->getTeacher(1);
-                $title = $teacher->name;
+                if ($teacher) {
+                    $title = $teacher->name;
+                }
                 break;
 
             case (\preg_match('/^about\/teamMember\/[0-9]+$/', $path) ? true : false):
                 \preg_match('/[0-9]+$/', $path, $matches);
                 $teacher = $this->teacherService->getTeacher(\intval($matches[0]));
-                $title = $teacher->name;
+                if ($teacher) {
+                    $title = $teacher->name;
+                }
                 break;
 
             case 'news/category/all':
@@ -133,13 +137,17 @@ class IndexController extends Controller
             case (\preg_match('/^news\/category\/[0-9]+$/', $path) ? true : false):
                 \preg_match('/[0-9]+$/', $path, $matches);
                 $category = $this->newsService->getNewsCategory(\intval($matches[0]));
-                $title = "{$category->name}公告";
+                if ($category) {
+                    $title = "{$category->name}公告";
+                }
                 break;
 
             case (\preg_match('/^news\/[0-9]+$/', $path) ? true : false):
                 \preg_match('/[0-9]+$/', $path, $matches);
                 $news = $this->newsService->getNews(\intval($matches[0]));
-                $title = $news->title;
+                if ($news) {
+                    $title = $news->title;
+                }
                 break;
 
             case 'course/aromatherapy/elementary':
@@ -256,14 +264,18 @@ class IndexController extends Controller
             case (\preg_match('/^blog\/category\/[0-9]+$/', $path) ? true : false):
                 \preg_match('/[0-9]+$/', $path, $matches);
                 $category = $this->articleService->getArticleCategory(\intval($matches[0]));
-                $title = $category->name;
+                if ($category) {
+                    $title = $category->name;
+                }
                 break;
 
             case (\preg_match('/^blog\/[0-9]+$/', $path) ? true : false):
                 \preg_match('/[0-9]+$/', $path, $matches);
                 $article = $this->articleService->getArticle(\intval($matches[0]));
-                $title = $article->title;
-                $image = $article->image ?? \config('app.url') . '/images/blog_default.svg';
+                if ($article) {
+                    $title = $article->title;
+                    $image = $article->image ?? \config('app.url') . '/images/blog_default.svg';
+                }
                 break;
 
             case 'presentation/category/all':
@@ -273,8 +285,18 @@ class IndexController extends Controller
             case (\preg_match('/^presentation\/category\/[0-9]+$/', $path) ? true : false):
                 \preg_match('/[0-9]+$/', $path, $matches);
                 $presentation = $this->presentationService->getSymptom(\intval($matches[0]));
-                $title = $presentation->name;
-                $image = $presentation->image ?? \config('app.url') . '/images/student_default.svg';
+                if ($presentation) {
+                    $title = $presentation->name;
+                    $image = $presentation->image ?? \config('app.url') . '/images/student_default.svg';
+                }
+                break;
+
+            case (\preg_match('/^faq\/category\/[0-9]+$/', $path) ? true : false):
+                $title = '常見問題';
+                break;
+
+            case 'recruit':
+                $title = '人才招募';
                 break;
         }
 

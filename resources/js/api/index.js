@@ -31,6 +31,10 @@ import {
     PresentationSemester,
     Presentation,
 } from './presentation';
+import {
+    Question,
+    QuestionCategory,
+} from "./question";
 
 export {
     Event,
@@ -56,4 +60,6 @@ export {
     PhysiologicalSystems,
     PresentationSemester,
     Presentation,
+    Question,
+    QuestionCategory,
 };

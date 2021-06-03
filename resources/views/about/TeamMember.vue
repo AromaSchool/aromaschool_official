@@ -61,6 +61,9 @@ export default {
   methods: {
     getTeamMember() {
       TeamMember.getList().then((item) => {
+        if (!item.length) {
+          this.$router.push({ path: "/about/teamMember/404" });
+        }
         this.item = item;
       });
     },

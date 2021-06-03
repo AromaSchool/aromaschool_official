@@ -2,7 +2,9 @@
   <section class="faq">
     <div class="container blog_container">
       <FaqSidebar></FaqSidebar>
-      <router-view></router-view>
+      <keep-alive>
+        <router-view :key="$route.fullPath"></router-view>
+      </keep-alive>
     </div>
   </section>
 </template>

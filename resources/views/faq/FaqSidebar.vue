@@ -10,24 +10,14 @@
     >
       常見問題選單<i class="fas fa-chevron-down"></i>
     </a>
-    <div class="accordion collapse" :class="{ show: this.fullWidth > 992 }" id="sidebar_collapse">
+    <div class="accordion collapse" :class="{ show: fullWidth > 992 }" id="sidebar_collapse">
       <div class="accordion-item" id="accordionExample">
         <div class="accordion-body">
           <ul>
-            <li class="sidebar_list">
-              <router-link to="/faq/category/1" title="課程相關">課程相關</router-link>
-            </li>
-            <li class="sidebar_list">
-              <router-link to="/faq/category/2" title="認證申請">認證申請</router-link>
-            </li>
-            <li class="sidebar_list">
-              <router-link to="/faq/category/3" title="學苑相關">學苑相關</router-link>
-            </li>
-            <li class="sidebar_list">
-              <router-link to="/faq/category/4" title="產品相關">產品相關</router-link>
-            </li>
-            <li class="sidebar_list">
-              <router-link to="/faq/category/5" title="其他">其他</router-link>
+            <li class="sidebar_list" v-for="datum in data" :key="datum.id">
+              <router-link :to="`/faq/category/${datum.id}`" :title="datum.name">{{
+                datum.name
+              }}</router-link>
             </li>
           </ul>
         </div>
@@ -37,24 +27,23 @@
 </template>
 
 <script>
+import { QuestionCategory } from "@/js/api";
+
 export default {
-  data() {
-    return {
-      fullWidth: 0,
-      fullHeight: 0,
-    };
+  data: () => ({
+    data: [],
+  }),
+  computed: {
+    fullWidth: () => window.innerWidth,
   },
   created() {
-    window.addEventListener("resize", this.windowResize);
-    this.windowResize();
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.windowResize);
+    this.getCategories();
   },
   methods: {
-    windowResize(e) {
-      this.fullWidth = window.innerWidth;
-      this.fullHeight = window.innerHeight;
+    getCategories() {
+      QuestionCategory.getList().then((response) => {
+        this.data = response;
+      });
     },
   },
 };

@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 class ArticleService
 {
-    public function getArticleCategory(int $id): ArticleCategory
+    public function getArticleCategory(int $id): ?ArticleCategory
     {
         return ArticleCategory::find($id);
     }
