@@ -45,9 +45,7 @@
             :aria-labelledby="`heading_${datum.id}`"
             data-bs-parent="#faq_list"
           >
-            <div class="accordion-body">
-              {{ datum.answer }}
-            </div>
+            <div class="accordion-body" v-html="datum.answer"></div>
           </div>
         </div>
       </template>
