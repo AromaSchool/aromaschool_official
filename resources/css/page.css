@@ -1879,6 +1879,96 @@ section.faq_list {
 
 }
 
+/* 人才招募 */
+section.recruit {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.recruit .apply_text {
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.recruit_box {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 50px;
+}
+
+.recruit_box picture {
+    margin-right: 70px;
+    box-shadow: 20px 20px 0 #f9efe5;
+}
+
+.recruit_box img {
+    width: 100%;
+}
+
+.recruit_info {
+    width: 100%;
+}
+
+.recruit_info h2 {
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #9c9da8;
+}
+
+.recruit_info h2 i {
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.recruit_info .info_box {
+    margin-bottom: 25px;
+}
+
+.recruit_info .title {
+    position: relative;
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.recruit_info .title::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 20px;
+    background: #767691;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.recruit_info ol {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* .recruit_info li {
+    position: relative;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.recruit_info li::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #C9B5A5;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
 @media screen and (max-width: 1400px) {
 
     /* 香氣發表會 */
@@ -2075,6 +2165,17 @@ section.faq_list {
     /* 常見問題 */
     section.faq_list {
         width: 100%;
+    }
+
+    /* 人才招募 */
+    .recruit_box {
+        flex-wrap: wrap;
+    }
+
+    .recruit_box picture {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
     }
 }
 

@@ -50,6 +50,7 @@ const PresentationList = () => import( /* webpackPrefetch: true */ /* webpackChu
 const PresentationDetail = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/presentation/PresentationDetail.vue");
 const Faq = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Faq.vue");
 const FaqList = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/faq/FaqList.vue");
+const Recruit = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Recruit.vue");
 
 const routes = [{
         path: "/",
@@ -486,7 +487,7 @@ const routes = [{
     {
         path: "/recruit",
         name: "recruit",
-        component: ComingSoon,
+        component: Recruit,
         meta: {
             title: "人才招募",
             titleEn: "RECRUIT",
