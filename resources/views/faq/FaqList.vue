@@ -1,53 +1,58 @@
 <template>
   <section class="faq_list">
     <div class="accordion" id="faq_list">
-      <div class="accordion-item" v-if="data.length">
-        <h2 class="accordion-header" :id="`heading_${data[0].id}`">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            :data-bs-target="`#question_${data[0].id}`"
-            aria-expanded="true"
-            :aria-controls="`question_${data[0].id}`"
+      <template v-if="data.length">
+        <div class="accordion-item">
+          <h2 class="accordion-header" :id="`heading_${data[0].id}`">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              :data-bs-target="`#question_${data[0].id}`"
+              aria-expanded="true"
+              :aria-controls="`question_${data[0].id}`"
+            >
+              {{ data[0].question }}
+            </button>
+          </h2>
+          <div
+            :id="`question_${data[0].id}`"
+            class="accordion-collapse collapse show"
+            :aria-labelledby="`heading_${data[0].id}`"
+            data-bs-parent="#faq_list"
           >
-            {{ data[0].question }}
-          </button>
-        </h2>
-        <div
-          :id="`question_${data[0].id}`"
-          class="accordion-collapse collapse show"
-          :aria-labelledby="`heading_${data[0].id}`"
-          data-bs-parent="#faq_list"
-        >
-          <div class="accordion-body">
-            {{ data[0].answer }}
+            <div class="accordion-body">
+              {{ data[0].answer }}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="accordion-item" v-for="datum in data.slice(1)" :key="datum.id">
-        <h2 class="accordion-header" :id="`heading_${datum.id}`">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            :data-bs-target="`#question_${datum.id}`"
-            aria-expanded="true"
-            :aria-controls="`question_${datum.id}`"
+        <div class="accordion-item" v-for="datum in data.slice(1)" :key="datum.id">
+          <h2 class="accordion-header" :id="`heading_${datum.id}`">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              :data-bs-target="`#question_${datum.id}`"
+              aria-expanded="true"
+              :aria-controls="`question_${datum.id}`"
+            >
+              {{ datum.question }}
+            </button>
+          </h2>
+          <div
+            :id="`question_${datum.id}`"
+            class="accordion-collapse collapse"
+            :aria-labelledby="`heading_${datum.id}`"
+            data-bs-parent="#faq_list"
           >
-            {{ datum.question }}
-          </button>
-        </h2>
-        <div
-          :id="`question_${datum.id}`"
-          class="accordion-collapse collapse"
-          :aria-labelledby="`heading_${datum.id}`"
-          data-bs-parent="#faq_list"
-        >
-          <div class="accordion-body">
-            {{ datum.answer }}
+            <div class="accordion-body">
+              {{ datum.answer }}
+            </div>
           </div>
         </div>
+      </template>
+      <div class="text-center" v-else>
+        <p>暫無資料</p>
       </div>
     </div>
   </section>

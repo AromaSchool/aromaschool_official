@@ -44,6 +44,7 @@ class Question {
                     return new Question(item);
                 });
             }
+            return [];
         })
     }
 }
