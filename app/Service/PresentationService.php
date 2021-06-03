@@ -17,7 +17,7 @@ class PresentationService
         return PhysiologicalSystem::all();
     }
 
-    public function getSymptom(int $id): Symptom
+    public function getSymptom(int $id): ?Symptom
     {
         return Symptom::find($id);
     }

@@ -71,10 +71,14 @@ export default {
   methods: {
     infiniteLoadingHandler() {},
     getSymptom(id) {
-      return Symptom.get(id).then((response) => {
-        this.$route.meta.title = response.name;
-        this.setTitle(response.name);
-      });
+      return Symptom.get(id)
+        .then((response) => {
+          this.$route.meta.title = response.name;
+          this.setTitle(response.name);
+        })
+        .catch(() => {
+          this.$router.push({ path: "/404" });
+        });
     },
     getPresentationSemesters($state) {
       PresentationSemester.getList({

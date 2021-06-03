@@ -68,9 +68,13 @@ export default {
   },
   methods: {
     getQuestions() {
-      Question.getList(this.$route.params.id).then((response) => {
-        this.data = response;
-      });
+      Question.getList(this.$route.params.id)
+        .then((response) => {
+          this.data = response;
+        })
+        .catch(() => {
+          this.$router.push({ path: "/404" });
+        });
     },
   },
 };

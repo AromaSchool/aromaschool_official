@@ -15,7 +15,7 @@ class TeacherService
         return TeacherCategory::all();
     }
 
-    public function getTeacher(int $id): Teacher
+    public function getTeacher(int $id): ?Teacher
     {
         return Teacher::find($id);
     }
