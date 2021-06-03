@@ -21,9 +21,7 @@
             :aria-labelledby="`heading_${data[0].id}`"
             data-bs-parent="#faq_list"
           >
-            <div class="accordion-body">
-              {{ data[0].answer }}
-            </div>
+            <div class="accordion-body" v-html="data[0].answer"></div>
           </div>
         </div>
         <div class="accordion-item" v-for="datum in data.slice(1)" :key="datum.id">
