@@ -27,30 +27,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="accordion-item">
-        <h2 class="accordion-header" id="heading_2">
-          <button
-            class="accordion-button collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#question_2"
-            aria-expanded="false"
-            aria-controls="question_2"
-          >
-            如果報名後因為時間關係臨時無法上課怎麼辦？
-          </button>
-        </h2>
-        <div
-          id="question_2"
-          class="accordion-collapse collapse"
-          aria-labelledby="heading_2"
-          data-bs-parent="#faq_list"
-        >
-          <div class="accordion-body">
-            針對這個問題，因為禾場課程開班固定，因此建議您可以安排至其它梯次上課，以更動一次為主。
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 </template>
