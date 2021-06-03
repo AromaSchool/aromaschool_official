@@ -1876,7 +1876,10 @@ section.faq_list {
 .faq_list .accordion-body {
     background: #FFF9F3;
     font-weight: 300;
+}
 
+.faq_list .accordion-body p:last-child {
+    margin-bottom: 0;
 }
 
 /* 人才招募 */
@@ -1951,23 +1954,6 @@ section.recruit {
     font-size: 15px;
     font-weight: 300;
 }
-
-/* .recruit_info li {
-    position: relative;
-    list-style: none;
-    padding-left: 20px;
-}
-
-.recruit_info li::before {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #C9B5A5;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-} */
 
 @media screen and (max-width: 1400px) {
 
