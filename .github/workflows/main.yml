@@ -18,7 +18,7 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v2
         with:
-          path: '**/vendor'
+          path: "**/vendor"
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             ${{ runner.os }}-composer-
@@ -74,7 +74,7 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v2
         with:
-          path: '**/node_modules'
+          path: "**/node_modules"
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
@@ -90,7 +90,7 @@ jobs:
       - name: Deploy FTP
         uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.1
         env:
-          DIST_TARGET_DIR: official.aromaharvest.com.tw
+          DIST_TARGET_DIR: public_html
         with:
           ftp_host: ${{ secrets.FTP_HOST }}
           ftp_username: ${{ secrets.FTP_USERNAME }}
