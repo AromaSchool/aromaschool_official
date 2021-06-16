@@ -35,12 +35,13 @@ class IndexController extends Controller
         $this->presentationService = $presentationService;
     }
 
-    public function __invoke(?string $path = null)
+    public function __invoke(Request $request, ?string $path = null)
     {
         $image = \config('app.url') . '/images/og_image.jpg';
         $author = \config('services.meta.author');
         $title = \config('services.meta.title');
         $description = null;
+        $jsonld = null;
 
         switch ($path) {
             case null:
@@ -155,6 +156,16 @@ class IndexController extends Controller
                 $description = '市面上的精油品牌、芳療師頭銜琳瑯滿目已經是一股熱潮，但為什麼常常在專櫃詢問，卻得不到自己要的答案？'
                 . '為什麼我感覺不到精油的神奇療效？精油是大自然生命力的精華如何才能運用在自己身上？無論你是精油新手，或是接觸精油好一陣子的朋友，'
                 . '學習芳療的第一步至關重要，選擇適合您的課程以及正確的教學機構，將決定您是否能夠成為一個優秀的芳療';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/aromatherapy/intermediate':
@@ -162,6 +173,16 @@ class IndexController extends Controller
                 $description = '完成了芳香療法入門班之後的下一步，就是芳香療法認證系列課程的芳香療法中階班！在入門班一步一腳印地學習精油、'
                 . '純露、植物油等知識後，想要成為一位能夠幫助個案的芳療師，還需要更進一步的準備！中階課程之中，'
                 . '延續美國NAHA及英國IFPA芳療師協會的精神，及芳療入門課程的基礎，透過分析植物的解剖構造，我們在芳香療法中階班更進一步';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/aromatherapy/advanced':
@@ -170,6 +191,16 @@ class IndexController extends Controller
                 . '甚至想將這樣的興趣結合在工作之中。學習芳香療法，每個人都有她獨特的動機，在國外，'
                 . '很多受過專業訓練的芳香療法執行師選擇讓它成為一種工作、一種服務，但也有許多人將它視為一種珍貴的特質。許多芳療師都有相同的經驗'
                 . '，當旁邊朋友們發現他們';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/aromatherapy/clinical':
@@ -177,6 +208,16 @@ class IndexController extends Controller
                 $description = '2006年前後，芳療圈開始討論作為臨床、職業或是真正能夠達到專業水準的芳療師，以200個小時作為Level2訓練標準是否足夠'
                 . '，於是提出全新架構的Level3這樣的檢討聲浪在NAHA、CFA、IFPA、IFA各大芳療協會皆有著相當的聲量！'
                 . '在2017年NAHA正式將Level3的臨床芳療師的專業標準進入委員會的討論，並於2';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/treatment/british':
@@ -184,6 +225,16 @@ class IndexController extends Controller
                 $description = '力道輕柔節奏和緩容易上手，是兼具舒壓及療效的入門按摩療法。在眾多按摩技法中，英式芳療按摩手法以淋巴引流的架構為主'
                 . '，同時帶入部分肌肉按摩的手法，因此按摩時不將力道集中在某一點，而是順淋巴的方向撫按，不但可以達到淋巴引流的排毒效果，'
                 . '同時也能在局部肌肉帶來舒緩的效果。英式芳療按摩手法輕柔和緩，不帶傳統按摩的侵略性，但仍然具有';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/treatment/lymphatic':
@@ -191,6 +242,16 @@ class IndexController extends Controller
                 $description = '梳理身體免疫網絡喚起自癒本能，是輕如羽毛般撫觸的進階按摩法。淋巴按摩源自西元1930年代歐洲EmileVodder醫師'
                 . '，為幫助特定淋巴系統失調疾患而研發的一種徒手治療，運用範圍非常廣泛，包括肌膚健康、運動傷害、偏頭痛、減脂，水腫、身心疲倦等等。'
                 . '淋巴系統是人體內重要的免疫及排毒樞紐，一旦運行不暢，淋巴液中的老舊廢棄物也會';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/treatment/facial':
@@ -198,6 +259,16 @@ class IndexController extends Controller
                 $description = '調理臉部肌理釋放頭顱壓力，是安撫生命運作核心的局部按摩法。視覺、聽覺、味覺和嗅覺等重要感官神經皆位於頭臉部，'
                 . '它的重要性在於表達，同時直觀反應出我們的身心狀態。芳香療法對於使用於淺層臉部與深層頭顱有不同對應處理方式，'
                 . '臉部除了可針對肌膚問題選用適當精油給予深層的保養代謝，並且讓已經脆弱的部分得以重建，回復到原生健康的肌膚。';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/treatment/pregnancy':
@@ -205,6 +276,16 @@ class IndexController extends Controller
                 $description = '減緩孕期媽媽身心不適感，是提升專科知識及技能的按摩法。美國邁阿密醫學院肢體碰觸研究中心於1982年開始，'
                 . '藉由科學化的研究發表於國際權威期刊，不斷提出按摩、芳療、精油對於孕婦各種身心症狀有明顯的改善與幫助的證明。在歐美國家，'
                 . '懷孕婦女因治療方法的快速進步，得以早一步受益於按摩治療應用在懷孕過程之中，降低了各種懷孕的風險與身';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/treatment/myofascial':
@@ -212,6 +293,16 @@ class IndexController extends Controller
                 $description = '解開長期反復疼痛的肌肉，是緩解身體酸痛症狀的治療按摩。為什麼肩、頸、背、肘、腰、膝的疼痛，即使已經治療多次，'
                 . '仍然還是一再反覆發作？雖然知道自己姿勢不正確，但稍不留意就很容易彎腰、駝背、拱肩，這些問題的根源都是因為「肌筋膜」緊繃所造成的，'
                 . '如果包覆肌肉、肌腱和骨骼的「肌筋膜」沒有舒緩展開，就會很快回覆到緊繃狀態拉扯肌肉，自';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/treatment/swedish':
@@ -219,6 +310,16 @@ class IndexController extends Controller
                 $description = '源自臨床醫療具有學理基礎，是調理肌肉施力不當的正統按摩手法。十九世紀瑞典治療師PerHenrikLing為調理運動員肌肉不適，' .
                 '恢復彈性和增進爆發力而發展出一套「按摩與運動系統」，推廣後得到國際認同，而將之稱為「瑞典式按摩與運動療法」，'
                 . '這便是現今我們使用瑞典式按摩的雛型。瑞典式按摩以肌肉生理為基礎，主要是順應表層肌肉方向';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/treatment/meridian':
@@ -226,6 +327,16 @@ class IndexController extends Controller
                 $description = '梳經理脈順氣調血，是傳承東方古老治療智慧的按摩法。有別於西方醫學重視人體各器官功能運作是否正常，東方中醫則是從'
                 . '「經絡暢通」、「氣血平衡」來論斷健康。中醫所講的「經絡」不等同於西醫所指的血管、淋巴管等有形的通路，而是遍布於全身，'
                 . '由經脈及絡脈組成的網絡系統。近代科學家更透過研究得知經絡是包覆於肌肉骨骼結締組織的筋膜上。從中';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/online/elementary':
@@ -233,6 +344,16 @@ class IndexController extends Controller
                 $description = '《禾場國際芳療學苑》有錄影直播課程囉！不必舟車勞頓，在家也能學習專業芳香療法課程！疫情影響喚醒大家對身心靈照護的重視'
                 . '，越來越多人懂得用精油來維持健康。但市面上的精油品牌琳瑯滿目，卻不知道該如何選擇？為什麼買了精油卻感覺不到它神奇療效？'
                 . '要如何運用精油能量在自己和家人身上？想要認識芳香療法卻苦無時間學習？如果你有以上煩惱，';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/online/intermediate':
@@ -240,6 +361,16 @@ class IndexController extends Controller
                 $description = '進階自己《禾場國際芳療學苑》錄影直播課程中階班，不用擔心群聚壓力，讓你在家也能進階專業芳香療法課程！'
                 . '完成了芳香療法入門課程之後，下一步，就是進階芳香療法認證系列課程中階班。在入門班學習精油、純露、植物油等基礎知識後，'
                 . '想要成為一位能夠幫助個案的芳療師，還需要更進一步的學習！中階課程之中，延續美國NAHA及英國IFPA芳療';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/online/all':
@@ -247,6 +378,16 @@ class IndexController extends Controller
                 $description = '芳療線上學習時代來臨！用最效率的方式學習，釋放內心的潛能。人生在不同階段都有不同發展與成長需求，'
                 . '學習不需要理由更不分年齡。喜愛精油的你是否曾經思考過，除了本業你還擁有什麼?現在就是你晉升專業芳療技能的最好時機，'
                 . '《禾場國際芳療學苑》Podcast 線上全階認證課程，內容以美國NAHA芳療師協會研究多年的系統為架構，融會成立20年以';
+                $jsonld = [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'Course',
+                    'name' => $title,
+                    'description' => $description,
+                    'provider' => [
+                        '@type' => 'Organization',
+                        'name' => $author,
+                    ],
+                ];
                 break;
 
             case 'course/signup':
@@ -275,6 +416,28 @@ class IndexController extends Controller
                 if ($article) {
                     $title = $article->title;
                     $image = $article->image ?? \config('app.url') . '/images/blog_default.svg';
+
+                    $jsonld = [
+                        '@context' => 'https://schema.org',
+                        '@type' => 'BlogPosting',
+                        'headline' => $title,
+                        'image' => [$image],
+                        'author' => [
+                            '@type' => 'Person',
+                            'name' => $article->authorName,
+                        ],
+                        'publisher' => [
+                            '@type' => 'Organization',
+                            'name' => $author,
+                            'logo' => [
+                                '@type' => 'ImageObject',
+                                'url' => \config('app.url') . '/images/logo_big.svg'
+                            ],
+                        ],
+                        'datePublished' => $article->createdAt,
+                        'dateModified' => $article->updatedAt,
+                        'mainEntityOfPage' => $request->url(),
+                    ];
                 }
                 break;
 
@@ -305,6 +468,7 @@ class IndexController extends Controller
             'author' => $author,
             'title' => $title,
             'description' => $description,
+            'jsonld' => $jsonld,
         ]);
     }
 }

@@ -91,6 +91,13 @@
 
     <div id="app"></div>
 
+    <!-- Structured Data -->'
+    @if ($jsonld)
+    <script type="application/ld+json">
+      {!! \json_encode($jsonld, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}
+    </script>
+    @endif
+
     @if( config('app.env') == 'local')
     <script src="http://localhost:35729/livereload.js"></script>
     @else
