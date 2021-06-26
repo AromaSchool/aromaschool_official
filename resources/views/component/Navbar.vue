@@ -64,12 +64,9 @@
             </ul>
           </li>
           <li class="nav-item">
-            <router-link
-              to="/news/category/all"
-              :title="routes[2].meta.title"
-              class="nav-link"
-              >{{ routes[2].meta.title }}</router-link
-            >
+            <router-link to="/news/category/all" :title="routes[2].meta.title" class="nav-link">
+              {{ routes[2].meta.title }}
+            </router-link>
           </li>
           <li class="nav-item dropdown">
             <router-link
@@ -181,41 +178,65 @@
                   </li>
                 </ul>
               </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <router-link
+              to="/online-course/elementary-video"
+              :title="routes[4].meta.title"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >{{ routes[4].meta.title }}</router-link
+            >
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <div class="dropdown-item">網路學苑</div>
-                <ul class="dropdown-submenu">
-                  <li>
-                    <router-link
-                      to="/course/online/elementary"
-                      class="dropdown-item"
-                      :title="routes[3].children[11].meta.title"
-                      >{{ routes[3].children[11].meta.title }}</router-link
-                    >
-                  </li>
-                  <li>
-                    <router-link
-                      to="/course/online/intermediate"
-                      class="dropdown-item"
-                      :title="routes[3].children[12].meta.title"
-                      >{{ routes[3].children[12].meta.title }}</router-link
-                    >
-                  </li>
-                  <li>
-                    <router-link
-                      to="/course/online/all"
-                      class="dropdown-item"
-                      :title="routes[3].children[13].meta.title"
-                      >{{ routes[3].children[13].meta.title }}</router-link
-                    >
-                  </li>
-                </ul>
+                <router-link
+                  to="/online-course/elementary-video"
+                  class="dropdown-item"
+                  :title="routes[4].children[0].meta.title"
+                  >{{ routes[4].children[0].meta.title }}</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="/online-course/elementary-audio"
+                  class="dropdown-item"
+                  :title="routes[4].children[1].meta.title"
+                  >{{ routes[4].children[1].meta.title }}</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="/online-course/intermediate-video"
+                  class="dropdown-item"
+                  :title="routes[4].children[2].meta.title"
+                  >{{ routes[4].children[2].meta.title }}</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="/online-course/all-audio"
+                  class="dropdown-item"
+                  :title="routes[4].children[3].meta.title"
+                  >{{ routes[4].children[3].meta.title }}</router-link
+                >
+              </li>
+              <li>
+                <router-link
+                  to="/online-course/all-video"
+                  class="dropdown-item"
+                  :title="routes[4].children[4].meta.title"
+                  >{{ routes[4].children[4].meta.title }}</router-link
+                >
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
-            <router-link to="/presentation" class="nav-link"
-              >香氣發表會</router-link
-            >
+            <router-link to="/presentation" class="nav-link">香氣發表會</router-link>
           </li>
           <li class="nav-item dropdown">
             <router-link
@@ -229,15 +250,10 @@
             >
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <li>
-                <router-link to="/blog/category/all" class="dropdown-item"
-                  >所有文章</router-link
-                >
+                <router-link to="/blog/category/all" class="dropdown-item">所有文章</router-link>
               </li>
               <li v-for="blogCategory in bolgCategories" :key="blogCategory.id">
-                <router-link
-                  :to="`/blog/category/${blogCategory.id}`"
-                  class="dropdown-item"
-                >
+                <router-link :to="`/blog/category/${blogCategory.id}`" class="dropdown-item">
                   {{ blogCategory.name }}
                 </router-link>
               </li>
