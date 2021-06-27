@@ -20,13 +20,13 @@ export default {
   data: () => ({
     title: "課程名稱 1",
     type: "NAHA IFPA 芳療認證入門/視訊",
-    registry: "/course/signup",
+    // registry: "/course/signup",
     isShow: true,
     onlineMode: "vedio",
     data: [],
   }),
   created() {
-    this.getCourseBatches();
+    // this.getCourseBatches();
   },
   methods: {
     getCourseBatches() {

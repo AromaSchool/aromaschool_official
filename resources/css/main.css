@@ -293,6 +293,17 @@ hr {
     );
 }
 
+.nav-wrapper {
+    flex: 1 0 auto;
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.navbar-expand-lg .navbar-nav {
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
 .navbar-light .navbar-nav .nav-link {
     font-size: 15px;
     color: #707179;
@@ -327,6 +338,44 @@ hr {
 .navbar_as .dropdown-submenu .dropdown-item {
     padding: 8px 30px;
     color: #a18875;
+}
+
+.action {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.action .divider {
+    margin: 0 0.75rem;
+}
+
+.action .nav-link {
+    padding: 0;
+    color: #707179;
+    font-size: 15px;
+}
+
+.action .nav-link.border {
+    margin-left: 1rem;
+    padding: 4px 8px;
+    border: 1px solid #707179;
+    border-radius: 3px;
+}
+
+.action .nav-link.border:hover {
+    color: #fff;
+    background-color: #707179;
+}
+
+.action .nav-link > i {
+    color: #9c9da8;
+}
+
+.action .nav-link.border-r {
+    border-right: 2px solid #707179;
 }
 
 /* footer */
@@ -843,6 +892,20 @@ footer .copyright {
     width: 80%;
 }
 
+.online_container {
+    display: flex;
+}
+
+.online_container .sidebar {
+    width: calc(20% + 40px);
+    margin-right: 80px;
+    margin-bottom: 20px;
+}
+
+.online_container .content_center {
+    width: calc(80% - 40px);
+}
+
 .sidebar * {
     color: #707179;
 }
@@ -1038,8 +1101,19 @@ footer .copyright {
 
 @media screen and (max-width: 992px) {
     /* 導覽列 */
+    .nav-wrapper {
+        flex: 0 0 100%;
+        overflow-y: scroll;
+        position: relative;
+    }
+
+    .nav-wrapper.collapse:not(.show) {
+        display: none !important;
+    }
+
     .navbar_as .navbar-collapse {
         padding: 10px 0;
+        padding-bottom: 48px;
         margin: 10px 0;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 0.25rem;
@@ -1111,6 +1185,17 @@ footer .copyright {
     /* 文章內容 */
     .arti_title_block h3 {
         font-size: 22px;
+    }
+
+    .action {
+        width: calc(100% - 2px);
+        justify-content: center;
+        padding: 8px;
+        position: absolute;
+        bottom: 10px;
+        color: #fff;
+        border-radius: 0 0 0.25rem 0.25rem;
+        background: #f1f1f4;
     }
 }
 

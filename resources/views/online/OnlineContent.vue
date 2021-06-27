@@ -50,10 +50,11 @@
 
 <script>
 export default {
-  name: "CourseContent",
+  name: "OnlineContent",
   inject: ["setDescription"],
   props: {
     title: {
+      type: String,
       required: true,
     },
     type: {
@@ -63,6 +64,17 @@ export default {
     isShow: {
       type: Boolean,
     },
+  },
+  mounted() {
+    this.anchorHashCheck();
+
+    // let intro = "";
+    // for (const vnode of this.$slots.intro) {
+    //   if (vnode.children && vnode.children[0].text) {
+    //     intro = `${intro}${vnode.children[0].text}`;
+    //   }
+    // }
+    // this.setDescription(intro);
   },
   methods: {
     anchorHashCheck() {
@@ -75,17 +87,6 @@ export default {
         });
       }
     },
-  },
-  mounted() {
-    this.anchorHashCheck();
-
-    let intro = "";
-    for (const vnode of this.$slots.intro) {
-      if (vnode.children && vnode.children[0].text) {
-        intro = `${intro}${vnode.children[0].text}`;
-      }
-    }
-    this.setDescription(intro);
   },
 };
 </script>

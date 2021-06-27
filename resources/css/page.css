@@ -1264,6 +1264,11 @@ section.course {
     margin-right: 3px;
 }
 
+/* 線上課程 */
+section.online {
+    margin-top: 50px;
+}
+
 /* 香氣發表會-列表 */
 section.presentation {
     margin-top: 50px;

@@ -1,10 +1,12 @@
 .navbar_as {
     padding: 25px 0;
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.7) 30%,
-            rgba(255, 255, 255, 0.9) 100%);
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.7) 30%,
+        rgba(255, 255, 255, 0.9) 100%
+    );
 
     .dropdown-menu {
         border: none;
@@ -69,7 +71,7 @@
     }
 
     .navbar_as {
-        .nav-item+.nav-item {
+        .nav-item + .nav-item {
             &::before {
                 content: "/";
                 position: absolute;

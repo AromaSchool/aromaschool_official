@@ -1,6 +1,6 @@
 <template>
-  <section class="course">
-    <div class="container blog_container">
+  <section class="online">
+    <div class="container online_container">
       <OnlineSidebar
         v-if="$route.name != 'course-sign-up' && $route.name != 'course-finish'"
       ></OnlineSidebar>
