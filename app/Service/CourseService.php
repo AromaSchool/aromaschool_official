@@ -82,7 +82,10 @@ class CourseService
 
     public function getOnlineCourses(?int $userId)
     {
+        $today = Carbon::today();
         $userCourses = OauthUserCourse::where('user_id', '=', $userId)
+            ->where('start_date', '<=', $today)
+            ->where('end_date', '>=', $today)
             ->pluck('course_id')
             ->toArray();
 
