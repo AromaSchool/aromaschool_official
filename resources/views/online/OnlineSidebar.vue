@@ -75,66 +75,6 @@
           </div>
         </div>
       </div>
-      <div class="accordion-item" id="accordionTwo">
-        <h2 class="accordion-header" id="headingTwo">
-          <button
-            class="accordion-button"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo"
-            aria-expanded="true"
-            aria-controls="collapseTwo"
-          >
-            療程學苑
-          </button>
-        </h2>
-        <div
-          id="collapseTwo"
-          class="accordion-collapse collapse show"
-          aria-labelledby="headingTwo"
-          data-bs-parent="#accordionTwo"
-        >
-          <div class="accordion-body">
-            <ul>
-              <li class="sidebar_list">
-                <router-link to="/course/treatment/british" title="英式芳療按摩療程"
-                  >英式芳療按摩療程</router-link
-                >
-              </li>
-              <li class="sidebar_list">
-                <router-link to="/course/treatment/lymphatic" title="淋巴引流按摩療程"
-                  >淋巴引流按摩療程</router-link
-                >
-              </li>
-              <li class="sidebar_list">
-                <router-link to="/course/treatment/facial" title="顱顏深層按摩療程"
-                  >顱顏深層按摩療程</router-link
-                >
-              </li>
-              <li class="sidebar_list">
-                <router-link to="/course/treatment/pregnancy" title="孕產婦芳療療程"
-                  >孕產婦芳療療程</router-link
-                >
-              </li>
-              <li class="sidebar_list">
-                <router-link to="/course/treatment/myofascial" title="肌筋膜系列課程"
-                  >肌筋膜系列課程</router-link
-                >
-              </li>
-              <li class="sidebar_list">
-                <router-link to="/course/treatment/swedish" title="瑞典式按摩療程"
-                  >瑞典式按摩療程</router-link
-                >
-              </li>
-              <li class="sidebar_list">
-                <router-link to="/course/treatment/meridian" title="經絡按摩療程"
-                  >經絡按摩療程</router-link
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 </template>

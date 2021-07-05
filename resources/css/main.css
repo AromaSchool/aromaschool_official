@@ -1133,19 +1133,32 @@ footer .copyright {
     .navbar_as .dropdown-submenu .dropdown-item {
         padding: 8px 20px;
     }
+    .action {
+        width: calc(100% - 2px);
+        justify-content: center;
+        padding: 8px;
+        position: absolute;
+        bottom: 10px;
+        color: #fff;
+        border-radius: 0 0 0.25rem 0.25rem;
+        background: #f1f1f4;
+    }
 
     /* 側選單 */
-    .blog_container {
+    .blog_container,
+    .online_container {
         flex-wrap: wrap;
     }
 
-    .blog_container .sidebar {
+    .blog_container .sidebar,
+    .online_container .sidebar {
         width: 100%;
         margin-right: 0;
         margin-bottom: 30px;
     }
 
-    .blog_container .content_center {
+    .blog_container .content_center,
+    .online_container .content_center {
         width: 100%;
     }
 
@@ -1185,17 +1198,6 @@ footer .copyright {
     /* 文章內容 */
     .arti_title_block h3 {
         font-size: 22px;
-    }
-
-    .action {
-        width: calc(100% - 2px);
-        justify-content: center;
-        padding: 8px;
-        position: absolute;
-        bottom: 10px;
-        color: #fff;
-        border-radius: 0 0 0.25rem 0.25rem;
-        background: #f1f1f4;
     }
 }
 

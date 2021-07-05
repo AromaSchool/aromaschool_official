@@ -21,7 +21,7 @@ export default {
     title: "課程名稱 1",
     type: "NAHA IFPA 芳療認證入門/視訊",
     // registry: "/course/signup",
-    isShow: true,
+    isShow: false,
     onlineMode: "vedio",
     data: [],
   }),

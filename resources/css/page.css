@@ -876,6 +876,10 @@ section.course {
     opacity: 0.5;
 }
 
+.course_content_block .overlay > p {
+    margin-bottom: 0;
+}
+
 .course_content_block .intro .video_block iframe {
     position: absolute;
     top: 0;
@@ -2392,6 +2396,9 @@ section.recruit {
 
     .presentation_content_block .video_box {
         width: 100%;
+    }
+    .course_content_block .overlay > i {
+        font-size: 2rem;
     }
 }
 
