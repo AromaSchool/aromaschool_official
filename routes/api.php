@@ -63,6 +63,9 @@ Route::prefix('courses')->group(function () {
     Route::prefix('signup')->group(function () {
         Route::post('/', Course\SignUpCourseController::class);
     });
+    Route::prefix('online')->middleware('oauth')->group(function () {
+        Route::get('/', Course\GetOnlineCoursesController::class);
+    });
 });
 
 Route::prefix('presentations')->group(function () {

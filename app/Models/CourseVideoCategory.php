@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class CourseVideoCategory extends Model
 {
     use \Eloquence\Behaviours\CamelCasing;
 
@@ -13,7 +13,7 @@ class Course extends Model
     *
     * @var string
     */
-    protected $table = 'courses';
+    protected $table = 'course_video_categories';
 
     /**
      * The attributes that are mass assignable.
@@ -21,8 +21,9 @@ class Course extends Model
      * @var array
      */
     protected $fillable = [
-        'category_id',
+        'course_id',
         'name',
+        'created_by',
     ];
 
     /**
@@ -31,20 +32,20 @@ class Course extends Model
      * @var array
      */
     protected $hidden = [
-        'category_id',
+        'course_id',
         'created_at',
         'updated_at',
         'created_by',
         'updated_by',
     ];
 
-    public function category()
+    public function course()
     {
-        return $this->hasOne(CourseCategory::class, 'id', 'category_id');
+        return $this->hasOne(Course::class, 'id', 'course_id');
     }
 
-    public function videosCategories()
+    public function videos()
     {
-        return $this->hasMany(CourseVideoCategory::class, 'course_id', 'id');
+        return $this->hasMany(CourseVideo::class, 'category_id', 'id')->orderBy('priority');
     }
 }

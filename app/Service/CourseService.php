@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace App\Service;
 
 use Carbon\Carbon;
+use App\Models\Course;
 use App\Models\CourseSetting;
 use App\Models\CourseBatch;
 use App\Models\CourseCustomer;
 use App\Models\CourseSignUp;
+use App\Models\OauthUserCourse;
 use Illuminate\Database\Eloquent\Collection;
 
 class CourseService
@@ -76,5 +78,30 @@ class CourseService
             \DB::rollBack();
             throw $th;
         }
+    }
+
+    public function getOnlineCourses(?int $userId)
+    {
+        $userCourses = OauthUserCourse::where('user_id', '=', $userId)
+            ->pluck('course_id')
+            ->toArray();
+
+        $courses = Course::with('videosCategories.videos')
+            ->where('category_id', '=', 3)
+            ->get();
+
+        foreach ($courses as &$course) {
+            if (!\in_array($course->id, $userCourses)) {
+                foreach ($course->videosCategories as &$videosCategory) {
+                    foreach ($videosCategory->videos as &$video) {
+                        if ($video->paid) {
+                            $video->makeHidden('url');
+                        }
+                    }
+                }
+            }
+        }
+
+        return $courses;
     }
 }

@@ -37,6 +37,10 @@ return [
         'url' => env('STORAGE_URL'),
     ],
 
+    'oauth' => [
+        'url' => env('OAUTH_URL'),
+    ],
+
     'mail' => [
         'username' => env('MAIL_USERNAME'),
     ],
