@@ -91,8 +91,8 @@
 
     <div id="app"></div>
 
-    <!-- Structured Data -->
     @if ($jsonld)
+    <!-- Structured Data -->
     <script type="application/ld+json">
       {!! \json_encode($jsonld, JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES) !!}
     </script>
