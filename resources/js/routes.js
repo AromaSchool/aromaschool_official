@@ -40,9 +40,10 @@ const TreatmentPregnancy = () => import( /* webpackPrefetch: true */ /* webpackC
 const TreatmentMyofascial = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentMyofascial.vue")
 const TreatmentSwedish = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentSwedish.vue")
 const TreatmentMeridian = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/treatment/TreatmentMeridian.vue")
-const OnlineElementary = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/online/OnlineElementary.vue")
-const OnlineIntermediate = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/online/OnlineIntermediate.vue")
-const OnlineAll = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/course/online/OnlineAll.vue")
+const Online = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/online/Online.vue")
+const OnlineElementary = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/online/OnlineElementary.vue")
+const OnlineIntermediate = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/online/OnlineIntermediate.vue")
+const OnlineAll = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/course" */ "../views/online/OnlineAll.vue")
 const Contact = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Contact.vue");
 const ComingSoon = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/component/ComingSoon.vue");
 const Presentation = () => import( /* webpackPrefetch: true */ /* webpackChunkName: "/js/other" */ "../views/Presentation.vue");
@@ -334,31 +335,6 @@ const routes = [{
                     courseId: COURSES.TREATMENT.MERIDIAN,
                 },
             }, {
-                path: "/course/online/elementary",
-                name: "course-online-elementary",
-                component: OnlineElementary,
-                meta: {
-                    title: "直播芳療認證課程入門班",
-                    courseId: COURSES.ONLINE.ELEMENTARY,
-                },
-            },
-            {
-                path: "/course/online/intermediate",
-                name: "course-online-intermediate",
-                component: OnlineIntermediate,
-                meta: {
-                    title: "直播芳療認證課程中階班",
-                    courseId: COURSES.ONLINE.INTERMEDIATE,
-                },
-            }, {
-                path: "/course/online/all",
-                name: "course-online-all",
-                component: OnlineAll,
-                meta: {
-                    title: "Podcast 線上全階認證課程",
-                    courseId: COURSES.ONLINE.ALL,
-                },
-            }, {
                 path: "/course/signup",
                 name: "course-sign-up",
                 component: CourseSignUp,
@@ -371,6 +347,64 @@ const routes = [{
                 component: CourseFinish,
                 meta: {
                     title: "報名完成",
+                },
+            },
+        ]
+    },
+    {
+        path: "/online-course",
+        redirect: '/online-course/elementary-video',
+        name: "online",
+        component: Online,
+        meta: {
+            title: "線上教學",
+            titleEn: "ONLINE",
+            bannerImage: "images/banner-6.jpg"
+        },
+        children: [
+            {
+                path: "/online-course/elementary-video",
+                name: "course-online-elementary-video",
+                component: OnlineElementary,
+                meta: {
+                    title: "NAHA IFPA 芳療認證入門/視訊",
+                    courseId: COURSES.ONLINE.ELEMENTARY,
+                },
+            },
+            {
+                path: "/online-course/elementary-audio",
+                name: "course-online-elementary-audio",
+                component: OnlineElementary,
+                meta: {
+                    title: "NAHA IFPA 芳療認證入門/免費音訊",
+                    courseId: COURSES.ONLINE.ELEMENTARY,
+                },
+            },
+            {
+                path: "/online-course/intermediate-video",
+                name: "course-online-intermediate-video",
+                component: OnlineIntermediate,
+                meta: {
+                    title: "NAHA IFPA 芳療認證中階/視訊",
+                    courseId: COURSES.ONLINE.INTERMEDIATE,
+                },
+            },
+            {
+                path: "/online-course/all-audio",
+                name: "course-online-all-audio",
+                component: OnlineAll,
+                meta: {
+                    title: "NAHA IFPA 芳療認證全階/音訊",
+                    courseId: COURSES.ONLINE.ALL,
+                },
+            },
+            {
+                path: "/online-course/all-video",
+                name: "course-online-all-video",
+                component: OnlineAll,
+                meta: {
+                    title: "NAHA IFPA 芳療認證全階/視訊",
+                    courseId: COURSES.ONLINE.ALL,
                 },
             },
         ]

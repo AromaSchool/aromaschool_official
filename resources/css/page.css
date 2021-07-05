@@ -58,7 +58,7 @@ header img {
 }
 
 .course_intro_box {
-    background: #FFF9F3;
+    background: #fff9f3;
     background-image: linear-gradient(-6deg, #fff9f3 62%, #f9efe5 50%);
     padding: 20px 25px;
     width: 25%;
@@ -69,7 +69,7 @@ header img {
     box-shadow: 0 0 20px rgba(10, 7, 7, 0.15);
 }
 
-.course_intro_box+.course_intro_box {
+.course_intro_box + .course_intro_box {
     margin-left: 10px;
 }
 
@@ -85,13 +85,13 @@ header img {
 .course_intro_box h4 span {
     display: block;
     font-size: 16px;
-    color: #A18875;
+    color: #a18875;
     margin-bottom: 5px;
     letter-spacing: 0;
 }
 
 .course_intro_box p {
-    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
     font-weight: 300;
     margin: 20px auto;
     line-height: 1.7;
@@ -109,7 +109,7 @@ header img {
     right: 0;
     width: 45vw;
     min-width: 755px;
-    background: rgba(118, 118, 145, .8);
+    background: rgba(118, 118, 145, 0.8);
     padding: 50px 40px;
 }
 
@@ -134,7 +134,7 @@ header img {
 }
 
 .index_news_list h3 span::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 4px;
     height: 15px;
@@ -151,24 +151,24 @@ header img {
     list-style: none;
 }
 
-.index_news .news_block li+li {
+.index_news .news_block li + li {
     margin-top: 15px;
 }
 
 .index_news .news_box {
     display: flex;
     align-items: center;
-    border: solid 1px rgba(255, 255, 255, .3);
+    border: solid 1px rgba(255, 255, 255, 0.3);
     text-decoration: none;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .index_news li:hover .news_box {
-    border: solid 1px rgba(255, 255, 255, .9)
+    border: solid 1px rgba(255, 255, 255, 0.9);
 }
 
 .index_news .time {
-    background: rgba(201, 181, 165, .8);
+    background: rgba(201, 181, 165, 0.8);
     width: 105px;
     padding: 5px 15px;
 }
@@ -200,19 +200,19 @@ header img {
 .index_news .news_title .category {
     display: flex;
     align-items: center;
-    color: #F9EFE5;
+    color: #f9efe5;
     font-size: 14px;
     font-weight: 300;
 }
 
 .index_news .news_title .category::before {
-    content: '';
+    content: "";
     display: block;
     width: 30px;
     height: 1px;
     margin: 0 10px 0 -40px;
-    background: #F9EFE5;
-    transition-duration: .3s;
+    background: #f9efe5;
+    transition-duration: 0.3s;
 }
 
 .index_news .news_block li:hover .category::before {
@@ -256,7 +256,7 @@ header img {
 .aroma_presentation_intro h3 span {
     display: block;
     position: relative;
-    color: #A18875;
+    color: #a18875;
     font-size: 16px;
     font-weight: 300;
     padding-left: 12px;
@@ -264,14 +264,14 @@ header img {
 }
 
 .aroma_presentation_intro h3 span::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     left: 0;
     top: 50%;
     width: 4px;
     height: 33px;
-    background: #A18875;
+    background: #a18875;
     transform: translateY(-50%);
 }
 
@@ -293,13 +293,13 @@ header img {
 }
 
 .aroma_presentation_photo_block::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 60%;
     height: 100%;
     top: 0;
     left: calc(-60% - 10px);
-    background: #F9EFE5;
+    background: #f9efe5;
 }
 
 .aroma_presentation_photo_block figure {
@@ -349,7 +349,7 @@ h3.index_title span {
 }
 
 h3.index_title span::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 18px;
@@ -378,12 +378,20 @@ h3.index_title span::after {
 
 .certi_box.NAHA {
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(241, 241, 244, 0) 70%, rgba(241, 241, 244, 1) 100%);
+    background: linear-gradient(
+        0deg,
+        rgba(241, 241, 244, 0) 70%,
+        rgba(241, 241, 244, 1) 100%
+    );
 }
 
 .certi_box.IFPA {
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(249, 239, 229, 0) 70%, rgba(249, 239, 229, 1) 100%);
+    background: linear-gradient(
+        0deg,
+        rgba(249, 239, 229, 0) 70%,
+        rgba(249, 239, 229, 1) 100%
+    );
 }
 
 .certi_box figure {
@@ -443,7 +451,7 @@ h3.index_title span::after {
 }
 
 .index_student_claim .swiper-slide * {
-    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
 }
 
 .index_student_claim figure {
@@ -494,16 +502,15 @@ h3.index_title span::after {
 }
 
 .index_student_claim .swiper-pagination-bullet {
-    background: #F1F1F4;
+    background: #f1f1f4;
     opacity: 1;
-    transition-duration: .2s;
+    transition-duration: 0.2s;
 }
 
 .index_student_claim .swiper-pagination-bullet-active {
     background: #767691;
-    opacity: .5;
+    opacity: 0.5;
 }
-
 
 /* 關於禾場-品牌故事 */
 .brand_story {
@@ -516,7 +523,7 @@ h3.index_title span::after {
 }
 
 .brand_story .container::before {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     left: 20%;
@@ -561,7 +568,7 @@ h3.index_title span::after {
 }
 
 .brand_story h2 span::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 4px;
     height: 15px;
@@ -570,7 +577,7 @@ h3.index_title span::after {
 }
 
 .brand_content p {
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, 0.8);
     padding: 60px 50px;
     font-weight: 300;
     line-height: 1.7;
@@ -600,7 +607,7 @@ h3.index_title span::after {
 }
 
 .main_service h2 span::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     width: 18px;
@@ -621,8 +628,8 @@ h3.index_title span::after {
     width: calc(100% / 3);
 }
 
-.service_box+.service_box {
-    border-left: solid 1px rgba(201, 181, 165, .2);
+.service_box + .service_box {
+    border-left: solid 1px rgba(201, 181, 165, 0.2);
 }
 
 .service_box h3 {
@@ -655,7 +662,7 @@ h3.index_title span::after {
 }
 
 .origin_card {
-    background: rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, 0.7);
     padding: 50px;
     text-align: center;
 }
@@ -691,12 +698,12 @@ h3.index_title span::after {
 /* 關於禾場-大事紀 */
 .history_time .slogan {
     text-align: center;
-    color: #9C9DA8;
+    color: #9c9da8;
     margin: 45px auto;
 }
 
 .history_time .time_box {
-    border-top: 1px solid rgba(118, 118, 145, .2);
+    border-top: 1px solid rgba(118, 118, 145, 0.2);
     padding: 55px 0;
 }
 
@@ -716,7 +723,7 @@ h3.index_title span::after {
     list-style: none;
     position: relative;
     margin: 15px 0;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .history_time .event_box:hover {
@@ -724,11 +731,11 @@ h3.index_title span::after {
 }
 
 .history_time .event_box:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #C9B5A5;
+    background: #c9b5a5;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -741,7 +748,7 @@ h3.index_title span::after {
 
 .history_time .event_box .date {
     display: inline-block;
-    color: #C9B5A5;
+    color: #c9b5a5;
     font-weight: 500;
     letter-spacing: 1px;
     width: 48px;
@@ -796,11 +803,11 @@ h3.index_title span::after {
 }
 
 .news_list .index_news .news_box {
-    border: solid 1px rgba(156, 157, 168, .3);
+    border: solid 1px rgba(156, 157, 168, 0.3);
 }
 
 .news_list .index_news .news_box:hover {
-    border: solid 1px rgba(156, 157, 168, .8);
+    border: solid 1px rgba(156, 157, 168, 0.8);
 }
 
 .news_list .index_news .time {
@@ -809,11 +816,11 @@ h3.index_title span::after {
 }
 
 .news_list .index_news .news_title .category {
-    color: #9C9DA8;
+    color: #9c9da8;
 }
 
 .news_list .index_news .news_title .category::before {
-    background: #9C9DA8;
+    background: #9c9da8;
 }
 
 .news_list .index_news .news_title h5 {
@@ -839,6 +846,40 @@ section.course {
     overflow: hidden;
 }
 
+.course_content_block .overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    z-index: 1;
+    user-select: none;
+}
+
+.course_content_block .overlay > * {
+    color: #fff;
+}
+
+.course_content_block .overlay > h4 {
+    margin-bottom: 1.25rem;
+}
+
+.course_content_block .overlay > i {
+    margin-bottom: 0.75rem;
+    font-size: 6rem;
+    opacity: 0.5;
+}
+
+.course_content_block .overlay > p {
+    margin-bottom: 0;
+}
+
 .course_content_block .intro .video_block iframe {
     position: absolute;
     top: 0;
@@ -853,7 +894,7 @@ section.course {
     color: #767691;
     font-size: 16px;
     font-weight: 400;
-    background: rgba(241, 241, 244, .5);
+    background: rgba(241, 241, 244, 0.5);
     padding: 20px;
     margin-bottom: 15px;
 }
@@ -889,18 +930,31 @@ section.course {
     margin-right: 5px;
 }
 
+.lock_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    color: #9c9da8;
+    background-color: #f6f6f6;
+}
+
+.lock_content p {
+    margin: 0;
+}
+
 .course_table {
     width: 100%;
-    border: solid 1px rgba(118, 118, 145, .2);
+    border: solid 1px rgba(118, 118, 145, 0.2);
     margin: 20px auto 10px;
 }
 
 .course_table thead {
-    background: #F1F1F4;
+    background: #f1f1f4;
 }
 
 .course_table th {
-    border: solid 1px rgba(118, 118, 145, .2);
+    border: solid 1px rgba(118, 118, 145, 0.2);
     font-weight: 400;
 }
 
@@ -945,7 +999,7 @@ section.course {
 }
 
 .course_table td {
-    border: solid 1px rgba(118, 118, 145, .2);
+    border: solid 1px rgba(118, 118, 145, 0.2);
     font-weight: 300;
 }
 
@@ -960,7 +1014,7 @@ section.course {
 .schedule .note {
     font-size: 14px;
     font-weight: 300;
-    color: #9C9DA8;
+    color: #9c9da8;
     text-align: right;
 }
 
@@ -984,11 +1038,11 @@ section.course {
 }
 
 .course_content_block .course_box ul li::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #C9B5A5;
+    background: #c9b5a5;
     left: 0;
     top: 0%;
     transform: translateY(100%);
@@ -1001,7 +1055,7 @@ section.course {
 .feature h6 {
     font-size: 14px;
     font-weight: 300;
-    color: #9C9DA8;
+    color: #9c9da8;
     margin-top: 5px;
 }
 
@@ -1128,13 +1182,13 @@ section.course {
     padding: 15px 0;
 }
 
-.form_course_box+.form_course_box {
-    border-top: solid 1px rgba(156, 157, 168, .2);
+.form_course_box + .form_course_box {
+    border-top: solid 1px rgba(156, 157, 168, 0.2);
 }
 
 .form_course_box .category {
     display: block;
-    color: #C9B5A5;
+    color: #c9b5a5;
     margin-bottom: 10px;
 }
 
@@ -1177,10 +1231,26 @@ section.course {
     text-align: right;
     font-size: 14px;
     padding: 5px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
-    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
-    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
-    background: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.4)0%, rgba(0, 0, 0, 0)100%);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    background: -o-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
 }
 
 .acc_box img {
@@ -1196,6 +1266,11 @@ section.course {
 .course_finish_block li .link i {
     font-size: 13px;
     margin-right: 3px;
+}
+
+/* 線上課程 */
+section.online {
+    margin-top: 50px;
 }
 
 /* 香氣發表會-列表 */
@@ -1223,7 +1298,7 @@ section.presentation {
     letter-spacing: 1px;
     padding: 5px 40px 5px 0px;
     margin: 0 auto;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .btn_purple:hover {
@@ -1249,7 +1324,7 @@ section.presentation {
     height: 1px;
     top: 50%;
     right: 0;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .btn_purple:hover::after {
@@ -1269,12 +1344,11 @@ section.presentation {
     top: 44%;
     right: 0;
     transform: rotate(45deg);
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
-
 .time_block_pst .time_box {
-    border-top: 1px solid rgba(118, 118, 145, .2);
+    border-top: 1px solid rgba(118, 118, 145, 0.2);
     padding: 55px 0;
 }
 
@@ -1338,14 +1412,14 @@ section.presentation {
 
 .list_li {
     width: calc(20% - 10px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 0px 5px 20px 5px;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .list_li:hover {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .list_a {
@@ -1356,7 +1430,7 @@ section.presentation {
 
 .list_a .title {
     padding-bottom: 5px;
-    border-bottom: 1px solid #DEDEDE;
+    border-bottom: 1px solid #dedede;
     color: #707179;
     font-weight: 300;
     font-size: 1.1rem;
@@ -1370,9 +1444,9 @@ section.presentation {
 }
 
 .student_icon i {
-    color: #C9B5A5;
+    color: #c9b5a5;
     border-radius: 50%;
-    border: 1px solid #C9B5A5;
+    border: 1px solid #c9b5a5;
     width: 25px;
     height: 25px;
     font-size: 0.8rem;
@@ -1380,10 +1454,6 @@ section.presentation {
     line-height: 23px;
     margin: 0px 10px 0px 0px;
 }
-
-
-
-
 
 /* 香氣發表會-內文 */
 section.presentation .main_side {
@@ -1455,15 +1525,15 @@ section.presentation .blog_container .content_center {
 }
 
 .student_info_box .symptom_tag {
-    color: #A18875;
+    color: #a18875;
     font-size: 14px;
     font-weight: 300;
     padding: 5px 10px;
     margin-bottom: 5px;
-    border: solid 1px #C9B5A5;
+    border: solid 1px #c9b5a5;
 }
 
-.student_info_box .symptom_tag+.symptom_tag {
+.student_info_box .symptom_tag + .symptom_tag {
     margin-left: 5px;
 }
 
@@ -1489,7 +1559,7 @@ section.presentation .blog_container .content_center {
     text-align: center;
     color: #767691;
     font-weight: 400;
-    background: rgba(241, 241, 244, .5);
+    background: rgba(241, 241, 244, 0.5);
     letter-spacing: 1px;
     line-height: 1.7;
     padding: 35px;
@@ -1540,7 +1610,7 @@ section.presentation .blog_container .content_center {
     margin: 0 10px 30px;
     text-decoration: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .blog_list .article_box:hover {
@@ -1562,7 +1632,7 @@ section.presentation .blog_container .content_center {
 
 .article_box figure img {
     width: 100%;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .article_box figure .category {
@@ -1571,7 +1641,7 @@ section.presentation .blog_container .content_center {
     right: 15px;
     font-size: 12px;
     color: #fff;
-    background: #A18875;
+    background: #a18875;
     padding: 3px 10px;
     border-radius: 999px;
 }
@@ -1607,7 +1677,7 @@ section.presentation .blog_container .content_center {
     font-size: 14px;
     letter-spacing: 1px;
     padding: 10px 20px;
-    border-top: solid 1px #F1F1F4;
+    border-top: solid 1px #f1f1f4;
 }
 
 /* 學苑周刊-文章 */
@@ -1618,7 +1688,7 @@ section.presentation .blog_container .content_center {
 
 .arti_keyword .keyword_box {
     display: inline-block;
-    color: #9C9DA8;
+    color: #9c9da8;
     font-size: 14px;
     text-decoration: none;
     padding: 5px 12px;
@@ -1626,11 +1696,11 @@ section.presentation .blog_container .content_center {
     border-radius: 5px;
     margin-right: 5px;
     margin-bottom: 10px;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 }
 
 .arti_keyword .keyword_box:hover {
-    background: #9C9DA8;
+    background: #9c9da8;
     color: #fff;
 }
 
@@ -1638,8 +1708,8 @@ section.presentation .blog_container .content_center {
     display: flex;
     align-items: center;
     padding: 30px;
-    border-top: solid 1px #F1F1F4;
-    border-bottom: solid 1px #F1F1F4;
+    border-top: solid 1px #f1f1f4;
+    border-bottom: solid 1px #f1f1f4;
 }
 
 .arti_author .author_image {
@@ -1670,7 +1740,7 @@ section.presentation .blog_container .content_center {
 
 .author_info .intro {
     font-size: 14px;
-    color: #9C9DA8;
+    color: #9c9da8;
     font-weight: 300;
     line-height: 1.5;
     margin-bottom: 0;
@@ -1706,7 +1776,7 @@ section.presentation .blog_container .content_center {
 }
 
 .contact_info h2 span::before {
-    content: '';
+    content: "";
     display: inline-block;
     width: 4px;
     height: 15px;
@@ -1768,14 +1838,14 @@ section.presentation .blog_container .content_center {
 }
 
 .info_hint .link i {
-    color: #00B900;
+    color: #00b900;
 }
 
 .contact_form {
     width: 50%;
     padding: 40px;
-    border-top: solid 3px #A18875;
-    border-bottom: solid 3px #A18875;
+    border-top: solid 3px #a18875;
+    border-bottom: solid 3px #a18875;
     box-shadow: 0 0 20px rgb(118 118 145 / 20%);
     font-weight: 300;
 }
@@ -1806,7 +1876,7 @@ section.presentation .blog_container .content_center {
 }
 
 .contact_form_block .form_label .hint {
-    color: #C9B5A5;
+    color: #c9b5a5;
     font-size: 15px;
 }
 
@@ -1865,7 +1935,6 @@ section.faq_list {
 .faq_list .accordion-button:not(.collapsed) {
     color: #707179;
     background: transparent;
-
 }
 
 .faq_list .accordion-collapse {
@@ -1874,7 +1943,7 @@ section.faq_list {
 }
 
 .faq_list .accordion-body {
-    background: #FFF9F3;
+    background: #fff9f3;
     font-weight: 300;
 }
 
@@ -1940,7 +2009,7 @@ section.recruit {
 }
 
 .recruit_info .title::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 4px;
     height: 20px;
@@ -1956,17 +2025,13 @@ section.recruit {
 }
 
 @media screen and (max-width: 1400px) {
-
     /* 香氣發表會 */
     .list_li {
         width: calc(25% - 10px);
     }
 }
 
-
-
 @media screen and (max-width: 1200px) {
-
     /* 關於禾場-品牌故事 */
     .brand_story .container::before {
         height: 55%;
@@ -1992,11 +2057,9 @@ section.recruit {
     .list_li {
         width: calc(33% - 10px);
     }
-
 }
 
 @media screen and (max-width: 1200px) and (min-width: 992px) {
-
     /* 首頁 */
     .course_intro_card .container {
         max-width: 1100px;
@@ -2004,7 +2067,6 @@ section.recruit {
 }
 
 @media screen and (max-width: 992px) {
-
     /* 首頁 */
     .welcome_words h2 {
         width: 75%;
@@ -2084,9 +2146,9 @@ section.recruit {
         padding: 30px 20px;
     }
 
-    .service_box+.service_box {
+    .service_box + .service_box {
         border-left: none;
-        border-top: solid 1px rgba(201, 181, 165, .2);
+        border-top: solid 1px rgba(201, 181, 165, 0.2);
     }
 
     .origin_block br {
@@ -2166,7 +2228,6 @@ section.recruit {
 }
 
 @media screen and (max-width: 768px) {
-
     /* 首頁 */
     .welcome_words h2 {
         width: 100%;
@@ -2215,7 +2276,11 @@ section.recruit {
 
     .certi_box.IFPA {
         background: rgb(255, 255, 255);
-        background: linear-gradient(180deg, rgba(249, 239, 229, 0) 70%, rgba(249, 239, 229, 1) 100%);
+        background: linear-gradient(
+            180deg,
+            rgba(249, 239, 229, 0) 70%,
+            rgba(249, 239, 229, 1) 100%
+        );
     }
 
     /* 關於禾場-品牌故事 */
@@ -2307,7 +2372,6 @@ section.recruit {
         margin: 0px 7px 0px 0px;
     }
 
-
     /* 香氣發表會-底層 */
     .presentation_content_block .student_info_block {
         flex-wrap: wrap;
@@ -2333,6 +2397,9 @@ section.recruit {
     .presentation_content_block .video_box {
         width: 100%;
     }
+    .course_content_block .overlay > i {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -2342,7 +2409,6 @@ section.recruit {
 }
 
 @media screen and (max-width: 576px) {
-
     /* 首頁 */
     header {
         padding: 100px 0;
@@ -2532,7 +2598,6 @@ section.recruit {
         line-height: 21px;
         margin: 0px 7px 0px 0px;
     }
-
 }
 
 @media screen and (max-width: 320px) {
