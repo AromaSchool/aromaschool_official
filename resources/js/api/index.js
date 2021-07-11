@@ -24,6 +24,7 @@ import {
     CourseSetting,
     CourseBatch,
     CourseSignUp,
+    CoursesOnline,
 } from "./course";
 import {
     Symptom,
@@ -56,6 +57,7 @@ export {
     CourseSetting,
     CourseBatch,
     CourseSignUp,
+    CoursesOnline,
     Symptom,
     PhysiologicalSystems,
     PresentationSemester,

@@ -171,6 +171,24 @@ class CourseSignUp {
     }
 }
 
+class CoursesOnline {
+    constructor({
+        id,
+        name,
+        videosCategories
+    } = {}) {
+        this.id = id;
+        this.name = name;
+        this.videosCategories = videosCategories
+    }
+
+    static async getList() {
+        return client.get("/courses/online").then(response => {
+            return response
+        })
+    }
+}
+
 export {
     COURSES,
     CLASSROOMS,
@@ -181,4 +199,5 @@ export {
     CourseSetting,
     CourseBatch,
     CourseSignUp,
+    CoursesOnline,
 };
