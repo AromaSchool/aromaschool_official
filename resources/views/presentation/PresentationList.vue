@@ -31,7 +31,7 @@
             >
               <div class="title">
                 <p>{{ presentation.title || presentation.name }}</p>
-                <small class="text-muted" v-if="presentation.name">{{ presentation.name }}</small>
+                <small class="text-muted" v-if="presentation.title">{{ presentation.name }}</small>
               </div>
               <div class="student_icon">
                 <i v-if="presentation.participate" class="fas fa-ribbon" title="研習認證"></i>
