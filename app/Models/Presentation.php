@@ -60,4 +60,14 @@ class Presentation extends Model
     {
         return $this->belongsToMany(Symptom::class, PresentationSymptom::class, 'presentation_id', 'symptom_id');
     }
+
+    public function essentialOils()
+    {
+        return $this->belongsToMany(
+            EssentialOil::class,
+            PresentationEssentialOil::class,
+            'presentation_id',
+            'essential_oil_id',
+        );
+    }
 }

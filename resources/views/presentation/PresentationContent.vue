@@ -1,7 +1,8 @@
 <template>
   <section class="content_center">
     <div class="arti_title_block">
-      <h3>{{ presentation.name }}</h3>
+      <h3>{{ presentation.title || presentation.name }}</h3>
+      <h4 v-if="presentation.title">{{ presentation.name }}</h4>
       <hr />
       <div class="arti_subtitle">
         <div class="type">{{ `高階${presentation.semester.semester}期學員` }}</div>
@@ -14,7 +15,7 @@
         </picture>
         <div class="student_info_box">
           <div class="name_box">
-            <h4>{{ presentation.name }}</h4>
+            <h4><span class="h6">芳療師</span> {{ presentation.name }}</h4>
             <div class="label_block">
               <div v-if="presentation.participate" class="label_box" title="研習認證">
                 <i class="fas fa-ribbon"></i>
@@ -35,6 +36,15 @@
               :key="`symptom${symptom.id}`"
             >
               {{ symptom.name }}
+            </div>
+          </div>
+          <div class="symptom_block">
+            <div
+              class="symptom_tag"
+              v-for="essentialOil in presentation.essentialOils"
+              :key="`essential_oil_${essentialOil.id}`"
+            >
+              {{ essentialOil.name }}
             </div>
           </div>
           <a

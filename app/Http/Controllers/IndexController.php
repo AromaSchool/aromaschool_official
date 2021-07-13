@@ -453,7 +453,14 @@ class IndexController extends Controller
                     $image = $presentation->image ?? \config('app.url') . '/images/student_default.svg';
                 }
                 break;
-
+            case (\preg_match('/^presentation\/[0-9]+$/', $path) ? true : false):
+                \preg_match('/[0-9]+$/', $path, $matches);
+                $presentation = $this->presentationService->getPresentation(\intval($matches[0]));
+                if ($presentation) {
+                    $title = $presentation->title ?? $presentation->image;
+                    $description = $presentation->summary;
+                }
+                break;
             case (\preg_match('/^faq\/category\/[0-9]+$/', $path) ? true : false):
                 $title = '常見問題';
                 break;

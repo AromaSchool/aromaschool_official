@@ -33,7 +33,7 @@ class PresentationService
 
     public function getPresentation(int $id): Presentation
     {
-        $presentation = Presentation::with(['symptoms', 'videos', 'semester'])->find($id);
+        $presentation = Presentation::with(['symptoms', 'videos', 'semester', 'essentialOils'])->find($id);
         if ($presentation->image) {
             $presentation->image = \config('services.storage.url') . "/storage/presentation/$presentation->image";
         }
@@ -50,8 +50,9 @@ class PresentationService
     ) {
         $query = PresentationSemester::limit($limit)
             ->with('presentations.videos')
+            ->with('presentations.essentialOils')
             ->with(['presentations' => function ($q) use ($symptomId) {
-                $q->select(['id', 'semester_id', 'name', 'participate', 'ppt'])
+                $q->select(['id', 'semester_id', 'name', 'participate', 'ppt', 'title'])
                     ->where('visible', true)
                     ->whereHas('symptoms', function ($q) use ($symptomId) {
                         if ($symptomId) {

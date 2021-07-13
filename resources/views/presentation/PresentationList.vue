@@ -26,10 +26,10 @@
           >
             <router-link
               :to="`/presentation/${presentation.id}`"
-              :title="presentation.name"
+              :title="presentation.title || presentation.name"
               class="list_a"
             >
-              <div class="title">{{ presentation.name }}</div>
+              <div class="title">{{ presentation.title || presentation.name }}</div>
               <div class="student_icon">
                 <i v-if="presentation.participate" class="fas fa-ribbon" title="研習認證"></i>
                 <i

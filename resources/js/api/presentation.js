@@ -83,6 +83,7 @@ class PresentationSemester {
 class Presentation {
     constructor({
         id,
+        title,
         name = "",
         image,
         summary = "",
@@ -92,8 +93,10 @@ class Presentation {
         videos,
         semester,
         symptoms,
+        essentialOils,
     } = {}) {
         this.id = id;
+        this.title = title;
         this.name = name;
         this.image = image ? image : require('@/image/index/student_default.svg');
         this.summary = summary;
@@ -105,6 +108,9 @@ class Presentation {
         this.symptoms = symptoms ? symptoms.map(symptom => {
             return new Symptom(symptom);
         }) : [];
+        this.essentialOils = essentialOils ? essentialOils.map(essentialOil => {
+            return new EssentialOil(essentialOil);
+        }) : [];
     }
 
     static async get(id) {
@@ -114,9 +120,20 @@ class Presentation {
     }
 }
 
+class EssentialOil {
+    constructor({
+        id,
+        name,
+    } = {}) {
+        this.id = id;
+        this.name = name;
+    }
+}
+
 export {
     Symptom,
     PhysiologicalSystems,
     PresentationSemester,
     Presentation,
+    EssentialOil,
 }

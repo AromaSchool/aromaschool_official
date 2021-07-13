@@ -44,8 +44,8 @@ export default {
       Presentation.get(this.$route.params.id)
         .then((response) => {
           this.data = response;
-          this.$route.meta.title = this.data.name;
-          this.setTitle(this.data.name);
+          this.$route.meta.title = this.data.title || this.data.name;
+          this.setTitle(this.data.title || this.data.name);
         })
         .catch(() => {
           this.$router.push({ path: "/404" });
