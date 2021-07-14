@@ -30,7 +30,7 @@
               class="list_a"
             >
               <div class="title">
-                <p>{{ presentation.title || presentation.name }}</p>
+                <p class="card_title">{{ presentation.title || presentation.name }}</p>
                 <small class="text-muted" v-if="presentation.title">{{ presentation.name }}</small>
               </div>
               <div class="student_icon">
@@ -108,3 +108,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.card_title {
+  margin-bottom: 0rem;
+}
+</style>
